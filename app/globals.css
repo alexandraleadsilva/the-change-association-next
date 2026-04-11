@@ -562,6 +562,83 @@ footer {
   text-transform: uppercase;
 }
 
+/* ---- TCA MODEL DIAGRAM ---- */
+.tca-diagram {
+  padding: 48px 48px 0;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.tca-diagram-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding-bottom: 48px;
+  min-width: fit-content;
+}
+.tca-diagram-step {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.tca-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  width: 160px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  font-family: var(--ui);
+}
+.tca-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.08);
+  transform: translateY(-4px) !important;
+}
+.tca-card-active {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.tca-card-active:hover {
+  border-color: var(--navy);
+}
+.tca-card-num {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.tca-card-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.tca-card-active .tca-card-name {
+  color: var(--cream);
+}
+.tca-card-focus {
+  font-size: 11px;
+  color: var(--text-mid);
+  line-height: 1.4;
+}
+.tca-card-active .tca-card-focus {
+  color: rgba(234, 228, 213, 0.6);
+}
+.tca-connector {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
 /* ============================================
    KNOWLEDGE HUB PAGE
    ============================================ */
@@ -1159,6 +1236,11 @@ a.link-disabled .article-link-arrow { color: var(--gold); font-size: 12px; }
   .mv-split { grid-template-columns: 1fr; min-height: auto; }
   .mv-image { min-height: 300px; }
   .mv-content { padding: 56px 32px; }
+  .tca-diagram { padding: 32px 20px 0; }
+  .tca-card { width: 130px; padding: 18px 14px; }
+  .tca-card-name { font-size: 17px; }
+  .tca-connector { padding: 0 3px; }
+  .tca-connector svg { width: 20px; }
   .hub-layout { grid-template-columns: 1fr; }
   .hub-sidebar { position: static; display: flex; overflow-x: auto; border-right: none; border-bottom: 1px solid var(--border); }
   .sidebar-item { border-bottom: none; flex-shrink: 0; }

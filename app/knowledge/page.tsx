@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ArticleLink } from "@/components/ArticleLink";
+import { TCAModelDiagram } from "@/components/TCAModelDiagram";
 
 const sidebarItems = [
   { id: "pillar-1", label: "01 · Direction" },
@@ -46,6 +47,8 @@ export default function Knowledge() {
         <h1>A structured framework for leading change that lasts</h1>
         <p>The TCA Change Model is a sequential framework for organisational change. Each pillar builds on the last. Direction sets the conditions, Engagement creates the will, Enablement closes the capability gap, Execution delivers in a disciplined way, and Sustainment makes it permanent.</p>
       </div>
+
+      <TCAModelDiagram />
 
       <div className="hub-layout">
         <aside className="hub-sidebar">
