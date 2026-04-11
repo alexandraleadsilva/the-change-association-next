@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+
+const GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbzxNy7izhXXpRMFc4wrgG2DqD_ZHco-_jDgAxCMmY2Y-E_MZ6oAGeYqA5YYQZT5vN_Muw/exec";
 
 export async function POST(req: Request) {
   const { firstName, lastName, email, topic, message } = await req.json();
@@ -8,39 +10,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Required fields are missing" }, { status: 400 });
   }
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-
   try {
-    await transporter.sendMail({
-      from: `"The Change Association" <${process.env.SMTP_USER}>`,
-      to: "alexandraleadsilva@live.com",
-      replyTo: email,
-      subject: `Contact Form: ${topic || "General Enquiry"} from ${firstName} ${lastName}`,
-      text: `Contact form submission:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nTopic: ${topic || "Not specified"}\n\nMessage:\n${message}`,
-      html: `
-        <h2>Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Topic:</strong> ${topic || "Not specified"}</p>
-        <hr>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-        <hr>
-        <p style="color:#999;font-size:12px">Sent from The Change Association website</p>
-      `,
+    await fetch(GOOGLE_SHEET_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sheetName: "Contact",
+        firstName,
+        lastName,
+        email,
+        topic,
+        message,
+      }),
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Email error:", error);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    console.error("Google Sheets error:", error);
+    return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
   }
 }

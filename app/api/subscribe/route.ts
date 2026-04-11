@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+
+const GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbzxNy7izhXXpRMFc4wrgG2DqD_ZHco-_jDgAxCMmY2Y-E_MZ6oAGeYqA5YYQZT5vN_Muw/exec";
 
 export async function POST(req: Request) {
   const { firstName, lastName, email } = await req.json();
@@ -8,34 +10,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
   }
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-
   try {
-    await transporter.sendMail({
-      from: `"The Change Association" <${process.env.SMTP_USER}>`,
-      to: "alexandraleadsilva@live.com",
-      subject: `New Subscriber: ${firstName} ${lastName}`,
-      text: `New subscriber from The Change Association website:\n\nName: ${firstName} ${lastName}\nEmail: ${email}`,
-      html: `
-        <h2>New Subscriber</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <hr>
-        <p style="color:#999;font-size:12px">Sent from The Change Association website</p>
-      `,
+    await fetch(GOOGLE_SHEET_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ firstName, lastName, email }),
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Email error:", error);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    console.error("Google Sheets error:", error);
+    return NextResponse.json({ error: "Failed to save subscriber" }, { status: 500 });
   }
 }
