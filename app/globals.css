@@ -417,8 +417,11 @@ footer {
   border-top: 1px solid var(--border);
 }
 .split-r {
-  padding: 64px 48px 64px 56px;
+  padding: 48px 48px 48px 56px;
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .article-item {
   padding-bottom: 44px;
