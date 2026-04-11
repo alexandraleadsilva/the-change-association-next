@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -39,6 +40,7 @@ export default function Contact() {
 
       <div className="contact-wrap">
         <div className="contact-left">
+          <ScrollReveal direction="left">
           <span>Get in Touch</span>
           <h1>We&apos;d love to hear from you</h1>
           <p>Whether you&apos;re interested in our upcoming certifications, want to contribute to the knowledge hub, or have a general enquiry, reach out and we&apos;ll get back to you promptly.</p>
@@ -56,8 +58,10 @@ export default function Contact() {
               <span className="contact-item-value">Coming soon. Register your interest via the form</span>
             </div>
           </div>
+          </ScrollReveal>
         </div>
         <div className="contact-right">
+          <ScrollReveal direction="right" delay={200}>
           {!submitted ? (
             <>
               <h2>Send us a message</h2>
@@ -93,6 +97,7 @@ export default function Contact() {
               </p>
             </div>
           )}
+          </ScrollReveal>
         </div>
       </div>
 
