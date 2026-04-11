@@ -37,7 +37,7 @@ export function TCAModelDiagram() {
 
   function scrollTo(id: string) {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) window.scrollTo({ top: el.offsetTop - 100, behavior: "smooth" });
   }
 
   return (
