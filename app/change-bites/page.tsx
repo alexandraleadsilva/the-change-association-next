@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { SubscribeModal } from "@/components/SubscribeModal";
 
 type Category =
   | "all"
@@ -270,10 +271,7 @@ export default function ChangeBites() {
         <aside className="blog-sidebar">
           <div className="sidebar-section">
             <span className="sidebar-heading">Stay in the Loop</span>
-            <div className="email-row">
-              <input type="email" placeholder="Your email address" />
-              <button type="submit">Subscribe</button>
-            </div>
+            <SubscribeModal />
           </div>
 
           <div className="sidebar-section">
