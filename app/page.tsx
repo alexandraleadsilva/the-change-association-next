@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SubscribeModal } from "@/components/SubscribeModal";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ChangeFeed } from "@/components/ChangeFeed";
 
 export default function Home() {
   return (
@@ -47,6 +48,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ChangeFeed limit={5} />
 
       <Footer />
     </>

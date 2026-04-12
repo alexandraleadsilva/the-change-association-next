@@ -180,6 +180,113 @@ nav {
   max-width: 580px;
 }
 
+/* ---- CHANGE FEED ---- */
+.change-feed {
+  border-top: 1px solid var(--border);
+  padding: 56px 48px;
+}
+.change-feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.change-feed-label {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 6px;
+}
+.change-feed-desc {
+  font-family: var(--ui);
+  font-size: 14px;
+  color: var(--text-mid);
+}
+.change-feed-list {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.feed-item {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+.feed-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.feed-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.feed-item-category {
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.feed-item-sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+}
+.feed-item-region {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: var(--text-mid);
+  letter-spacing: 0.06em;
+}
+.feed-item-date {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: #9A9080;
+  letter-spacing: 0.06em;
+}
+.feed-item-headline {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.feed-item-summary {
+  font-family: var(--ui);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 12px;
+}
+.feed-item-source {
+  font-family: var(--ui);
+  font-size: 12px;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.feed-item-source:hover { color: var(--navy); }
+
+@media (max-width: 1024px) {
+  .change-feed { padding: 40px 32px; }
+  .change-feed-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+@media (max-width: 640px) {
+  .change-feed { padding: 32px 20px; }
+  .change-feed-label { font-size: 26px; }
+  .feed-item-headline { font-size: 19px; }
+}
+
 /* ---- FOOTER ---- */
 footer {
   border-top: 1px solid var(--border);
