@@ -163,6 +163,43 @@ function ExpandableList({ items, type }: { items: ListItem[]; type: "questions" 
 export default function CurrentStateAssessment() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
+  const [activeCaseStudy, setActiveCaseStudy] = useState<number | null>(null);
+
+  const caseStudies = [
+    {
+      label: "Case Study 01",
+      headline: "The ERP rollout that ignored how people actually worked",
+      hook: "They mapped every process on paper. They never once watched how work was actually done.",
+      dimension: "Process",
+      body: [
+        "A mid-sized manufacturer invested heavily in a new ERP system to replace ageing infrastructure. The project team mapped the official processes and configured the system accordingly. What they did not do was observe how work actually happened on the shop floor.",
+        "Supervisors had built years of workarounds into spreadsheets and informal handoffs that kept production running. When the new system went live, those workarounds disappeared overnight. Production slowed, errors spiked, and frontline staff lost confidence in both the system and the leadership team that imposed it.",
+      ],
+      lesson: "The process dimension was assessed on paper, not in practice. A current state assessment that included shadowing and process walk-throughs would have surfaced the gap between documented and actual workflows before it became a crisis.",
+    },
+    {
+      label: "Case Study 02",
+      headline: "The culture that killed a merger before it started",
+      hook: "Due diligence covered everything except the one thing that mattered most.",
+      dimension: "Culture",
+      body: [
+        "Two professional services firms merged with the goal of creating a stronger combined offering. On paper, the strategic rationale was sound. Due diligence covered financials, clients, and contracts thoroughly.",
+        "What no one assessed was culture. One firm operated on consensus and collaboration. The other ran on hierarchy and individual performance. When integration began, decision-making ground to a halt. Senior leaders from each side operated on fundamentally different assumptions about how work should be done. Within eighteen months, a third of the senior team had left.",
+      ],
+      lesson: "The culture dimension was absent from the assessment entirely. Understanding how each organisation made decisions, handled conflict, and rewarded performance would have revealed the integration risk before the deal closed.",
+    },
+    {
+      label: "Case Study 03",
+      headline: "The transformation that trained everyone but changed nothing",
+      hook: "90% completion rates. Near-zero adoption. The training worked perfectly. The change did not.",
+      dimension: "Capability",
+      body: [
+        "A financial services organisation launched a major transformation programme to modernise its operating model. The programme included an extensive training rollout covering new systems, new processes, and new ways of working. Completion rates were above 90%.",
+        "Six months after launch, adoption remained low. People had attended the training but returned to their old ways of working. The reason was straightforward: no one had assessed whether people had the confidence, not just the knowledge, to change. Managers had not been equipped to coach their teams. The capability gap was behavioural, not technical, and the training programme had missed it entirely.",
+      ],
+      lesson: "The capability dimension was assessed through a training lens rather than a behavioural one. A deeper assessment would have revealed that knowledge transfer alone was insufficient, and that manager readiness was the critical gap.",
+    },
+  ];
 
   const checkItems = [
     { key: "people", label: "We have spoken directly to the people affected, not just their managers" },
@@ -194,6 +231,9 @@ export default function CurrentStateAssessment() {
           <p className="article-intro">Most current state assessments scratch the surface. They gather data, produce reports, and confirm what leadership already suspects. A meaningful assessment goes deeper. It uncovers the patterns, tensions, and truths that explain why the organisation operates the way it does, and what needs to shift for change to take hold.</p>
         </ScrollReveal>
       </div>
+
+      <div className="article-with-sidebar">
+      <div className="article-main">
 
       {/* LEVEL 1: OVERVIEW */}
       <section className="article-section">
@@ -259,54 +299,44 @@ export default function CurrentStateAssessment() {
         </section>
       )}
 
-      {/* CASE STUDIES */}
-      <section className="article-section case-studies-section">
-        <ScrollReveal direction="up">
-          <h2 className="article-section-title">When This Goes Wrong</h2>
-          <p className="article-section-desc">These are generalised accounts drawn from common patterns in organisational change. They illustrate what happens when the current state is not properly understood before a transformation begins.</p>
-        </ScrollReveal>
+      </div>
 
-        <div className="case-studies-grid">
-          <ScrollReveal direction="up" delay={100}>
-            <div className="case-study-card">
-              <span className="case-study-label">Case Study 01</span>
-              <h3 className="case-study-title">The ERP rollout that ignored how people actually worked</h3>
-              <p className="case-study-body">A mid-sized manufacturer invested heavily in a new ERP system to replace ageing infrastructure. The project team mapped the official processes and configured the system accordingly. What they did not do was observe how work actually happened on the shop floor.</p>
-              <p className="case-study-body">Supervisors had built years of workarounds into spreadsheets and informal handoffs that kept production running. When the new system went live, those workarounds disappeared overnight. Production slowed, errors spiked, and frontline staff lost confidence in both the system and the leadership team that imposed it.</p>
-              <div className="case-study-lesson">
-                <span className="case-study-lesson-label">The lesson</span>
-                <p>The process dimension was assessed on paper, not in practice. A current state assessment that included shadowing and process walk-throughs would have surfaced the gap between documented and actual workflows before it became a crisis.</p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={200}>
-            <div className="case-study-card">
-              <span className="case-study-label">Case Study 02</span>
-              <h3 className="case-study-title">The culture that killed a merger before it started</h3>
-              <p className="case-study-body">Two professional services firms merged with the goal of creating a stronger combined offering. On paper, the strategic rationale was sound. Due diligence covered financials, clients, and contracts thoroughly.</p>
-              <p className="case-study-body">What no one assessed was culture. One firm operated on consensus and collaboration. The other ran on hierarchy and individual performance. When integration began, decision-making ground to a halt. Senior leaders from each side operated on fundamentally different assumptions about how work should be done. Within eighteen months, a third of the senior team had left.</p>
-              <div className="case-study-lesson">
-                <span className="case-study-lesson-label">The lesson</span>
-                <p>The culture dimension was absent from the assessment entirely. Understanding how each organisation made decisions, handled conflict, and rewarded performance would have revealed the integration risk before the deal closed.</p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={300}>
-            <div className="case-study-card">
-              <span className="case-study-label">Case Study 03</span>
-              <h3 className="case-study-title">The transformation that trained everyone but changed nothing</h3>
-              <p className="case-study-body">A financial services organisation launched a major transformation programme to modernise its operating model. The programme included an extensive training rollout covering new systems, new processes, and new ways of working. Completion rates were above 90%.</p>
-              <p className="case-study-body">Six months after launch, adoption remained low. People had attended the training but returned to their old ways of working. The reason was straightforward: no one had assessed whether people had the confidence, not just the knowledge, to change. Managers had not been equipped to coach their teams. The capability gap was behavioural, not technical, and the training programme had missed it entirely.</p>
-              <div className="case-study-lesson">
-                <span className="case-study-lesson-label">The lesson</span>
-                <p>The capability dimension was assessed through a training lens rather than a behavioural one. A deeper assessment would have revealed that knowledge transfer alone was insufficient, and that manager readiness was the critical gap.</p>
-              </div>
-            </div>
-          </ScrollReveal>
+      {/* SIDEBAR: CASE STUDIES */}
+      <aside className="article-sidebar">
+        <div className="sidebar-sticky">
+          <span className="case-sidebar-heading">When This Goes Wrong</span>
+          {caseStudies.map((cs, i) => (
+            <ScrollReveal key={i} direction="right" delay={i * 120}>
+              <button className="case-teaser" onClick={() => setActiveCaseStudy(i)}>
+                <span className="case-teaser-label">{cs.dimension}</span>
+                <span className="case-teaser-headline">{cs.headline}</span>
+                <span className="case-teaser-hook">{cs.hook}</span>
+                <span className="case-teaser-read">Read the full story &rarr;</span>
+              </button>
+            </ScrollReveal>
+          ))}
         </div>
-      </section>
+      </aside>
+      </div>
+
+      {/* CASE STUDY MODAL */}
+      {activeCaseStudy !== null && (
+        <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && setActiveCaseStudy(null)}>
+          <div className="modal case-study-modal">
+            <button className="modal-close" onClick={() => setActiveCaseStudy(null)}>&times;</button>
+            <span className="case-study-label">{caseStudies[activeCaseStudy].label}</span>
+            <span className="case-study-dimension">{caseStudies[activeCaseStudy].dimension}</span>
+            <h2 className="case-study-modal-title">{caseStudies[activeCaseStudy].headline}</h2>
+            {caseStudies[activeCaseStudy].body.map((p, i) => (
+              <p key={i} className="case-study-modal-body">{p}</p>
+            ))}
+            <div className="case-study-lesson">
+              <span className="case-study-lesson-label">The lesson</span>
+              <p>{caseStudies[activeCaseStudy].lesson}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* LEVEL 3: SELF-CHECK */}
       <section className="article-section">
