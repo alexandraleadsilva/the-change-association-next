@@ -588,23 +588,16 @@ footer {
   text-align: center;
   padding: 24px 20px;
   width: 160px;
-  background: var(--cream);
-  border: 1px solid var(--border);
+  background: var(--navy);
+  border: 1px solid var(--navy);
   cursor: pointer;
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
   font-family: var(--ui);
 }
 .tca-card:hover {
   border-color: var(--gold);
-  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.08);
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.15);
   transform: translateY(-4px) !important;
-}
-.tca-card-active {
-  background: var(--navy);
-  border-color: var(--navy);
-}
-.tca-card-active:hover {
-  border-color: var(--navy);
 }
 .tca-card-num {
   font-size: 10px;
@@ -617,20 +610,14 @@ footer {
   font-family: var(--serif);
   font-size: 20px;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--cream);
   margin-bottom: 6px;
   line-height: 1.2;
 }
-.tca-card-active .tca-card-name {
-  color: var(--cream);
-}
 .tca-card-focus {
   font-size: 11px;
-  color: var(--text-mid);
-  line-height: 1.4;
-}
-.tca-card-active .tca-card-focus {
   color: rgba(234, 228, 213, 0.6);
+  line-height: 1.4;
 }
 .tca-connector {
   display: flex;

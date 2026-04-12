@@ -11,28 +11,11 @@ const pillars = [
 ];
 
 export function TCAModelDiagram() {
-  const [activeId, setActiveId] = useState("pillar-1");
   const [animated, setAnimated] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimated(true), 100);
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    function onScroll() {
-      const sections = pillars.map((p) => document.getElementById(p.id));
-      let current = "pillar-1";
-      for (const section of sections) {
-        if (section && window.scrollY >= section.offsetTop - 200) {
-          current = section.id;
-        }
-      }
-      setActiveId(current);
-    }
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   function scrollTo(id: string) {
@@ -46,7 +29,7 @@ export function TCAModelDiagram() {
         {pillars.map((p, i) => (
           <div key={p.id} className="tca-diagram-step">
             <button
-              className={`tca-card${activeId === p.id ? " tca-card-active" : ""}`}
+              className="tca-card"
               onClick={() => scrollTo(p.id)}
               style={{
                 opacity: animated ? 1 : 0,
