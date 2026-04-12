@@ -904,8 +904,12 @@ footer {
 .dimension-card-active:hover {
   border-color: var(--gold);
 }
-.dimension-icon {
-  font-size: 28px;
+.dimension-num {
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
   margin-bottom: 12px;
 }
 .dimension-name {
@@ -943,7 +947,13 @@ footer {
   gap: 16px;
   margin-bottom: 20px;
 }
-.dimension-icon-lg { font-size: 36px; }
+.dimension-num-lg {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
 .detail-title {
   font-family: var(--serif);
   font-size: 32px;

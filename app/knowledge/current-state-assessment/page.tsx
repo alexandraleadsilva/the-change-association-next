@@ -9,7 +9,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 const dimensions = [
   {
     id: "people",
-    icon: "👤",
+    num: "01",
     name: "People",
     summary: "Who is affected, how they feel, and what they need to move forward.",
     what: "A people assessment looks at the individuals and teams who will be impacted by the change. It goes beyond headcount and org charts to understand how people are currently experiencing their work, their level of trust in leadership, and their emotional readiness for change.",
@@ -34,7 +34,7 @@ const dimensions = [
   },
   {
     id: "process",
-    icon: "⚙️",
+    num: "02",
     name: "Process",
     summary: "How work actually gets done today, not how it is documented.",
     what: "A process assessment examines the real workflows, handoffs, and decision points that define how work gets done. The goal is to understand the gap between documented processes and actual practice, because change that targets the former while ignoring the latter will fail.",
@@ -59,7 +59,7 @@ const dimensions = [
   },
   {
     id: "culture",
-    icon: "🏛️",
+    num: "03",
     name: "Culture",
     summary: "The unwritten rules, behaviours, and norms that shape how things really work.",
     what: "Culture is the environment in which change either takes root or dies. A culture assessment seeks to understand the values, behaviours, and power dynamics that operate beneath the surface. It asks: what does this organisation reward, tolerate, and punish, and how will that help or hinder the change?",
@@ -84,7 +84,7 @@ const dimensions = [
   },
   {
     id: "capability",
-    icon: "📐",
+    num: "04",
     name: "Capability",
     summary: "Whether people have the skills, knowledge, and confidence to work in new ways.",
     what: "A capability assessment looks at whether the organisation and its people have what they need to operate in the future state. This is not just about training needs. It is about confidence, judgement, and the practical ability to do things differently when it matters.",
@@ -109,7 +109,7 @@ const dimensions = [
   },
   {
     id: "systems",
-    icon: "💻",
+    num: "05",
     name: "Systems",
     summary: "The technology, tools, and infrastructure that enable or constrain the way people work.",
     what: "A systems assessment examines whether the current technology landscape supports or inhibits the change. It looks at the tools people use daily, the data they rely on, and the infrastructure that connects (or disconnects) the organisation. Systems that are not ready for the future state will undermine adoption no matter how good the people strategy is.",
@@ -183,7 +183,7 @@ export default function CurrentStateAssessment() {
                 className={`dimension-card${expanded === d.id ? " dimension-card-active" : ""}`}
                 onClick={() => toggle(d.id)}
               >
-                <span className="dimension-icon">{d.icon}</span>
+                <span className="dimension-num">{d.num}</span>
                 <span className="dimension-name">{d.name}</span>
                 <span className="dimension-summary">{d.summary}</span>
                 <span className="dimension-expand">{expanded === d.id ? "Close" : "Explore"} &darr;</span>
@@ -202,7 +202,7 @@ export default function CurrentStateAssessment() {
               <div key={d.id}>
                 <ScrollReveal direction="up">
                   <div className="detail-header">
-                    <span className="dimension-icon-lg">{d.icon}</span>
+                    <span className="dimension-num-lg">{d.num}</span>
                     <h2 className="detail-title">{d.name}</h2>
                   </div>
                   <p className="detail-body">{d.what}</p>
