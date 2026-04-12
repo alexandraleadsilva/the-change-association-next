@@ -854,8 +854,6 @@ footer {
 }
 .article-section {
   padding: 56px 48px;
-  max-width: 960px;
-  margin: 0 auto;
 }
 .article-section-title {
   font-family: var(--serif);
@@ -1261,6 +1259,18 @@ footer {
   color: var(--text-dark);
   line-height: 1.7;
 }
+
+.case-study-source {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--ui);
+  font-size: 12px;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.case-study-source:hover { color: var(--navy); }
 
 @media (max-width: 1024px) {
   .article-with-sidebar { grid-template-columns: 1fr; }

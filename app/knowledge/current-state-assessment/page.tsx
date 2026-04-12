@@ -167,37 +167,46 @@ export default function CurrentStateAssessment() {
 
   const caseStudies = [
     {
-      label: "Case Study 01",
-      headline: "The ERP rollout that ignored how people actually worked",
-      hook: "They mapped every process on paper. They never once watched how work was actually done.",
+      label: "Lidl",
+      headline: "Lidl's \u20AC500 million SAP project that never went live",
+      hook: "Seven years. Half a billion euros. They tried to make the system fit the old way of working instead of understanding it first.",
       dimension: "Process",
       body: [
-        "A mid-sized manufacturer invested heavily in a new ERP system to replace ageing infrastructure. The project team mapped the official processes and configured the system accordingly. What they did not do was observe how work actually happened on the shop floor.",
-        "Supervisors had built years of workarounds into spreadsheets and informal handoffs that kept production running. When the new system went live, those workarounds disappeared overnight. Production slowed, errors spiked, and frontline staff lost confidence in both the system and the leadership team that imposed it.",
+        "In 2011, Lidl embarked on a major SAP implementation to replace its legacy inventory management system. The project, internally known as eLWIS, was originally budgeted at \u20AC201 million. It would eventually cost \u20AC500 million over seven years before being abandoned entirely in 2018.",
+        "The core problem was a failure to properly assess the current state of Lidl's processes. Lidl's inventory system was built around purchase prices, while SAP is designed around retail prices. Rather than understanding this fundamental gap and adapting their approach, Lidl chose to heavily customise SAP to match their existing way of working. The modifications became increasingly complex, breaking the integrity of the platform and introducing layers of technical debt.",
+        "By 2018, the system was still not fit for purpose. Lidl scrapped the project and reverted to an updated version of its original legacy system. The lesson was expensive but clear: they had tried to force a new system onto old processes without first understanding why those processes existed and what would need to change.",
       ],
-      lesson: "The process dimension was assessed on paper, not in practice. A current state assessment that included shadowing and process walk-throughs would have surfaced the gap between documented and actual workflows before it became a crisis.",
+      lesson: "A thorough current state assessment of the process dimension would have surfaced the pricing model incompatibility before a single line of code was customised. Understanding how work actually gets done is not optional when implementing systems change.",
+      source: "https://www.computerweekly.com/news/252446965/Lidl-dumps-500m-SAP-project",
+      sourceLabel: "Computer Weekly",
     },
     {
-      label: "Case Study 02",
-      headline: "The culture that killed a merger before it started",
-      hook: "Due diligence covered everything except the one thing that mattered most.",
+      label: "Daimler-Chrysler",
+      headline: "The $38 billion merger destroyed by culture",
+      hook: "It was called a merger of equals. It was anything but. No one assessed whether two fundamentally different cultures could work together.",
       dimension: "Culture",
       body: [
-        "Two professional services firms merged with the goal of creating a stronger combined offering. On paper, the strategic rationale was sound. Due diligence covered financials, clients, and contracts thoroughly.",
-        "What no one assessed was culture. One firm operated on consensus and collaboration. The other ran on hierarchy and individual performance. When integration began, decision-making ground to a halt. Senior leaders from each side operated on fundamentally different assumptions about how work should be done. Within eighteen months, a third of the senior team had left.",
+        "In 1998, Daimler-Benz acquired Chrysler Corporation for $38 billion in what was described as the world's largest ever cross-border deal. The strategic rationale was compelling: a German engineering powerhouse combining with an American mass-market manufacturer to create a global automotive leader.",
+        "What neither side adequately assessed was culture. Daimler operated on German engineering precision, hierarchical decision-making, and long-term planning. Chrysler's culture was built on American-style autonomy, speed, and entrepreneurial risk-taking. These differences were not cosmetic. They shaped how every meeting was run, how every decision was made, and how every conflict was handled.",
+        "The two companies effectively operated as separate entities for years. Synergies in development and production were minimal. By 2006, Chrysler was reporting losses of $1.5 billion. Daimler's CEO resigned in 2005 as the share price collapsed. In 2007, Daimler sold Chrysler for just $6 billion, a fraction of the original price. Chrysler filed for bankruptcy two years later.",
       ],
-      lesson: "The culture dimension was absent from the assessment entirely. Understanding how each organisation made decisions, handled conflict, and rewarded performance would have revealed the integration risk before the deal closed.",
+      lesson: "The culture dimension was absent from the pre-merger assessment. A proper current state assessment of both organisations' cultures, examining how decisions were made, how conflict was handled, and what behaviours were rewarded, would have revealed the integration risk before the deal was signed.",
+      source: "https://en.wikipedia.org/wiki/DaimlerChrysler",
+      sourceLabel: "Wikipedia",
     },
     {
-      label: "Case Study 03",
-      headline: "The transformation that trained everyone but changed nothing",
-      hook: "90% completion rates. Near-zero adoption. The training worked perfectly. The change did not.",
-      dimension: "Capability",
+      label: "Target Canada",
+      headline: "Target's $2.1 billion failure to understand its own systems",
+      hook: "$2.1 billion lost. 133 stores closed. 17,600 jobs cut. The shelves were empty because the data was wrong.",
+      dimension: "Systems",
       body: [
-        "A financial services organisation launched a major transformation programme to modernise its operating model. The programme included an extensive training rollout covering new systems, new processes, and new ways of working. Completion rates were above 90%.",
-        "Six months after launch, adoption remained low. People had attended the training but returned to their old ways of working. The reason was straightforward: no one had assessed whether people had the confidence, not just the knowledge, to change. Managers had not been equipped to coach their teams. The capability gap was behavioural, not technical, and the training programme had missed it entirely.",
+        "In 2013, Target launched its expansion into Canada, opening 133 stores within a year. The ambition was significant and the brand recognition was strong. Canadian consumers had been cross-border shopping at American Target stores for years. The demand was there.",
+        "The failure was in the systems. Target implemented a new SAP inventory management system for the Canadian operation but did not properly assess the state of its data. Product dimensions, pricing, and supply chain information were riddled with errors. The result was catastrophic: shelves sat empty because the system did not know what to order, how much to order, or where to send it.",
+        "Rather than delay the launch to fix the data, Target pushed ahead. Management did not want to continue paying rent on unopened stores. The customer experience was disastrous from day one. Canadians who expected the American Target experience found bare shelves and higher prices. By January 2015, Target announced it was closing all 133 Canadian stores, resulting in 17,600 job losses and $2.1 billion in accumulated losses.",
       ],
-      lesson: "The capability dimension was assessed through a training lens rather than a behavioural one. A deeper assessment would have revealed that knowledge transfer alone was insufficient, and that manager readiness was the critical gap.",
+      lesson: "The systems dimension was assessed in terms of technology choice but not data readiness. A current state assessment that examined data quality, integration requirements, and end-user experience would have revealed that the foundation was not ready for launch.",
+      source: "https://en.wikipedia.org/wiki/Target_Canada",
+      sourceLabel: "Wikipedia",
     },
   ];
 
@@ -304,7 +313,7 @@ export default function CurrentStateAssessment() {
       {/* SIDEBAR: CASE STUDIES */}
       <aside className="article-sidebar">
         <div className="sidebar-sticky">
-          <span className="case-sidebar-heading">When This Goes Wrong</span>
+          <span className="case-sidebar-heading">Enterprise Examples</span>
           {caseStudies.map((cs, i) => (
             <ScrollReveal key={i} direction="right" delay={i * 120}>
               <button className="case-teaser" onClick={() => setActiveCaseStudy(i)}>
@@ -334,6 +343,14 @@ export default function CurrentStateAssessment() {
               <span className="case-study-lesson-label">The lesson</span>
               <p>{caseStudies[activeCaseStudy].lesson}</p>
             </div>
+            <a
+              href={caseStudies[activeCaseStudy].source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-study-source"
+            >
+              Source: {caseStudies[activeCaseStudy].sourceLabel} &rarr;
+            </a>
           </div>
         </div>
       )}
