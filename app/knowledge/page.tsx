@@ -88,6 +88,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="Which change framework should you use, and does it even matter?"
                   tag="Frameworks & Methodology"
+                  href="/knowledge/change-frameworks"
                 />
                 <ArticleLink
                   title="How to conduct a current state assessment that reveals what surveys miss"
