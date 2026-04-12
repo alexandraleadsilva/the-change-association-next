@@ -47,11 +47,11 @@ export default function Contact() {
           <div className="contact-details">
             <div className="contact-item">
               <span className="contact-item-label">Email</span>
-              <span className="contact-item-value"><a href="mailto:hello@thechangeassociation.com">hello@thechangeassociation.com</a></span>
+              <span className="contact-item-value"><a href="mailto:enquiries@thechangeassociation.com">enquiries@thechangeassociation.com</a></span>
             </div>
             <div className="contact-item">
               <span className="contact-item-label">Follow Us</span>
-              <span className="contact-item-value"><a href="#">LinkedIn | The Change Association</a></span>
+              <span className="contact-item-value"><a href="https://www.linkedin.com/company/thechangeassociation/" target="_blank" rel="noopener noreferrer">LinkedIn | The Change Association</a></span>
             </div>
             <div className="contact-item">
               <span className="contact-item-label">Certifications</span>

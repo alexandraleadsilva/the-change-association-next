@@ -77,7 +77,7 @@ const jsonLd = {
       url: "https://thechangeassociation.com",
       description:
         "The professional body for change leadership. Equipping and certifying professionals who lead organisational change that delivers real, lasting impact.",
-      sameAs: [],
+      sameAs: ["https://www.linkedin.com/company/thechangeassociation/"],
     },
     {
       "@type": "WebSite",
