@@ -308,53 +308,6 @@ export default function CurrentStateAssessment() {
         </section>
       )}
 
-      </div>
-
-      {/* SIDEBAR: CASE STUDIES */}
-      <aside className="article-sidebar">
-        <div className="sidebar-sticky">
-          <span className="case-sidebar-heading">Enterprise Examples</span>
-          {caseStudies.map((cs, i) => (
-            <ScrollReveal key={i} direction="right" delay={i * 120}>
-              <button className="case-teaser" onClick={() => setActiveCaseStudy(i)}>
-                <span className="case-teaser-label">{cs.dimension}</span>
-                <span className="case-teaser-headline">{cs.headline}</span>
-                <span className="case-teaser-hook">{cs.hook}</span>
-                <span className="case-teaser-read">Read the full story &rarr;</span>
-              </button>
-            </ScrollReveal>
-          ))}
-        </div>
-      </aside>
-      </div>
-
-      {/* CASE STUDY MODAL */}
-      {activeCaseStudy !== null && (
-        <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && setActiveCaseStudy(null)}>
-          <div className="modal case-study-modal">
-            <button className="modal-close" onClick={() => setActiveCaseStudy(null)}>&times;</button>
-            <span className="case-study-label">{caseStudies[activeCaseStudy].label}</span>
-            <span className="case-study-dimension">{caseStudies[activeCaseStudy].dimension}</span>
-            <h2 className="case-study-modal-title">{caseStudies[activeCaseStudy].headline}</h2>
-            {caseStudies[activeCaseStudy].body.map((p, i) => (
-              <p key={i} className="case-study-modal-body">{p}</p>
-            ))}
-            <div className="case-study-lesson">
-              <span className="case-study-lesson-label">The lesson</span>
-              <p>{caseStudies[activeCaseStudy].lesson}</p>
-            </div>
-            <a
-              href={caseStudies[activeCaseStudy].source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="case-study-source"
-            >
-              Source: {caseStudies[activeCaseStudy].sourceLabel} &rarr;
-            </a>
-          </div>
-        </div>
-      )}
-
       {/* LEVEL 3: SELF-CHECK */}
       <section className="article-section">
         <ScrollReveal direction="up">
@@ -406,6 +359,53 @@ export default function CurrentStateAssessment() {
           <Link href="/knowledge" className="btn">Explore the Full Model</Link>
         </ScrollReveal>
       </section>
+
+      </div>
+
+      {/* SIDEBAR: CASE STUDIES */}
+      <aside className="article-sidebar">
+        <div className="sidebar-sticky">
+          <span className="case-sidebar-heading">Enterprise Examples</span>
+          {caseStudies.map((cs, i) => (
+            <ScrollReveal key={i} direction="right" delay={i * 120}>
+              <button className="case-teaser" onClick={() => setActiveCaseStudy(i)}>
+                <span className="case-teaser-label">{cs.dimension}</span>
+                <span className="case-teaser-headline">{cs.headline}</span>
+                <span className="case-teaser-hook">{cs.hook}</span>
+                <span className="case-teaser-read">Read the full story &rarr;</span>
+              </button>
+            </ScrollReveal>
+          ))}
+        </div>
+      </aside>
+      </div>
+
+      {/* CASE STUDY MODAL */}
+      {activeCaseStudy !== null && (
+        <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && setActiveCaseStudy(null)}>
+          <div className="modal case-study-modal">
+            <button className="modal-close" onClick={() => setActiveCaseStudy(null)}>&times;</button>
+            <span className="case-study-label">{caseStudies[activeCaseStudy].label}</span>
+            <span className="case-study-dimension">{caseStudies[activeCaseStudy].dimension}</span>
+            <h2 className="case-study-modal-title">{caseStudies[activeCaseStudy].headline}</h2>
+            {caseStudies[activeCaseStudy].body.map((p, i) => (
+              <p key={i} className="case-study-modal-body">{p}</p>
+            ))}
+            <div className="case-study-lesson">
+              <span className="case-study-lesson-label">The lesson</span>
+              <p>{caseStudies[activeCaseStudy].lesson}</p>
+            </div>
+            <a
+              href={caseStudies[activeCaseStudy].source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-study-source"
+            >
+              Source: {caseStudies[activeCaseStudy].sourceLabel} &rarr;
+            </a>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
