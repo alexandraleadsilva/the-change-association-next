@@ -86,7 +86,7 @@ export default function ChangeBites() {
                 className="btn-gold link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read Article
+                Coming Soon
               </a>
             </div>
           )}
@@ -121,7 +121,7 @@ export default function ChangeBites() {
                 className="btn link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read More
+                Coming Soon
               </a>
             </div>
           )}
@@ -155,7 +155,7 @@ export default function ChangeBites() {
                 className="btn link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read More
+                Coming Soon
               </a>
             </div>
           )}
@@ -191,7 +191,7 @@ export default function ChangeBites() {
                 className="btn link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read More
+                Coming Soon
               </a>
             </div>
           )}
@@ -226,7 +226,7 @@ export default function ChangeBites() {
                 className="btn link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read More
+                Coming Soon
               </a>
             </div>
           )}
@@ -262,7 +262,7 @@ export default function ChangeBites() {
                 className="btn link-disabled"
                 onClick={(e) => e.preventDefault()}
               >
-                Read More
+                Coming Soon
               </a>
             </div>
           )}
