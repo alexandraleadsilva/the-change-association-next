@@ -3,8 +3,81 @@ import { PageTransition } from "@/components/PageTransition";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Change Association",
-  description: "Equipping professionals to lead change that delivers real, lasting impact.",
+  title: {
+    default: "The Change Association | Leading Change That Lasts",
+    template: "%s | The Change Association",
+  },
+  description:
+    "The professional body for change leadership. Equipping and certifying professionals who lead organisational change that delivers real, lasting impact.",
+  keywords: [
+    "change management",
+    "organisational change",
+    "change leadership",
+    "TCA Change Model",
+    "change management certification",
+    "change management framework",
+    "digital transformation",
+    "leadership development",
+    "HR transformation",
+    "change adoption",
+  ],
+  authors: [{ name: "The Change Association" }],
+  metadataBase: new URL("https://thechangeassociation.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://thechangeassociation.com",
+    siteName: "The Change Association",
+    title: "The Change Association | Leading Change That Lasts",
+    description:
+      "The professional body for change leadership. A five-pillar framework for leading organisational change that delivers real, lasting impact.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Change Association",
+    description:
+      "Equipping professionals to lead organisational change that delivers real, lasting impact.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://thechangeassociation.com",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "The Change Association",
+      url: "https://thechangeassociation.com",
+      description:
+        "The professional body for change leadership. Equipping and certifying professionals who lead organisational change that delivers real, lasting impact.",
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      name: "The Change Association",
+      url: "https://thechangeassociation.com",
+      description:
+        "Knowledge, frameworks, and certification for change professionals.",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://thechangeassociation.com/knowledge",
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -20,6 +93,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body><PageTransition>{children}</PageTransition></body>

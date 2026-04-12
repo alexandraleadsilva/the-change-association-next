@@ -4,7 +4,9 @@ import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "About | The Change Association",
+  title: "About",
+  description: "The Change Association is a professional body committed to leading change in a way that is practical, centred on people, and grounded in real impact.",
+  alternates: { canonical: "https://thechangeassociation.com/about" },
 };
 
 export default function About() {
