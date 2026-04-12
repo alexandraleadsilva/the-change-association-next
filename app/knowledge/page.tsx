@@ -92,6 +92,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to conduct a current state assessment that reveals what surveys miss"
                   tag="Diagnostic Methods"
+                  href="/knowledge/current-state-assessment"
                 />
                 <ArticleLink
                   title="What does a meaningful gap analysis look like, and how do you avoid making it a tick-box exercise?"
