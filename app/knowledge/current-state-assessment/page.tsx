@@ -259,6 +259,55 @@ export default function CurrentStateAssessment() {
         </section>
       )}
 
+      {/* CASE STUDIES */}
+      <section className="article-section case-studies-section">
+        <ScrollReveal direction="up">
+          <h2 className="article-section-title">When This Goes Wrong</h2>
+          <p className="article-section-desc">These are generalised accounts drawn from common patterns in organisational change. They illustrate what happens when the current state is not properly understood before a transformation begins.</p>
+        </ScrollReveal>
+
+        <div className="case-studies-grid">
+          <ScrollReveal direction="up" delay={100}>
+            <div className="case-study-card">
+              <span className="case-study-label">Case Study 01</span>
+              <h3 className="case-study-title">The ERP rollout that ignored how people actually worked</h3>
+              <p className="case-study-body">A mid-sized manufacturer invested heavily in a new ERP system to replace ageing infrastructure. The project team mapped the official processes and configured the system accordingly. What they did not do was observe how work actually happened on the shop floor.</p>
+              <p className="case-study-body">Supervisors had built years of workarounds into spreadsheets and informal handoffs that kept production running. When the new system went live, those workarounds disappeared overnight. Production slowed, errors spiked, and frontline staff lost confidence in both the system and the leadership team that imposed it.</p>
+              <div className="case-study-lesson">
+                <span className="case-study-lesson-label">The lesson</span>
+                <p>The process dimension was assessed on paper, not in practice. A current state assessment that included shadowing and process walk-throughs would have surfaced the gap between documented and actual workflows before it became a crisis.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={200}>
+            <div className="case-study-card">
+              <span className="case-study-label">Case Study 02</span>
+              <h3 className="case-study-title">The culture that killed a merger before it started</h3>
+              <p className="case-study-body">Two professional services firms merged with the goal of creating a stronger combined offering. On paper, the strategic rationale was sound. Due diligence covered financials, clients, and contracts thoroughly.</p>
+              <p className="case-study-body">What no one assessed was culture. One firm operated on consensus and collaboration. The other ran on hierarchy and individual performance. When integration began, decision-making ground to a halt. Senior leaders from each side operated on fundamentally different assumptions about how work should be done. Within eighteen months, a third of the senior team had left.</p>
+              <div className="case-study-lesson">
+                <span className="case-study-lesson-label">The lesson</span>
+                <p>The culture dimension was absent from the assessment entirely. Understanding how each organisation made decisions, handled conflict, and rewarded performance would have revealed the integration risk before the deal closed.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={300}>
+            <div className="case-study-card">
+              <span className="case-study-label">Case Study 03</span>
+              <h3 className="case-study-title">The transformation that trained everyone but changed nothing</h3>
+              <p className="case-study-body">A financial services organisation launched a major transformation programme to modernise its operating model. The programme included an extensive training rollout covering new systems, new processes, and new ways of working. Completion rates were above 90%.</p>
+              <p className="case-study-body">Six months after launch, adoption remained low. People had attended the training but returned to their old ways of working. The reason was straightforward: no one had assessed whether people had the confidence, not just the knowledge, to change. Managers had not been equipped to coach their teams. The capability gap was behavioural, not technical, and the training programme had missed it entirely.</p>
+              <div className="case-study-lesson">
+                <span className="case-study-lesson-label">The lesson</span>
+                <p>The capability dimension was assessed through a training lens rather than a behavioural one. A deeper assessment would have revealed that knowledge transfer alone was insufficient, and that manager readiness was the critical gap.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* LEVEL 3: SELF-CHECK */}
       <section className="article-section">
         <ScrollReveal direction="up">
