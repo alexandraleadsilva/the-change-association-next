@@ -17,39 +17,43 @@ export default function Home() {
           <ScrollReveal direction="left" className="hero-left">
             <h1 className="hero-quote">&ldquo;Defining the<br />Future of<br />Change<br />Management&rdquo;</h1>
           </ScrollReveal>
-          <ScrollReveal direction="up" delay={300} className="split-l">
+
+          <div className="home-cards">
+            <ScrollReveal direction="up" delay={100}>
+              <Link href="/knowledge" className="home-card">
+                <span className="home-card-label">Knowledge Hub</span>
+                <span className="home-card-title">The TCA Change Model</span>
+                <span className="home-card-desc">A five-pillar framework for leading change that lasts. Explore Direction, Engagement, Enablement, Execution, and Sustainment.</span>
+                <span className="home-card-link">Explore the model &rarr;</span>
+              </Link>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={200}>
+              <Link href="/change-bites" className="home-card">
+                <span className="home-card-label">Change Bites</span>
+                <span className="home-card-title">Sharp thinking on change</span>
+                <span className="home-card-desc">Short, direct articles on the questions change professionals are actually asking.</span>
+                <span className="home-card-link">Read articles &rarr;</span>
+              </Link>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={300}>
+              <Link href="/contact" className="home-card">
+                <span className="home-card-label">Get Involved</span>
+                <span className="home-card-title">Join the conversation</span>
+                <span className="home-card-desc">Interested in certifications, contributing to the knowledge hub, or partnering with us? Get in touch.</span>
+                <span className="home-card-link">Contact us &rarr;</span>
+              </Link>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal direction="up" delay={400} className="split-l">
             <span className="email-heading">Get Exclusive Change Management Tips</span>
             <SubscribeModal />
           </ScrollReveal>
         </div>
         <div className="home-right">
-          <div className="split-r">
-            <ScrollReveal direction="right" delay={100}>
-              <div className="article-item">
-                <h3>Why do so many change initiatives fail even when organisations follow the right frameworks?</h3>
-                <p>Most organisations invest heavily in change methodologies, tools, and structured approaches, yet outcomes still fall short. The issue is rarely the framework itself. It is how well it is translated into real behaviour, alignment, and understanding across the organisation. There is often a missing layer between knowing the process and enabling true adoption.</p>
-                <Link href="/knowledge" className="btn">Explore Topics</Link>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={250}>
-              <div className="article-item">
-                <h3>Are you actually leading change or just managing tasks through a change plan?</h3>
-                <p>Change plans can create a sense of control, but control is not the same as leadership. Many professionals find themselves focused on activities, timelines, and deliverables without fully engaging with how people are experiencing the change. Real leadership goes beyond execution. It shapes understanding, belief, and commitment.</p>
-                <Link href="/change-bites" className="btn">Read More</Link>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={400}>
-              <div className="article-item">
-                <h3>Why does change fail when people understand the process but not the experience?</h3>
-                <p>Even when communication is clear and processes are well defined, change can still struggle to take hold. Understanding what needs to happen is not the same as experiencing what it feels like to change. Without addressing the human side of transition, clarity alone is not enough to drive lasting adoption.</p>
-                <Link href="/change-bites" className="btn">Read More</Link>
-              </div>
-            </ScrollReveal>
-          </div>
+          <ChangeFeed limit={5} />
         </div>
       </section>
-
-      <ChangeFeed limit={5} />
 
       <Footer />
     </>
