@@ -483,49 +483,11 @@ footer {
   background-size: cover;
   background-position: center;
 }
-.mv-image.workshop {
-  background-color: #C8C0B0;
-  /* Add workshop.jpg to /public/img/ to enable */
-  /* background-image: url('/img/workshop.jpg'); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mv-image.mission-img {
+  background-image: url('/img/mission.jpg');
 }
-.mv-image.globe {
-  background: linear-gradient(135deg, #0A1628 0%, #0E1F3A 40%, #152540 70%, #0A1220 100%);
-  position: relative;
-  overflow: hidden;
-}
-.mv-image.globe::before {
-  content: '';
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  border: 1px solid rgba(196, 148, 58, 0.15);
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -40%);
-}
-.mv-image.globe::after {
-  content: '';
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  border: 1px solid rgba(196, 148, 58, 0.1);
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%, -30%);
-  box-shadow: inset 0 0 120px rgba(196,80,60,0.08), 0 0 80px rgba(196,80,60,0.06);
-}
-.globe-glow {
-  position: absolute;
-  width: 600px;
-  height: 300px;
-  background: radial-gradient(ellipse, rgba(180,60,60,0.12) 0%, transparent 70%);
-  bottom: -60px;
-  right: -60px;
+.mv-image.vision-img {
+  background-image: url('/img/vision.jpg');
 }
 .mv-content {
   padding: 80px 72px;

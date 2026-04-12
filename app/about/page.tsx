@@ -36,9 +36,7 @@ export default function About() {
       <hr className="section-divider" />
 
       <div className="mv-split">
-        <div className="mv-image workshop">
-          <span className="img-placeholder-note">Add workshop photo here</span>
-        </div>
+        <div className="mv-image mission-img"></div>
         <div className="mv-content">
           <ScrollReveal direction="right" delay={200}>
             <h2>Mission</h2>
@@ -54,9 +52,7 @@ export default function About() {
             <p>To shape the future of change by setting the global standard for human centred and impactful change leadership.</p>
           </ScrollReveal>
         </div>
-        <div className="mv-image globe">
-          <div className="globe-glow"></div>
-        </div>
+        <div className="mv-image vision-img"></div>
       </div>
 
       <Footer showAbout />
