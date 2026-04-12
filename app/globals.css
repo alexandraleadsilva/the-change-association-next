@@ -878,6 +878,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  align-items: stretch;
 }
 .dimension-card {
   display: flex;
@@ -891,6 +892,7 @@ footer {
   transition: all 0.25s;
   font-family: var(--ui);
   width: 100%;
+  height: 100%;
 }
 .dimension-card:hover {
   border-color: var(--gold);
@@ -1010,7 +1012,48 @@ footer {
   border-radius: 50%;
   background: var(--gold);
 }
-.detail-list-methods li::before {
+.detail-list-item {
+  cursor: pointer;
+}
+.detail-list-item-head {
+  font-family: var(--ui);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+  transition: color 0.2s;
+}
+.detail-list-item-head:hover { color: var(--navy); }
+.detail-list-item-head::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.detail-list-item-toggle {
+  font-size: 11px;
+  color: var(--gold);
+  margin-left: 8px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.detail-list-item-toggle.open {
+  transform: rotate(90deg);
+}
+.detail-list-item-body {
+  padding: 10px 0 4px 20px;
+  font-family: var(--ui);
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  max-width: 560px;
+}
+.detail-list-methods .detail-list-item-head::before {
   border-radius: 0;
   width: 8px;
   height: 2px;
