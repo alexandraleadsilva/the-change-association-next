@@ -39,21 +39,21 @@ export default function About() {
         <div className="mv-image workshop">
           <span className="img-placeholder-note">Add workshop photo here</span>
         </div>
-        <ScrollReveal direction="right" delay={200}>
-          <div className="mv-content">
+        <div className="mv-content">
+          <ScrollReveal direction="right" delay={200}>
             <h2>Mission</h2>
             <p>To equip and certify professionals who lead change that delivers real and lasting impact.</p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </div>
 
       <div className="mv-split">
-        <ScrollReveal direction="left" delay={200}>
-          <div className="mv-content vision-text">
+        <div className="mv-content">
+          <ScrollReveal direction="left" delay={200}>
             <h2>Vision</h2>
             <p>To shape the future of change by setting the global standard for human centred and impactful change leadership.</p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
         <div className="mv-image globe">
           <div className="globe-glow"></div>
         </div>
