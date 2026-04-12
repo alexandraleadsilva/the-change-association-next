@@ -34,7 +34,11 @@ export function ArticleLink({ title, tag, href = "#" }: { title: string; tag: st
         <div className="article-tag">{tag}</div>
       </div>
       <span className="article-link-arrow">
-        <span className="read-more-label">Read more &rarr;</span>
+        {hovered ? (
+          <span className="coming-soon-label" style={{ display: "inline-block" }}>Coming soon</span>
+        ) : (
+          <span className="read-more-label">Read more &rarr;</span>
+        )}
       </span>
     </a>
   );
