@@ -98,6 +98,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What does a meaningful gap analysis look like, and how do you avoid making it a tick-box exercise?"
                   tag="Gap Analysis"
+                  href="/knowledge/gap-analysis"
                 />
               </div>
             </div>
