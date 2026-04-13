@@ -110,6 +110,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to get executives on board when they say yes but act no"
                   tag="Leadership & Sponsorship"
+                  href="/knowledge/executive-sponsorship"
                 />
                 <ArticleLink
                   title="Are you actually leading change or just managing tasks through a change plan?"
