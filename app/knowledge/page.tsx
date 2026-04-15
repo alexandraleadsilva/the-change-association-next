@@ -115,6 +115,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="Are you actually leading change or just managing tasks through a change plan?"
                   tag="Change Leadership"
+                  href="/knowledge/leading-vs-managing-change"
                 />
                 <ArticleLink
                   title="What does genuine executive sponsorship look like in practice, and how do you build it?"

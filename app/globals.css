@@ -1526,6 +1526,220 @@ footer {
   .diagnostic-question { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 
+/* Assessment Pairs */
+.assessment-pairs {
+  display: flex;
+  flex-direction: column;
+}
+.pair-row {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+.pair-theme {
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+.pair-options {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+.pair-vs {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: #9A9080;
+  display: flex;
+  align-items: center;
+}
+.pair-option {
+  padding: 16px 18px;
+  font-family: var(--ui);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-mid);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+.pair-option:hover {
+  border-color: var(--gold);
+}
+.pair-selected {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--cream);
+}
+.pair-option-leader.pair-selected {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Assessment Result */
+.assessment-result {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.assessment-bar {
+  display: flex;
+  height: 32px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.assessment-bar-manager {
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.6s ease;
+}
+.assessment-bar-manager span {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.assessment-bar-leader {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.6s ease;
+}
+.assessment-bar-leader span {
+  font-family: var(--ui);
+  font-size: 11px;
+  color: var(--navy);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.assessment-result-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.assessment-result-desc {
+  font-family: var(--ui);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* Phase Cards */
+.phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.phase-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--ui);
+  width: 100%;
+  transition: all 0.2s;
+}
+.phase-card:hover {
+  border-color: var(--gold);
+  transform: translateX(4px);
+}
+.phase-card-active {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.phase-card-active .phase-card-pillar { color: var(--gold); }
+.phase-card-active .phase-card-name { color: var(--cream); }
+.phase-card-active .phase-card-question { color: rgba(234, 228, 213, 0.5); }
+.phase-card-pillar {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+.phase-card-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  min-width: 160px;
+  flex-shrink: 0;
+}
+.phase-card-question {
+  font-size: 13px;
+  color: var(--text-mid);
+  font-style: italic;
+}
+
+/* Phase Compare */
+.phase-detail {
+  margin-top: 4px;
+}
+.phase-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.phase-compare-col {
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+.phase-compare-leader {
+  background: rgba(10, 22, 40, 0.03);
+  border-left: 3px solid var(--gold);
+}
+.phase-compare-label {
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 12px;
+}
+.phase-compare-leader .phase-compare-label { color: var(--gold); }
+.phase-compare-text {
+  font-family: var(--ui);
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .pair-options { grid-template-columns: 1fr; }
+  .pair-vs { justify-content: center; }
+  .phase-card { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .phase-compare { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .pair-option { padding: 12px 14px; font-size: 12.5px; }
+  .phase-card { padding: 14px 16px; }
+  .phase-compare-col { padding: 20px; }
+}
+
 /* Framework Cards */
 .framework-grid {
   display: grid;
