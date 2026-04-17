@@ -137,6 +137,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to craft a change narrative that connects strategy to individual meaning"
                   tag="Narrative Design"
+                  href="/knowledge/crafting-narrative"
                 />
               </div>
             </div>
