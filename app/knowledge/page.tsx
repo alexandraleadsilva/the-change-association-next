@@ -358,6 +358,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What does a phased approach to change actually look like in practice?"
                   tag="Planning & Phasing"
+                  href="/knowledge/phased-approach"
                 />
                 <ArticleLink
                   title="How to manage change across multiple sites without losing consistency"
