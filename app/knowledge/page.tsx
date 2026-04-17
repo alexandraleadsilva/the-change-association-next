@@ -197,10 +197,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to build a change communication plan that does more than inform"
                   tag="Communication Planning"
+                  href="/knowledge/communication-planning"
                 />
                 <ArticleLink
                   title="When should you communicate change, and what happens when you get the timing wrong?"
                   tag="Communication Timing"
+                  href="/knowledge/communication-planning"
                 />
               </div>
             </div>
@@ -212,14 +214,17 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What does a good change readiness assessment actually tell you?"
                   tag="Readiness & Assessment"
+                  href="/knowledge/change-impact-assessment"
                 />
                 <ArticleLink
                   title="How to run a stakeholder impact assessment that people actually use"
                   tag="Impact Analysis"
+                  href="/knowledge/change-impact-assessment"
                 />
                 <ArticleLink
                   title="The real reason employees resist change, and it is not what you think"
                   tag="People & Resistance"
+                  href="/knowledge/change-impact-assessment"
                 />
               </div>
             </div>
@@ -231,14 +236,17 @@ export default function Knowledge() {
                 <ArticleLink
                   title="Why change fails when people understand the process but not the experience"
                   tag="Change Adoption"
+                  href="/knowledge/change-experience"
                 />
                 <ArticleLink
                   title="What does the emotional journey of change actually look like for the people going through it?"
                   tag="Transition & Emotion"
+                  href="/knowledge/change-experience"
                 />
                 <ArticleLink
                   title="How to design change touchpoints that build trust instead of eroding it"
                   tag="Experience Design"
+                  href="/knowledge/change-experience"
                 />
               </div>
             </div>
