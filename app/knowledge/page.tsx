@@ -153,6 +153,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What is the difference between project success and change success, and why it matters"
                   tag="Outcomes & Measurement"
+                  href="/knowledge/project-vs-change-success"
                 />
               </div>
             </div>
