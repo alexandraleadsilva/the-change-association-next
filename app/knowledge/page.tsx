@@ -120,6 +120,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What does genuine executive sponsorship look like in practice, and how do you build it?"
                   tag="Sponsorship"
+                  href="/knowledge/building-sponsorship"
                 />
               </div>
             </div>
