@@ -307,10 +307,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="Why digital transformations keep failing the people they are supposed to help"
                   tag="Digital Transformation"
+                  href="/knowledge/tools-and-systems"
                 />
                 <ArticleLink
                   title="What went wrong when a well-planned ERP rollout lost the workforce halfway through?"
                   tag="Digital Transformation"
+                  href="/knowledge/tools-and-systems"
                 />
               </div>
             </div>
