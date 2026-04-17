@@ -273,10 +273,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to design training that drives behaviour change, not just knowledge transfer"
                   tag="Training Design"
+                  href="/knowledge/learning-design"
                 />
                 <ArticleLink
                   title="What is the difference between training for compliance and training for adoption?"
                   tag="Learning Strategy"
+                  href="/knowledge/learning-design"
                 />
               </div>
             </div>
@@ -288,10 +290,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to redesign processes so they reinforce the future state, not the old one"
                   tag="Process Redesign"
+                  href="/knowledge/process-design"
                 />
                 <ArticleLink
                   title="When should process change happen in relation to people change?"
                   tag="Sequencing"
+                  href="/knowledge/process-design"
                 />
               </div>
             </div>
@@ -318,14 +322,17 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What is HR's actual role in an organisational transformation?"
                   tag="HR & People Teams"
+                  href="/knowledge/role-clarity"
                 />
                 <ArticleLink
                   title="When should you bring in an external change manager, and when should you not?"
                   tag="Change Management"
+                  href="/knowledge/role-clarity"
                 />
                 <ArticleLink
                   title="How to define new roles and responsibilities without creating confusion or resistance"
                   tag="Role Design"
+                  href="/knowledge/role-clarity"
                 />
               </div>
             </div>
