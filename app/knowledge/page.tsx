@@ -368,6 +368,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="What can a failed restructure teach us about the timing of change?"
                   tag="Restructure & Timing"
+                  href="/knowledge/restructure-timing"
                 />
               </div>
             </div>
@@ -379,10 +380,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How do you adapt your change approach when the business keeps shifting?"
                   tag="Adaptive Change"
+                  href="/knowledge/delivery-cadence"
                 />
                 <ArticleLink
                   title="How to set up a change delivery rhythm that keeps momentum without burning people out"
                   tag="Delivery Rhythm"
+                  href="/knowledge/delivery-cadence"
                 />
               </div>
             </div>
@@ -394,10 +397,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to design change governance that enables decisions, not delays them"
                   tag="Governance Design"
+                  href="/knowledge/governance"
                 />
                 <ArticleLink
                   title="Who should own what in a change programme, and how do you make that clear?"
                   tag="Decision Rights"
+                  href="/knowledge/governance"
                 />
               </div>
             </div>
@@ -409,10 +414,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to measure change adoption when the metrics are hard to pin down"
                   tag="Measurement & Tracking"
+                  href="/knowledge/adoption-metrics"
                 />
                 <ArticleLink
                   title="What leading indicators actually predict successful change adoption?"
                   tag="Leading Indicators"
+                  href="/knowledge/adoption-metrics"
                 />
               </div>
             </div>
