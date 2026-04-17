@@ -443,10 +443,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to design reinforcement mechanisms that make new behaviours the path of least resistance"
                   tag="Reinforcement Design"
+                  href="/knowledge/reinforcement-planning"
                 />
                 <ArticleLink
                   title="What role do managers play in sustaining change, and how do you equip them for it?"
                   tag="Manager Enablement"
+                  href="/knowledge/reinforcement-planning"
                 />
               </div>
             </div>
@@ -458,10 +460,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to align performance management to the new way of working without creating a backlash"
                   tag="Performance Management"
+                  href="/knowledge/performance-alignment"
                 />
                 <ArticleLink
                   title="When should KPIs change, and what happens when they lag behind the transformation?"
                   tag="KPI Alignment"
+                  href="/knowledge/performance-alignment"
                 />
               </div>
             </div>
@@ -473,14 +477,17 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How do you change culture when you cannot see it, touch it, or measure it easily?"
                   tag="Culture"
+                  href="/knowledge/culture-integration"
                 />
                 <ArticleLink
                   title="How did a merger succeed where most fail, by focusing on culture first?"
                   tag="Culture & Mergers"
+                  href="/knowledge/culture-integration"
                 />
                 <ArticleLink
                   title="What does it actually mean to embed change into culture, and how do you know when it has happened?"
                   tag="Cultural Embedding"
+                  href="/knowledge/culture-integration"
                 />
               </div>
             </div>
@@ -492,10 +499,12 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to build feedback loops that keep change alive after the programme ends"
                   tag="Feedback Loops"
+                  href="/knowledge/continuous-improvement"
                 />
                 <ArticleLink
                   title="What does a post-implementation review actually need to cover, and who should be in the room?"
                   tag="Post-Implementation Review"
+                  href="/knowledge/continuous-improvement"
                 />
               </div>
             </div>
