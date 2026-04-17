@@ -178,14 +178,17 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to engage operational teams who are too busy for another initiative"
                   tag="Stakeholder Engagement"
+                  href="/knowledge/stakeholder-strategy"
                 />
                 <ArticleLink
                   title="How to build a stakeholder map that actually drives your engagement approach"
                   tag="Stakeholder Mapping"
+                  href="/knowledge/stakeholder-strategy"
                 />
                 <ArticleLink
                   title="How to identify and activate the informal influencers who shape adoption"
                   tag="Influence & Networks"
+                  href="/knowledge/stakeholder-strategy"
                 />
               </div>
             </div>
