@@ -148,6 +148,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to define change success before delivery begins, and why most organisations skip this"
                   tag="Success Criteria"
+                  href="/knowledge/defining-success"
                 />
                 <ArticleLink
                   title="What is the difference between project success and change success, and why it matters"
