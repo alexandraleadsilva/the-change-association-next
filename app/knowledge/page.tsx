@@ -132,6 +132,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to build a burning platform that motivates action without creating fear"
                   tag="Communication"
+                  href="/knowledge/burning-platform"
                 />
                 <ArticleLink
                   title="How to craft a change narrative that connects strategy to individual meaning"
