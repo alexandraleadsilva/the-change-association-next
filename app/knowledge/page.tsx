@@ -363,6 +363,7 @@ export default function Knowledge() {
                 <ArticleLink
                   title="How to manage change across multiple sites without losing consistency"
                   tag="Complex Change"
+                  href="/knowledge/multi-site-change"
                 />
                 <ArticleLink
                   title="What can a failed restructure teach us about the timing of change?"
