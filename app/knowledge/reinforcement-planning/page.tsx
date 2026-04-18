@@ -418,6 +418,38 @@ const caseStudies = [
 ];
 
 /* ------------------------------------------------------------------ */
+/*  Topic — Practical Coaching Guide for Managers                      */
+/* ------------------------------------------------------------------ */
+
+const coachingConversations: ActionItem[] = [
+  {
+    text: "The \"What's Changing For You\" Conversation",
+    detail:
+      "When to have it: Within the first week of the change being announced to the team, before assumptions solidify. This is the foundational conversation that ensures every person understands specifically what is changing in their role, their processes, and their daily experience. What to ask: What have you heard so far about this change? What do you think it means for your role specifically? What are you unsure about? What to listen for: Misunderstandings about scope, catastrophising about impact, or dangerous assumptions that nothing will actually change. People often hear the corporate announcement and either inflate the impact or dismiss it entirely. Neither response is helpful. What to do with what you hear: Correct misinformation immediately and honestly. Where you do not have answers, say so and commit to a date by which you will follow up. Document the specific concerns raised so you can track whether they are resolved. Feed common misunderstandings back to the change team so communications can be adjusted.",
+  },
+  {
+    text: "The \"How Are You Feeling\" Conversation",
+    detail:
+      "When to have it: Two to three weeks after the change has been announced or is beginning to take effect, and again at any point where resistance or disengagement becomes visible. This conversation acknowledges the emotional dimension of change that most organisations ignore. What to ask: How are you feeling about this change right now, honestly? What is your biggest concern? Is there anything about this that feels personal to you, not just professional? What to listen for: Fear of incompetence in the new way of working, grief for what is being lost, anger about not being consulted, or anxiety about job security. People rarely articulate these emotions directly. Listen for the signals: withdrawal from team discussions, cynicism, excessive focus on what is wrong with the new approach, or uncharacteristic negativity. What to do with what you hear: Do not try to fix the emotion or argue people out of it. Acknowledge it. Validate that the feeling makes sense given their experience. Then explore what would help: more information, more time, more support, more involvement in shaping the change. If someone is genuinely distressed, connect them with appropriate support. Feed patterns of emotional response back to the change team because widespread anxiety is a programme risk, not an individual problem.",
+  },
+  {
+    text: "The \"What Do You Need\" Conversation",
+    detail:
+      "When to have it: As the change moves from announcement into implementation, typically four to six weeks in, and repeated at regular intervals throughout the transition. This conversation shifts from understanding to action. What to ask: What do you need to be able to work effectively in the new way? What barriers are you hitting? What training or support would make the biggest difference? Is there anything I can remove or simplify to make this easier? What to listen for: Practical blockers such as missing access, inadequate training, conflicting priorities, or unclear processes. Also listen for capability gaps that people are reluctant to admit. If someone says they are fine but their performance is declining, the need is there but unspoken. What to do with what you hear: Act on what you can control immediately. Escalate what you cannot. Be transparent about what is within your power and what requires programme-level intervention. Track needs and follow up visibly. Nothing destroys trust faster than asking what someone needs and then doing nothing about it. Where multiple people raise the same need, consolidate the feedback and present it to the change team as a systemic issue rather than individual requests.",
+  },
+  {
+    text: "The \"What's Working\" Conversation",
+    detail:
+      "When to have it: Six to eight weeks after the change has been implemented, and periodically thereafter. This conversation is often skipped because managers focus on problems, but it is essential for reinforcement. What to ask: What aspects of the new way of working are actually better than before? Where have you found unexpected benefits? What would you tell a colleague in another team about how this has gone? What to listen for: Genuine positive experiences that can be amplified, specific examples of the new approach delivering value, and moments where people surprised themselves by succeeding with the new behaviour. Also listen for people who are compliant but not convinced. If the only positive thing someone can say is that the new system is not as bad as expected, that is not adoption. What to do with what you hear: Share the positive stories with the broader team, with permission. Specific, authentic examples of the change working are far more powerful than corporate success metrics. Feed the stories to the change team for use in communications. Recognise the individuals who are making the change work. Use these conversations to build a narrative of progress that sustains momentum through the inevitable difficult periods.",
+  },
+  {
+    text: "The \"What Would You Do Differently\" Conversation",
+    detail:
+      "When to have it: Eight to twelve weeks after implementation, when people have enough experience to offer informed feedback, and again at subsequent milestones. This conversation treats the people experiencing the change as experts in how it could be improved. What to ask: If you could change one thing about how this was rolled out, what would it be? What advice would you give us for the next team going through this? Is there anything about the new way of working that still does not make sense to you? What to listen for: Practical suggestions for improvement that the programme team may have missed. Residual confusion that indicates gaps in training or communication. Frustration with aspects of the change that feel unnecessary or poorly designed. Also listen for the meta-feedback: how people feel about whether their input matters. If someone says there is no point giving feedback because nothing changes, that is the most important signal in the conversation. What to do with what you hear: Take the feedback seriously and visibly act on what you can. Where feedback cannot be incorporated, explain why honestly. Feed improvement suggestions to the change team and advocate for adjustments where the evidence supports them. Close the loop: tell people what happened as a result of their feedback. This single act, showing that input led to change, is the most powerful reinforcement mechanism a manager has.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /*  Checklist Items                                                    */
 /* ------------------------------------------------------------------ */
 
@@ -772,6 +804,25 @@ export default function ReinforcementPlanning() {
                     {readiness.description}
                   </p>
                 </div>
+              </div>
+            </ScrollReveal>
+          </section>
+
+          {/* ---- SECTION: PRACTICAL COACHING GUIDE FOR MANAGERS ---- */}
+          <section className="article-section">
+            <ScrollReveal direction="up">
+              <h2 className="article-section-title">
+                Practical Coaching Guide for Managers
+              </h2>
+              <p className="article-section-desc">
+                Managers are the primary reinforcement mechanism for any change. But telling managers to &ldquo;support their teams through the change&rdquo; without giving them practical guidance is like telling someone to fly a plane without training. The five conversations below are the backbone of effective change coaching. Each one addresses a different stage of the adoption journey, and together they give managers a structured, repeatable approach to helping their teams move from awareness through to genuine ownership of the new way of working.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={100}>
+              <div className="detail-block">
+                <h3 className="detail-block-title">Five Coaching Conversations During Change</h3>
+                <ExpandableList items={coachingConversations} />
               </div>
             </ScrollReveal>
           </section>

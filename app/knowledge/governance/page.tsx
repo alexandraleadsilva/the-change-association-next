@@ -222,6 +222,43 @@ const caseStudies = [
 ];
 
 /* ------------------------------------------------------------------ */
+/*  Risk and Issue Management in Change                                */
+/* ------------------------------------------------------------------ */
+
+const changeRiskActions: ActionItem[] = [
+  {
+    text: "Why traditional RAID logs fail in change programmes",
+    detail:
+      "Most programmes use RAID logs (Risks, Assumptions, Issues, Dependencies) inherited from project management. These logs track project risks: system delivery delays, vendor issues, budget overruns, resource shortages. They are useful for project governance but almost entirely blind to change risks. A RAID log will tell you that the technology platform is two weeks behind schedule. It will not tell you that the executive sponsor has quietly disengaged, that middle managers are actively discouraging adoption, or that frontline teams have developed workarounds that make the new process irrelevant. Change risks are human, relational, and behavioural. They do not fit neatly into a project risk register because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. The result is that most programmes have excellent visibility of their project risks and almost no visibility of the risks that will actually determine whether the change succeeds or fails.",
+  },
+  {
+    text: "Sponsor disengagement: the risk that leadership attention drifts away",
+    detail:
+      "What it looks like: The sponsor stops attending steering committees, delegates briefings to a deputy, responds slowly to requests for decisions, and quietly shifts their attention to other priorities. The programme continues on paper but has lost its political protection. Early warning signs: The sponsor cancels or shortens meetings with the change team. Their communications about the change become generic rather than personal. They stop asking probing questions about adoption and revert to asking only about timelines and budget. Other executives begin to deprioritise the change in their own areas because they sense the sponsor has moved on. Recommended response: Have an honest, private conversation with the sponsor about their level of engagement. Reframe the change in terms of their current strategic priorities to re-establish relevance. If the sponsor cannot re-engage, negotiate a formal handover to a new sponsor rather than allowing a slow fade. Never leave a change programme without active sponsorship, even if it means escalating the conversation to an uncomfortable level.",
+  },
+  {
+    text: "Adoption stalling: the risk that initial compliance does not convert to genuine use",
+    detail:
+      "What it looks like: Training is completed, systems are live, and compliance metrics look healthy, but actual usage data tells a different story. People are logging into the new system but doing their real work elsewhere. Teams attend the new meetings but make decisions in informal side conversations. The organisation has adopted the appearance of change without adopting the substance. Early warning signs: A gap between training completion rates and actual usage metrics. Teams that were enthusiastic during pilot suddenly go quiet post-rollout. Workarounds emerge that allow people to technically comply while practically continuing the old way. Managers report that their teams are doing fine without being able to cite specific examples of new behaviours. Recommended response: Shift measurement from compliance metrics to behavioural indicators. Go and observe how people are actually working, not just what the dashboards say. Identify the specific barriers that are making the old way easier than the new way and remove them. Engage the teams where adoption is stalling to understand their experience and co-design solutions. Escalate systemic barriers to governance for rapid resolution.",
+  },
+  {
+    text: "Capability gaps persisting: the risk that people cannot do what the change requires",
+    detail:
+      "What it looks like: People have been trained but still cannot perform the new tasks confidently. Error rates remain high. People frequently ask colleagues for help with tasks they should be able to do independently. The help desk is overwhelmed with basic how-to questions months after go-live. Performance declines in areas that should have stabilised. Early warning signs: High volumes of support requests that focus on basic functionality rather than edge cases. Managers spending disproportionate time helping team members with routine tasks. A widening gap between the performance of early adopters and the rest of the population. People expressing frustration that the training did not prepare them for the reality of the new way of working. Recommended response: Conduct a capability assessment to identify specific gaps, not generic training needs. Provide targeted support that meets people where they are: peer coaching for those who are close, intensive retraining for those who are far behind, and embedded support for the tasks that are most difficult. Extend the hypercare period rather than assuming the initial training was sufficient. Redesign training content based on the actual difficulties people are experiencing, not the difficulties the programme team anticipated.",
+  },
+  {
+    text: "Cultural resistance hardening: the risk that opposition becomes entrenched identity",
+    detail:
+      "What it looks like: Initial scepticism, which is normal and healthy, solidifies into an entrenched oppositional identity. Groups define themselves by their resistance to the change. The narrative shifts from questioning specific aspects of the change to rejecting the change entirely. Resistance becomes a badge of loyalty to the old way of working and a marker of group belonging. Early warning signs: Informal leaders who were initially sceptical begin actively organising opposition. The language shifts from constructive criticism to identity statements: we are the people who know this will not work. Social media or internal communication channels become echo chambers for anti-change sentiment. Moderate voices stop speaking up because the social cost of supporting the change has become too high. Recommended response: Do not dismiss or marginalise the resistance. Engage directly with the informal leaders of the opposition. Listen to the legitimate concerns embedded in the resistance and address them visibly. Create safe spaces for honest conversation where people can express doubts without being labelled. Break the narrative that resistance equals loyalty by amplifying stories of people who valued the old way of working and are finding genuine benefit in the new. If cultural resistance has hardened to this degree, the change approach needs to adapt, not just the communication.",
+  },
+  {
+    text: "Fatigue accumulating: the risk that people run out of capacity to absorb change",
+    detail:
+      "What it looks like: People are not resistant to this specific change. They are exhausted by the cumulative weight of every change happening simultaneously. Engagement drops across the board, not just for your programme. Quality of work declines. Sick leave increases. People describe feeling overwhelmed, undervalued, and unable to keep up. The organisation is not pushing back against the change. It is buckling under the load. Early warning signs: Engagement survey scores declining across multiple dimensions. Increased absenteeism and turnover in teams experiencing the most change. People disengaging from voluntary activities like champion networks or feedback sessions. Managers reporting that their teams have nothing left to give. A sense of resignation rather than resistance: people are not fighting the change, they are just too tired to engage with it. Recommended response: Conduct a change saturation assessment to map how much change each team is absorbing simultaneously. Advocate at governance level for sequencing and prioritisation rather than parallel delivery of every initiative. Reduce the burden on the most affected teams by simplifying requirements, extending timelines, or temporarily removing non-essential work. Acknowledge the fatigue publicly and honestly. People can tolerate a heavy load if they feel it is recognised and finite. They cannot tolerate being told that the pace is normal when their experience tells them it is not.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /*  Reusable ExpandableList component                                  */
 /* ------------------------------------------------------------------ */
 
@@ -700,6 +737,26 @@ export default function GovernancePage() {
           <div className="detail-block">
             <h3 className="detail-block-title">Five Principles of Clear Ownership</h3>
             <ExpandableList items={ownershipPrinciples} />
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* ---------------------------------------------------------- */}
+      {/*  RISK AND ISSUE MANAGEMENT IN CHANGE                        */}
+      {/* ---------------------------------------------------------- */}
+
+      <section className="article-section">
+        <ScrollReveal direction="up">
+          <h2 className="article-section-title">Risk and Issue Management in Change</h2>
+          <p className="article-section-desc">
+            Most programmes track project risks meticulously and change risks not at all. A project risk is a system delay or a budget overrun. A change risk is a sponsor who has quietly disengaged, a workforce that is developing workarounds instead of adopting, or a culture that is hardening against the new way of working. These risks do not appear in RAID logs because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. But they are the risks that determine whether the change actually lands. The following framework identifies the five change-specific risks that every programme should be actively tracking, with guidance on how to spot them early and what to do when they emerge.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay={100}>
+          <div className="detail-block">
+            <h3 className="detail-block-title">Risk and Issue Management in Change</h3>
+            <ExpandableList items={changeRiskActions} />
           </div>
         </ScrollReveal>
       </section>

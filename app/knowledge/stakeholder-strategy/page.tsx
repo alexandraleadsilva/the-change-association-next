@@ -252,6 +252,38 @@ const caseStudies = [
 ];
 
 /* ------------------------------------------------------------------ */
+/*  Topic 4 — Building a Change Champion Network                       */
+/* ------------------------------------------------------------------ */
+
+const championNetworkActions: ActionItem[] = [
+  {
+    text: "Understand what a champion network is and why it matters",
+    detail:
+      "A change champion network is a formally recruited group of people from across the organisation who are given an explicit role in supporting the adoption of a change. Champions are not the same as informal influencers. Influencers are identified because of their existing social capital and engaged through relationships. Champions are selected, briefed, equipped, and given ongoing responsibilities. They serve as the connective tissue between the central change team and the rest of the organisation. They translate corporate messaging into local context, surface resistance before it hardens, and model new behaviours in their teams. Without a champion network, the change team is trying to reach hundreds or thousands of people through a handful of communications. With one, you have a distributed sensing and support system embedded in every part of the organisation that matters.",
+  },
+  {
+    text: "Design the network with intention: selection criteria, coverage, commitment, and reporting",
+    detail:
+      "A champion network fails when it is assembled hastily from whoever volunteers. Design it deliberately. Start with selection criteria: champions should be respected by their peers, open to the change (though not necessarily enthusiastic), and willing to invest time. They do not need to be managers, but they need credibility in their local context. Next, map coverage: ensure every geography, function, and level that the change touches has at least one champion. Gaps in coverage become blind spots where resistance grows unseen. Be explicit about the time commitment. Champions typically need two to four hours per week during peak change periods. If you do not protect that time with their line manager, the role becomes an unfunded mandate that collapses under workload pressure. Finally, define the reporting line: champions should report into the change team, not their local management chain, to ensure they can share honest feedback without fear of local consequences.",
+  },
+  {
+    text: "Equip champions so they can succeed: briefings, materials, access, and recognition",
+    detail:
+      "Recruiting champions and then leaving them to figure out their role is the fastest way to kill the network. Equip them properly. Hold regular briefings, ideally fortnightly, where the change team shares upcoming milestones, anticipated concerns, and key messages. Provide materials they can use in their teams: not polished corporate slides, but practical talking points, FAQs, and one-page summaries written in plain language. Give champions direct access to the change team so they can ask questions and escalate issues without going through layers of hierarchy. And recognise their contribution visibly. Champions are doing extra work on top of their day job. If leadership never acknowledges that, the best champions will quietly step back. Recognition can be as simple as a senior leader thanking champions by name in a town hall, or as structured as including champion contributions in performance reviews.",
+  },
+  {
+    text: "Keep the network active: check-ins, feedback loops, and celebrating contributions",
+    detail:
+      "Champion networks have a half-life. Without deliberate maintenance, energy declines after the first few weeks. Keep the network alive through regular check-ins where champions share what they are hearing, what is working, and what is not. Make these sessions genuinely two-way: if champions feel they are just being talked at, they stop attending. Create a feedback loop where the intelligence champions provide visibly influences the change approach. When a champion reports that a particular team is struggling, and the change team responds by adjusting the rollout plan, that demonstrates that the network has real impact. Celebrate contributions regularly. Share specific stories of how individual champions made a difference. Create a community identity for the network with a name, a communication channel, and periodic events that bring champions together. The network should feel like a valued community, not a task force.",
+  },
+  {
+    text: "Avoid the common mistakes that undermine champion networks",
+    detail:
+      "Five mistakes kill most champion networks. First, over-relying on volunteers. Volunteers are enthusiastic but may not have the credibility or coverage you need. Supplement volunteers with deliberately recruited champions from underrepresented areas. Second, not protecting their time. If a champion's manager does not know about the role or does not support it, the champion will deprioritise it the moment workload increases. Get explicit line manager agreement before someone becomes a champion. Third, treating champions as a communication channel. If all you do is ask champions to cascade messages, you are using them as a distribution list, not a network. Champions should be listening, sensing, supporting, and feeding back, not just broadcasting. Fourth, failing to refresh the network. As the change progresses, some champions will lose energy or move roles. Plan for rotation and recruitment of new champions at regular intervals. Fifth, not closing the loop on feedback. If champions report issues and nothing visibly changes, they learn that the feedback mechanism is performative and stop contributing honest intelligence.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /*  Reusable expandable list component                                 */
 /* ------------------------------------------------------------------ */
 
@@ -633,6 +665,27 @@ export default function StakeholderStrategy() {
               <div className="detail-block">
                 <h3 className="detail-block-title">Finding and Activating Influencers</h3>
                 <ExpandableList items={influencerActions} />
+              </div>
+            </ScrollReveal>
+          </section>
+
+          {/* -------------------------------------------------------------- */}
+          {/*  TOPIC 4 — Building a Change Champion Network                   */}
+          {/* -------------------------------------------------------------- */}
+          <section className="article-section">
+            <ScrollReveal direction="up">
+              <h2 className="article-section-title">
+                Building a Change Champion Network
+              </h2>
+              <p className="article-section-desc">
+                Informal influencers shape opinion. But a champion network gives you something different: a formally recruited, deliberately designed, and actively maintained group of people who bridge the gap between the change team and the organisation. Champions are not volunteers who happen to be enthusiastic. They are selected, equipped, and supported to play a defined role throughout the life of the change. When built well, a champion network is the single most effective mechanism for scaling engagement, surfacing resistance early, and sustaining adoption after the programme team has moved on.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={100}>
+              <div className="detail-block">
+                <h3 className="detail-block-title">Building a Change Champion Network</h3>
+                <ExpandableList items={championNetworkActions} />
               </div>
             </ScrollReveal>
           </section>

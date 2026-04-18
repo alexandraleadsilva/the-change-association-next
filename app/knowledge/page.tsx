@@ -86,6 +86,11 @@ export default function Knowledge() {
               <p className="sub-pillar-desc">Current state assessment, future state definition, and gap analysis. The foundational diagnostic work leaders must complete before leading others.</p>
               <div className="article-list">
                 <ArticleLink
+                  title="How to write a change charter and business case that sets the programme up for success"
+                  tag="Charter & Business Case"
+                  href="/knowledge/change-charter"
+                />
+                <ArticleLink
                   title="Which change framework should you use, and does it even matter?"
                   tag="Frameworks & Methodology"
                   href="/knowledge/change-frameworks"
@@ -228,6 +233,11 @@ export default function Knowledge() {
                   title="The real reason employees resist change, and it is not what you think"
                   tag="People & Resistance"
                   href="/knowledge/change-impact-assessment"
+                />
+                <ArticleLink
+                  title="How to build a resistance management plan that anticipates, monitors, and responds"
+                  tag="Resistance Management"
+                  href="/knowledge/resistance-management"
                 />
               </div>
             </div>
@@ -420,6 +430,11 @@ export default function Knowledge() {
                   title="What leading indicators actually predict successful change adoption?"
                   tag="Leading Indicators"
                   href="/knowledge/adoption-metrics"
+                />
+                <ArticleLink
+                  title="Benefits realisation planning: how to track whether change delivers its intended value"
+                  tag="Benefits Realisation"
+                  href="/knowledge/benefits-realisation"
                 />
               </div>
             </div>
