@@ -149,6 +149,90 @@ const changeBites: ChangeBite[] = [
     relatedTitle: "How to engage operational teams who are too busy for another initiative",
     relatedHref: "/knowledge/stakeholder-strategy",
   },
+  {
+    title: "Are you actually leading change or just managing tasks through a change plan?",
+    body: [
+      "There is a test you can run right now. Look at your calendar for the last two weeks. Count the hours you spent on status reports, RAID logs, governance decks, and stakeholder trackers. Now count the hours you spent in genuine conversation with the people affected by the change. Listening to their concerns. Understanding their experience. Shaping their understanding of why this matters.",
+      "If the first number dwarfs the second, you are managing change. You are not leading it.",
+      "Change management is necessary. Someone needs to track the milestones, manage the risks, and keep the governance structure informed. But management without leadership produces activity without adoption. Things get done. People do not change.",
+      "Change leadership is about judgement, not process. It is about knowing when to push and when to pause. When to follow the plan and when to throw it out. When to present and when to listen. It is about taking ownership of whether the change actually lands, not just whether the activities were completed.",
+      "The uncomfortable truth is that most change professionals are trained in management and rewarded for management. The plans, the reports, the frameworks. Leadership is harder to teach, harder to measure, and harder to recognise. But it is the difference between a change that gets delivered and a change that gets adopted.",
+    ],
+    takeaway: "If you completed every task on your change plan and nobody worked differently, you managed the project. You did not lead the change.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "An interactive self-assessment: are you leading change or managing it?",
+    relatedHref: "/knowledge/leading-vs-managing-change",
+  },
+  {
+    title: "Why does change fail when people understand the process but not the experience?",
+    body: [
+      "You have explained the change clearly. The communication was crisp. The process documentation was thorough. The training covered every step. People can describe what is changing. And yet nothing is different.",
+      "This is one of the most common and least understood failure patterns in organisational change. People understand the process but have not experienced the change. They know what they are supposed to do. They do not know what it feels like to do it.",
+      "Understanding is cognitive. Experience is emotional. And the gap between the two is where most changes die. You can inform someone about a new process in a 30-minute briefing. But the first time they try to use it under pressure, with a customer waiting and their manager watching, the old way of doing things will feel safer, faster, and more reliable.",
+      "The change experience is not a soft extra. It is the mechanism through which adoption happens. People do not change because they received a communication. They change because they went through a transition: from the familiar to the unfamiliar, from competence to uncertainty, and eventually to a new competence that feels natural.",
+      "If your change approach focuses on informing people but not on supporting them through the emotional and practical experience of working differently, you are building a bridge that stops halfway across.",
+    ],
+    takeaway: "Information tells people what to do. Experience teaches them what it feels like. You need both, but most change programmes only deliver the first.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "The emotional journey of change and how to design touchpoints that build trust",
+    relatedHref: "/knowledge/change-experience",
+  },
+  {
+    title: "How to get executives on board when they say yes but act no.",
+    body: [
+      "The meeting went well. The executive nodded along. They said the right things. They approved the budget. They signed the business case. And then nothing happened.",
+      "This is passive sponsorship. It looks like support. It is not. It is permission without commitment. Approval without action. Agreement without ownership.",
+      "The gap between saying yes and acting yes is one of the most dangerous in any transformation. Because everyone below the executive interprets their behaviour, not their words. When middle managers see that the sponsor approved the change but did not attend the launch, did not reference it in their own meetings, and did not make any trade-offs to support it, they conclude that the change is optional.",
+      "Active sponsorship is visible, consistent, and personal. It means the executive communicates about the change in their own words. It means they intervene when blockers arise rather than waiting for an escalation. It means they make difficult trade-offs when the change competes with other priorities. And it means they change their own behaviour to model what the change requires.",
+      "If your sponsor is passive, it is not because they do not care. It is usually because they do not know what active sponsorship looks like in practice. Your job is to show them, specifically and tactfully, what the organisation needs to see from them and when.",
+    ],
+    takeaway: "An executive who approved the change but is not visibly leading it is not a sponsor. They are a signature on a document.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "The five levels of executive sponsorship and how to move your sponsor up",
+    relatedHref: "/knowledge/executive-sponsorship",
+  },
+  {
+    title: "What is HR's actual role in a transformation, and why does it keep getting confused?",
+    body: [
+      "Ask five people in a transformation programme what HR's role is and you will get five different answers. HR supports the people side. HR handles the comms. HR manages the training. HR deals with the restructure. HR looks after the affected employees.",
+      "The confusion is not HR's fault. It is a design failure in how organisations set up their change programmes. When nobody explicitly defines who owns what, HR becomes the default owner of everything that is not technical delivery. And because HR professionals genuinely care about people, they accept the work even when it is not theirs to carry.",
+      "The result is a function that is stretched across too many responsibilities, empowered in none of them, and blamed when the people side does not land. HR ends up doing change management, communication, training coordination, and stakeholder engagement while also maintaining their core responsibilities in talent, performance, and employee relations.",
+      "The fix is role clarity. Before the programme starts, define explicitly what HR owns, what the change management function owns, what line managers own, and what the programme team owns. Write it down. Test it with each group. And revisit it when the boundaries get blurred, because they will.",
+      "HR's most powerful contribution to a transformation is not doing everything. It is owning the systems that sustain change: performance management, reward and recognition, capability development, and workforce planning. These are the levers that determine whether the change sticks after the programme team leaves.",
+    ],
+    takeaway: "HR's role is not to be the change management team. It is to own the people systems that make change permanent.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Role clarity: what HR, change managers, and line managers each own in transformation",
+    relatedHref: "/knowledge/role-clarity",
+  },
+  {
+    title: "How do you change culture when you cannot see it, touch it, or measure it easily?",
+    body: [
+      "Culture is the most important and most misunderstood dimension of organisational change. Everyone agrees it matters. Almost nobody agrees on what it is. And the approaches most organisations take to changing it, new values statements, culture workshops, engagement surveys, are almost always insufficient.",
+      "Culture is not a thing. It is a pattern. It is the accumulated weight of thousands of decisions about what gets rewarded, what gets tolerated, and what gets punished. It is the behaviour that people adopt when they are not being watched. It is the story people tell new starters about how things really work here.",
+      "You cannot change culture by declaring new values. You change it by changing the systems that reinforce the current ones. If you want a culture of collaboration, you need to stop rewarding individual heroics. If you want a culture of innovation, you need to stop punishing failure. If you want a culture of transparency, leaders need to share information they would rather keep to themselves.",
+      "The test of whether culture has actually changed is simple. Watch what happens when someone new joins. Do they learn the new way of working naturally, through observation and imitation? Or do a veteran colleague quietly teach them how things really work, overriding everything in the onboarding deck?",
+      "Culture change is slow, it is hard, and it cannot be delegated to a programme team. It requires leaders to change their own behaviour first, then to redesign the systems that shape everyone else's behaviour. There are no shortcuts.",
+    ],
+    takeaway: "Culture is not changed by posters. It is changed by what leaders reward, what systems reinforce, and what happens when no one is looking.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Culture Integration: embedding change into organisational DNA",
+    relatedHref: "/knowledge/culture-integration",
+  },
+  {
+    title: "Why digital transformations keep failing the people they are supposed to help.",
+    body: [
+      "The technology works. It always works. The system is configured. The data is migrated. The APIs are connected. The testing is complete. And then the people who are supposed to use it do not use it, or they use it badly, or they find workarounds that bypass it entirely.",
+      "Digital transformation is not a technology problem. It is a people problem wrapped in technology. The system is the easy part. The hard part is changing how people work, what they trust, and what they are willing to let go of.",
+      "The pattern is remarkably consistent. The technology team builds the system based on documented processes. But the documented processes do not reflect how work actually gets done. The training team schedules courses. But the courses teach features, not behaviours. The go-live date is set by the project timeline. But the people are not ready by that date.",
+      "Then the system goes live and the problems begin. Workarounds appear within the first week. Support tickets flood in. Managers cannot answer questions because no one trained them differently from their teams. And the dashboard shows adoption rates that bear no resemblance to the business case.",
+      "The fix is not more technology or better technology. It is better change management applied earlier. It is understanding how people actually work before designing the system. It is building training around behaviours, not features. It is measuring adoption, not go-live. And it is keeping support in place long after the project team has declared success and moved on.",
+    ],
+    takeaway: "The technology is never the problem. The problem is the distance between how the system was designed and how people actually need to work.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Tools & Systems: why digital transformations fail and how to prevent it",
+    relatedHref: "/knowledge/tools-and-systems",
+  },
 ];
 
 export default function ChangeBites() {
@@ -191,10 +275,10 @@ export default function ChangeBites() {
             <div className="featured-post" data-category="leadership">
               <span className="featured-label">Featured</span>
               <h2>
-                <Link href="/knowledge/leading-vs-managing-change">
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(8); }}>
                   Are you actually leading change or just managing tasks through
                   a change plan?
-                </Link>
+                </a>
               </h2>
               <p>
                 Change plans can create a sense of control, but control is not
@@ -204,9 +288,9 @@ export default function ChangeBites() {
                 leadership goes beyond execution. It shapes understanding,
                 belief, and commitment.
               </p>
-              <Link href="/knowledge/leading-vs-managing-change" className="btn-gold">
+              <button className="btn-gold" onClick={() => setActiveBite(8)}>
                 Read Article
-              </Link>
+              </button>
             </div>
           )}
 
@@ -246,7 +330,7 @@ export default function ChangeBites() {
             </div>
           )}
 
-          {/* POST: Change Experience - KNOWLEDGE HUB LINK */}
+          {/* POST: Change Experience */}
           {isVisible("change-adoption") && (
             <div className="blog-post" data-category="change-adoption">
               <div className="post-meta">
@@ -255,23 +339,16 @@ export default function ChangeBites() {
                 <span className="post-date">April 2025</span>
               </div>
               <h2>
-                <Link href="/knowledge/change-experience">
-                  Why does change fail when people understand the process but not
-                  the experience?
-                </Link>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(9); }}>
+                  Why does change fail when people understand the process but not the experience?
+                </a>
               </h2>
-              <p>
-                Even when communication is clear and processes are well defined,
-                change can still struggle to take hold. Understanding what needs
-                to happen is not the same as experiencing what it feels like to
-                change. Without addressing the human side of transition, clarity
-                alone is not enough to drive lasting adoption.
-              </p>
-              <Link href="/knowledge/change-experience" className="btn">Read More</Link>
+              <p>{changeBites[9].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(9)}>Read More</button>
             </div>
           )}
 
-          {/* POST: Executive Sponsorship - KNOWLEDGE HUB LINK */}
+          {/* POST: Executive Sponsorship */}
           {isVisible("leadership") && (
             <div className="blog-post" data-category="leadership">
               <div className="post-meta">
@@ -280,18 +357,12 @@ export default function ChangeBites() {
                 <span className="post-date">March 2025</span>
               </div>
               <h2>
-                <Link href="/knowledge/executive-sponsorship">
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(10); }}>
                   How to get executives on board when they say yes but act no
-                </Link>
+                </a>
               </h2>
-              <p>
-                Executive sponsorship is cited as the number one driver of change
-                success, yet it is also the most frequently misunderstood. There
-                is a significant difference between an executive who approves a
-                change and one who actively sponsors it. Understanding that gap
-                is where most change efforts either accelerate or stall.
-              </p>
-              <Link href="/knowledge/executive-sponsorship" className="btn">Read More</Link>
+              <p>{changeBites[10].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(10)}>Read More</button>
             </div>
           )}
 
@@ -313,7 +384,7 @@ export default function ChangeBites() {
             </div>
           )}
 
-          {/* POST: HR Role - KNOWLEDGE HUB LINK */}
+          {/* POST: HR Role */}
           {isVisible("hr-people") && (
             <div className="blog-post" data-category="hr-people">
               <div className="post-meta">
@@ -322,24 +393,16 @@ export default function ChangeBites() {
                 <span className="post-date">March 2025</span>
               </div>
               <h2>
-                <Link href="/knowledge/role-clarity">
-                  What is HR&apos;s actual role in a transformation, and why does it
-                  keep getting confused?
-                </Link>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(11); }}>
+                  What is HR&apos;s actual role in a transformation, and why does it keep getting confused?
+                </a>
               </h2>
-              <p>
-                HR is often called upon to &ldquo;support&rdquo; change without clear
-                boundaries around what that means in practice. The result is a
-                function that is simultaneously over-relied upon and
-                under-empowered. Getting this right requires both clarity of role
-                and intentional collaboration with change leadership from day
-                one.
-              </p>
-              <Link href="/knowledge/role-clarity" className="btn">Read More</Link>
+              <p>{changeBites[11].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(11)}>Read More</button>
             </div>
           )}
 
-          {/* POST: Culture - KNOWLEDGE HUB LINK */}
+          {/* POST: Culture */}
           {isVisible("culture") && (
             <div className="blog-post" data-category="culture">
               <div className="post-meta">
@@ -348,19 +411,12 @@ export default function ChangeBites() {
                 <span className="post-date">February 2025</span>
               </div>
               <h2>
-                <Link href="/knowledge/culture-integration">
-                  How do you change culture when you cannot see it, touch it, or
-                  measure it easily?
-                </Link>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(12); }}>
+                  How do you change culture when you cannot see it, touch it, or measure it easily?
+                </a>
               </h2>
-              <p>
-                Culture change is simultaneously the most important and most
-                misunderstood dimension of organisational transformation. It is
-                shaped through decisions, behaviours, and systems, not through
-                values statements pinned to a wall. This article unpacks what
-                culture actually is and how to shift it intentionally.
-              </p>
-              <Link href="/knowledge/culture-integration" className="btn">Read More</Link>
+              <p>{changeBites[12].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(12)}>Read More</button>
             </div>
           )}
 
@@ -454,7 +510,7 @@ export default function ChangeBites() {
             </div>
           )}
 
-          {/* POST: Digital Transformation - KNOWLEDGE HUB LINK */}
+          {/* POST: Digital Transformation */}
           {isVisible("digital-transformation") && (
             <div className="blog-post" data-category="digital-transformation">
               <div className="post-meta">
@@ -463,20 +519,12 @@ export default function ChangeBites() {
                 <span className="post-date">February 2025</span>
               </div>
               <h2>
-                <Link href="/knowledge/tools-and-systems">
-                  Why digital transformations keep failing the people they are
-                  supposed to help
-                </Link>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(13); }}>
+                  Why digital transformations keep failing the people they are supposed to help
+                </a>
               </h2>
-              <p>
-                Technology implementations consistently underperform not because
-                of the technology itself, but because the human change wrapped
-                around it is treated as an afterthought. The system goes live,
-                but the people do not. Understanding why this happens, and how to
-                prevent it, is one of the most commercially valuable things a
-                change professional can master.
-              </p>
-              <Link href="/knowledge/tools-and-systems" className="btn">Read More</Link>
+              <p>{changeBites[13].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(13)}>Read More</button>
             </div>
           )}
         </main>
