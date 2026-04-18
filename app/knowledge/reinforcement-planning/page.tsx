@@ -418,7 +418,7 @@ const caseStudies = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Topic — Practical Coaching Guide for Managers                      */
+/*  Topic, Practical Coaching Guide for Managers                      */
 /* ------------------------------------------------------------------ */
 
 const coachingConversations: ActionItem[] = [

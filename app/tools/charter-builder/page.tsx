@@ -407,7 +407,7 @@ export default function CharterBuilderPage() {
                       : {}),
                   }}
                 >
-                  {/* card header — clickable */}
+                  {/* card header, clickable */}
                   <button
                     onClick={() => toggle(s.key)}
                     style={{
@@ -459,7 +459,7 @@ export default function CharterBuilderPage() {
                     </span>
                   </button>
 
-                  {/* card body — expandable */}
+                  {/* card body, expandable */}
                   {isOpen && (
                     <div
                       style={{

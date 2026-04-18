@@ -16,7 +16,7 @@ interface ActionItem {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Interactive Stakeholder Map — concentric rings                     */
+/*  Interactive Stakeholder Map, concentric rings                     */
 /* ------------------------------------------------------------------ */
 
 const stakeholderRings = [
@@ -86,7 +86,7 @@ const stakeholderRings = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Topic 1 — Engaging busy operational teams                          */
+/*  Topic 1, Engaging busy operational teams                          */
 /* ------------------------------------------------------------------ */
 
 const busyTeamsActions: ActionItem[] = [
@@ -123,7 +123,7 @@ const busyTeamsActions: ActionItem[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Topic 2 — Building a stakeholder map that drives engagement        */
+/*  Topic 2, Building a stakeholder map that drives engagement        */
 /* ------------------------------------------------------------------ */
 
 const stakeholderMapActions: ActionItem[] = [
@@ -160,7 +160,7 @@ const stakeholderMapActions: ActionItem[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Topic 3 — Identifying and activating informal influencers          */
+/*  Topic 3, Identifying and activating informal influencers          */
 /* ------------------------------------------------------------------ */
 
 const influencerActions: ActionItem[] = [
@@ -252,7 +252,7 @@ const caseStudies = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Topic 4 — Building a Change Champion Network                       */
+/*  Topic 4, Building a Change Champion Network                       */
 /* ------------------------------------------------------------------ */
 
 const championNetworkActions: ActionItem[] = [
@@ -367,7 +367,7 @@ export default function StakeholderStrategy() {
       </div>
 
       {/* ================================================================ */}
-      {/*  BODY — sidebar layout                                           */}
+      {/*  BODY, sidebar layout                                           */}
       {/* ================================================================ */}
       <div className="article-with-sidebar">
         <div className="article-main">
@@ -400,7 +400,7 @@ export default function StakeholderStrategy() {
                     aspectRatio: "1",
                   }}
                 >
-                  {/* Outer ring — Power */}
+                  {/* Outer ring, Power */}
                   <button
                     onClick={() => setActiveRing(activeRing === "power" ? null : "power")}
                     style={{
@@ -444,7 +444,7 @@ export default function StakeholderStrategy() {
                     </span>
                   </button>
 
-                  {/* Middle ring — Influence */}
+                  {/* Middle ring, Influence */}
                   <button
                     onClick={() => setActiveRing(activeRing === "influence" ? null : "influence")}
                     style={{
@@ -492,7 +492,7 @@ export default function StakeholderStrategy() {
                     </span>
                   </button>
 
-                  {/* Inner ring — Impact */}
+                  {/* Inner ring, Impact */}
                   <button
                     onClick={() => setActiveRing(activeRing === "impact" ? null : "impact")}
                     style={{
@@ -607,7 +607,7 @@ export default function StakeholderStrategy() {
           </section>
 
           {/* -------------------------------------------------------------- */}
-          {/*  TOPIC 1 — Engaging busy operational teams                      */}
+          {/*  TOPIC 1, Engaging busy operational teams                      */}
           {/* -------------------------------------------------------------- */}
           <section className="article-section">
             <ScrollReveal direction="up">
@@ -628,7 +628,7 @@ export default function StakeholderStrategy() {
           </section>
 
           {/* -------------------------------------------------------------- */}
-          {/*  TOPIC 2 — Building a stakeholder map that drives engagement    */}
+          {/*  TOPIC 2, Building a stakeholder map that drives engagement    */}
           {/* -------------------------------------------------------------- */}
           <section className="article-section">
             <ScrollReveal direction="up">
@@ -649,7 +649,7 @@ export default function StakeholderStrategy() {
           </section>
 
           {/* -------------------------------------------------------------- */}
-          {/*  TOPIC 3 — Identifying and activating informal influencers      */}
+          {/*  TOPIC 3, Identifying and activating informal influencers      */}
           {/* -------------------------------------------------------------- */}
           <section className="article-section">
             <ScrollReveal direction="up">
@@ -670,7 +670,7 @@ export default function StakeholderStrategy() {
           </section>
 
           {/* -------------------------------------------------------------- */}
-          {/*  TOPIC 4 — Building a Change Champion Network                   */}
+          {/*  TOPIC 4, Building a Change Champion Network                   */}
           {/* -------------------------------------------------------------- */}
           <section className="article-section">
             <ScrollReveal direction="up">

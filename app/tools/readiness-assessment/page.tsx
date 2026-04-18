@@ -48,7 +48,7 @@ const DIMENSIONS: DimensionDef[] = [
     key: "people",
     label: "People",
     description:
-      "Assesses whether the people affected by this change have been identified, understood, and engaged — and whether leadership credibility is sufficient to carry the change forward.",
+      "Assesses whether the people affected by this change have been identified, understood, and engaged, and whether leadership credibility is sufficient to carry the change forward.",
     items: [
       { id: "people_1", statement: "Key stakeholders have been identified and their concerns are understood" },
       { id: "people_2", statement: "There is visible and active executive sponsorship for this change" },
@@ -57,8 +57,8 @@ const DIMENSIONS: DimensionDef[] = [
       { id: "people_5", statement: "Previous change experiences have been acknowledged and addressed" },
     ],
     recommendations: {
-      low: "Your people readiness score indicates significant gaps. Before proceeding, invest in stakeholder analysis to understand who is affected and how. Ensure executive sponsors are visibly active — not just named on a slide. Address any trust deficit from previous change experiences before asking people to engage with this one. Consider holding listening sessions to surface concerns that have not been captured.",
-      mid: "Your people readiness is developing but has gaps. Focus on deepening stakeholder understanding beyond surface-level mapping — what are people actually worried about? Ensure the 'why' of this change is communicated in terms that matter to those impacted, not just in strategic language. Check that sponsorship is active and sustained, not front-loaded.",
+      low: "Your people readiness score indicates significant gaps. Before proceeding, invest in stakeholder analysis to understand who is affected and how. Ensure executive sponsors are visibly active, not just named on a slide. Address any trust deficit from previous change experiences before asking people to engage with this one. Consider holding listening sessions to surface concerns that have not been captured.",
+      mid: "Your people readiness is developing but has gaps. Focus on deepening stakeholder understanding beyond surface-level mapping, what are people actually worried about? Ensure the 'why' of this change is communicated in terms that matter to those impacted, not just in strategic language. Check that sponsorship is active and sustained, not front-loaded.",
     },
   },
   {
@@ -74,8 +74,8 @@ const DIMENSIONS: DimensionDef[] = [
       { id: "process_5", statement: "Handoffs between teams have been reviewed for the future state" },
     ],
     recommendations: {
-      low: "Your process readiness score suggests significant work is needed. Start by mapping how work actually gets done — not the documented procedures, but the real workflows including workarounds. Identify process owners for every process the change will affect. Until you understand the current state honestly, any future state design is built on assumptions.",
-      mid: "Process readiness is partially in place. Pay particular attention to informal processes and workarounds — these are often the glue that holds current operations together, and if the future state does not account for them, people will either resist or recreate them. Review handoffs between teams, as these are where most process failures occur during transitions.",
+      low: "Your process readiness score suggests significant work is needed. Start by mapping how work actually gets done, not the documented procedures, but the real workflows including workarounds. Identify process owners for every process the change will affect. Until you understand the current state honestly, any future state design is built on assumptions.",
+      mid: "Process readiness is partially in place. Pay particular attention to informal processes and workarounds, these are often the glue that holds current operations together, and if the future state does not account for them, people will either resist or recreate them. Review handoffs between teams, as these are where most process failures occur during transitions.",
     },
   },
   {
@@ -91,15 +91,15 @@ const DIMENSIONS: DimensionDef[] = [
       { id: "culture_5", statement: "The change aligns with or deliberately addresses cultural norms" },
     ],
     recommendations: {
-      low: "Your culture readiness score highlights a critical gap. Culture is the most common reason changes fail to sustain. Go beyond engagement surveys — observe how decisions are actually made, how bad news travels, and what behaviours are rewarded versus what is stated in values documents. Define the specific behaviours the change requires and assess honestly whether leadership is modelling them. If psychological safety is low, people will comply publicly and resist privately.",
-      mid: "Culture readiness is emerging but needs reinforcement. Ensure the behaviours the change demands have been explicitly defined — not just values, but observable actions. Check whether leadership behaviour matches the change narrative. If the change requires collaboration but leaders compete for resources, the message is contradicted daily. Create safe channels for people to raise concerns without career risk.",
+      low: "Your culture readiness score highlights a critical gap. Culture is the most common reason changes fail to sustain. Go beyond engagement surveys, observe how decisions are actually made, how bad news travels, and what behaviours are rewarded versus what is stated in values documents. Define the specific behaviours the change requires and assess honestly whether leadership is modelling them. If psychological safety is low, people will comply publicly and resist privately.",
+      mid: "Culture readiness is emerging but needs reinforcement. Ensure the behaviours the change demands have been explicitly defined, not just values, but observable actions. Check whether leadership behaviour matches the change narrative. If the change requires collaboration but leaders compete for resources, the message is contradicted daily. Create safe channels for people to raise concerns without career risk.",
     },
   },
   {
     key: "capability",
     label: "Capability",
     description:
-      "Assesses whether people have — or will have — the skills, confidence, and support to work effectively in the future state.",
+      "Assesses whether people have, or will have, the skills, confidence, and support to work effectively in the future state.",
     items: [
       { id: "capability_1", statement: "Specific skill gaps between current and future state have been identified" },
       { id: "capability_2", statement: "Training has been designed for behaviour change, not just knowledge transfer" },
@@ -108,8 +108,8 @@ const DIMENSIONS: DimensionDef[] = [
       { id: "capability_5", statement: "Learning is planned close to the point of need" },
     ],
     recommendations: {
-      low: "Capability readiness requires significant attention. Start by identifying the specific skill gaps the change creates — not generic training needs, but the delta between what people can do today and what the future state requires. Design learning that builds behaviour change, not just knowledge. Critically, equip managers to support their teams: managers are the most important enablers of change at the frontline, and if they are not prepared, no amount of training will compensate.",
-      mid: "Capability readiness is progressing but has gaps. Check that training is designed for behaviour change, not just awareness. Consider confidence alongside competence — people may know what to do but not feel ready to do it under pressure. Ensure learning is timed close to when people will use it: training delivered months before go-live is largely forgotten by the time it matters.",
+      low: "Capability readiness requires significant attention. Start by identifying the specific skill gaps the change creates, not generic training needs, but the delta between what people can do today and what the future state requires. Design learning that builds behaviour change, not just knowledge. Critically, equip managers to support their teams: managers are the most important enablers of change at the frontline, and if they are not prepared, no amount of training will compensate.",
+      mid: "Capability readiness is progressing but has gaps. Check that training is designed for behaviour change, not just awareness. Consider confidence alongside competence, people may know what to do but not feel ready to do it under pressure. Ensure learning is timed close to when people will use it: training delivered months before go-live is largely forgotten by the time it matters.",
     },
   },
   {
@@ -125,8 +125,8 @@ const DIMENSIONS: DimensionDef[] = [
       { id: "systems_5", statement: "Support mechanisms are in place for the transition period" },
     ],
     recommendations: {
-      low: "Systems readiness is significantly underprepared. Before go-live, ensure every impacted system has been inventoried and that integration dependencies are mapped — missing one dependency can cascade across the organisation. Involve end users in design and usability decisions, not just in user acceptance testing at the end. Assess data quality now: dirty data in a new system creates more problems than the old system did. Plan transition support that goes beyond a helpdesk — people need floor-walking, champions, and quick-reference resources.",
-      mid: "Systems readiness is partially in place. Focus on areas that are commonly under-invested: end user consultation (not just UAT sign-off), data quality assessment, and transition support. Integration dependencies are a frequent blind spot — map not just the primary systems but the downstream effects. Ensure support mechanisms are designed for the first weeks post-go-live, when demand is highest and confidence is lowest.",
+      low: "Systems readiness is significantly underprepared. Before go-live, ensure every impacted system has been inventoried and that integration dependencies are mapped, missing one dependency can cascade across the organisation. Involve end users in design and usability decisions, not just in user acceptance testing at the end. Assess data quality now: dirty data in a new system creates more problems than the old system did. Plan transition support that goes beyond a helpdesk, people need floor-walking, champions, and quick-reference resources.",
+      mid: "Systems readiness is partially in place. Focus on areas that are commonly under-invested: end user consultation (not just UAT sign-off), data quality assessment, and transition support. Integration dependencies are a frequent blind spot, map not just the primary systems but the downstream effects. Ensure support mechanisms are designed for the first weeks post-go-live, when demand is highest and confidence is lowest.",
     },
   },
 ];
@@ -179,7 +179,7 @@ function overallBand(score: number): { label: string; description: string } {
     return {
       label: "Developing Readiness",
       description:
-        "Some foundations are in place but critical gaps remain. Focus on the lowest-scoring dimensions — these represent the areas most likely to undermine the change. A phased approach with targeted interventions will reduce risk.",
+        "Some foundations are in place but critical gaps remain. Focus on the lowest-scoring dimensions, these represent the areas most likely to undermine the change. A phased approach with targeted interventions will reduce risk.",
     };
   if (score < 4)
     return {
@@ -782,8 +782,8 @@ export default function ReadinessAssessmentPage() {
         <span className="article-label">Interactive Tool</span>
         <h1 className="article-title">Change Readiness Assessment</h1>
         <p className="article-intro">
-          Rate your organisation across five dimensions — People, Process, Culture, Capability, and
-          Systems — to identify where you are ready, where gaps exist, and what to focus on before
+          Rate your organisation across five dimensions, People, Process, Culture, Capability, and
+          Systems, to identify where you are ready, where gaps exist, and what to focus on before
           go-live. This is based on the TCA current state assessment framework.
         </p>
       </header>
@@ -892,7 +892,7 @@ export default function ReadinessAssessmentPage() {
                     onClick={() => setItemScore(activeTab, item.id, val)}
                     title={SCALE_LABELS[val]}
                   >
-                    {val} — {SCALE_LABELS[val]}
+                    {val}, {SCALE_LABELS[val]}
                   </button>
                 ))}
               </div>
@@ -916,7 +916,7 @@ export default function ReadinessAssessmentPage() {
               {assessment.dimensions[activeTab].score.toFixed(1)}
             </span>
             <span style={{ fontSize: 12 }}>
-              / 5 — {bandLabel(assessment.dimensions[activeTab].score)}
+              / 5, {bandLabel(assessment.dimensions[activeTab].score)}
             </span>
           </div>
         )}
@@ -993,7 +993,7 @@ export default function ReadinessAssessmentPage() {
                           <div style={styles.barFill(score)} />
                         </div>
                         <span style={styles.barScore(score)}>
-                          {score > 0 ? score.toFixed(1) : "—"}
+                          {score > 0 ? score.toFixed(1) : ","}
                         </span>
                       </div>
                     );
@@ -1028,7 +1028,7 @@ export default function ReadinessAssessmentPage() {
                       </span>
                     </div>
                     <span style={styles.breakdownScore(dimData.score)}>
-                      {dimData.score > 0 ? dimData.score.toFixed(1) : "—"}
+                      {dimData.score > 0 ? dimData.score.toFixed(1) : ","}
                     </span>
 
                     <div className="ra-breakdown-items">
@@ -1038,7 +1038,7 @@ export default function ReadinessAssessmentPage() {
                           <div className="ra-breakdown-item" key={item.id}>
                             <span style={styles.breakdownItemText}>{item.statement}</span>
                             <span style={styles.breakdownItemScore(val)}>
-                              {val > 0 ? val : "—"}
+                              {val > 0 ? val : ","}
                             </span>
                           </div>
                         );
@@ -1120,11 +1120,11 @@ export default function ReadinessAssessmentPage() {
                   const rec = score <= 2.5 ? dim.recommendations.low : dim.recommendations.mid;
                   return (
                     <div key={dim.key} style={styles.recCard}>
-                      <span style={styles.recDim}>{dim.label} — {score.toFixed(1)} / 5</span>
+                      <span style={styles.recDim}>{dim.label}, {score.toFixed(1)} / 5</span>
                       <h4 style={styles.recTitle}>
                         {score <= 2.5
                           ? `${dim.label}: Significant gaps to address`
-                          : `${dim.label}: Developing — strengthen before go-live`}
+                          : `${dim.label}: Developing, strengthen before go-live`}
                       </h4>
                       <p style={styles.recText}>{rec}</p>
                     </div>
@@ -1263,7 +1263,7 @@ export default function ReadinessAssessmentPage() {
                       }}
                     >
                       The full guide to assessing readiness across People, Process, Culture,
-                      Capability, and Systems — with key questions, methods, and case studies.
+                      Capability, and Systems, with key questions, methods, and case studies.
                     </span>
                   </div>
                   <span
