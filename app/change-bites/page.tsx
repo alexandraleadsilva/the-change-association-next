@@ -78,6 +78,77 @@ const changeBites: ChangeBite[] = [
     relatedTitle: "Change Impact Assessment: readiness, impact, and the real reason employees resist change",
     relatedHref: "/knowledge/change-impact-assessment",
   },
+  {
+    title: "Culture is not what is on the wall. It is what happens when no one is watching.",
+    body: [
+      "Every organisation has values on the wall. Integrity. Collaboration. Innovation. Customer focus. They are printed on lanyards, featured in onboarding decks, and recited in town halls. And most of the time, they bear little resemblance to how the organisation actually operates.",
+      "Culture is not what an organisation says it values. It is what it rewards, tolerates, and punishes in practice. It is the behaviour that gets someone promoted, the behaviour that gets someone ignored, and the behaviour that everyone knows is unacceptable but nobody addresses.",
+      "If the values say collaboration but the incentive structure rewards individual performance, the culture is competitive. If the values say innovation but the response to failure is blame, the culture is risk-averse. If the values say transparency but bad news never reaches the top, the culture is one of concealment.",
+      "This matters for change because culture is the environment in which every change initiative either takes root or dies. You can design the perfect change programme, but if the culture is working against it, the programme will lose.",
+      "The most common mistake organisations make is trying to change culture by changing the values statement. Culture does not change because you write new words. It changes when you change what gets rewarded, what gets measured, and what leaders do when they think no one is watching.",
+    ],
+    takeaway: "If you want to know the real culture, ignore the posters. Watch what happens in the meeting after the meeting.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "How to embed change into culture, and how to know when it has happened",
+    relatedHref: "/knowledge/culture-integration",
+  },
+  {
+    title: "HR is not the change management department. Stop treating it like one.",
+    body: [
+      "There is a pattern that plays out in almost every large transformation. The programme team builds the plan. Leadership approves it. And then someone asks: who is going to handle the people side? The answer, almost invariably, is HR.",
+      "This is a mistake. Not because HR does not care about people. They do. But because dumping the people side of change onto HR without clarity about what that means creates a function that is simultaneously over-relied upon and under-empowered.",
+      "HR is expected to manage communications, handle resistance, deliver training, support affected employees, redesign roles, update policies, and maintain engagement, all while continuing their day job. No function can do all of that well. And when they inevitably cannot, they become the scapegoat for the programme's failure to manage change properly.",
+      "The real question is not whether HR should be involved. Of course they should. The question is what HR should own versus what the programme should own versus what line managers should own. Without that clarity, everyone assumes someone else is doing it, and the critical work falls through the gaps.",
+      "HR's strongest contribution to a transformation is not being the change management team. It is being the expert on the people systems that need to align with the change: performance management, reward and recognition, role design, capability development, and workforce planning. These are strategic enablers, not administrative tasks.",
+    ],
+    takeaway: "HR should enable the people systems that sustain change. They should not be the default owner of everything the programme team does not want to do.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Role Clarity: what HR, change managers, project managers, and line managers each own",
+    relatedHref: "/knowledge/role-clarity",
+  },
+  {
+    title: "Your system went live. Your people did not.",
+    body: [
+      "Go-live is the most dangerous moment in any technology-driven transformation. Not because of technical risk. Most organisations manage the technical cutover competently. The danger is in the assumption that go-live equals change.",
+      "On go-live day, the system is in production. The old system is switched off. The project team celebrates. The steering committee reports success. And then Monday comes, and the people who are supposed to use the new system discover that it does not work the way they expected, the training they received three weeks ago has already faded, and their manager cannot answer their questions because nobody trained the managers.",
+      "This is the moment where the gap between project success and change success becomes visible. The project delivered. The change did not. And the tragedy is that this was predictable. It happens in the majority of technology implementations, and it happens for the same reasons every time.",
+      "The system was configured based on documented processes, not actual ones. The training was designed for knowledge transfer, not behaviour change. The go-live date was set by the project timeline, not by organisational readiness. And the people who would use the system daily were the last to be consulted about how it should work.",
+      "The fix is not better technology. It is better change management. It is understanding that a system going live is the beginning of the change, not the end. It is measuring adoption at 30, 60, and 90 days, not just at launch. And it is keeping support in place long after the project team has moved on.",
+    ],
+    takeaway: "Go-live is not the finish line. It is the starting line. The real change begins when people have to use the system on a Monday morning.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Why digital transformations keep failing the people they are supposed to help",
+    relatedHref: "/knowledge/tools-and-systems",
+  },
+  {
+    title: "Training completion is not adoption. Here is how to tell the difference.",
+    body: [
+      "There is a number that change programmes love to report: training completion rates. 95% of staff completed the training. It sounds impressive. It means almost nothing.",
+      "Training completion tells you that people sat in a room, or clicked through an online module, or watched a video. It does not tell you that they understood what they learned. It does not tell you that they can apply it under pressure. And it certainly does not tell you that they will do anything differently tomorrow.",
+      "Adoption is a behaviour, not an event. It is not measured by whether someone attended the training. It is measured by whether they changed how they work. And the distance between attending and adopting is where most enablement programmes fail.",
+      "The signs of genuine adoption are observable. People are using the new system without being reminded. They are following the new process without reverting to the old one. They are making decisions using the new framework. They are asking questions that show they are engaging with the change, not just complying with it.",
+      "The signs of training without adoption are equally observable. People completed the course but still use spreadsheets instead of the new system. They attended the workshop but still escalate decisions they should now make themselves. They passed the assessment but still ask their colleague to do it for them.",
+      "If you want to measure adoption, stop counting completions. Start observing behaviours. Go to the place where the work happens and watch whether anything is different. That is your adoption metric.",
+    ],
+    takeaway: "Completion is an input. Adoption is an outcome. Measure the outcome, not the input.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "How to measure change adoption when the metrics are hard to pin down",
+    relatedHref: "/knowledge/adoption-metrics",
+  },
+  {
+    title: "Why your best people leave during transformation.",
+    body: [
+      "There is an uncomfortable pattern in organisational transformation. The people you most need to keep are often the first to leave. Not because they cannot handle change. Because they can. They have options. And when the change feels poorly managed, they exercise them.",
+      "Your highest performers are the ones who are most attuned to whether the organisation is serious about its stated direction. They watch leadership behaviour more closely than anyone. When they see leaders saying one thing and doing another, they do not complain. They update their LinkedIn profile.",
+      "They also have the lowest tolerance for dysfunction. If the transformation creates ambiguity about their role, increases their workload without acknowledgement, or removes the autonomy they valued, they will not wait to see if it gets better. They will find somewhere that already is better.",
+      "The irony is that most retention strategies during transformation focus on the wrong people. They focus on the people who are visibly unhappy, the ones raising concerns, pushing back, or disengaging. Meanwhile, the quiet departure of a high performer, the person who simply stops contributing their discretionary effort before handing in their notice, goes unnoticed until it is too late.",
+      "The solution is not a retention bonus. It is genuine engagement. It is involving your best people in shaping the change rather than subjecting them to it. It is having honest conversations about what is changing and what is not. It is ensuring that the transformation does not accidentally destroy the things that made the organisation worth staying at.",
+    ],
+    takeaway: "The people who leave first are not the ones who cannot adapt. They are the ones who have the most options. Treat your best people as partners in the change, not passengers.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "How to engage operational teams who are too busy for another initiative",
+    relatedHref: "/knowledge/stakeholder-strategy",
+  },
 ];
 
 export default function ChangeBites() {
@@ -290,6 +361,96 @@ export default function ChangeBites() {
                 culture actually is and how to shift it intentionally.
               </p>
               <Link href="/knowledge/culture-integration" className="btn">Read More</Link>
+            </div>
+          )}
+
+          {/* CHANGE BITE: Culture */}
+          {isVisible("culture") && (
+            <div className="blog-post" data-category="culture">
+              <div className="post-meta">
+                <span className="post-tag">Culture</span>
+                <span className="post-meta-sep"></span>
+                <span className="post-date">March 2026</span>
+              </div>
+              <h2>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(3); }}>
+                  {changeBites[3].title}
+                </a>
+              </h2>
+              <p>{changeBites[3].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(3)}>Read More</button>
+            </div>
+          )}
+
+          {/* CHANGE BITE: HR & People */}
+          {isVisible("hr-people") && (
+            <div className="blog-post" data-category="hr-people">
+              <div className="post-meta">
+                <span className="post-tag">HR & People</span>
+                <span className="post-meta-sep"></span>
+                <span className="post-date">March 2026</span>
+              </div>
+              <h2>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(4); }}>
+                  {changeBites[4].title}
+                </a>
+              </h2>
+              <p>{changeBites[4].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(4)}>Read More</button>
+            </div>
+          )}
+
+          {/* CHANGE BITE: Digital Transformation */}
+          {isVisible("digital-transformation") && (
+            <div className="blog-post" data-category="digital-transformation">
+              <div className="post-meta">
+                <span className="post-tag">Digital Transformation</span>
+                <span className="post-meta-sep"></span>
+                <span className="post-date">February 2026</span>
+              </div>
+              <h2>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(5); }}>
+                  {changeBites[5].title}
+                </a>
+              </h2>
+              <p>{changeBites[5].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(5)}>Read More</button>
+            </div>
+          )}
+
+          {/* CHANGE BITE: Change Adoption */}
+          {isVisible("change-adoption") && (
+            <div className="blog-post" data-category="change-adoption">
+              <div className="post-meta">
+                <span className="post-tag">Change Adoption</span>
+                <span className="post-meta-sep"></span>
+                <span className="post-date">February 2026</span>
+              </div>
+              <h2>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(6); }}>
+                  {changeBites[6].title}
+                </a>
+              </h2>
+              <p>{changeBites[6].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(6)}>Read More</button>
+            </div>
+          )}
+
+          {/* CHANGE BITE: HR & People - Retention */}
+          {isVisible("hr-people") && (
+            <div className="blog-post" data-category="hr-people">
+              <div className="post-meta">
+                <span className="post-tag">HR & People</span>
+                <span className="post-meta-sep"></span>
+                <span className="post-date">January 2026</span>
+              </div>
+              <h2>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActiveBite(7); }}>
+                  {changeBites[7].title}
+                </a>
+              </h2>
+              <p>{changeBites[7].body[0].slice(0, 200)}...</p>
+              <button className="btn" onClick={() => setActiveBite(7)}>Read More</button>
             </div>
           )}
 
