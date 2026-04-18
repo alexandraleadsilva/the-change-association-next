@@ -14,6 +14,7 @@ export function Nav() {
     { href: "/about", label: "About" },
     "sep",
     { href: "/knowledge", label: "Knowledge" },
+    { href: "/tools", label: "Tools" },
     "sep",
     { href: "/change-bites", label: "Change Bites" },
   ] as const;
@@ -34,7 +35,7 @@ export function Nav() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={pathname === item.href ? "active" : ""}
+                className={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "active" : ""}
                 onClick={() => setOpen(false)}
               >
                 {item.label}

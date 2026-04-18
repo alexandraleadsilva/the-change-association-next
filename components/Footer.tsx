@@ -17,6 +17,7 @@ export function Footer({ showAbout = false }: { showAbout?: boolean }) {
         <li><Link href="/">Home</Link></li>
         <li><Link href="/about">About</Link></li>
         <li><Link href="/knowledge">Knowledge</Link></li>
+        <li><Link href="/tools">Tools</Link></li>
         <li><Link href="/change-bites">Change Bites</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
