@@ -202,7 +202,7 @@ export default function StakeholderMapPage() {
             support for your change initiative.
           </p>
           <Link
-            href="/knowledge"
+            href="/tools"
             style={{
               display: "inline-block",
               marginTop: 20,
@@ -214,7 +214,7 @@ export default function StakeholderMapPage() {
               textDecoration: "none",
             }}
           >
-            &larr; Back to Knowledge Hub
+            &larr; Back to Tools
           </Link>
         </ScrollReveal>
       </header>

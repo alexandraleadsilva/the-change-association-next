@@ -776,8 +776,8 @@ export default function ReadinessAssessmentPage() {
 
       {/* ---- HEADER ---- */}
       <header className="article-header" style={{ paddingTop: 48 }}>
-        <Link href="/knowledge" className="article-back">
-          &larr; Back to Knowledge Hub
+        <Link href="/tools" className="article-back">
+          &larr; Back to Tools
         </Link>
         <span className="article-label">Interactive Tool</span>
         <h1 className="article-title">Change Readiness Assessment</h1>
