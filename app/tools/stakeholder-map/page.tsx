@@ -113,6 +113,7 @@ export default function StakeholderMapPage() {
   const [form, setForm] = useState<Omit<Stakeholder, "id">>(EMPTY_FORM);
   const [showForm, setShowForm] = useState(false);
   const [formError, setFormError] = useState("");
+  const [editingId, setEditingId] = useState<string | null>(null);
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<Stakeholder, "id">>(
@@ -130,7 +131,30 @@ export default function StakeholderMapPage() {
       return;
     }
     setFormError("");
-    setStakeholders((prev) => [...prev, { ...form, id: generateId() }]);
+    if (editingId) {
+      setStakeholders((prev) =>
+        prev.map((s) => (s.id === editingId ? { ...form, id: editingId } : s))
+      );
+      setEditingId(null);
+    } else {
+      setStakeholders((prev) => [...prev, { ...form, id: generateId() }]);
+    }
+    setForm(EMPTY_FORM);
+    setShowForm(false);
+  };
+
+  const editStakeholder = (id: string) => {
+    const s = stakeholders.find((s) => s.id === id);
+    if (!s) return;
+    const { id: _id, ...rest } = s;
+    setForm(rest);
+    setEditingId(id);
+    setShowForm(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const cancelEdit = () => {
+    setEditingId(null);
     setForm(EMPTY_FORM);
     setShowForm(false);
   };
@@ -282,11 +306,15 @@ export default function StakeholderMapPage() {
               <button
                 className="btn"
                 onClick={() => {
-                  setShowForm(!showForm);
+                  if (editingId) {
+                    cancelEdit();
+                  } else {
+                    setShowForm(!showForm);
+                  }
                   setFormError("");
                 }}
               >
-                {showForm ? "Cancel" : "+ Add Stakeholder"}
+                {showForm ? (editingId ? "Cancel Edit" : "Cancel") : "+ Add Stakeholder"}
               </button>
             </div>
 
@@ -474,7 +502,7 @@ export default function StakeholderMapPage() {
                 )}
 
                 <button className="btn-gold" onClick={addStakeholder}>
-                  Add Stakeholder
+                  {editingId ? "Update Stakeholder" : "Add Stakeholder"}
                 </button>
               </div>
             )}
@@ -608,6 +636,25 @@ export default function StakeholderMapPage() {
                           >
                             {INFLUENCE_LABELS[s.impact]} Impact
                           </span>
+
+                          {/* Edit */}
+                          <button
+                            onClick={() => editStakeholder(s.id)}
+                            aria-label={`Edit ${s.name}`}
+                            style={{
+                              background: "none",
+                              border: "none",
+                              cursor: "pointer",
+                              fontFamily: "var(--ui)",
+                              fontSize: 12,
+                              color: "var(--gold)",
+                              padding: "4px 8px",
+                              transition: "color 0.2s",
+                              letterSpacing: "0.04em",
+                            }}
+                          >
+                            Edit
+                          </button>
 
                           {/* Delete */}
                           <button
