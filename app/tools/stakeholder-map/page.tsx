@@ -114,6 +114,7 @@ export default function StakeholderMapPage() {
   const [showForm, setShowForm] = useState(false);
   const [formError, setFormError] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [mapFilter, setMapFilter] = useState<"all" | Stakeholder["ring"]>("all");
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<Stakeholder, "id">>(
@@ -821,44 +822,62 @@ export default function StakeholderMapPage() {
                 >
                   Stakeholder Map
                 </h2>
-                <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)", marginBottom: 24 }}>
-                  Impact (vertical) vs Influence (horizontal). Colour indicates current support level.
+                <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)", marginBottom: 16 }}>
+                  Impact (vertical) vs Influence (horizontal). Colour indicates current support level. Click any dot to edit.
                 </p>
+
+                {/* Filter tabs */}
+                <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "1px solid var(--border)" }}>
+                  {([{ label: "All", value: "all" as const }, ...Object.entries(RING_LABELS).map(([value, label]) => ({ label, value: value as Stakeholder["ring"] }))]).map(tab => (
+                    <button
+                      key={tab.value}
+                      onClick={() => setMapFilter(tab.value)}
+                      style={{
+                        fontFamily: "var(--ui)", fontSize: 11, fontWeight: mapFilter === tab.value ? 500 : 400,
+                        letterSpacing: "0.08em", textTransform: "uppercase" as const,
+                        color: mapFilter === tab.value ? "var(--navy)" : "var(--text-mid)",
+                        padding: "8px 16px 10px", cursor: "pointer",
+                        background: "none", border: "none", borderBottom: mapFilter === tab.value ? "2px solid var(--navy)" : "2px solid transparent",
+                        marginBottom: -1, transition: "all 0.2s",
+                      }}
+                    >{tab.label}</button>
+                  ))}
+                </div>
 
                 {/* Legend */}
                 <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
                   {(Object.keys(POSITION_COLOURS) as Stakeholder["currentPosition"][]).map(pos => (
                     <div key={pos} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                      <span style={{ width: 12, height: 12, borderRadius: "50%", background: POSITION_COLOURS[pos], display: "inline-block" }}></span>
-                      <span style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--text-mid)" }}>{POSITION_LABELS[pos]}</span>
+                      <span style={{ width: 10, height: 10, borderRadius: "50%", background: POSITION_COLOURS[pos], display: "inline-block" }}></span>
+                      <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>{POSITION_LABELS[pos]}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Quadrant Grid */}
-                <div style={{ position: "relative", width: "100%", maxWidth: 600, aspectRatio: "1", border: "1px solid var(--border)", background: "var(--cream)" }}>
+                <div style={{ position: "relative", width: "100%", maxWidth: 560, aspectRatio: "1", border: "1px solid var(--border)", background: "var(--cream)", margin: "0 auto" }}>
                   {/* Axis labels */}
-                  <span style={{ position: "absolute", left: -8, top: "50%", transform: "translateY(-50%) rotate(-90deg)", fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080", whiteSpace: "nowrap" }}>Impact</span>
-                  <span style={{ position: "absolute", bottom: -24, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080" }}>Influence</span>
+                  <span style={{ position: "absolute", left: -28, top: "50%", transform: "translateY(-50%) rotate(-90deg)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080", whiteSpace: "nowrap" }}>Impact</span>
+                  <span style={{ position: "absolute", bottom: -28, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080" }}>Influence</span>
 
                   {/* Quadrant lines */}
                   <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "var(--border)" }}></div>
                   <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, background: "var(--border)" }}></div>
 
-                  {/* Quadrant labels */}
-                  <span style={{ position: "absolute", top: 8, left: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em" }}>High Impact, Low Influence</span>
-                  <span style={{ position: "absolute", top: 8, right: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em", textAlign: "right" as const }}>High Impact, High Influence</span>
-                  <span style={{ position: "absolute", bottom: 8, left: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em" }}>Low Impact, Low Influence</span>
-                  <span style={{ position: "absolute", bottom: 8, right: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em", textAlign: "right" as const }}>Low Impact, High Influence</span>
+                  {/* Quadrant labels - short, positioned in corners */}
+                  <span style={{ position: "absolute", top: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Keep Satisfied</span>
+                  <span style={{ position: "absolute", top: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Manage Closely</span>
+                  <span style={{ position: "absolute", bottom: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Monitor</span>
+                  <span style={{ position: "absolute", bottom: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Keep Informed</span>
 
                   {/* Axis end labels */}
-                  <span style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>High</span>
-                  <span style={{ position: "absolute", bottom: -18, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>Low</span>
-                  <span style={{ position: "absolute", left: -4, top: "50%", transform: "translateY(12px)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>Low</span>
-                  <span style={{ position: "absolute", right: -4, top: "50%", transform: "translateY(12px)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>High</span>
+                  <span style={{ position: "absolute", top: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
+                  <span style={{ position: "absolute", bottom: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
+                  <span style={{ position: "absolute", left: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
+                  <span style={{ position: "absolute", right: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
 
-                  {/* Stakeholder dots */}
-                  {stakeholders.map((s, i) => {
+                  {/* Stakeholder dots - filtered */}
+                  {stakeholders.filter(s => mapFilter === "all" || s.ring === mapFilter).map((s, i) => {
                     const xBase = s.influence === "high" ? 75 : s.influence === "medium" ? 50 : 25;
                     const yBase = s.impact === "high" ? 25 : s.impact === "medium" ? 50 : 75;
                     // Jitter to prevent overlap
