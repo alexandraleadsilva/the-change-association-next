@@ -28,6 +28,9 @@ interface ChangeBite {
   title: string;
   body: string[];
   takeaway: string;
+  relatedLabel: string;
+  relatedTitle: string;
+  relatedHref: string;
 }
 
 const changeBites: ChangeBite[] = [
@@ -41,6 +44,9 @@ const changeBites: ChangeBite[] = [
       "The 70% stat is not wrong. It is incomplete. It tells you that change is hard. It does not tell you why. And if you do not understand why, you cannot fix it. The TCA Change Model exists to address the specific failure points that research consistently identifies: Direction without alignment, Engagement without depth, Enablement without confidence, Execution without governance, and Sustainment without reinforcement.",
     ],
     takeaway: "Stop quoting the stat. Start understanding the specific failure points. That is where the real work begins.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "The TCA Change Model: A structured framework for leading change that lasts",
+    relatedHref: "/knowledge",
   },
   {
     title: "Your change plan is not a change strategy. Here is the difference.",
@@ -53,6 +59,9 @@ const changeBites: ChangeBite[] = [
       "The plan is the vehicle. The strategy is the navigation. You need both. But if you only have the plan, you are driving without knowing where you are going.",
     ],
     takeaway: "If your change plan could be completed perfectly without anyone actually changing how they work, it is a plan, not a strategy.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "What is the difference between project success and change success, and why it matters",
+    relatedHref: "/knowledge/project-vs-change-success",
   },
   {
     title: "Stop calling it resistance. It is feedback.",
@@ -65,6 +74,9 @@ const changeBites: ChangeBite[] = [
       "The next time someone pushes back, do not reach for your stakeholder engagement plan. Reach for curiosity. Ask what is driving their response. Listen to the answer. Then decide whether the change needs to adapt, not whether the person needs to be managed.",
     ],
     takeaway: "Resistance is not a character flaw. It is a diagnostic signal. The question is not how to overcome it. The question is what it is telling you.",
+    relatedLabel: "Go deeper on this topic",
+    relatedTitle: "Change Impact Assessment: readiness, impact, and the real reason employees resist change",
+    relatedHref: "/knowledge/change-impact-assessment",
   },
 ];
 
@@ -371,6 +383,23 @@ export default function ChangeBites() {
             <div className="case-study-lesson">
               <span className="case-study-lesson-label">The Takeaway</span>
               <p>{changeBites[activeBite].takeaway}</p>
+            </div>
+            <div style={{ marginTop: "24px", padding: "20px 24px", background: "rgba(10, 22, 40, 0.03)", border: "1px solid var(--border)" }}>
+              <span style={{ fontFamily: "var(--ui)", fontSize: "10px", fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "var(--gold)", display: "block", marginBottom: "8px" }}>{changeBites[activeBite].relatedLabel}</span>
+              <Link
+                href={changeBites[activeBite].relatedHref}
+                style={{ fontFamily: "var(--serif)", fontSize: "18px", fontWeight: 600, color: "var(--navy)", textDecoration: "none", lineHeight: "1.3", display: "block", marginBottom: "8px" }}
+                onClick={() => setActiveBite(null)}
+              >
+                {changeBites[activeBite].relatedTitle}
+              </Link>
+              <Link
+                href={changeBites[activeBite].relatedHref}
+                className="case-study-source"
+                onClick={() => setActiveBite(null)}
+              >
+                Read the full article &rarr;
+              </Link>
             </div>
           </div>
         </div>
