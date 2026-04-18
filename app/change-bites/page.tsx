@@ -45,7 +45,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "Stop quoting the stat. Start understanding the specific failure points. That is where the real work begins.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "The TCA Change Model: A structured framework for leading change that lasts",
+    relatedTitle: "The TCA Change Model: a structured framework for leading change that lasts",
     relatedHref: "/knowledge",
   },
   {
@@ -75,7 +75,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "Resistance is not a character flaw. It is a diagnostic signal. The question is not how to overcome it. The question is what it is telling you.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "Change Impact Assessment: readiness, impact, and the real reason employees resist change",
+    relatedTitle: "Change Impact Assessment: readiness, stakeholder impact, and the real reasons employees resist change",
     relatedHref: "/knowledge/change-impact-assessment",
   },
   {
@@ -89,7 +89,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "If you want to know the real culture, ignore the posters. Watch what happens in the meeting after the meeting.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "How to embed change into culture, and how to know when it has happened",
+    relatedTitle: "Culture Integration: embedding change into the way an organisation thinks and behaves",
     relatedHref: "/knowledge/culture-integration",
   },
   {
@@ -103,7 +103,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "HR should enable the people systems that sustain change. They should not be the default owner of everything the programme team does not want to do.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "Role Clarity: what HR, change managers, project managers, and line managers each own",
+    relatedTitle: "Role clarity and capability in organisational change: HR, external consultants, and defining new responsibilities",
     relatedHref: "/knowledge/role-clarity",
   },
   {
@@ -132,7 +132,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "Completion is an input. Adoption is an outcome. Measure the outcome, not the input.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "How to measure change adoption when the metrics are hard to pin down",
+    relatedTitle: "How to measure change adoption and what leading indicators actually predict success",
     relatedHref: "/knowledge/adoption-metrics",
   },
   {
@@ -146,7 +146,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "The people who leave first are not the ones who cannot adapt. They are the ones who have the most options. Treat your best people as partners in the change, not passengers.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "How to engage operational teams who are too busy for another initiative",
+    relatedTitle: "Stakeholder strategy: how to map, engage, and activate the people who determine whether change lands",
     relatedHref: "/knowledge/stakeholder-strategy",
   },
   {
@@ -160,7 +160,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "If you completed every task on your change plan and nobody worked differently, you managed the project. You did not lead the change.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "An interactive self-assessment: are you leading change or managing it?",
+    relatedTitle: "Are you leading change or just managing tasks through a change plan",
     relatedHref: "/knowledge/leading-vs-managing-change",
   },
   {
@@ -174,7 +174,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "Information tells people what to do. Experience teaches them what it feels like. You need both, but most change programmes only deliver the first.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "The emotional journey of change and how to design touchpoints that build trust",
+    relatedTitle: "The change experience: why understanding the process is not enough",
     relatedHref: "/knowledge/change-experience",
   },
   {
@@ -188,7 +188,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "An executive who approved the change but is not visibly leading it is not a sponsor. They are a signature on a document.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "The five levels of executive sponsorship and how to move your sponsor up",
+    relatedTitle: "How to get executives on board when they say yes but act no",
     relatedHref: "/knowledge/executive-sponsorship",
   },
   {
@@ -202,7 +202,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "HR's role is not to be the change management team. It is to own the people systems that make change permanent.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "Role clarity: what HR, change managers, and line managers each own in transformation",
+    relatedTitle: "Role clarity and capability in organisational change: HR, external consultants, and defining new responsibilities",
     relatedHref: "/knowledge/role-clarity",
   },
   {
@@ -216,7 +216,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "Culture is not changed by posters. It is changed by what leaders reward, what systems reinforce, and what happens when no one is looking.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "Culture Integration: embedding change into organisational DNA",
+    relatedTitle: "Culture Integration: embedding change into the way an organisation thinks and behaves",
     relatedHref: "/knowledge/culture-integration",
   },
   {
@@ -230,7 +230,7 @@ const changeBites: ChangeBite[] = [
     ],
     takeaway: "The technology is never the problem. The problem is the distance between how the system was designed and how people actually need to work.",
     relatedLabel: "Go deeper on this topic",
-    relatedTitle: "Tools & Systems: why digital transformations fail and how to prevent it",
+    relatedTitle: "Why digital transformations keep failing the people they are supposed to help",
     relatedHref: "/knowledge/tools-and-systems",
   },
 ];
