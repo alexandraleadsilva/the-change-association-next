@@ -803,7 +803,7 @@ export default function StakeholderMapPage() {
           </section>
         </ScrollReveal>
 
-        {/* ---- Visual Summary ---- */}
+        {/* ---- Quadrant Map ---- */}
         {stakeholders.length > 0 && (
           <>
             <hr className="section-divider" style={{ marginBottom: 48 }} />
@@ -813,302 +813,107 @@ export default function StakeholderMapPage() {
                 <h2
                   style={{
                     fontFamily: "var(--serif)",
-                    fontSize: 26,
-                    fontWeight: 400,
+                    fontSize: 28,
+                    fontWeight: 500,
                     color: "var(--navy)",
-                    marginBottom: 28,
+                    marginBottom: 12,
                   }}
                 >
-                  Summary
+                  Stakeholder Map
                 </h2>
+                <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)", marginBottom: 24 }}>
+                  Impact (vertical) vs Influence (horizontal). Colour indicates current support level.
+                </p>
 
-                {/* Summary Grid */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                    gap: 20,
-                    marginBottom: 28,
-                  }}
-                >
-                  {/* Count by Ring */}
-                  <div
-                    style={{
-                      border: "1px solid var(--border)",
-                      padding: "22px 24px",
-                      background: "rgba(10,22,40,0.02)",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: "var(--ui)",
-                        fontSize: 10,
-                        fontWeight: 500,
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
-                        color: "var(--gold)",
-                        marginBottom: 16,
-                      }}
-                    >
-                      By Stakeholder Ring
-                    </h3>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 8,
-                      }}
-                    >
-                      {(
-                        [
-                          "decision-maker",
-                          "influencer",
-                          "impacted",
-                          "peripheral",
-                        ] as Stakeholder["ring"][]
-                      ).map((ring) => {
-                        const count = countByRing(ring);
-                        return (
-                          <div
-                            key={ring}
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                              padding: "6px 0",
-                              borderBottom: "1px solid var(--border)",
-                            }}
-                          >
-                            <span
-                              style={{
-                                fontFamily: "var(--ui)",
-                                fontSize: 13,
-                                color: "var(--text-dark)",
-                              }}
-                            >
-                              {RING_LABELS[ring]}
-                            </span>
-                            <span
-                              style={{
-                                fontFamily: "var(--ui)",
-                                fontSize: 14,
-                                fontWeight: 600,
-                                color: count > 0 ? "var(--navy)" : "#9A9080",
-                              }}
-                            >
-                              {count}
-                            </span>
-                          </div>
-                        );
-                      })}
+                {/* Legend */}
+                <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
+                  {(Object.keys(POSITION_COLOURS) as Stakeholder["currentPosition"][]).map(pos => (
+                    <div key={pos} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <span style={{ width: 12, height: 12, borderRadius: "50%", background: POSITION_COLOURS[pos], display: "inline-block" }}></span>
+                      <span style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--text-mid)" }}>{POSITION_LABELS[pos]}</span>
                     </div>
-                  </div>
+                  ))}
+                </div>
 
-                  {/* Count by Current Position */}
-                  <div
-                    style={{
-                      border: "1px solid var(--border)",
-                      padding: "22px 24px",
-                      background: "rgba(10,22,40,0.02)",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: "var(--ui)",
-                        fontSize: 10,
-                        fontWeight: 500,
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
-                        color: "var(--gold)",
-                        marginBottom: 16,
-                      }}
-                    >
-                      By Current Position
-                    </h3>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 8,
-                      }}
-                    >
-                      {(
-                        [
-                          "champion",
-                          "supporter",
-                          "neutral",
-                          "resistant",
-                          "blocker",
-                        ] as Stakeholder["currentPosition"][]
-                      ).map((pos) => {
-                        const count = countByPosition(pos);
-                        return (
-                          <div
-                            key={pos}
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                              padding: "6px 0",
-                              borderBottom: "1px solid var(--border)",
-                            }}
-                          >
-                            <span
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 8,
-                                fontFamily: "var(--ui)",
-                                fontSize: 13,
-                                color: "var(--text-dark)",
-                              }}
-                            >
-                              <span
-                                style={{
-                                  display: "inline-block",
-                                  width: 10,
-                                  height: 10,
-                                  borderRadius: "50%",
-                                  background: POSITION_COLOURS[pos],
-                                  flexShrink: 0,
-                                }}
-                              />
-                              {POSITION_LABELS[pos]}
-                            </span>
-                            <span
-                              style={{
-                                fontFamily: "var(--ui)",
-                                fontSize: 14,
-                                fontWeight: 600,
-                                color: count > 0 ? "var(--navy)" : "#9A9080",
-                              }}
-                            >
-                              {count}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+                {/* Quadrant Grid */}
+                <div style={{ position: "relative", width: "100%", maxWidth: 600, aspectRatio: "1", border: "1px solid var(--border)", background: "var(--cream)" }}>
+                  {/* Axis labels */}
+                  <span style={{ position: "absolute", left: -8, top: "50%", transform: "translateY(-50%) rotate(-90deg)", fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080", whiteSpace: "nowrap" }}>Impact</span>
+                  <span style={{ position: "absolute", bottom: -24, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080" }}>Influence</span>
 
-                  {/* Movement Needed */}
-                  <div
-                    style={{
-                      border: "1px solid var(--border)",
-                      padding: "22px 24px",
-                      background: "rgba(10,22,40,0.02)",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: "var(--ui)",
-                        fontSize: 10,
-                        fontWeight: 500,
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
-                        color: "var(--gold)",
-                        marginBottom: 16,
-                      }}
-                    >
-                      Movement Needed
-                    </h3>
+                  {/* Quadrant lines */}
+                  <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "var(--border)" }}></div>
+                  <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, background: "var(--border)" }}></div>
 
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 12,
-                      }}
-                    >
+                  {/* Quadrant labels */}
+                  <span style={{ position: "absolute", top: 8, left: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em" }}>High Impact, Low Influence</span>
+                  <span style={{ position: "absolute", top: 8, right: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em", textAlign: "right" as const }}>High Impact, High Influence</span>
+                  <span style={{ position: "absolute", bottom: 8, left: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em" }}>Low Impact, Low Influence</span>
+                  <span style={{ position: "absolute", bottom: 8, right: 8, fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080", letterSpacing: "0.06em", textAlign: "right" as const }}>Low Impact, High Influence</span>
+
+                  {/* Axis end labels */}
+                  <span style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>High</span>
+                  <span style={{ position: "absolute", bottom: -18, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>Low</span>
+                  <span style={{ position: "absolute", left: -4, top: "50%", transform: "translateY(12px)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>Low</span>
+                  <span style={{ position: "absolute", right: -4, top: "50%", transform: "translateY(12px)", fontFamily: "var(--ui)", fontSize: 9, color: "#9A9080" }}>High</span>
+
+                  {/* Stakeholder dots */}
+                  {stakeholders.map((s, i) => {
+                    const xBase = s.influence === "high" ? 75 : s.influence === "medium" ? 50 : 25;
+                    const yBase = s.impact === "high" ? 25 : s.impact === "medium" ? 50 : 75;
+                    // Jitter to prevent overlap
+                    const jitter = (i * 7) % 15 - 7;
+                    const x = Math.min(95, Math.max(5, xBase + jitter));
+                    const y = Math.min(95, Math.max(5, yBase + (jitter * 0.5)));
+                    return (
                       <div
+                        key={s.id}
+                        title={`${s.name} (${POSITION_LABELS[s.currentPosition]})`}
                         style={{
-                          textAlign: "center",
-                          padding: "16px 0",
-                          borderBottom: "1px solid var(--border)",
+                          position: "absolute",
+                          left: `${x}%`,
+                          top: `${y}%`,
+                          transform: "translate(-50%, -50%)",
+                          width: 32,
+                          height: 32,
+                          borderRadius: "50%",
+                          background: POSITION_COLOURS[s.currentPosition],
+                          border: "2px solid white",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                          transition: "transform 0.2s",
+                          zIndex: 2,
                         }}
+                        onClick={() => editStakeholder(s.id)}
                       >
-                        <div
-                          style={{
-                            fontFamily: "var(--serif)",
-                            fontSize: 42,
-                            fontWeight: 600,
-                            color:
-                              movementNeeded > 0 ? "var(--navy)" : "#2E7D32",
-                            lineHeight: 1,
-                            marginBottom: 4,
-                          }}
-                        >
-                          {movementNeeded}
-                        </div>
-                        <div
-                          style={{
-                            fontFamily: "var(--ui)",
-                            fontSize: 12,
-                            color: "var(--text-mid)",
-                          }}
-                        >
-                          of {stakeholders.length} stakeholder
-                          {stakeholders.length !== 1 ? "s" : ""} need
-                          {movementNeeded === 1 ? "s" : ""} to move
-                        </div>
+                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 600, color: "white" }}>
+                          {s.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase()}
+                        </span>
                       </div>
+                    );
+                  })}
+                </div>
 
-                      {/* Movement breakdown */}
-                      {stakeholders
-                        .filter(
-                          (s) => s.currentPosition !== s.targetPosition
-                        )
-                        .map((s) => (
-                          <div
-                            key={s.id}
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 8,
-                              fontSize: 12,
-                              fontFamily: "var(--ui)",
-                              color: "var(--text-dark)",
-                              flexWrap: "wrap",
-                            }}
-                          >
-                            <span style={{ fontWeight: 500, minWidth: 80 }}>
-                              {s.name}
-                            </span>
-                            <span
-                              style={{
-                                color: POSITION_COLOURS[s.currentPosition],
-                                fontWeight: 500,
-                              }}
-                            >
-                              {POSITION_LABELS[s.currentPosition]}
-                            </span>
-                            <span style={{ color: "var(--gold)" }}>
-                              &rarr;
-                            </span>
-                            <span
-                              style={{ color: "#2E7D32", fontWeight: 500 }}
-                            >
-                              {TARGET_LABELS[s.targetPosition]}
-                            </span>
-                          </div>
-                        ))}
-
-                      {movementNeeded === 0 && (
-                        <p
-                          style={{
-                            fontFamily: "var(--ui)",
-                            fontSize: 13,
-                            color: "#2E7D32",
-                            fontWeight: 500,
-                            textAlign: "center",
-                          }}
-                        >
-                          All stakeholders are at their target position.
-                        </p>
-                      )}
-                    </div>
+                {/* Movement Summary */}
+                <div style={{ marginTop: 32, padding: "20px 24px", background: "var(--navy)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+                  <div>
+                    <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "var(--gold)", display: "block", marginBottom: 4 }}>Movement Needed</span>
+                    <span style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, color: "var(--cream)" }}>{movementNeeded}</span>
+                    <span style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.6)", marginLeft: 8 }}>of {stakeholders.length} stakeholders need to shift position</span>
+                  </div>
+                  <div style={{ display: "flex", gap: 20 }}>
+                    {(["decision-maker", "influencer", "impacted", "peripheral"] as const).map(ring => (
+                      <div key={ring} style={{ textAlign: "center" as const }}>
+                        <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "var(--cream)", display: "block" }}>{countByRing(ring)}</span>
+                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "rgba(234,228,213,0.5)" }}>{RING_LABELS[ring]}s</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
               </section>
             </ScrollReveal>
           </>
