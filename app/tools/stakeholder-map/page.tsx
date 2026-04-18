@@ -268,7 +268,156 @@ export default function StakeholderMapPage() {
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 
+        {/* ---- Quadrant Map ---- */}
+        <hr className="section-divider" style={{ marginBottom: 48 }} />
+
+            <ScrollReveal>
+              <section style={{ marginBottom: 48 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12, flexWrap: "wrap", gap: 12 }}>
+                  <h2
+                    style={{
+                      fontFamily: "var(--serif)",
+                      fontSize: 28,
+                      fontWeight: 500,
+                      color: "var(--navy)",
+                    }}
+                  >
+                    Stakeholder Map
+                  </h2>
+                  <button className="btn" onClick={() => { setShowForm(true); window.scrollTo({ top: document.getElementById("stakeholder-form-section")?.offsetTop || 0, behavior: "smooth" }); }}>
+                    + Add Stakeholder
+                  </button>
+                </div>
+                <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)", marginBottom: 16 }}>
+                  Impact (vertical) vs Influence (horizontal). Colour indicates current support level. Click any dot to edit.
+                </p>
+
+                {/* Filter tabs */}
+                <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "1px solid var(--border)" }}>
+                  {([{ label: "All", value: "all" as const }, ...Object.entries(RING_LABELS).map(([value, label]) => ({ label, value: value as Stakeholder["ring"] }))]).map(tab => (
+                    <button
+                      key={tab.value}
+                      onClick={() => setMapFilter(tab.value)}
+                      style={{
+                        fontFamily: "var(--ui)", fontSize: 11, fontWeight: mapFilter === tab.value ? 500 : 400,
+                        letterSpacing: "0.08em", textTransform: "uppercase" as const,
+                        color: mapFilter === tab.value ? "var(--navy)" : "var(--text-mid)",
+                        padding: "8px 16px 10px", cursor: "pointer",
+                        background: "none", border: "none", borderBottom: mapFilter === tab.value ? "2px solid var(--navy)" : "2px solid transparent",
+                        marginBottom: -1, transition: "all 0.2s",
+                      }}
+                    >{tab.label}</button>
+                  ))}
+                </div>
+
+                {/* Legend */}
+                <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
+                  {(Object.keys(POSITION_COLOURS) as Stakeholder["currentPosition"][]).map(pos => (
+                    <div key={pos} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <span style={{ width: 10, height: 10, borderRadius: "50%", background: POSITION_COLOURS[pos], display: "inline-block" }}></span>
+                      <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>{POSITION_LABELS[pos]}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Quadrant Grid */}
+                <div style={{ position: "relative", width: "100%", maxWidth: 560, aspectRatio: "1", border: "1px solid var(--border)", background: "var(--cream)", margin: "0 auto" }}>
+                  {/* Axis labels */}
+                  <span style={{ position: "absolute", left: -28, top: "50%", transform: "translateY(-50%) rotate(-90deg)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080", whiteSpace: "nowrap" }}>Impact</span>
+                  <span style={{ position: "absolute", bottom: -28, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080" }}>Influence</span>
+
+                  {/* Quadrant lines */}
+                  <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "var(--border)" }}></div>
+                  <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, background: "var(--border)" }}></div>
+
+                  {/* Quadrant labels - short, positioned in corners */}
+                  <span style={{ position: "absolute", top: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Keep Satisfied</span>
+                  <span style={{ position: "absolute", top: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Manage Closely</span>
+                  <span style={{ position: "absolute", bottom: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Monitor</span>
+                  <span style={{ position: "absolute", bottom: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Keep Informed</span>
+
+                  {/* Axis end labels */}
+                  <span style={{ position: "absolute", top: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
+                  <span style={{ position: "absolute", bottom: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
+                  <span style={{ position: "absolute", left: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
+                  <span style={{ position: "absolute", right: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
+
+                  {/* Empty state */}
+                  {stakeholders.filter(s => mapFilter === "all" || s.ring === mapFilter).length === 0 && (
+                    <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" as const, zIndex: 3 }}>
+                      <p style={{ fontFamily: "var(--ui)", fontSize: 14, color: "var(--text-mid)", marginBottom: 8 }}>
+                        {stakeholders.length === 0 ? "No stakeholders yet" : "No stakeholders in this filter"}
+                      </p>
+                      {stakeholders.length === 0 && (
+                        <p style={{ fontFamily: "var(--ui)", fontSize: 12, color: "#9A9080" }}>
+                          Add stakeholders to see them plotted here
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Stakeholder dots - filtered */}
+                  {stakeholders.filter(s => mapFilter === "all" || s.ring === mapFilter).map((s, i) => {
+                    const xBase = s.influence === "high" ? 75 : s.influence === "medium" ? 50 : 25;
+                    const yBase = s.impact === "high" ? 25 : s.impact === "medium" ? 50 : 75;
+                    // Jitter to prevent overlap
+                    const jitter = (i * 7) % 15 - 7;
+                    const x = Math.min(95, Math.max(5, xBase + jitter));
+                    const y = Math.min(95, Math.max(5, yBase + (jitter * 0.5)));
+                    return (
+                      <div
+                        key={s.id}
+                        title={`${s.name} (${POSITION_LABELS[s.currentPosition]})`}
+                        style={{
+                          position: "absolute",
+                          left: `${x}%`,
+                          top: `${y}%`,
+                          transform: "translate(-50%, -50%)",
+                          width: 32,
+                          height: 32,
+                          borderRadius: "50%",
+                          background: POSITION_COLOURS[s.currentPosition],
+                          border: "2px solid white",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                          transition: "transform 0.2s",
+                          zIndex: 2,
+                        }}
+                        onClick={() => editStakeholder(s.id)}
+                      >
+                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 600, color: "white" }}>
+                          {s.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase()}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Movement Summary */}
+                {stakeholders.length > 0 && <div style={{ marginTop: 32, padding: "20px 24px", background: "var(--navy)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+                  <div>
+                    <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "var(--gold)", display: "block", marginBottom: 4 }}>Movement Needed</span>
+                    <span style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, color: "var(--cream)" }}>{movementNeeded}</span>
+                    <span style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.6)", marginLeft: 8 }}>of {stakeholders.length} stakeholders need to shift position</span>
+                  </div>
+                  <div style={{ display: "flex", gap: 20 }}>
+                    {(["decision-maker", "influencer", "impacted", "peripheral"] as const).map(ring => (
+                      <div key={ring} style={{ textAlign: "center" as const }}>
+                        <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "var(--cream)", display: "block" }}>{countByRing(ring)}</span>
+                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "rgba(234,228,213,0.5)" }}>{RING_LABELS[ring]}s</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>}
+
+              </section>
+            </ScrollReveal>
+
         {/* ---- Add Stakeholder Toggle ---- */}
+        <div id="stakeholder-form-section"></div>
         <ScrollReveal>
           <section style={{ marginBottom: 48 }}>
             <div
@@ -803,140 +952,6 @@ export default function StakeholderMapPage() {
             )}
           </section>
         </ScrollReveal>
-
-        {/* ---- Quadrant Map ---- */}
-        {stakeholders.length > 0 && (
-          <>
-            <hr className="section-divider" style={{ marginBottom: 48 }} />
-
-            <ScrollReveal>
-              <section style={{ marginBottom: 48 }}>
-                <h2
-                  style={{
-                    fontFamily: "var(--serif)",
-                    fontSize: 28,
-                    fontWeight: 500,
-                    color: "var(--navy)",
-                    marginBottom: 12,
-                  }}
-                >
-                  Stakeholder Map
-                </h2>
-                <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)", marginBottom: 16 }}>
-                  Impact (vertical) vs Influence (horizontal). Colour indicates current support level. Click any dot to edit.
-                </p>
-
-                {/* Filter tabs */}
-                <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "1px solid var(--border)" }}>
-                  {([{ label: "All", value: "all" as const }, ...Object.entries(RING_LABELS).map(([value, label]) => ({ label, value: value as Stakeholder["ring"] }))]).map(tab => (
-                    <button
-                      key={tab.value}
-                      onClick={() => setMapFilter(tab.value)}
-                      style={{
-                        fontFamily: "var(--ui)", fontSize: 11, fontWeight: mapFilter === tab.value ? 500 : 400,
-                        letterSpacing: "0.08em", textTransform: "uppercase" as const,
-                        color: mapFilter === tab.value ? "var(--navy)" : "var(--text-mid)",
-                        padding: "8px 16px 10px", cursor: "pointer",
-                        background: "none", border: "none", borderBottom: mapFilter === tab.value ? "2px solid var(--navy)" : "2px solid transparent",
-                        marginBottom: -1, transition: "all 0.2s",
-                      }}
-                    >{tab.label}</button>
-                  ))}
-                </div>
-
-                {/* Legend */}
-                <div style={{ display: "flex", gap: 16, marginBottom: 20, flexWrap: "wrap" }}>
-                  {(Object.keys(POSITION_COLOURS) as Stakeholder["currentPosition"][]).map(pos => (
-                    <div key={pos} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                      <span style={{ width: 10, height: 10, borderRadius: "50%", background: POSITION_COLOURS[pos], display: "inline-block" }}></span>
-                      <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>{POSITION_LABELS[pos]}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Quadrant Grid */}
-                <div style={{ position: "relative", width: "100%", maxWidth: 560, aspectRatio: "1", border: "1px solid var(--border)", background: "var(--cream)", margin: "0 auto" }}>
-                  {/* Axis labels */}
-                  <span style={{ position: "absolute", left: -28, top: "50%", transform: "translateY(-50%) rotate(-90deg)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080", whiteSpace: "nowrap" }}>Impact</span>
-                  <span style={{ position: "absolute", bottom: -28, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 9, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#9A9080" }}>Influence</span>
-
-                  {/* Quadrant lines */}
-                  <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "var(--border)" }}></div>
-                  <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, background: "var(--border)" }}></div>
-
-                  {/* Quadrant labels - short, positioned in corners */}
-                  <span style={{ position: "absolute", top: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Keep Satisfied</span>
-                  <span style={{ position: "absolute", top: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Manage Closely</span>
-                  <span style={{ position: "absolute", bottom: 10, left: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", lineHeight: "1.3" }}>Monitor</span>
-                  <span style={{ position: "absolute", bottom: 10, right: 10, fontFamily: "var(--ui)", fontSize: 9, color: "rgba(154,144,128,0.6)", textAlign: "right" as const, lineHeight: "1.3" }}>Keep Informed</span>
-
-                  {/* Axis end labels */}
-                  <span style={{ position: "absolute", top: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
-                  <span style={{ position: "absolute", bottom: -16, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
-                  <span style={{ position: "absolute", left: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>LOW</span>
-                  <span style={{ position: "absolute", right: 4, top: "50%", transform: "translateY(8px)", fontFamily: "var(--ui)", fontSize: 8, color: "#9A9080" }}>HIGH</span>
-
-                  {/* Stakeholder dots - filtered */}
-                  {stakeholders.filter(s => mapFilter === "all" || s.ring === mapFilter).map((s, i) => {
-                    const xBase = s.influence === "high" ? 75 : s.influence === "medium" ? 50 : 25;
-                    const yBase = s.impact === "high" ? 25 : s.impact === "medium" ? 50 : 75;
-                    // Jitter to prevent overlap
-                    const jitter = (i * 7) % 15 - 7;
-                    const x = Math.min(95, Math.max(5, xBase + jitter));
-                    const y = Math.min(95, Math.max(5, yBase + (jitter * 0.5)));
-                    return (
-                      <div
-                        key={s.id}
-                        title={`${s.name} (${POSITION_LABELS[s.currentPosition]})`}
-                        style={{
-                          position: "absolute",
-                          left: `${x}%`,
-                          top: `${y}%`,
-                          transform: "translate(-50%, -50%)",
-                          width: 32,
-                          height: 32,
-                          borderRadius: "50%",
-                          background: POSITION_COLOURS[s.currentPosition],
-                          border: "2px solid white",
-                          boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          cursor: "pointer",
-                          transition: "transform 0.2s",
-                          zIndex: 2,
-                        }}
-                        onClick={() => editStakeholder(s.id)}
-                      >
-                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 600, color: "white" }}>
-                          {s.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase()}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Movement Summary */}
-                <div style={{ marginTop: 32, padding: "20px 24px", background: "var(--navy)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-                  <div>
-                    <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "var(--gold)", display: "block", marginBottom: 4 }}>Movement Needed</span>
-                    <span style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 600, color: "var(--cream)" }}>{movementNeeded}</span>
-                    <span style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.6)", marginLeft: 8 }}>of {stakeholders.length} stakeholders need to shift position</span>
-                  </div>
-                  <div style={{ display: "flex", gap: 20 }}>
-                    {(["decision-maker", "influencer", "impacted", "peripheral"] as const).map(ring => (
-                      <div key={ring} style={{ textAlign: "center" as const }}>
-                        <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "var(--cream)", display: "block" }}>{countByRing(ring)}</span>
-                        <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "rgba(234,228,213,0.5)" }}>{RING_LABELS[ring]}s</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </section>
-            </ScrollReveal>
-          </>
-        )}
 
         {/* ---- Related Knowledge ---- */}
         <hr className="section-divider" style={{ marginBottom: 40 }} />
