@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -115,6 +117,11 @@ export default function StakeholderMapPage() {
   const [formError, setFormError] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [mapFilter, setMapFilter] = useState<"all" | Stakeholder["ring"]>("all");
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "stakeholder-map",
+    defaultData: {},
+  });
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<Stakeholder, "id">>(
@@ -265,6 +272,8 @@ export default function StakeholderMapPage() {
             </div>
           </section>
         </ScrollReveal>
+
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 

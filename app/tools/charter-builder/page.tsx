@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -151,6 +153,11 @@ export default function CharterBuilderPage() {
       risksDependencies: "",
     },
     completeness: {},
+  });
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "charter-builder",
+    defaultData: {},
   });
 
   /* ---- expanded cards ---- */
@@ -373,6 +380,10 @@ export default function CharterBuilderPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <div style={{ padding: "0 48px", maxWidth: 820, margin: "0 auto" }}>
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
+      </div>
 
       {/* ---------- 7 CHARTER SECTIONS ---------- */}
       <section

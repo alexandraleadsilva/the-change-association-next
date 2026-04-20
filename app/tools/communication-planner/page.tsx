@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -121,6 +123,11 @@ export default function CommunicationPlannerPage() {
   const [showForm, setShowForm] = useState(false);
   const [formError, setFormError] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "communication-planner",
+    defaultData: {},
+  });
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<CommEntry, "id">>(
@@ -270,6 +277,8 @@ export default function CommunicationPlannerPage() {
             </div>
           </section>
         </ScrollReveal>
+
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 

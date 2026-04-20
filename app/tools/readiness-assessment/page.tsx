@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -221,6 +223,11 @@ export default function ReadinessAssessmentPage() {
   const [assessment, setAssessment] = useState<ReadinessAssessment>(initialAssessment);
   const [activeTab, setActiveTab] = useState<DimensionKey>("people");
   const [showResults, setShowResults] = useState(false);
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "readiness-assessment",
+    defaultData: {},
+  });
 
   /* ---- state helpers ---- */
 
@@ -830,6 +837,8 @@ export default function ReadinessAssessmentPage() {
             </div>
           </div>
         </ScrollReveal>
+
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         {/* ---- DIMENSION TABS ---- */}
         <ScrollReveal>

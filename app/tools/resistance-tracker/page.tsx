@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -129,6 +131,11 @@ export default function ResistanceTrackerPage() {
   const [filterStatus, setFilterStatus] = useState<
     "all" | ResistanceSignal["status"]
   >("all");
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "resistance-tracker",
+    defaultData: {},
+  });
 
   /* ---- form helpers ---- */
   const updateField = useCallback(
@@ -307,6 +314,8 @@ export default function ResistanceTrackerPage() {
             </div>
           </section>
         </ScrollReveal>
+
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 

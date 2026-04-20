@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -220,6 +222,11 @@ export default function AdoptionScorecardPage() {
   /* ---- expanded stages ---- */
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "adoption-scorecard",
+    defaultData: {},
+  });
+
   const toggle = useCallback((key: string) => {
     setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   }, []);
@@ -411,6 +418,8 @@ export default function AdoptionScorecardPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- ADOPTION CURVE STAIRCASE ---------- */}
       <ScrollReveal>

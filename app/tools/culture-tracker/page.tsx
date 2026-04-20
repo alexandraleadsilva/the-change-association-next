@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -283,6 +285,11 @@ export default function CultureTrackerPage() {
     },
   });
 
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "culture-tracker",
+    defaultData: {},
+  });
+
   /* ---- updaters ---- */
   const updateField = useCallback(
     (field: "projectName" | "createdBy" | "assessmentDate", value: string) => {
@@ -439,6 +446,8 @@ export default function CultureTrackerPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- 5 INDICATOR CARDS ---------- */}
       <section

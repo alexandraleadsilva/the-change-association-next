@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -142,6 +144,11 @@ export default function BenefitsRegisterPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<Omit<Benefit, "id">>(EMPTY_BENEFIT);
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "benefits-register",
+    defaultData: {},
+  });
 
   /* ---- updaters ---- */
   const updateField = useCallback(
@@ -303,6 +310,8 @@ export default function BenefitsRegisterPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- SUMMARY DASHBOARD ---------- */}
       <ScrollReveal>

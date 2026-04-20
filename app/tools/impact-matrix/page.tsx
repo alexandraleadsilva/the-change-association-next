@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -210,6 +212,11 @@ export default function ImpactMatrixPage() {
   const [draft, setDraft] = useState<ImpactGroup>(emptyGroup());
   const [heatmapView, setHeatmapView] = useState(false);
 
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "impact-matrix",
+    defaultData: {},
+  });
+
   /* ---- derived ---- */
   const totalHeadcount = useMemo(
     () =>
@@ -379,6 +386,8 @@ export default function ImpactMatrixPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- ADD GROUP BUTTON ---------- */}
       <ScrollReveal>

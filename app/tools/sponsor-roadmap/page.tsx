@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useToolData } from "@/lib/useToolData";
+import { SaveIndicator } from "@/components/SaveIndicator";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -225,6 +227,11 @@ export default function SponsorRoadmapPage() {
 
   /* ---- active tab ---- */
   const [activeTab, setActiveTab] = useState<PhaseKey>("direction");
+
+  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+    toolType: "sponsor-roadmap",
+    defaultData: {},
+  });
 
   /* ---- new action form state per pillar ---- */
   const [newActionText, setNewActionText] = useState<Record<PhaseKey, string>>({
@@ -557,6 +564,10 @@ export default function SponsorRoadmapPage() {
           </div>
         </section>
       </ScrollReveal>
+
+      <div style={{ padding: "0 48px", maxWidth: 900, margin: "0 auto" }}>
+        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
+      </div>
 
       {/* ---------- PILLAR TABS ---------- */}
       <section
