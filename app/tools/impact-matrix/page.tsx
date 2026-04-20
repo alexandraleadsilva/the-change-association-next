@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, Fragment } from "react";
+import { useState, useCallback, useMemo, Fragment, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -212,10 +212,30 @@ export default function ImpactMatrixPage() {
   const [draft, setDraft] = useState<ImpactGroup>(emptyGroup());
   const [heatmapView, setHeatmapView] = useState(false);
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<ImpactMatrix>({
     toolType: "impact-matrix",
-    defaultData: {},
+    defaultData: { projectName: "", createdBy: "", groups: [] },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setMatrix(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(matrix);
+  }, [matrix]);
 
   /* ---- derived ---- */
   const totalHeadcount = useMemo(

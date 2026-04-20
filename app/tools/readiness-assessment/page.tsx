@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -224,10 +224,30 @@ export default function ReadinessAssessmentPage() {
   const [activeTab, setActiveTab] = useState<DimensionKey>("people");
   const [showResults, setShowResults] = useState(false);
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<ReadinessAssessment>({
     toolType: "readiness-assessment",
-    defaultData: {},
+    defaultData: initialAssessment(),
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setAssessment(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(assessment);
+  }, [assessment]);
 
   /* ---- state helpers ---- */
 

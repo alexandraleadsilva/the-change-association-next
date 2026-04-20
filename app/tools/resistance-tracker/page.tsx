@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -132,10 +132,32 @@ export default function ResistanceTrackerPage() {
     "all" | ResistanceSignal["status"]
   >("all");
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<ResistanceTracker>({
     toolType: "resistance-tracker",
-    defaultData: {},
+    defaultData: { projectName: "", createdBy: "", signals: [] },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setProjectName(savedData.projectName || "");
+      setCreatedBy(savedData.createdBy || "");
+      setSignals(savedData.signals || []);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb({ projectName, createdBy, signals });
+  }, [projectName, createdBy, signals]);
 
   /* ---- form helpers ---- */
   const updateField = useCallback(

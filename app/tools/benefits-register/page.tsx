@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -145,10 +145,30 @@ export default function BenefitsRegisterPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<Omit<Benefit, "id">>(EMPTY_BENEFIT);
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<BenefitsRegister>({
     toolType: "benefits-register",
-    defaultData: {},
+    defaultData: { projectName: "", createdBy: "", benefits: [] },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setRegister(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(register);
+  }, [register]);
 
   /* ---- updaters ---- */
   const updateField = useCallback(

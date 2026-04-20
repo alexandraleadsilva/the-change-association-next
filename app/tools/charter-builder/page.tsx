@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -155,10 +155,44 @@ export default function CharterBuilderPage() {
     completeness: {},
   });
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<ChangeCharter>({
     toolType: "charter-builder",
-    defaultData: {},
+    defaultData: {
+      projectName: "",
+      createdBy: "",
+      createdDate: new Date().toISOString().slice(0, 10),
+      sections: {
+        strategicContext: "",
+        caseForChange: "",
+        scopeBoundaries: "",
+        approachPhasing: "",
+        governanceRoles: "",
+        successCriteria: "",
+        risksDependencies: "",
+      },
+      completeness: {},
+    },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setCharter(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(charter);
+  }, [charter]);
 
   /* ---- expanded cards ---- */
   const [expanded, setExpanded] = useState<Record<string, boolean>>({

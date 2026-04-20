@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -118,10 +118,32 @@ export default function StakeholderMapPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [mapFilter, setMapFilter] = useState<"all" | Stakeholder["ring"]>("all");
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<StakeholderMap>({
     toolType: "stakeholder-map",
-    defaultData: {},
+    defaultData: { projectName: "", createdBy: "", createdDate: "", stakeholders: [] },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setProjectName(savedData.projectName || "");
+      setCreatedBy(savedData.createdBy || "");
+      setStakeholders(savedData.stakeholders || []);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb({ projectName, createdBy, createdDate: new Date().toISOString().slice(0, 10), stakeholders });
+  }, [projectName, createdBy, stakeholders]);
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<Stakeholder, "id">>(

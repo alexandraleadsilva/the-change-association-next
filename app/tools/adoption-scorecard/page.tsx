@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -222,10 +222,41 @@ export default function AdoptionScorecardPage() {
   /* ---- expanded stages ---- */
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<AdoptionScorecard>({
     toolType: "adoption-scorecard",
-    defaultData: {},
+    defaultData: {
+      projectName: "",
+      createdBy: "",
+      assessmentDate: new Date().toISOString().slice(0, 10),
+      stages: {
+        awareness: { score: 0, evidence: "" },
+        understanding: { score: 0, evidence: "" },
+        trial: { score: 0, evidence: "" },
+        adoption: { score: 0, evidence: "" },
+        proficiency: { score: 0, evidence: "" },
+      },
+    },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setScorecard(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(scorecard);
+  }, [scorecard]);
 
   const toggle = useCallback((key: string) => {
     setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));

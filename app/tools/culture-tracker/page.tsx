@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -285,10 +285,41 @@ export default function CultureTrackerPage() {
     },
   });
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<CultureTracker>({
     toolType: "culture-tracker",
-    defaultData: {},
+    defaultData: {
+      projectName: "",
+      createdBy: "",
+      assessmentDate: new Date().toISOString().slice(0, 10),
+      indicators: {
+        language: { level: "not-yet", evidence: "" },
+        behaviours: { level: "not-yet", evidence: "" },
+        oldWays: { level: "not-yet", evidence: "" },
+        newStarters: { level: "not-yet", evidence: "" },
+        leadershipChange: { level: "not-yet", evidence: "" },
+      },
+    },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setTracker(savedData);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb(tracker);
+  }, [tracker]);
 
   /* ---- updaters ---- */
   const updateField = useCallback(
