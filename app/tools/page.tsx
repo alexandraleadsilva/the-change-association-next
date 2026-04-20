@@ -28,17 +28,65 @@ const tools = [
     relatedArticle: "/knowledge/change-charter",
     relatedLabel: "Change Charter & Business Case",
   },
+  {
+    href: "/tools/communication-planner",
+    pillar: "Engagement",
+    name: "Communication Planner",
+    description: "Plan communications by phase, audience, and channel. Track status across the full change timeline from pre-announcement to post go-live.",
+    relatedArticle: "/knowledge/communication-planning",
+    relatedLabel: "Communication Planning",
+  },
+  {
+    href: "/tools/sponsor-roadmap",
+    pillar: "Direction",
+    name: "Sponsor Roadmap",
+    description: "Map your executive sponsor's actions to each TCA pillar. Track progress with pre-populated suggested actions and custom additions.",
+    relatedArticle: "/knowledge/building-sponsorship",
+    relatedLabel: "Building Sponsorship",
+  },
+  {
+    href: "/tools/resistance-tracker",
+    pillar: "Engagement",
+    name: "Resistance Tracker",
+    description: "Log resistance signals, classify them by type and severity, record your interpretation, and track your response. Filter by severity and status.",
+    relatedArticle: "/knowledge/resistance-management",
+    relatedLabel: "Resistance Management",
+  },
+  {
+    href: "/tools/benefits-register",
+    pillar: "Execution",
+    name: "Benefits Register",
+    description: "Define expected benefits with owners, baselines, targets, and tracking schedules. Monitor status and overall health of your benefits case.",
+    relatedArticle: "/knowledge/benefits-realisation",
+    relatedLabel: "Benefits Realisation",
+  },
+  {
+    href: "/tools/adoption-scorecard",
+    pillar: "Execution",
+    name: "Adoption Scorecard",
+    description: "Score adoption across the five-stage curve: Awareness, Understanding, Trial, Adoption, Proficiency. Get auto-generated interpretation of your pattern.",
+    relatedArticle: "/knowledge/adoption-metrics",
+    relatedLabel: "Adoption Metrics",
+  },
+  {
+    href: "/tools/culture-tracker",
+    pillar: "Sustainment",
+    name: "Culture Embedding Tracker",
+    description: "Assess five embedding indicators: language, behaviours, old ways, new starters, and leadership resilience. See whether the change is becoming culture.",
+    relatedArticle: "/knowledge/culture-integration",
+    relatedLabel: "Culture Integration",
+  },
+  {
+    href: "/tools/impact-matrix",
+    pillar: "Engagement",
+    name: "Change Impact Matrix",
+    description: "Score impact by group across five dimensions: role, process, system, skill, and location change. Visualise as a colour-coded heatmap.",
+    relatedArticle: "/knowledge/change-impact-assessment",
+    relatedLabel: "Change Impact Assessment",
+  },
 ];
 
-const comingSoon = [
-  { pillar: "Engagement", name: "Communication Planner", description: "Build a timeline of messages by audience and channel." },
-  { pillar: "Direction", name: "Sponsor Roadmap", description: "Map sponsor actions to each phase of the TCA model." },
-  { pillar: "Engagement", name: "Resistance Tracker", description: "Log and categorise resistance signals with recommended responses." },
-  { pillar: "Execution", name: "Benefits Register", description: "Define benefits, owners, baselines, and tracking schedules." },
-  { pillar: "Execution", name: "Adoption Scorecard", description: "Score adoption across the five-stage adoption curve." },
-  { pillar: "Sustainment", name: "Culture Embedding Tracker", description: "Track the five embedding indicators over time." },
-  { pillar: "Execution", name: "Change Impact Matrix", description: "Score impact by role across multiple change dimensions." },
-];
+const comingSoon: typeof tools = [];
 
 export default function ToolsPage() {
   return (
