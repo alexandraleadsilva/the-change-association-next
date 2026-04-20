@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -124,10 +124,32 @@ export default function CommunicationPlannerPage() {
   const [formError, setFormError] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const { isAuthenticated, isSaving, lastSaved } = useToolData({
+  const { data: savedData, setData: saveToDb, isAuthenticated, isSaving, lastSaved, loaded } = useToolData<CommunicationPlan>({
     toolType: "communication-planner",
-    defaultData: {},
+    defaultData: { projectName: "", createdBy: "", entries: [] },
   });
+
+  // Load from database on first load
+  const hasLoaded = useRef(false);
+  useEffect(() => {
+    if (loaded && !hasLoaded.current && savedData && savedData.projectName !== undefined) {
+      setProjectName(savedData.projectName || "");
+      setCreatedBy(savedData.createdBy || "");
+      setEntries(savedData.entries || []);
+      hasLoaded.current = true;
+    }
+  }, [loaded, savedData]);
+
+  // Auto-save when data changes
+  const isInitialRender = useRef(true);
+  useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
+    if (!hasLoaded.current && !isAuthenticated) return;
+    saveToDb({ projectName, createdBy, entries });
+  }, [projectName, createdBy, entries]);
 
   /* --- helpers --- */
   const updateField = <K extends keyof Omit<CommEntry, "id">>(
