@@ -30,7 +30,7 @@ export function SignInPrompt() {
     <div
       style={{
         position: "fixed",
-        bottom: 24,
+        top: 70,
         right: 24,
         maxWidth: 340,
         background: "var(--navy)",
