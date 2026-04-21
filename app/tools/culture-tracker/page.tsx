@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -409,67 +409,25 @@ export default function CultureTrackerPage() {
         </p>
       </header>
 
-      {/* ---------- PROJECT INFO ---------- */}
-      <ScrollReveal>
-        <section
-          style={{
-            padding: "0 48px 40px",
-            maxWidth: 820,
-            margin: "0 auto",
-          }}
-        >
-          <div
-            style={{
-              padding: "28px 32px",
-              border: "1px solid var(--border)",
-              background: "var(--cream)",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "var(--ui)",
-                fontSize: 10,
-                fontWeight: 500,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
-                color: "#9A9080",
-                marginBottom: 20,
-              }}
-            >
-              Project Information
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
-                gap: 16,
-              }}
-            >
-              <ProjectSelector value={tracker.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Assessed By</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jane Smith, Change Lead"
-                  value={tracker.createdBy}
-                  onChange={(e) => updateField("createdBy", e.target.value)}
-                />
-              </div>
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Assessment Date</label>
-                <input
-                  type="date"
-                  value={tracker.assessmentDate}
-                  onChange={(e) =>
-                    updateField("assessmentDate", e.target.value)
-                  }
-                />
-              </div>
-            </div>
+      <ToolLayout
+        projectName={tracker.projectName}
+        onProjectChange={(val) => updateField("projectName", val)}
+        createdBy={tracker.createdBy}
+        onCreatedByChange={(val) => updateField("createdBy", val)}
+        isAuthenticated={isAuthenticated}
+        extraFields={
+          <div className="form-group" style={{ marginBottom: 20 }}>
+            <label>Assessment Date</label>
+            <input
+              type="date"
+              value={tracker.assessmentDate}
+              onChange={(e) =>
+                updateField("assessmentDate", e.target.value)
+              }
+            />
           </div>
-        </section>
-      </ScrollReveal>
-
+        }
+      >
 
       {/* ---------- 5 INDICATOR CARDS ---------- */}
       <section
@@ -987,6 +945,8 @@ export default function CultureTrackerPage() {
           </Link>
         </section>
       </ScrollReveal>
+
+      </ToolLayout>
 
       <Footer />
     </>

@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -391,57 +391,13 @@ export default function AdoptionScorecardPage() {
         </section>
       </ScrollReveal>
 
-      {/* ---------- PROJECT INFO ---------- */}
-      <ScrollReveal>
-        <section
-          style={{
-            padding: "0 48px 40px",
-            maxWidth: 820,
-            margin: "0 auto",
-          }}
-        >
-          <div
-            style={{
-              padding: "28px 32px",
-              border: "1px solid var(--border)",
-              background: "var(--cream)",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "var(--ui)",
-                fontSize: 10,
-                fontWeight: 500,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
-                color: "#9A9080",
-                marginBottom: 20,
-              }}
-            >
-              Project Information
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 16,
-              }}
-            >
-              <ProjectSelector value={scorecard.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Assessed By</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jane Smith, Change Lead"
-                  value={scorecard.createdBy}
-                  onChange={(e) => updateField("createdBy", e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
+      <ToolLayout
+        projectName={scorecard.projectName}
+        onProjectChange={(val) => updateField("projectName", val)}
+        createdBy={scorecard.createdBy}
+        onCreatedByChange={(val) => updateField("createdBy", val)}
+        isAuthenticated={isAuthenticated}
+      >
 
       {/* ---------- ADOPTION CURVE STAIRCASE ---------- */}
       <ScrollReveal>
@@ -1210,6 +1166,8 @@ export default function AdoptionScorecardPage() {
           </Link>
         </section>
       </ScrollReveal>
+
+      </ToolLayout>
 
       <Footer />
     </>

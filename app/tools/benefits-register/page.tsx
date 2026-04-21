@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -272,57 +272,13 @@ export default function BenefitsRegisterPage() {
         </p>
       </header>
 
-      {/* ---------- PROJECT INFO ---------- */}
-      <ScrollReveal>
-        <section
-          style={{
-            padding: "0 48px 40px",
-            maxWidth: 820,
-            margin: "0 auto",
-          }}
-        >
-          <div
-            style={{
-              padding: "28px 32px",
-              border: "1px solid var(--border)",
-              background: "var(--cream)",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "var(--ui)",
-                fontSize: 10,
-                fontWeight: 500,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
-                color: "#9A9080",
-                marginBottom: 20,
-              }}
-            >
-              Project Information
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 16,
-              }}
-            >
-              <ProjectSelector value={register.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Created By</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jane Smith, Benefits Owner"
-                  value={register.createdBy}
-                  onChange={(e) => updateField("createdBy", e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
+      <ToolLayout
+        projectName={register.projectName}
+        onProjectChange={(val) => updateField("projectName", val)}
+        createdBy={register.createdBy}
+        onCreatedByChange={(val) => updateField("createdBy", val)}
+        isAuthenticated={isAuthenticated}
+      >
 
       {/* ---------- SUMMARY DASHBOARD ---------- */}
       <ScrollReveal>
@@ -929,6 +885,8 @@ export default function BenefitsRegisterPage() {
           </Link>
         </section>
       </ScrollReveal>
+
+      </ToolLayout>
 
       {/* ---------- MODAL ---------- */}
       <div

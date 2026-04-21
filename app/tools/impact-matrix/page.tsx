@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -364,41 +364,13 @@ export default function ImpactMatrixPage() {
         </p>
       </header>
 
-      {/* ---------- PROJECT INFO ---------- */}
-      <ScrollReveal>
-        <section
-          style={{
-            padding: "0 48px 40px",
-            maxWidth: 960,
-            margin: "0 auto",
-          }}
-        >
-          <div style={panelStyle}>
-            <div style={{ ...labelStyle, marginBottom: 20 }}>
-              Project Information
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 16,
-              }}
-            >
-              <ProjectSelector value={matrix.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Created By</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jane Smith, Change Lead"
-                  value={matrix.createdBy}
-                  onChange={(e) => updateField("createdBy", e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
+      <ToolLayout
+        projectName={matrix.projectName}
+        onProjectChange={(val) => updateField("projectName", val)}
+        createdBy={matrix.createdBy}
+        onCreatedByChange={(val) => updateField("createdBy", val)}
+        isAuthenticated={isAuthenticated}
+      >
 
       {/* ---------- ADD GROUP BUTTON ---------- */}
       <ScrollReveal>
@@ -1029,6 +1001,8 @@ export default function ImpactMatrixPage() {
           </Link>
         </section>
       </ScrollReveal>
+
+      </ToolLayout>
 
       {/* ---------- MODAL ---------- */}
       {modalOpen && (

@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -815,42 +815,30 @@ export default function ReadinessAssessmentPage() {
         </p>
       </header>
 
+      <ToolLayout
+        projectName={assessment.projectName}
+        onProjectChange={(val) => setField("projectName", val)}
+        createdBy={assessment.assessedBy}
+        onCreatedByChange={(val) => setField("assessedBy", val)}
+        isAuthenticated={isAuthenticated}
+        extraFields={
+          <div className="form-group" style={{ marginBottom: 20 }}>
+            <label>Date</label>
+            <input
+              type="date"
+              value={assessment.assessedDate}
+              onChange={(e) =>
+                setAssessment((prev) => ({ ...prev, assessedDate: e.target.value }))
+              }
+            />
+          </div>
+        }
+      >
       <div style={styles.toolWrap}>
         {/* ---- PROGRESS ---- */}
         <div style={styles.progressBar}>
           <div style={{ ...styles.progressFill, width: `${(totalAnswered / 25) * 100}%` }} />
         </div>
-
-        {/* ---- PROJECT INFO ---- */}
-        <ScrollReveal>
-          <div className="ra-project-grid">
-            <div>
-              <ProjectSelector value={assessment.projectName} onChange={(val: string) => setField("projectName", val)} isAuthenticated={isAuthenticated} />
-            </div>
-            <div>
-              <label style={styles.fieldLabel}>Assessed By</label>
-              <input
-                type="text"
-                style={styles.fieldInput}
-                placeholder="e.g. Jane Smith"
-                value={assessment.assessedBy}
-                onChange={(e) => setField("assessedBy", e.target.value)}
-              />
-            </div>
-            <div>
-              <label style={styles.fieldLabel}>Date</label>
-              <input
-                type="date"
-                style={styles.fieldInput}
-                value={assessment.assessedDate}
-                onChange={(e) =>
-                  setAssessment((prev) => ({ ...prev, assessedDate: e.target.value }))
-                }
-              />
-            </div>
-          </div>
-        </ScrollReveal>
-
 
         {/* ---- DIMENSION TABS ---- */}
         <ScrollReveal>
@@ -1302,6 +1290,8 @@ export default function ReadinessAssessmentPage() {
           </div>
         )}
       </div>
+
+      </ToolLayout>
 
       <Footer />
     </>

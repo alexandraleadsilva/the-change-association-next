@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -289,45 +289,13 @@ export default function ResistanceTrackerPage() {
       </header>
 
       {/* ---------- MAIN ---------- */}
-      <main
-        style={{
-          padding: "48px 48px 64px",
-          maxWidth: 1060,
-          marginInline: "auto",
-        }}
+      <ToolLayout
+        projectName={projectName}
+        onProjectChange={setProjectName}
+        createdBy={createdBy}
+        onCreatedByChange={setCreatedBy}
+        isAuthenticated={isAuthenticated}
       >
-        {/* ---- Project Info ---- */}
-        <ScrollReveal>
-          <section style={{ marginBottom: 48 }}>
-            <h2
-              style={{
-                fontFamily: "var(--serif)",
-                fontSize: 26,
-                fontWeight: 400,
-                color: "var(--navy)",
-                marginBottom: 20,
-              }}
-            >
-              Project Information
-            </h2>
-            <div className="form-row">
-              <ProjectSelector value={projectName} onChange={setProjectName} isAuthenticated={isAuthenticated} />
-              <div className="form-group">
-                <label htmlFor="rt-createdBy">Created By</label>
-                <input
-                  id="rt-createdBy"
-                  type="text"
-                  placeholder="Your name"
-                  value={createdBy}
-                  onChange={(e) => setCreatedBy(e.target.value)}
-                />
-              </div>
-            </div>
-          </section>
-        </ScrollReveal>
-
-
-        <hr className="section-divider" style={{ marginBottom: 48 }} />
 
         {/* ---- Dashboard Summary ---- */}
         <ScrollReveal>
@@ -1088,7 +1056,7 @@ export default function ResistanceTrackerPage() {
             </Link>
           </section>
         </ScrollReveal>
-      </main>
+      </ToolLayout>
 
       {/* ---- Signal Form Modal ---- */}
       {showForm && (

@@ -1829,6 +1829,37 @@ footer {
   .self-check { padding: 24px 20px; }
 }
 
+/* ---- TOOL LAYOUT ---- */
+.tool-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 200px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tool-sidebar {
+  border-right: 1px solid var(--border);
+  padding: 32px 24px;
+  position: sticky;
+  top: 65px;
+  height: fit-content;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+.tool-main {
+  padding: 32px 48px 64px;
+}
+
+@media (max-width: 1024px) {
+  .tool-grid { grid-template-columns: 1fr; }
+  .tool-sidebar { position: static; border-right: none; border-bottom: 1px solid var(--border); padding: 24px 32px; }
+  .tool-main { padding: 24px 32px 48px; }
+}
+@media (max-width: 640px) {
+  .tool-sidebar { padding: 20px; }
+  .tool-main { padding: 20px 20px 40px; }
+}
+
 /* ============================================
    CHANGE BITES (BLOG) PAGE
    ============================================ */

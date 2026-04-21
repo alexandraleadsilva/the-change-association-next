@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { ProjectSelector } from "@/components/ProjectSelector";
+import { ToolLayout } from "@/components/ToolLayout";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -522,66 +522,24 @@ export default function SponsorRoadmapPage() {
         </section>
       </ScrollReveal>
 
-      {/* ---------- PROJECT INFO ---------- */}
-      <ScrollReveal>
-        <section
-          style={{
-            padding: "0 48px 40px",
-            maxWidth: 900,
-            margin: "0 auto",
-          }}
-        >
-          <div
-            style={{
-              padding: "28px 32px",
-              border: "1px solid var(--border)",
-              background: "var(--cream)",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "var(--ui)",
-                fontSize: 10,
-                fontWeight: 500,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase" as const,
-                color: "#9A9080",
-                marginBottom: 20,
-              }}
-            >
-              Project Information
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
-                gap: 16,
-              }}
-            >
-              <ProjectSelector value={roadmap.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Executive Sponsor</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Sarah Chen, CFO"
-                  value={roadmap.sponsorName}
-                  onChange={(e) => updateField("sponsorName", e.target.value)}
-                />
-              </div>
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Created By</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Jane Smith, Change Lead"
-                  value={roadmap.createdBy}
-                  onChange={(e) => updateField("createdBy", e.target.value)}
-                />
-              </div>
-            </div>
+      <ToolLayout
+        projectName={roadmap.projectName}
+        onProjectChange={(val) => updateField("projectName", val)}
+        createdBy={roadmap.createdBy}
+        onCreatedByChange={(val) => updateField("createdBy", val)}
+        isAuthenticated={isAuthenticated}
+        extraFields={
+          <div className="form-group" style={{ marginBottom: 20 }}>
+            <label>Executive Sponsor</label>
+            <input
+              type="text"
+              placeholder="e.g. Sarah Chen, CFO"
+              value={roadmap.sponsorName}
+              onChange={(e) => updateField("sponsorName", e.target.value)}
+            />
           </div>
-        </section>
-      </ScrollReveal>
-
+        }
+      >
 
       {/* ---------- PILLAR TABS ---------- */}
       <section
@@ -1263,6 +1221,8 @@ export default function SponsorRoadmapPage() {
           </Link>
         </section>
       </ScrollReveal>
+
+      </ToolLayout>
 
       <Footer />
     </>
