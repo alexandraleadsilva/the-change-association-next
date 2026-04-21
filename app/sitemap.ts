@@ -275,12 +275,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/tools/change-roadmap`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/tools/training-matrix`,
       lastModified: new Date(),
       changeFrequency: "monthly",

@@ -72,14 +72,6 @@ const tools = [
     relatedLabel: "Learning Design & Delivery",
   },
   {
-    href: "/tools/change-roadmap",
-    pillar: "Execution",
-    name: "Change Roadmap",
-    description: "Build a visual timeline of your change programme with milestones, phases, and key activities. Track progress against plan.",
-    relatedArticle: "/knowledge/phased-approach",
-    relatedLabel: "Phased Approach to Change",
-  },
-  {
     href: "/tools/benefits-register",
     pillar: "Execution",
     name: "Benefits Register",
