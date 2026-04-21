@@ -1,26 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function SignInPrompt() {
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const pathname = usePathname();
 
+  // Show again on every page navigation if not signed in
   useEffect(() => {
-    // Check if already signed in
     const cached = localStorage.getItem("tca_user");
-    if (cached) return;
-
-    // Check if already dismissed this session
-    const wasDismissed = sessionStorage.getItem("tca_signin_dismissed");
-    if (wasDismissed) return;
-
+    if (cached) {
+      setShow(false);
+      return;
+    }
+    setDismissed(false);
     setShow(true);
-  }, []);
+  }, [pathname]);
 
   function dismiss() {
     setDismissed(true);
-    sessionStorage.setItem("tca_signin_dismissed", "true");
     setTimeout(() => setShow(false), 300);
   }
 
