@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
   title: "How to Align Performance Management to the New Way of Working Without Creating a Backlash",
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <><ArticleSchema title="How to Align Performance Management to the New Way of Working Without Creating a Backlash" description="A practical guide to aligning performance management and KPIs with organisational transformation. Includes an interactive KPI alignment audit, guidance on when KPIs should change, and enterprise case studies from Microsoft, Adobe, and Deloitte." url="https://thechangeassociation.com/knowledge/performance-alignment" />{children}</>;
 }

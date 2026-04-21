@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
   title: "What Does a Meaningful Gap Analysis Look Like",
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <><ArticleSchema title="What Does a Meaningful Gap Analysis Look Like" description="A practical guide to conducting gap analysis that drives real change. Covers the five lenses of gap analysis: Strategic, Operational, Capability, Cultural, and Structural, with interactive tools and enterprise case studies." url="https://thechangeassociation.com/knowledge/gap-analysis" />{children}</>;
 }
