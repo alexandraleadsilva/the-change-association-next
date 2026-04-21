@@ -10,14 +10,30 @@ export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
-  const [user, setUser] = useState<{ email: string } | null>(null);
-  const [authLoaded, setAuthLoaded] = useState(false);
+  const [user, setUser] = useState<{ email: string } | null>(() => {
+    if (typeof window !== "undefined") {
+      const cached = localStorage.getItem("tca_user");
+      if (cached) try { return JSON.parse(cached); } catch { /* */ }
+    }
+    return null;
+  });
+  const [authLoaded, setAuthLoaded] = useState(() => {
+    if (typeof window !== "undefined") return !!localStorage.getItem("tca_user");
+    return false;
+  });
 
   useEffect(() => {
     fetch("/api/auth/session")
       .then((r) => r.json())
       .then((data) => {
-        if (data.authenticated) setUser({ email: data.email });
+        if (data.authenticated) {
+          const u = { email: data.email };
+          setUser(u);
+          localStorage.setItem("tca_user", JSON.stringify(u));
+        } else {
+          setUser(null);
+          localStorage.removeItem("tca_user");
+        }
       })
       .catch(() => {})
       .finally(() => setAuthLoaded(true));
@@ -26,6 +42,7 @@ export function Nav() {
   async function handleLogout() {
     await fetch("/api/auth/logout", { method: "POST" });
     setUser(null);
+    localStorage.removeItem("tca_user");
   }
 
   const links = [
