@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -8,17 +11,9 @@ const tools = [
     href: "/tools/readiness-assessment",
     pillar: "Direction",
     name: "Change Readiness Assessment",
-    description: "Rate your organisation across People, Process, Culture, Capability, and Systems. Get a visual readiness score with targeted recommendations for each dimension.",
+    description: "Rate your organisation across People, Process, Culture, Capability, and Systems. Get a visual readiness score with targeted recommendations.",
     relatedArticle: "/knowledge/current-state-assessment",
     relatedLabel: "Current State Assessment",
-  },
-  {
-    href: "/tools/stakeholder-map",
-    pillar: "Engagement",
-    name: "Stakeholder Map Builder",
-    description: "Build your stakeholder map on screen. Plot stakeholders by impact and influence, track their current and target support levels, and see where movement is needed.",
-    relatedArticle: "/knowledge/stakeholder-strategy",
-    relatedLabel: "Stakeholder Strategy",
   },
   {
     href: "/tools/charter-builder",
@@ -29,14 +24,6 @@ const tools = [
     relatedLabel: "Change Charter & Business Case",
   },
   {
-    href: "/tools/communication-planner",
-    pillar: "Engagement",
-    name: "Communication Planner",
-    description: "Plan communications by phase, audience, and channel. Track status across the full change timeline from pre-announcement to post go-live.",
-    relatedArticle: "/knowledge/communication-planning",
-    relatedLabel: "Communication Planning",
-  },
-  {
     href: "/tools/sponsor-roadmap",
     pillar: "Direction",
     name: "Sponsor Roadmap",
@@ -45,12 +32,52 @@ const tools = [
     relatedLabel: "Building Sponsorship",
   },
   {
+    href: "/tools/stakeholder-map",
+    pillar: "Engagement",
+    name: "Stakeholder Map Builder",
+    description: "Plot stakeholders by impact and influence on a quadrant map. Track current and target support levels and see where movement is needed.",
+    relatedArticle: "/knowledge/stakeholder-strategy",
+    relatedLabel: "Stakeholder Strategy",
+  },
+  {
+    href: "/tools/communication-planner",
+    pillar: "Engagement",
+    name: "Communication Planner",
+    description: "Plan communications by phase, audience, and channel. Track status across the full change timeline from pre-announcement to post go-live.",
+    relatedArticle: "/knowledge/communication-planning",
+    relatedLabel: "Communication Planning",
+  },
+  {
     href: "/tools/resistance-tracker",
     pillar: "Engagement",
     name: "Resistance Tracker",
-    description: "Log resistance signals, classify them by type and severity, record your interpretation, and track your response. Filter by severity and status.",
+    description: "Log resistance signals, classify them by type and severity, record your interpretation, and track your response.",
     relatedArticle: "/knowledge/resistance-management",
     relatedLabel: "Resistance Management",
+  },
+  {
+    href: "/tools/impact-matrix",
+    pillar: "Engagement",
+    name: "Change Impact Matrix",
+    description: "Score impact by group across five dimensions: role, process, system, skill, and location change. Visualise as a colour-coded heatmap.",
+    relatedArticle: "/knowledge/change-impact-assessment",
+    relatedLabel: "Change Impact Assessment",
+  },
+  {
+    href: "/tools/training-matrix",
+    pillar: "Enablement",
+    name: "Training Needs Matrix",
+    description: "Map roles against skills needed for the future state. Identify capability gaps and plan targeted training by group.",
+    relatedArticle: "/knowledge/learning-design",
+    relatedLabel: "Learning Design & Delivery",
+  },
+  {
+    href: "/tools/change-roadmap",
+    pillar: "Execution",
+    name: "Change Roadmap",
+    description: "Build a visual timeline of your change programme with milestones, phases, and key activities. Track progress against plan.",
+    relatedArticle: "/knowledge/phased-approach",
+    relatedLabel: "Phased Approach to Change",
   },
   {
     href: "/tools/benefits-register",
@@ -64,7 +91,7 @@ const tools = [
     href: "/tools/adoption-scorecard",
     pillar: "Execution",
     name: "Adoption Scorecard",
-    description: "Score adoption across the five-stage curve: Awareness, Understanding, Trial, Adoption, Proficiency. Get auto-generated interpretation of your pattern.",
+    description: "Score adoption across the five-stage curve: Awareness, Understanding, Trial, Adoption, Proficiency. Get auto-generated interpretation.",
     relatedArticle: "/knowledge/adoption-metrics",
     relatedLabel: "Adoption Metrics",
   },
@@ -76,34 +103,15 @@ const tools = [
     relatedArticle: "/knowledge/culture-integration",
     relatedLabel: "Culture Integration",
   },
-  {
-    href: "/tools/impact-matrix",
-    pillar: "Engagement",
-    name: "Change Impact Matrix",
-    description: "Score impact by group across five dimensions: role, process, system, skill, and location change. Visualise as a colour-coded heatmap.",
-    relatedArticle: "/knowledge/change-impact-assessment",
-    relatedLabel: "Change Impact Assessment",
-  },
-  {
-    href: "/tools/change-roadmap",
-    pillar: "Execution",
-    name: "Change Roadmap",
-    description: "Build a visual timeline of your change programme with milestones, phases, and key activities. Track progress against plan.",
-    relatedArticle: "/knowledge/phased-approach",
-    relatedLabel: "Phased Approach to Change",
-  },
-  {
-    href: "/tools/training-matrix",
-    pillar: "Enablement",
-    name: "Training Needs Matrix",
-    description: "Map roles against skills needed for the future state. Identify capability gaps and plan targeted training by group.",
-    relatedArticle: "/knowledge/learning-design",
-    relatedLabel: "Learning Design & Delivery",
-  },
 ];
 
+const pillars = ["All", "Direction", "Engagement", "Enablement", "Execution", "Sustainment"];
 
 export default function ToolsPage() {
+  const [activePillar, setActivePillar] = useState("All");
+
+  const filtered = activePillar === "All" ? tools : tools.filter(t => t.pillar === activePillar);
+
   return (
     <>
       <Nav />
@@ -113,65 +121,78 @@ export default function ToolsPage() {
         <h1>Interactive tools for change practitioners</h1>
         <p>
           Built for use on screen, not in a drawer. Each tool connects to the
-          TCA Change Model and the relevant Knowledge Hub article. No downloads,
-          no PDFs.
+          TCA Change Model and the relevant Knowledge Hub article.
         </p>
       </div>
 
-      <section style={{ padding: "56px 48px", maxWidth: 960, margin: "0 auto" }}>
-        <ScrollReveal direction="up">
-          <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 500, color: "var(--navy)", marginBottom: 32 }}>
-            Available Now
-          </h2>
-        </ScrollReveal>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
-          {tools.map((tool, i) => (
-            <ScrollReveal key={tool.href} direction="up" delay={i * 100}>
-              <Link
-                href={tool.href}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  padding: "28px 24px",
-                  border: "1px solid var(--border)",
-                  textDecoration: "none",
-                  transition: "all 0.25s",
-                  height: "100%",
-                }}
-                className="home-card"
+      <div className="hub-layout">
+        <aside className="hub-sidebar">
+          {pillars.map(pillar => (
+            <div className="sidebar-item" key={pillar}>
+              <a
+                href="#"
+                className={activePillar === pillar ? "active" : ""}
+                onClick={(e) => { e.preventDefault(); setActivePillar(pillar); }}
               >
-                <span style={{
-                  fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500,
-                  letterSpacing: "0.18em", textTransform: "uppercase",
-                  color: "var(--gold)", marginBottom: 10,
-                }}>
-                  {tool.pillar}
-                </span>
-                <span style={{
-                  fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600,
-                  color: "var(--navy)", lineHeight: 1.25, marginBottom: 10,
-                }}>
-                  {tool.name}
-                </span>
-                <span style={{
-                  fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)",
-                  lineHeight: 1.6, marginBottom: 16, flex: 1,
-                }}>
-                  {tool.description}
-                </span>
-                <span style={{
-                  fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)",
-                  letterSpacing: "0.04em",
-                }}>
-                  Open tool &rarr;
-                </span>
-              </Link>
-            </ScrollReveal>
+                {pillar === "All" ? `All Tools (${tools.length})` : `${pillar} (${tools.filter(t => t.pillar === pillar).length})`}
+              </a>
+            </div>
           ))}
-        </div>
-      </section>
+        </aside>
 
+        <main className="hub-content">
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            {filtered.map((tool, i) => (
+              <ScrollReveal key={tool.href} direction="up" delay={i * 40}>
+                <Link
+                  href={tool.href}
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr auto",
+                    alignItems: "center",
+                    gap: 24,
+                    padding: "24px 0",
+                    borderTop: i === 0 ? "1px solid var(--border)" : "none",
+                    borderBottom: "1px solid var(--border)",
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  <div>
+                    <span style={{
+                      fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500,
+                      letterSpacing: "0.16em", textTransform: "uppercase" as const,
+                      color: "var(--gold)", display: "block", marginBottom: 6,
+                    }}>
+                      {tool.pillar}
+                    </span>
+                    <span style={{
+                      fontFamily: "var(--serif)", fontSize: 20, fontWeight: 500,
+                      color: "var(--navy)", lineHeight: 1.3, display: "block", marginBottom: 6,
+                      transition: "color 0.2s",
+                    }}>
+                      {tool.name}
+                    </span>
+                    <span style={{
+                      fontFamily: "var(--ui)", fontSize: 13, color: "var(--text-mid)",
+                      lineHeight: 1.6, display: "block",
+                    }}>
+                      {tool.description}
+                    </span>
+                  </div>
+                  <span style={{
+                    fontFamily: "var(--ui)", fontSize: 12, color: "var(--gold)",
+                    letterSpacing: "0.04em", whiteSpace: "nowrap", flexShrink: 0,
+                    transition: "transform 0.2s",
+                  }}>
+                    Open &rarr;
+                  </span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </main>
+      </div>
 
       <Footer />
     </>
