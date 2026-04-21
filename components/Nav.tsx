@@ -10,19 +10,16 @@ export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
-  const [user, setUser] = useState<{ email: string } | null>(() => {
-    if (typeof window !== "undefined") {
-      const cached = localStorage.getItem("tca_user");
-      if (cached) try { return JSON.parse(cached); } catch { /* */ }
-    }
-    return null;
-  });
-  const [authLoaded, setAuthLoaded] = useState(() => {
-    if (typeof window !== "undefined") return !!localStorage.getItem("tca_user");
-    return false;
-  });
+  const [user, setUser] = useState<{ email: string } | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Immediately read from localStorage to prevent flash
+    const cached = localStorage.getItem("tca_user");
+    if (cached) try { setUser(JSON.parse(cached)); } catch { /* */ }
+    setMounted(true);
+
+    // Then validate with server
     fetch("/api/auth/session")
       .then((r) => r.json())
       .then((data) => {
@@ -35,8 +32,7 @@ export function Nav() {
           localStorage.removeItem("tca_user");
         }
       })
-      .catch(() => {})
-      .finally(() => setAuthLoaded(true));
+      .catch(() => {});
   }, []);
 
   async function handleLogout() {
@@ -81,25 +77,19 @@ export function Nav() {
               </li>
             )
           )}
-          {user && (
-            <>
-              <li className="nav-sep"></li>
-              <li>
-                <Link
-                  href="/dashboard"
-                  className={pathname === "/dashboard" ? "active" : ""}
-                  onClick={() => setOpen(false)}
-                >
-                  Dashboard
-                </Link>
-              </li>
-            </>
-          )}
+          <li className="nav-sep" style={{ visibility: mounted && user ? "visible" : "hidden" }}></li>
+          <li style={{ display: mounted && user ? "flex" : "none" }}>
+            <Link
+              href="/dashboard"
+              className={pathname === "/dashboard" ? "active" : ""}
+              onClick={() => setOpen(false)}
+            >
+              Dashboard
+            </Link>
+          </li>
           <li className="nav-sep"></li>
-          <li style={{ minWidth: 100, textAlign: "center" }}>
-            {!authLoaded ? (
-              <span style={{ display: "block", padding: "10px 24px" }}></span>
-            ) : user ? (
+          <li style={{ minWidth: 90 }}>
+            {mounted && user ? (
               <button
                 onClick={handleLogout}
                 style={{
@@ -111,12 +101,11 @@ export function Nav() {
                   color: "var(--text-mid)",
                   padding: "10px 24px",
                   cursor: "pointer",
-                  transition: "color 0.2s",
                 }}
               >
                 Sign Out
               </button>
-            ) : (
+            ) : mounted ? (
               <button
                 onClick={() => setAuthOpen(true)}
                 style={{
@@ -128,11 +117,12 @@ export function Nav() {
                   color: "#fff",
                   padding: "10px 24px",
                   cursor: "pointer",
-                  transition: "background 0.2s",
                 }}
               >
                 Sign In
               </button>
+            ) : (
+              <span style={{ display: "inline-block", padding: "10px 24px", minWidth: 90 }}></span>
             )}
           </li>
         </ul>
