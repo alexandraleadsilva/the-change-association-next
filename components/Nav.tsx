@@ -31,6 +31,7 @@ export function Nav() {
     { href: "/about", label: "About" },
     "sep",
     { href: "/knowledge", label: "Knowledge" },
+    "sep",
     { href: "/tools", label: "Tools" },
     "sep",
     { href: "/change-bites", label: "Change Bites" },
