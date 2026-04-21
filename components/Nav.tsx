@@ -61,6 +61,20 @@ export function Nav() {
               </li>
             )
           )}
+          {user && (
+            <>
+              <li className="nav-sep"></li>
+              <li>
+                <Link
+                  href="/dashboard"
+                  className={pathname === "/dashboard" ? "active" : ""}
+                  onClick={() => setOpen(false)}
+                >
+                  Dashboard
+                </Link>
+              </li>
+            </>
+          )}
           <li className="nav-sep"></li>
           <li>
             {user ? (
