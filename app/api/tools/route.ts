@@ -11,7 +11,6 @@ export async function GET(req: Request) {
 
   const { searchParams } = new URL(req.url);
   const toolType = searchParams.get("tool");
-  const projectName = searchParams.get("project") || "";
 
   if (!toolType) {
     // Return all tools for this user (for dashboard)
@@ -24,13 +23,13 @@ export async function GET(req: Request) {
     return NextResponse.json({ tools: rows });
   }
 
-  // Return specific tool data
+  // Return most recent data for this tool type
   const { rows } = await sql`
-    SELECT data, updated_at
+    SELECT data, project_name, updated_at
     FROM tool_data
     WHERE user_email = ${session.email}
     AND tool_type = ${toolType}
-    AND project_name = ${projectName}
+    ORDER BY updated_at DESC
     LIMIT 1
   `;
 
@@ -54,15 +53,28 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "toolType and data required" }, { status: 400 });
   }
 
-  // Upsert: insert or update
-  await sql`
-    INSERT INTO tool_data (user_email, tool_type, project_name, data, updated_at)
-    VALUES (${session.email}, ${toolType}, ${projectName}, ${JSON.stringify(data)}, NOW())
-    ON CONFLICT (user_email, tool_type, project_name)
-    DO UPDATE SET data = ${JSON.stringify(data)}, updated_at = NOW()
+  // Upsert by user + tool type (one save per tool per user for now)
+  const { rows: existing } = await sql`
+    SELECT id FROM tool_data
+    WHERE user_email = ${session.email}
+    AND tool_type = ${toolType}
+    LIMIT 1
   `;
 
-  // Also upsert user record
+  if (existing.length > 0) {
+    await sql`
+      UPDATE tool_data
+      SET data = ${JSON.stringify(data)}, project_name = ${projectName}, updated_at = NOW()
+      WHERE id = ${existing[0].id}
+    `;
+  } else {
+    await sql`
+      INSERT INTO tool_data (user_email, tool_type, project_name, data, updated_at)
+      VALUES (${session.email}, ${toolType}, ${projectName}, ${JSON.stringify(data)}, NOW())
+    `;
+  }
+
+  // Upsert user record
   await sql`
     INSERT INTO users (email, last_login)
     VALUES (${session.email}, NOW())
@@ -82,7 +94,6 @@ export async function DELETE(req: Request) {
 
   const { searchParams } = new URL(req.url);
   const toolType = searchParams.get("tool");
-  const projectName = searchParams.get("project") || "";
 
   if (!toolType) {
     return NextResponse.json({ error: "tool parameter required" }, { status: 400 });
@@ -92,7 +103,6 @@ export async function DELETE(req: Request) {
     DELETE FROM tool_data
     WHERE user_email = ${session.email}
     AND tool_type = ${toolType}
-    AND project_name = ${projectName}
   `;
 
   return NextResponse.json({ success: true });

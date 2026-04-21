@@ -4,11 +4,10 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 interface UseToolDataOptions<T> {
   toolType: string;
-  projectName?: string;
   defaultData: T;
 }
 
-export function useToolData<T>({ toolType, projectName = "", defaultData }: UseToolDataOptions<T>) {
+export function useToolData<T>({ toolType, defaultData }: UseToolDataOptions<T>) {
   const [data, setData] = useState<T>(defaultData);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -26,7 +25,7 @@ export function useToolData<T>({ toolType, projectName = "", defaultData }: UseT
         if (session.authenticated) {
           setIsAuthenticated(true);
 
-          const dataRes = await fetch(`/api/tools?tool=${toolType}&project=${encodeURIComponent(projectName)}`);
+          const dataRes = await fetch(`/api/tools?tool=${toolType}`);
           const result = await dataRes.json();
 
           if (result.data) {
@@ -35,13 +34,13 @@ export function useToolData<T>({ toolType, projectName = "", defaultData }: UseT
           }
         }
       } catch {
-        // Not authenticated or network error, use default data
+        // Not authenticated or network error
       }
       setLoaded(true);
     }
 
     init();
-  }, [toolType, projectName]);
+  }, [toolType]);
 
   // Auto-save with debounce
   const save = useCallback(
@@ -49,6 +48,9 @@ export function useToolData<T>({ toolType, projectName = "", defaultData }: UseT
       setData(newData);
 
       if (!isAuthenticated) return;
+
+      // Extract projectName from the data if it exists
+      const projectName = (newData as Record<string, unknown>)?.projectName as string || "";
 
       if (saveTimeout.current) clearTimeout(saveTimeout.current);
       saveTimeout.current = setTimeout(async () => {
@@ -64,9 +66,9 @@ export function useToolData<T>({ toolType, projectName = "", defaultData }: UseT
           // Save failed silently
         }
         setIsSaving(false);
-      }, 1500); // Debounce 1.5 seconds
+      }, 1500);
     },
-    [isAuthenticated, toolType, projectName]
+    [isAuthenticated, toolType]
   );
 
   return {
