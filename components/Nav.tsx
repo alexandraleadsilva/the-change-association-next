@@ -13,6 +13,13 @@ export function Nav() {
   const [user, setUser] = useState<{ email: string } | null>(null);
   const [mounted, setMounted] = useState(false);
 
+  // Listen for sign-in prompt trigger
+  useEffect(() => {
+    const handler = () => setAuthOpen(true);
+    window.addEventListener("tca-open-signin", handler);
+    return () => window.removeEventListener("tca-open-signin", handler);
+  }, []);
+
   useEffect(() => {
     // Immediately read from localStorage to prevent flash
     const cached = localStorage.getItem("tca_user");
