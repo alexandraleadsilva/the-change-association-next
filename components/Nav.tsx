@@ -11,6 +11,7 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState<{ email: string } | null>(null);
+  const [authLoaded, setAuthLoaded] = useState(false);
 
   useEffect(() => {
     fetch("/api/auth/session")
@@ -18,7 +19,8 @@ export function Nav() {
       .then((data) => {
         if (data.authenticated) setUser({ email: data.email });
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setAuthLoaded(true));
   }, []);
 
   async function handleLogout() {
@@ -77,8 +79,10 @@ export function Nav() {
             </>
           )}
           <li className="nav-sep"></li>
-          <li>
-            {user ? (
+          <li style={{ minWidth: 100, textAlign: "center" }}>
+            {!authLoaded ? (
+              <span style={{ display: "block", padding: "10px 24px" }}></span>
+            ) : user ? (
               <button
                 onClick={handleLogout}
                 style={{
