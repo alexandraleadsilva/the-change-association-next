@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -825,14 +825,7 @@ export default function ReadinessAssessmentPage() {
         <ScrollReveal>
           <div className="ra-project-grid">
             <div>
-              <label style={styles.fieldLabel}>Project / Change Name</label>
-              <input
-                type="text"
-                style={styles.fieldInput}
-                placeholder="e.g. ERP Transformation"
-                value={assessment.projectName}
-                onChange={(e) => setField("projectName", e.target.value)}
-              />
+              <ProjectSelector value={assessment.projectName} onChange={(val: string) => setField("projectName", val)} isAuthenticated={isAuthenticated} />
             </div>
             <div>
               <label style={styles.fieldLabel}>Assessed By</label>
@@ -858,7 +851,6 @@ export default function ReadinessAssessmentPage() {
           </div>
         </ScrollReveal>
 
-        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         {/* ---- DIMENSION TABS ---- */}
         <ScrollReveal>

@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -384,15 +384,7 @@ export default function ImpactMatrixPage() {
                 gap: 16,
               }}
             >
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Project Name</label>
-                <input
-                  type="text"
-                  placeholder="e.g. ERP Transformation Programme"
-                  value={matrix.projectName}
-                  onChange={(e) => updateField("projectName", e.target.value)}
-                />
-              </div>
+              <ProjectSelector value={matrix.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
               <div className="form-group" style={{ marginBottom: 0 }}>
                 <label>Created By</label>
                 <input
@@ -407,7 +399,6 @@ export default function ImpactMatrixPage() {
         </section>
       </ScrollReveal>
 
-      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- ADD GROUP BUTTON ---------- */}
       <ScrollReveal>

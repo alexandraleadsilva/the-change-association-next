@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -445,15 +445,7 @@ export default function CultureTrackerPage() {
                 gap: 16,
               }}
             >
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Project / Change Name</label>
-                <input
-                  type="text"
-                  placeholder="e.g. Agile Ways of Working"
-                  value={tracker.projectName}
-                  onChange={(e) => updateField("projectName", e.target.value)}
-                />
-              </div>
+              <ProjectSelector value={tracker.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
               <div className="form-group" style={{ marginBottom: 0 }}>
                 <label>Assessed By</label>
                 <input
@@ -478,7 +470,6 @@ export default function CultureTrackerPage() {
         </section>
       </ScrollReveal>
 
-      <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
       {/* ---------- 5 INDICATOR CARDS ---------- */}
       <section

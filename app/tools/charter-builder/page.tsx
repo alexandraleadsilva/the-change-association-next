@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -392,15 +392,7 @@ export default function CharterBuilderPage() {
                 gap: 16,
               }}
             >
-              <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Project Name</label>
-                <input
-                  type="text"
-                  placeholder="e.g. ERP Transformation Programme"
-                  value={charter.projectName}
-                  onChange={(e) => updateField("projectName", e.target.value)}
-                />
-              </div>
+              <ProjectSelector value={charter.projectName} onChange={(val: string) => updateField("projectName", val)} isAuthenticated={isAuthenticated} />
               <div className="form-group" style={{ marginBottom: 0 }}>
                 <label>Created By</label>
                 <input
@@ -415,9 +407,6 @@ export default function CharterBuilderPage() {
         </section>
       </ScrollReveal>
 
-      <div style={{ padding: "0 48px", maxWidth: 820, margin: "0 auto" }}>
-        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
-      </div>
 
       {/* ---------- 7 CHARTER SECTIONS ---------- */}
       <section

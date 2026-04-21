@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -276,16 +276,7 @@ export default function CommunicationPlannerPage() {
               Project Information
             </h2>
             <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="projectName">Project / Initiative Name</label>
-                <input
-                  id="projectName"
-                  type="text"
-                  placeholder="e.g. ERP Rollout Phase 2"
-                  value={projectName}
-                  onChange={(e) => setProjectName(e.target.value)}
-                />
-              </div>
+              <ProjectSelector value={projectName} onChange={setProjectName} isAuthenticated={isAuthenticated} />
               <div className="form-group">
                 <label htmlFor="createdBy">Created By</label>
                 <input
@@ -300,7 +291,6 @@ export default function CommunicationPlannerPage() {
           </section>
         </ScrollReveal>
 
-        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 

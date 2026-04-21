@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useToolData } from "@/lib/useToolData";
-import { SaveIndicator } from "@/components/SaveIndicator";
+import { ProjectSelector } from "@/components/ProjectSelector";
 
 /* ------------------------------------------------------------------ */
 /*  DATA MODEL                                                         */
@@ -311,18 +311,7 @@ export default function ResistanceTrackerPage() {
               Project Information
             </h2>
             <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="rt-projectName">
-                  Project / Initiative Name
-                </label>
-                <input
-                  id="rt-projectName"
-                  type="text"
-                  placeholder="e.g. CRM Migration Programme"
-                  value={projectName}
-                  onChange={(e) => setProjectName(e.target.value)}
-                />
-              </div>
+              <ProjectSelector value={projectName} onChange={setProjectName} isAuthenticated={isAuthenticated} />
               <div className="form-group">
                 <label htmlFor="rt-createdBy">Created By</label>
                 <input
@@ -337,7 +326,6 @@ export default function ResistanceTrackerPage() {
           </section>
         </ScrollReveal>
 
-        <SaveIndicator isAuthenticated={isAuthenticated} isSaving={isSaving} lastSaved={lastSaved} />
 
         <hr className="section-divider" style={{ marginBottom: 48 }} />
 
