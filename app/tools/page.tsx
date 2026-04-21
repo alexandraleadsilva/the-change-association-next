@@ -84,9 +84,24 @@ const tools = [
     relatedArticle: "/knowledge/change-impact-assessment",
     relatedLabel: "Change Impact Assessment",
   },
+  {
+    href: "/tools/change-roadmap",
+    pillar: "Execution",
+    name: "Change Roadmap",
+    description: "Build a visual timeline of your change programme with milestones, phases, and key activities. Track progress against plan.",
+    relatedArticle: "/knowledge/phased-approach",
+    relatedLabel: "Phased Approach to Change",
+  },
+  {
+    href: "/tools/training-matrix",
+    pillar: "Enablement",
+    name: "Training Needs Matrix",
+    description: "Map roles against skills needed for the future state. Identify capability gaps and plan targeted training by group.",
+    relatedArticle: "/knowledge/learning-design",
+    relatedLabel: "Learning Design & Delivery",
+  },
 ];
 
-const comingSoon: typeof tools = [];
 
 export default function ToolsPage() {
   return (
@@ -157,51 +172,6 @@ export default function ToolsPage() {
         </div>
       </section>
 
-      <section style={{ padding: "0 48px 56px", maxWidth: 960, margin: "0 auto" }}>
-        <ScrollReveal direction="up">
-          <h2 style={{ fontFamily: "var(--serif)", fontSize: 28, fontWeight: 500, color: "var(--navy)", marginBottom: 12 }}>
-            Coming Soon
-          </h2>
-          <p style={{ fontFamily: "var(--ui)", fontSize: 14, color: "var(--text-mid)", marginBottom: 32 }}>
-            These tools are in development and will be added as the toolkit grows.
-          </p>
-        </ScrollReveal>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
-          {comingSoon.map((tool, i) => (
-            <ScrollReveal key={tool.name} direction="up" delay={i * 60}>
-              <div
-                style={{
-                  padding: "24px 22px",
-                  border: "1px solid var(--border)",
-                  opacity: 0.55,
-                  height: "100%",
-                }}
-              >
-                <span style={{
-                  fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500,
-                  letterSpacing: "0.18em", textTransform: "uppercase",
-                  color: "var(--gold)", marginBottom: 8, display: "block",
-                }}>
-                  {tool.pillar}
-                </span>
-                <span style={{
-                  fontFamily: "var(--serif)", fontSize: 18, fontWeight: 600,
-                  color: "var(--navy)", lineHeight: 1.25, marginBottom: 6, display: "block",
-                }}>
-                  {tool.name}
-                </span>
-                <span style={{
-                  fontFamily: "var(--ui)", fontSize: 12, color: "var(--text-mid)",
-                  lineHeight: 1.5,
-                }}>
-                  {tool.description}
-                </span>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
 
       <Footer />
     </>
