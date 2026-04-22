@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Email and code required" }, { status: 400 });
   }
 
-  const valid = verifyOTP(email, code);
+  const valid = await verifyOTP(email, code);
   if (!valid) {
     return NextResponse.json({ error: "Invalid or expired code" }, { status: 401 });
   }

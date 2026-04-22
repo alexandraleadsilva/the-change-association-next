@@ -36,6 +36,21 @@ export async function GET() {
       CREATE INDEX IF NOT EXISTS idx_tool_data_type ON tool_data(user_email, tool_type)
     `;
 
+    // OTP codes table
+    await sql`
+      CREATE TABLE IF NOT EXISTS otp_codes (
+        id SERIAL PRIMARY KEY,
+        email VARCHAR(255) NOT NULL,
+        code VARCHAR(6) NOT NULL,
+        expires_at TIMESTAMP NOT NULL,
+        created_at TIMESTAMP DEFAULT NOW()
+      )
+    `;
+
+    await sql`
+      CREATE INDEX IF NOT EXISTS idx_otp_email ON otp_codes(email)
+    `;
+
     return NextResponse.json({ success: true, message: "Tables created" });
   } catch (error) {
     console.error("DB setup error:", error);

@@ -47,7 +47,7 @@ export default function Contact() {
           <div className="contact-details">
             <div className="contact-item">
               <span className="contact-item-label">Email</span>
-              <span className="contact-item-value"><a href="mailto:enquiries@thechangeassociation.com">enquiries@thechangeassociation.com</a></span>
+              <span className="contact-item-value"><a href="mailto:general@thechangeassociation.com">general@thechangeassociation.com</a></span>
             </div>
             <div className="contact-item">
               <span className="contact-item-label">Follow Us</span>

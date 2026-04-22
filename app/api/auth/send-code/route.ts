@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   }
 
   const code = generateOTP();
-  storeOTP(email, code);
+  await storeOTP(email, code);
 
   try {
     await resend.emails.send({

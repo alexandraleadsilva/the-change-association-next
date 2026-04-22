@@ -1,33 +1,50 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
+import { sql } from "@vercel/postgres";
 
 const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
 const COOKIE_NAME = "tca_session";
-
-// In-memory OTP store (replace with database later)
-const otpStore = new Map<string, { code: string; expires: number; email: string }>();
 
 export function generateOTP(): string {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
-export function storeOTP(email: string, code: string) {
-  otpStore.set(email.toLowerCase(), {
-    code,
-    expires: Date.now() + 10 * 60 * 1000, // 10 minutes
-    email: email.toLowerCase(),
-  });
+export async function storeOTP(email: string, code: string) {
+  const expires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+  const emailLower = email.toLowerCase();
+
+  // Delete any existing OTP for this email
+  await sql`DELETE FROM otp_codes WHERE email = ${emailLower}`;
+
+  // Insert new OTP
+  await sql`INSERT INTO otp_codes (email, code, expires_at) VALUES (${emailLower}, ${code}, ${expires.toISOString()})`;
 }
 
-export function verifyOTP(email: string, code: string): boolean {
-  const stored = otpStore.get(email.toLowerCase());
-  if (!stored) return false;
-  if (Date.now() > stored.expires) {
-    otpStore.delete(email.toLowerCase());
+export async function verifyOTP(email: string, code: string): Promise<boolean> {
+  const emailLower = email.toLowerCase();
+
+  const { rows } = await sql`
+    SELECT code, expires_at FROM otp_codes
+    WHERE email = ${emailLower}
+    ORDER BY expires_at DESC
+    LIMIT 1
+  `;
+
+  if (rows.length === 0) return false;
+
+  const stored = rows[0];
+
+  // Check expiry
+  if (new Date() > new Date(stored.expires_at)) {
+    await sql`DELETE FROM otp_codes WHERE email = ${emailLower}`;
     return false;
   }
+
+  // Check code
   if (stored.code !== code) return false;
-  otpStore.delete(email.toLowerCase());
+
+  // Valid -- delete the OTP
+  await sql`DELETE FROM otp_codes WHERE email = ${emailLower}`;
   return true;
 }
 
