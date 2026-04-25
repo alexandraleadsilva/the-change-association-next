@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Dashboard | The Change Association",
@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  // Force dynamic rendering by reading headers
-  await headers();
+  await cookies();
   return <>{children}</>;
 }
