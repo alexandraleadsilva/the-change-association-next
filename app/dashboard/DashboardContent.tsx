@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { GaugeChart, DonutChart, BarMeter, getColour } from "@/components/DashboardCharts";
-import { getDemoTools } from "@/data/demo-tools";
 
 interface ToolRecord {
   tool_type: string;
@@ -120,10 +119,42 @@ export default function DashboardPage() {
     return (<><Nav /><div style={{ padding: "120px 48px", textAlign: "center", fontFamily: "var(--ui)", color: "var(--text-mid)" }}>Loading your dashboard...</div><Footer /></>);
   }
 
-  // Use dummy data for non-authenticated users
   const isDemo = !authenticated;
 
-  const displayTools = isDemo ? getDemoTools() as ToolRecord[] : tools;
+  if (isDemo) {
+    return (
+      <>
+        <Nav />
+        <div className="page-header">
+          <span>Dashboard</span>
+          <h1>Program Health</h1>
+          <p>A visual overview of your change program across all dimensions of the TCA model.</p>
+        </div>
+        <div style={{ padding: "0 48px 64px", maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ background: "var(--navy)", padding: "32px 40px", marginBottom: 40, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+            <div>
+              <p style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 500, color: "var(--cream)", marginBottom: 8 }}>See your program health at a glance</p>
+              <p style={{ fontFamily: "var(--ui)", fontSize: 14, color: "rgba(234,228,213,0.7)", lineHeight: 1.6, maxWidth: 520 }}>Sign in to track readiness scores, stakeholder positions, sponsor actions, adoption curves, resistance signals, benefits realisation, and culture embedding across all your change tools.</p>
+            </div>
+            <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", color: "var(--navy)", padding: "12px 28px", cursor: "pointer" }}>Sign In</button>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20 }}>
+            {["Readiness Gauge", "Stakeholder Map", "Charter Progress", "Communication Status", "Sponsor Actions", "Resistance Signals", "Benefits Tracking", "Adoption Curve", "Culture Embedding"].map((item) => (
+              <div key={item} style={{ background: "var(--cream)", border: "1px solid var(--border)", padding: "32px 20px", textAlign: "center", opacity: 0.5 }}>
+                <div style={{ width: 80, height: 80, borderRadius: "50%", background: "rgba(100,90,70,0.08)", margin: "0 auto 16px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "#9A9080" }}>Preview</span>
+                </div>
+                <span style={{ fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)" }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  const displayTools = tools;
 
   return (
     <>
