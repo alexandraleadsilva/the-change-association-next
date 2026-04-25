@@ -256,7 +256,7 @@ export default function DashboardPage() {
   // Use dummy data for non-authenticated users
   const isDemo = !authenticated;
 
-  const displayTools = tools;
+  const displayTools = isDemo ? DEMO_TOOLS : tools;
 
   return (
     <>
