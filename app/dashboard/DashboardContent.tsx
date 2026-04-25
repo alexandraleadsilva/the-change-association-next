@@ -36,21 +36,76 @@ export default function DashboardPage() {
     <>
       <Nav />
       <div className="page-header"><span>Dashboard</span><h1>Program Health</h1><p>Track your change program across all dimensions of the TCA model.</p></div>
-      <div style={{ padding: "0 48px 64px", maxWidth: 900, margin: "0 auto" }}>
-        <div style={{ background: "var(--navy)", padding: "32px 40px", marginBottom: 40, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <div>
-            <p style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--cream)", marginBottom: 6 }}>See your program health at a glance</p>
-            <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.6)", lineHeight: 1.5 }}>Sign in to track readiness, stakeholders, sponsorship, adoption, and more.</p>
-          </div>
-          <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)", padding: "10px 24px", cursor: "pointer" }}>Sign In</button>
+      <div style={{ padding: "0 48px 64px", maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ background: "var(--navy)", padding: "20px 40px", marginBottom: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+          <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.8)" }}>This is a preview with sample data. <strong style={{ color: "var(--cream)" }}>Sign in</strong> to track your own program.</p>
+          <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)", padding: "8px 20px", cursor: "pointer" }}>Sign In</button>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
-          {["Readiness", "Stakeholders", "Charter", "Communications", "Sponsor", "Resistance", "Benefits", "Adoption", "Culture"].map(n => (
-            <div key={n} style={{ border: "1px solid var(--border)", padding: "28px 16px", textAlign: "center", opacity: 0.35 }}>
-              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "rgba(100,90,70,0.1)", margin: "0 auto 10px" }} />
-              <span style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--navy)" }}>{n}</span>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, marginBottom: 36 }}>
+          <div style={{ border: "1px solid var(--border)", padding: "28px 20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <GaugeChart value={3.3} max={5} label="Overall Readiness" colour="#D4A017" size={180} />
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <DonutChart segments={[{ value: 4, colour: "#27AE60", label: "Supportive" }, { value: 3, colour: "#9E9E9E", label: "Neutral" }, { value: 3, colour: "#C0392B", label: "Resistant" }]} label="Stakeholders" />
             </div>
-          ))}
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <GaugeChart value={4} max={7} label="Charter" colour="#D4A017" size={130} />
+            </div>
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <GaugeChart value={2} max={9} label="Sponsor" colour="#C0392B" size={130} />
+            </div>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14, marginBottom: 36 }}>
+          <div style={{ border: "1px solid var(--border)", borderLeft: "3px solid #27AE60", padding: "16px 18px" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Communications</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>7</span>
+          </div>
+          <div style={{ border: "1px solid var(--border)", borderLeft: "3px solid #D4A017", padding: "16px 18px" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Resistance Signals</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>4</span>
+          </div>
+          <div style={{ border: "1px solid var(--border)", borderLeft: "3px solid #27AE60", padding: "16px 18px" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Benefits</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>4</span>
+          </div>
+          <div style={{ border: "1px solid var(--border)", borderLeft: "3px solid #9E9E9E", padding: "16px 18px" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Impact Groups</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>3</span>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 36 }}>
+          <div style={{ border: "1px solid var(--border)", padding: 20 }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14 }}>Readiness by Dimension</span>
+            <BarMeter value={3.8} max={5} label="People" colour="#D4A017" />
+            <BarMeter value={2.4} max={5} label="Process" colour="#C0392B" />
+            <BarMeter value={3.2} max={5} label="Culture" colour="#D4A017" />
+            <BarMeter value={2.8} max={5} label="Capability" colour="#D4A017" />
+            <BarMeter value={4.1} max={5} label="Systems" colour="#27AE60" />
+          </div>
+          <div style={{ border: "1px solid var(--border)", padding: 20 }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14 }}>Adoption Curve</span>
+            <BarMeter value={4.2} max={5} label="Awareness" colour="#27AE60" />
+            <BarMeter value={3.5} max={5} label="Understanding" colour="#D4A017" />
+            <BarMeter value={2.8} max={5} label="Trial" colour="#D4A017" />
+            <BarMeter value={1.6} max={5} label="Adoption" colour="#C0392B" />
+            <BarMeter value={0} max={5} label="Proficiency" colour="#9E9E9E" />
+          </div>
+        </div>
+
+        <div style={{ border: "1px solid var(--border)", padding: 20 }}>
+          <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14 }}>Culture Embedding</span>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12 }}>
+            <div style={{ textAlign: "center" }}><span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "#D4A017", display: "block" }}>1/3</span><span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>Language</span></div>
+            <div style={{ textAlign: "center" }}><span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "#C0392B", display: "block" }}>0/3</span><span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>Behaviours</span></div>
+            <div style={{ textAlign: "center" }}><span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "#C0392B", display: "block" }}>0/3</span><span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>Old Ways</span></div>
+            <div style={{ textAlign: "center" }}><span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "#D4A017", display: "block" }}>1/3</span><span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>New Starters</span></div>
+            <div style={{ textAlign: "center" }}><span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 600, color: "#C0392B", display: "block" }}>0/3</span><span style={{ fontFamily: "var(--ui)", fontSize: 10, color: "var(--text-mid)" }}>Leadership</span></div>
+          </div>
         </div>
       </div>
       <Footer />
