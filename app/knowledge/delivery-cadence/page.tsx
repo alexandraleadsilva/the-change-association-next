@@ -105,10 +105,10 @@ function buildRituals(pace: Pace, complexity: Complexity, teamSize: TeamSize): R
     rituals.push({
       name: "Monthly Steering Committee",
       frequency: "Monthly, 90 minutes",
-      purpose: "Bring together senior sponsors and programme leadership to review strategic alignment, resource allocation, and cross-programme dependencies.",
+      purpose: "Bring together senior sponsors and program leadership to review strategic alignment, resource allocation, and cross-program dependencies.",
       covers: [
         "Strategic context update: has anything changed that affects the change rationale",
-        "Programme health across all dimensions: delivery, adoption, sentiment, capability",
+        "Program health across all dimensions: delivery, adoption, sentiment, capability",
         "Resource and budget decisions that need senior authority",
         "Escalated risks and the recommended response",
         "Decisions on whether to continue, adjust, pause, or accelerate specific workstreams",
@@ -121,7 +121,7 @@ function buildRituals(pace: Pace, complexity: Complexity, teamSize: TeamSize): R
       frequency: "Monthly, 45 minutes",
       purpose: "Keep the executive sponsor informed, engaged, and making the decisions that only they can make.",
       covers: [
-        "Programme progress and health summary",
+        "Program progress and health summary",
         "Key risks and the proposed response",
         "Decisions that require sponsor authority",
         "Upcoming milestones and what success looks like for each",
@@ -142,7 +142,7 @@ function buildRituals(pace: Pace, complexity: Complexity, teamSize: TeamSize): R
       "Capability review: do people have the skills and confidence to sustain the change",
       "Forward look: what needs to shift in the next quarter based on what we have learned",
     ],
-    warning: "The quarterly health check is the most important ritual and the one most often skipped when delivery pressure increases. Protect it. It is the mechanism that turns a change programme into a learning system.",
+    warning: "The quarterly health check is the most important ritual and the one most often skipped when delivery pressure increases. Protect it. It is the mechanism that turns a change program into a learning system.",
   });
 
   /* ------ ADAPTIVE EXTRAS ------ */
@@ -166,7 +166,7 @@ function buildRituals(pace: Pace, complexity: Complexity, teamSize: TeamSize): R
     rituals.push({
       name: "Change Network Sync",
       frequency: pace === "fast" ? "Weekly, 30 minutes" : "Fortnightly, 45 minutes",
-      purpose: "Connect the network of change champions, change agents, and local leaders who are translating the programme into reality on the ground.",
+      purpose: "Connect the network of change champions, change agents, and local leaders who are translating the program into reality on the ground.",
       covers: [
         "What the network is hearing from their teams",
         "Patterns of resistance, confusion, or enthusiasm",
@@ -187,7 +187,7 @@ function buildRituals(pace: Pace, complexity: Complexity, teamSize: TeamSize): R
 const adaptationStrategies: ActionItem[] = [
   {
     text: "Shorten your planning horizon without shortening your vision",
-    detail: "When the business is shifting frequently, the instinct is to keep replanning the entire programme. Instead, hold the long-term vision steady and shorten the planning detail to the next four to six weeks. Plan in detail for the near term, in outline for the medium term, and in direction for the long term. This means each shift in business context only requires you to adjust the near-term plan, not redesign everything.",
+    detail: "When the business is shifting frequently, the instinct is to keep replanning the entire program. Instead, hold the long-term vision steady and shorten the planning detail to the next four to six weeks. Plan in detail for the near term, in outline for the medium term, and in direction for the long term. This means each shift in business context only requires you to adjust the near-term plan, not redesign everything.",
   },
   {
     text: "Build flex points into your delivery plan from the start",
@@ -195,7 +195,7 @@ const adaptationStrategies: ActionItem[] = [
   },
   {
     text: "Distinguish between noise and signal in business changes",
-    detail: "Not every business shift requires a change to your approach. Some are noise: temporary adjustments, leadership opinions that do not translate to decisions, market fluctuations that do not affect the programme. Develop a simple filter: does this shift change the rationale for the change, the people affected, the timeline, or the resources available? If none of those, acknowledge it and continue.",
+    detail: "Not every business shift requires a change to your approach. Some are noise: temporary adjustments, leadership opinions that do not translate to decisions, market fluctuations that do not affect the program. Develop a simple filter: does this shift change the rationale for the change, the people affected, the timeline, or the resources available? If none of those, acknowledge it and continue.",
   },
   {
     text: "Communicate what is stable, not just what is changing",
@@ -226,11 +226,11 @@ const momentumPrinciples: ActionItem[] = [
   },
   {
     text: "Monitor energy as seriously as you monitor progress",
-    detail: "Most change programmes track milestones, adoption rates, and budget. Very few track the energy levels of the people delivering and receiving the change. Add a simple energy question to your fortnightly reviews: on a scale of 1 to 5, how sustainable does this pace feel? If the number drops below 3 for two consecutive reviews, something needs to change before burnout becomes the dominant issue.",
+    detail: "Most change programs track milestones, adoption rates, and budget. Very few track the energy levels of the people delivering and receiving the change. Add a simple energy question to your fortnightly reviews: on a scale of 1 to 5, how sustainable does this pace feel? If the number drops below 3 for two consecutive reviews, something needs to change before burnout becomes the dominant issue.",
   },
   {
     text: "Rotate intensity across teams rather than sustaining it everywhere",
-    detail: "Not every team needs to be at peak intensity at the same time. Design your cadence so that when one team is in a high-intensity delivery phase, others are in consolidation or preparation. This rotation means the overall programme maintains momentum without requiring sustained maximum effort from everyone simultaneously.",
+    detail: "Not every team needs to be at peak intensity at the same time. Design your cadence so that when one team is in a high-intensity delivery phase, others are in consolidation or preparation. This rotation means the overall program maintains momentum without requiring sustained maximum effort from everyone simultaneously.",
   },
   {
     text: "Celebrate progress at every cadence interval, not just at milestones",
@@ -397,7 +397,7 @@ export default function DeliveryCadence() {
   const rituals = allSelected ? buildRituals(pace, complexity, teamSize) : [];
 
   const checkItems = [
-    { key: "rhythm", label: "We have a defined delivery cadence with rituals at different levels: team, programme, and strategic" },
+    { key: "rhythm", label: "We have a defined delivery cadence with rituals at different levels: team, program, and strategic" },
     { key: "flex", label: "Our delivery plan has explicit flex points where we reassess and adapt based on the current context" },
     { key: "horizon", label: "We plan in detail for the near term and in direction for the long term, not the other way around" },
     { key: "recovery", label: "We build recovery periods into the cadence after major milestones or go-live events" },
@@ -421,7 +421,7 @@ export default function DeliveryCadence() {
         <ScrollReveal direction="up">
           <span className="article-label">Execution &middot; Change Delivery Cadence</span>
           <h1 className="article-title">How to build a change delivery rhythm that keeps momentum without burning people out</h1>
-          <p className="article-intro">Every change programme needs a heartbeat. Too fast and people burn out. Too slow and momentum dies. The right cadence is not a fixed formula: it depends on your pace of business change, the complexity of what you are delivering, and the capacity of the people experiencing it. This guide covers both sides of the cadence challenge: how to adapt your change approach when the business keeps shifting, and how to set up a delivery rhythm that sustains momentum without exhausting the organisation. The two are inseparable. A good cadence is both responsive and sustainable.</p>
+          <p className="article-intro">Every change program needs a heartbeat. Too fast and people burn out. Too slow and momentum dies. The right cadence is not a fixed formula: it depends on your pace of business change, the complexity of what you are delivering, and the capacity of the people experiencing it. This guide covers both sides of the cadence challenge: how to adapt your change approach when the business keeps shifting, and how to set up a delivery rhythm that sustains momentum without exhausting the organisation. The two are inseparable. A good cadence is both responsive and sustainable.</p>
         </ScrollReveal>
       </div>
 
@@ -432,7 +432,7 @@ export default function DeliveryCadence() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Adapting When the Business Keeps Shifting</h2>
-          <p className="article-section-desc">Business context rarely stays still long enough for a change plan to survive intact. Strategy pivots, leadership changes, market disruptions, and reorganisations all affect the environment in which your change is landing. The question is not whether the business will shift. It is whether your change approach is designed to absorb those shifts without losing direction. These six strategies make the difference between a change programme that bends and one that breaks.</p>
+          <p className="article-section-desc">Business context rarely stays still long enough for a change plan to survive intact. Strategy pivots, leadership changes, market disruptions, and reorganisations all affect the environment in which your change is landing. The question is not whether the business will shift. It is whether your change approach is designed to absorb those shifts without losing direction. These six strategies make the difference between a change program that bends and one that breaks.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

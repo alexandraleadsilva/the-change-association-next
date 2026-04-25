@@ -84,8 +84,8 @@ export function Nav() {
               </li>
             )
           )}
-          <li className="nav-sep" style={{ visibility: mounted && user ? "visible" : "hidden" }}></li>
-          <li style={{ display: mounted && user ? "flex" : "none" }}>
+          <li className="nav-sep"></li>
+          <li>
             <Link
               href="/dashboard"
               className={pathname === "/dashboard" ? "active" : ""}

@@ -86,7 +86,7 @@ export default function Knowledge() {
               <p className="sub-pillar-desc">Current state assessment, future state definition, and gap analysis. The foundational diagnostic work leaders must complete before leading others.</p>
               <div className="article-list">
                 <ArticleLink
-                  title="How to write a change charter and business case that sets the programme up for success"
+                  title="How to write a change charter and business case that sets the program up for success"
                   tag="Charter & Business Case"
                   href="/knowledge/change-charter"
                 />
@@ -402,7 +402,7 @@ export default function Knowledge() {
 
             <div className="sub-pillar">
               <h3 className="sub-pillar-title">Governance & Decision Rights</h3>
-              <p className="sub-pillar-desc">Clear structures for how change decisions are made, escalated, and communicated across the programme.</p>
+              <p className="sub-pillar-desc">Clear structures for how change decisions are made, escalated, and communicated across the program.</p>
               <div className="article-list">
                 <ArticleLink
                   title="How to design change governance that enables decisions, not delays them"
@@ -410,7 +410,7 @@ export default function Knowledge() {
                   href="/knowledge/governance"
                 />
                 <ArticleLink
-                  title="Who should own what in a change programme, and how do you make that clear?"
+                  title="Who should own what in a change program, and how do you make that clear?"
                   tag="Decision Rights"
                   href="/knowledge/governance"
                 />
@@ -448,7 +448,7 @@ export default function Knowledge() {
           >
             <span className="pillar-num">Pillar 05</span>
             <h2>Sustainment</h2>
-            <p className="pillar-intro">Sustainment is the work that begins where most change programmes end. It is the systematic effort to reinforce new behaviours, integrate them into culture, and prevent regression to old ways of working. Sustainment is not passive. It requires deliberate design and ongoing attention.</p>
+            <p className="pillar-intro">Sustainment is the work that begins where most change programs end. It is the systematic effort to reinforce new behaviours, integrate them into culture, and prevent regression to old ways of working. Sustainment is not passive. It requires deliberate design and ongoing attention.</p>
             <div className="pillar-divider"></div>
 
             <div className="sub-pillar">
@@ -512,7 +512,7 @@ export default function Knowledge() {
               <p className="sub-pillar-desc">Establishing feedback loops and review cycles that identify what's working, what isn't, and what needs to adapt.</p>
               <div className="article-list">
                 <ArticleLink
-                  title="How to build feedback loops that keep change alive after the programme ends"
+                  title="How to build feedback loops that keep change alive after the program ends"
                   tag="Feedback Loops"
                   href="/knowledge/continuous-improvement"
                 />

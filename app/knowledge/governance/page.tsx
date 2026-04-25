@@ -38,8 +38,8 @@ const healthCriteria: HealthCriterion[] = [
   {
     id: "clarity-of-authority",
     label: "Clarity of Authority",
-    description: "Does every person involved in the programme know exactly what decisions they can and cannot make?",
-    enablers: "Decision rights are documented and communicated. People can name who owns each type of decision. There are no grey areas between the programme and the business.",
+    description: "Does every person involved in the program know exactly what decisions they can and cannot make?",
+    enablers: "Decision rights are documented and communicated. People can name who owns each type of decision. There are no grey areas between the program and the business.",
     obstructors: "People escalate decisions they could make themselves because they are unsure of their authority. The same decision gets discussed in multiple forums. Ownership is assumed but never confirmed.",
   },
   {
@@ -54,14 +54,14 @@ const healthCriteria: HealthCriterion[] = [
     label: "Burden vs Value",
     description: "Does your governance generate more value than it costs in time, effort, and delay?",
     enablers: "Reporting is proportionate to risk. Low-risk workstreams have lighter governance. People see governance as a support mechanism, not a bureaucratic hurdle. Meetings are short, focused, and decisive.",
-    obstructors: "The programme team spends more time preparing for governance meetings than doing the work. Reports are produced that nobody reads. Governance requirements are the same regardless of the size or risk of the decision.",
+    obstructors: "The program team spends more time preparing for governance meetings than doing the work. Reports are produced that nobody reads. Governance requirements are the same regardless of the size or risk of the decision.",
   },
   {
     id: "stakeholder-confidence",
     label: "Stakeholder Confidence",
     description: "Do senior stakeholders trust the governance to surface problems early and make sound decisions?",
-    enablers: "Sponsors get honest, concise updates. Bad news travels fast because the governance rewards transparency. Stakeholders defend the programme when challenged because they trust the information they receive.",
-    obstructors: "Reports are optimistic by default. Problems are hidden until they become crises. Sponsors are surprised by issues that the programme team knew about weeks ago. Trust is low and micro-management increases.",
+    enablers: "Sponsors get honest, concise updates. Bad news travels fast because the governance rewards transparency. Stakeholders defend the program when challenged because they trust the information they receive.",
+    obstructors: "Reports are optimistic by default. Problems are hidden until they become crises. Sponsors are surprised by issues that the program team knew about weeks ago. Trust is low and micro-management increases.",
   },
 ];
 
@@ -72,7 +72,7 @@ const healthCriteria: HealthCriterion[] = [
 const designPrinciples: ActionItem[] = [
   {
     text: "Design governance around decisions, not meetings",
-    detail: "Start by listing the decisions the programme needs to make and who should make them. Then design the minimum governance structure required to support those decisions. Most organisations do it backwards: they set up a steering committee and then try to work out what it should decide. The result is a meeting in search of a purpose. When governance is designed around decisions, every meeting has a clear remit, every attendee knows why they are there, and the test for whether governance is working is simple: are decisions being made at the right speed and quality?",
+    detail: "Start by listing the decisions the program needs to make and who should make them. Then design the minimum governance structure required to support those decisions. Most organisations do it backwards: they set up a steering committee and then try to work out what it should decide. The result is a meeting in search of a purpose. When governance is designed around decisions, every meeting has a clear remit, every attendee knows why they are there, and the test for whether governance is working is simple: are decisions being made at the right speed and quality?",
   },
   {
     text: "Separate strategic governance from operational governance",
@@ -84,11 +84,11 @@ const designPrinciples: ActionItem[] = [
   },
   {
     text: "Build in a governance review mechanism",
-    detail: "Governance that was right at the start of a programme may not be right six months in. As the programme moves from design to delivery to stabilisation, the types of decisions change, the risks shift, and the people involved evolve. Build an explicit review point every quarter where the governance model itself is assessed: is it still enabling decisions? Is anything being delayed unnecessarily? Are the right people in the room? Governance that cannot adapt becomes the very obstacle it was designed to prevent.",
+    detail: "Governance that was right at the start of a program may not be right six months in. As the program moves from design to delivery to stabilisation, the types of decisions change, the risks shift, and the people involved evolve. Build an explicit review point every quarter where the governance model itself is assessed: is it still enabling decisions? Is anything being delayed unnecessarily? Are the right people in the room? Governance that cannot adapt becomes the very obstacle it was designed to prevent.",
   },
   {
-    text: "Make governance visible and accessible to the whole programme",
-    detail: "If the only people who understand how governance works are the programme director and the PMO, the governance is not serving the programme. Everyone involved in the change should be able to answer three questions: who decides this? How do I escalate? What is the fastest route to a decision? Publish a simple one-page governance map. Keep it updated. Make it the first thing new team members see. When governance is visible, people use it. When it is opaque, people work around it.",
+    text: "Make governance visible and accessible to the whole program",
+    detail: "If the only people who understand how governance works are the program director and the PMO, the governance is not serving the program. Everyone involved in the change should be able to answer three questions: who decides this? How do I escalate? What is the fastest route to a decision? Publish a simple one-page governance map. Keep it updated. Make it the first thing new team members see. When governance is visible, people use it. When it is opaque, people work around it.",
   },
 ];
 
@@ -98,16 +98,16 @@ const designPrinciples: ActionItem[] = [
 
 const ownershipRoles = [
   {
-    role: "Programme Sponsor",
+    role: "Program Sponsor",
     owns: "Strategic direction, budget authority, organisational commitment",
     doesNotOwn: "Day-to-day delivery decisions, resource allocation within workstreams, communication drafting",
-    clarity: "The sponsor owns the 'why' and the 'what' at the highest level. They remove organisational barriers and hold the programme accountable for outcomes. They do not run the programme.",
+    clarity: "The sponsor owns the 'why' and the 'what' at the highest level. They remove organisational barriers and hold the program accountable for outcomes. They do not run the program.",
   },
   {
-    role: "Programme Director / Lead",
+    role: "Program Director / Lead",
     owns: "Delivery approach, timeline, resource coordination, risk management, stakeholder management",
     doesNotOwn: "Business strategy, policy decisions, people management of seconded staff, technology architecture",
-    clarity: "The programme lead owns the 'how' and the 'when'. They translate the sponsor's intent into a deliverable plan and manage the interdependencies across workstreams.",
+    clarity: "The program lead owns the 'how' and the 'when'. They translate the sponsor's intent into a deliverable plan and manage the interdependencies across workstreams.",
   },
   {
     role: "Workstream Leads",
@@ -118,13 +118,13 @@ const ownershipRoles = [
   {
     role: "Business Change Owners",
     owns: "Readiness of the business to receive the change, adoption, benefit realisation, sustainment post go-live",
-    doesNotOwn: "Technical delivery, programme timeline, solution design",
-    clarity: "This is the most frequently missing role. Without a named business change owner, nobody in the business is accountable for making the change stick. The programme delivers it and walks away. The business never truly adopts it.",
+    doesNotOwn: "Technical delivery, program timeline, solution design",
+    clarity: "This is the most frequently missing role. Without a named business change owner, nobody in the business is accountable for making the change stick. The program delivers it and walks away. The business never truly adopts it.",
   },
   {
     role: "Impacted Leaders (Line Managers)",
     owns: "Team readiness, local communication, coaching, feedback, resistance management",
-    doesNotOwn: "Programme design, governance, training content, system configuration",
+    doesNotOwn: "Program design, governance, training content, system configuration",
     clarity: "Line managers are the single biggest factor in whether change lands. But they are often the last to be engaged and the least supported. They own the adoption experience for their teams and need to be equipped, not just informed.",
   },
 ];
@@ -140,15 +140,15 @@ const ownershipPrinciples: ActionItem[] = [
   },
   {
     text: "Document ownership at the decision level, not just the role level",
-    detail: "A role description that says 'responsible for change delivery' tells you nothing about who decides whether to delay a go-live date, who approves a change to the training approach, or who signs off on a revised communication plan. Map ownership at the decision level. List the twenty most important decisions the programme will face and name who makes each one. This is far more useful than a generic RACI that maps roles to workstreams.",
+    detail: "A role description that says 'responsible for change delivery' tells you nothing about who decides whether to delay a go-live date, who approves a change to the training approach, or who signs off on a revised communication plan. Map ownership at the decision level. List the twenty most important decisions the program will face and name who makes each one. This is far more useful than a generic RACI that maps roles to workstreams.",
   },
   {
     text: "Test ownership before you need it",
-    detail: "The worst time to discover that ownership is unclear is during a crisis. Run a tabletop exercise early in the programme: present a realistic scenario (a key milestone is at risk, a senior stakeholder withdraws support, adoption data shows a problem) and ask people to walk through who decides what. If there is confusion, hesitation, or disagreement, fix it now. Ownership that has not been tested is ownership that has not been established.",
+    detail: "The worst time to discover that ownership is unclear is during a crisis. Run a tabletop exercise early in the program: present a realistic scenario (a key milestone is at risk, a senior stakeholder withdraws support, adoption data shows a problem) and ask people to walk through who decides what. If there is confusion, hesitation, or disagreement, fix it now. Ownership that has not been tested is ownership that has not been established.",
   },
   {
     text: "Revisit ownership at every phase transition",
-    detail: "Ownership that was appropriate during design may not be appropriate during rollout. During design, the programme team owns most decisions. During rollout, the business needs to own more. During stabilisation, the business owns almost everything. If ownership does not shift as the programme progresses, the business never takes responsibility for the change and the programme team becomes a permanent dependency.",
+    detail: "Ownership that was appropriate during design may not be appropriate during rollout. During design, the program team owns most decisions. During rollout, the business needs to own more. During stabilisation, the business owns almost everything. If ownership does not shift as the program progresses, the business never takes responsibility for the change and the program team becomes a permanent dependency.",
   },
 ];
 
@@ -157,11 +157,11 @@ const ownershipPrinciples: ActionItem[] = [
 /* ------------------------------------------------------------------ */
 
 const checkItems = [
-  { key: "decisions-mapped", label: "We have mapped the key decisions the programme needs to make and assigned each one to a named individual" },
+  { key: "decisions-mapped", label: "We have mapped the key decisions the program needs to make and assigned each one to a named individual" },
   { key: "strategic-operational", label: "Strategic and operational governance are separated with clear remits for each" },
   { key: "escalation-criteria", label: "Escalation criteria are defined with specific thresholds, not just escalation paths" },
   { key: "governance-proportionate", label: "Governance requirements are proportionate to risk: lighter for low-risk items, heavier for high-risk ones" },
-  { key: "one-page-map", label: "A one-page governance map exists and is accessible to everyone in the programme" },
+  { key: "one-page-map", label: "A one-page governance map exists and is accessible to everyone in the program" },
   { key: "business-change-owner", label: "A named business change owner exists for each major area of change" },
   { key: "ownership-tested", label: "Ownership has been tested through a scenario exercise, not just documented on paper" },
   { key: "phase-transitions", label: "Ownership is reviewed and adjusted at each phase transition" },
@@ -176,14 +176,14 @@ const checkItems = [
 const caseStudies = [
   {
     label: "NHS England",
-    headline: "The National Programme for IT: when centralised governance overrode local decision rights",
-    hook: "A ten billion pound programme dismantled after a decade because governance was designed for control, not for decisions.",
+    headline: "The National Program for IT: when centralised governance overrode local decision rights",
+    hook: "A ten billion pound program dismantled after a decade because governance was designed for control, not for decisions.",
     dimension: "Governance Failure",
     body: [
-      "In 2002, the UK government launched the National Programme for IT (NPfIT) in the NHS, the largest public-sector IT programme ever attempted in the country. The ambition was to create a single, integrated electronic care records system across the entire NHS. The programme was centrally governed from Whitehall, with decisions about systems, suppliers, and implementation approaches made at the national level and imposed on local NHS organisations.",
+      "In 2002, the UK government launched the National Program for IT (NPfIT) in the NHS, the largest public-sector IT program ever attempted in the country. The ambition was to create a single, integrated electronic care records system across the entire NHS. The program was centrally governed from Whitehall, with decisions about systems, suppliers, and implementation approaches made at the national level and imposed on local NHS organisations.",
       "The governance model was designed for control: a central authority made top-down decisions on behalf of hundreds of local organisations, each with different needs, different levels of readiness, and different existing systems. Local clinicians and managers had almost no decision rights over the systems they would be required to use. Feedback from doctors, nurses, and GPs about accessibility and usability requirements was raised early but had no effective route into the decision-making process.",
-      "The result was a programme that delivered systems that local organisations did not want, could not use effectively, and actively resisted. Contracts were structured nationally, meaning that when a supplier failed to deliver in one region, the governance model had no mechanism for a local organisation to make alternative arrangements. Decisions that should have been made locally were trapped in a national governance structure that moved slowly and responded poorly to the reality on the ground.",
-      "After nearly a decade of delays, cost overruns, and stakeholder opposition, the programme was formally dismantled in 2011. The total cost exceeded ten billion pounds. Subsequent analysis identified governance as one of the root causes: the programme concentrated decision rights at the wrong level, created escalation paths that were too long and too slow, and designed governance for oversight rather than for enabling effective decisions.",
+      "The result was a program that delivered systems that local organisations did not want, could not use effectively, and actively resisted. Contracts were structured nationally, meaning that when a supplier failed to deliver in one region, the governance model had no mechanism for a local organisation to make alternative arrangements. Decisions that should have been made locally were trapped in a national governance structure that moved slowly and responded poorly to the reality on the ground.",
+      "After nearly a decade of delays, cost overruns, and stakeholder opposition, the program was formally dismantled in 2011. The total cost exceeded ten billion pounds. Subsequent analysis identified governance as one of the root causes: the program concentrated decision rights at the wrong level, created escalation paths that were too long and too slow, and designed governance for oversight rather than for enabling effective decisions.",
     ],
     lesson: "NPfIT demonstrates what happens when governance is designed for control rather than for decisions. Centralising authority can feel like it reduces risk, but when the people closest to the problem have no decision rights, the governance itself becomes the biggest risk. Effective change governance distributes decision rights to the level where the best information exists.",
     source: "https://www.henricodolfing.com/2019/01/case-study-10-billion-it-disaster.html",
@@ -196,7 +196,7 @@ const caseStudies = [
     dimension: "Decision Rights Failure",
     body: [
       "The Boeing 737 MAX crisis, which led to two fatal crashes in 2018 and 2019 killing 346 people, is frequently discussed as an engineering or cultural failure. It was also, fundamentally, a governance and decision rights failure. At the time of the crashes, none of Boeing's board committees had been specifically assigned responsibility for overseeing aircraft safety. The most critical category of decision in an aerospace company had no clear governance owner at the highest level of the organisation.",
-      "The absence of explicit safety governance at board level created a vacuum that was filled by production and commercial pressures. Decision rights around the 737 MAX programme were heavily influenced by the need to compete with Airbus and meet aggressive production timelines. Engineers who raised concerns about the MCAS system found that the governance structure provided no effective escalation path to someone with the authority and the mandate to prioritise safety over schedule.",
+      "The absence of explicit safety governance at board level created a vacuum that was filled by production and commercial pressures. Decision rights around the 737 MAX program were heavily influenced by the need to compete with Airbus and meet aggressive production timelines. Engineers who raised concerns about the MCAS system found that the governance structure provided no effective escalation path to someone with the authority and the mandate to prioritise safety over schedule.",
       "The relationship with the FAA compounded the problem. Boeing had been granted significant authority to self-certify aspects of its own aircraft. This delegation of decision rights from the regulator to the manufacturer required robust internal governance to ensure those rights were exercised responsibly. Instead, Boeing's governance incentivised speed and allowed critical test results to be managed rather than transparently reported.",
       "Between the first crash in October 2018 and the second in March 2019, Boeing's board did not discuss grounding the aircraft due to safety concerns. The governance structure simply did not surface this as a decision that required board-level attention. The decision rights for the most consequential safety question the company faced were not assigned to anyone with the authority and the information to make the right call.",
     ],
@@ -215,7 +215,7 @@ const caseStudies = [
       "What makes it work is the governance architecture around the autonomy. Strategic decisions about organisational structure and long-term direction remain with senior leadership. Company-level priorities, called company bets, are reviewed and set quarterly. Squads operate freely within these strategic boundaries. The model creates what Spotify calls enabling constraints: enough structure to ensure alignment, but not so much that it slows teams down. The principle is explicit: the stronger the alignment, the more autonomy can be granted.",
       "The model is not without challenges. Technical dependencies between squads create coordination complexity. Autonomy can lead to duplication of effort or inconsistent approaches. But Spotify addresses these through voluntary coordination mechanisms like guilds and chapters rather than mandatory approval processes. The governance enables teams to coordinate because they want to, not because they are forced to.",
     ],
-    lesson: "Spotify demonstrates that governance does not have to mean control. By clearly separating strategic decisions (owned by leadership) from operational decisions (owned by squads), and by creating enabling constraints rather than approval gates, Spotify built a governance model that scales autonomy rather than restricting it. The lesson for change programmes is that governance which distributes decision rights to the people with the best information produces faster, better decisions than governance which concentrates authority at the top.",
+    lesson: "Spotify demonstrates that governance does not have to mean control. By clearly separating strategic decisions (owned by leadership) from operational decisions (owned by squads), and by creating enabling constraints rather than approval gates, Spotify built a governance model that scales autonomy rather than restricting it. The lesson for change programs is that governance which distributes decision rights to the people with the best information produces faster, better decisions than governance which concentrates authority at the top.",
     source: "https://www.sciencedirect.com/science/article/pii/S0164121223000444",
     sourceLabel: "Journal of Systems and Software",
   },
@@ -227,14 +227,14 @@ const caseStudies = [
 
 const changeRiskActions: ActionItem[] = [
   {
-    text: "Why traditional RAID logs fail in change programmes",
+    text: "Why traditional RAID logs fail in change programs",
     detail:
-      "Most programmes use RAID logs (Risks, Assumptions, Issues, Dependencies) inherited from project management. These logs track project risks: system delivery delays, vendor issues, budget overruns, resource shortages. They are useful for project governance but almost entirely blind to change risks. A RAID log will tell you that the technology platform is two weeks behind schedule. It will not tell you that the executive sponsor has quietly disengaged, that middle managers are actively discouraging adoption, or that frontline teams have developed workarounds that make the new process irrelevant. Change risks are human, relational, and behavioural. They do not fit neatly into a project risk register because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. The result is that most programmes have excellent visibility of their project risks and almost no visibility of the risks that will actually determine whether the change succeeds or fails.",
+      "Most programs use RAID logs (Risks, Assumptions, Issues, Dependencies) inherited from project management. These logs track project risks: system delivery delays, vendor issues, budget overruns, resource shortages. They are useful for project governance but almost entirely blind to change risks. A RAID log will tell you that the technology platform is two weeks behind schedule. It will not tell you that the executive sponsor has quietly disengaged, that middle managers are actively discouraging adoption, or that frontline teams have developed workarounds that make the new process irrelevant. Change risks are human, relational, and behavioural. They do not fit neatly into a project risk register because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. The result is that most programs have excellent visibility of their project risks and almost no visibility of the risks that will actually determine whether the change succeeds or fails.",
   },
   {
     text: "Sponsor disengagement: the risk that leadership attention drifts away",
     detail:
-      "What it looks like: The sponsor stops attending steering committees, delegates briefings to a deputy, responds slowly to requests for decisions, and quietly shifts their attention to other priorities. The programme continues on paper but has lost its political protection. Early warning signs: The sponsor cancels or shortens meetings with the change team. Their communications about the change become generic rather than personal. They stop asking probing questions about adoption and revert to asking only about timelines and budget. Other executives begin to deprioritise the change in their own areas because they sense the sponsor has moved on. Recommended response: Have an honest, private conversation with the sponsor about their level of engagement. Reframe the change in terms of their current strategic priorities to re-establish relevance. If the sponsor cannot re-engage, negotiate a formal handover to a new sponsor rather than allowing a slow fade. Never leave a change programme without active sponsorship, even if it means escalating the conversation to an uncomfortable level.",
+      "What it looks like: The sponsor stops attending steering committees, delegates briefings to a deputy, responds slowly to requests for decisions, and quietly shifts their attention to other priorities. The program continues on paper but has lost its political protection. Early warning signs: The sponsor cancels or shortens meetings with the change team. Their communications about the change become generic rather than personal. They stop asking probing questions about adoption and revert to asking only about timelines and budget. Other executives begin to deprioritise the change in their own areas because they sense the sponsor has moved on. Recommended response: Have an honest, private conversation with the sponsor about their level of engagement. Reframe the change in terms of their current strategic priorities to re-establish relevance. If the sponsor cannot re-engage, negotiate a formal handover to a new sponsor rather than allowing a slow fade. Never leave a change program without active sponsorship, even if it means escalating the conversation to an uncomfortable level.",
   },
   {
     text: "Adoption stalling: the risk that initial compliance does not convert to genuine use",
@@ -244,7 +244,7 @@ const changeRiskActions: ActionItem[] = [
   {
     text: "Capability gaps persisting: the risk that people cannot do what the change requires",
     detail:
-      "What it looks like: People have been trained but still cannot perform the new tasks confidently. Error rates remain high. People frequently ask colleagues for help with tasks they should be able to do independently. The help desk is overwhelmed with basic how-to questions months after go-live. Performance declines in areas that should have stabilised. Early warning signs: High volumes of support requests that focus on basic functionality rather than edge cases. Managers spending disproportionate time helping team members with routine tasks. A widening gap between the performance of early adopters and the rest of the population. People expressing frustration that the training did not prepare them for the reality of the new way of working. Recommended response: Conduct a capability assessment to identify specific gaps, not generic training needs. Provide targeted support that meets people where they are: peer coaching for those who are close, intensive retraining for those who are far behind, and embedded support for the tasks that are most difficult. Extend the hypercare period rather than assuming the initial training was sufficient. Redesign training content based on the actual difficulties people are experiencing, not the difficulties the programme team anticipated.",
+      "What it looks like: People have been trained but still cannot perform the new tasks confidently. Error rates remain high. People frequently ask colleagues for help with tasks they should be able to do independently. The help desk is overwhelmed with basic how-to questions months after go-live. Performance declines in areas that should have stabilised. Early warning signs: High volumes of support requests that focus on basic functionality rather than edge cases. Managers spending disproportionate time helping team members with routine tasks. A widening gap between the performance of early adopters and the rest of the population. People expressing frustration that the training did not prepare them for the reality of the new way of working. Recommended response: Conduct a capability assessment to identify specific gaps, not generic training needs. Provide targeted support that meets people where they are: peer coaching for those who are close, intensive retraining for those who are far behind, and embedded support for the tasks that are most difficult. Extend the hypercare period rather than assuming the initial training was sufficient. Redesign training content based on the actual difficulties people are experiencing, not the difficulties the program team anticipated.",
   },
   {
     text: "Cultural resistance hardening: the risk that opposition becomes entrenched identity",
@@ -254,7 +254,7 @@ const changeRiskActions: ActionItem[] = [
   {
     text: "Fatigue accumulating: the risk that people run out of capacity to absorb change",
     detail:
-      "What it looks like: People are not resistant to this specific change. They are exhausted by the cumulative weight of every change happening simultaneously. Engagement drops across the board, not just for your programme. Quality of work declines. Sick leave increases. People describe feeling overwhelmed, undervalued, and unable to keep up. The organisation is not pushing back against the change. It is buckling under the load. Early warning signs: Engagement survey scores declining across multiple dimensions. Increased absenteeism and turnover in teams experiencing the most change. People disengaging from voluntary activities like champion networks or feedback sessions. Managers reporting that their teams have nothing left to give. A sense of resignation rather than resistance: people are not fighting the change, they are just too tired to engage with it. Recommended response: Conduct a change saturation assessment to map how much change each team is absorbing simultaneously. Advocate at governance level for sequencing and prioritisation rather than parallel delivery of every initiative. Reduce the burden on the most affected teams by simplifying requirements, extending timelines, or temporarily removing non-essential work. Acknowledge the fatigue publicly and honestly. People can tolerate a heavy load if they feel it is recognised and finite. They cannot tolerate being told that the pace is normal when their experience tells them it is not.",
+      "What it looks like: People are not resistant to this specific change. They are exhausted by the cumulative weight of every change happening simultaneously. Engagement drops across the board, not just for your program. Quality of work declines. Sick leave increases. People describe feeling overwhelmed, undervalued, and unable to keep up. The organisation is not pushing back against the change. It is buckling under the load. Early warning signs: Engagement survey scores declining across multiple dimensions. Increased absenteeism and turnover in teams experiencing the most change. People disengaging from voluntary activities like champion networks or feedback sessions. Managers reporting that their teams have nothing left to give. A sense of resignation rather than resistance: people are not fighting the change, they are just too tired to engage with it. Recommended response: Conduct a change saturation assessment to map how much change each team is absorbing simultaneously. Advocate at governance level for sequencing and prioritisation rather than parallel delivery of every initiative. Reduce the burden on the most affected teams by simplifying requirements, extending timelines, or temporarily removing non-essential work. Acknowledge the fatigue publicly and honestly. People can tolerate a heavy load if they feel it is recognised and finite. They cannot tolerate being told that the pace is normal when their experience tells them it is not.",
   },
 ];
 
@@ -307,7 +307,7 @@ export default function GovernancePage() {
     if (scorePercent >= 80) return { level: "Enabling", colour: "#2E6B4F", message: "Your governance is enabling delivery. It is designed around decisions, not control. Protect this by reviewing it quarterly and resisting the urge to add layers as complexity increases." };
     if (scorePercent >= 60) return { level: "Mixed", colour: "#B8860B", message: "Your governance has enabling elements but also significant friction points. Identify the two lowest-scoring criteria and address those first. Often, separating strategic and operational governance and defining escalation criteria will unlock the most improvement." };
     if (scorePercent >= 40) return { level: "Obstructing", colour: "#C0392B", message: "Your governance is more likely slowing delivery than enabling it. Decisions are probably waiting for meetings, authority is unclear, and escalation is unreliable. Consider a fundamental redesign focused on decision speed, not oversight coverage." };
-    return { level: "Severely Obstructing", colour: "#7B241C", message: "Your governance is a significant barrier to delivery. It is likely consuming more programme effort than it is contributing value. The programme team is probably working around governance rather than through it. A complete reset is needed, starting from the decisions that matter and designing the minimum structure to support them." };
+    return { level: "Severely Obstructing", colour: "#7B241C", message: "Your governance is a significant barrier to delivery. It is likely consuming more program effort than it is contributing value. The program team is probably working around governance rather than through it. A complete reset is needed, starting from the decisions that matter and designing the minimum structure to support them." };
   };
 
   const verdict = getVerdict();
@@ -328,7 +328,7 @@ export default function GovernancePage() {
         <ScrollReveal direction="up">
           <span className="article-label">Execution &middot; Governance &amp; Decision Rights</span>
           <h1 className="article-title">How to design change governance that enables decisions, not delays them</h1>
-          <p className="article-intro">Governance is supposed to help. In most change programmes, it does the opposite. It creates layers of approval that slow decisions down, forums where the same issues are discussed repeatedly without resolution, and reporting that consumes more effort than the work it describes. The problem is not too much governance or too little. It is governance designed for the wrong purpose: oversight instead of decision-making, control instead of clarity. This guide covers two connected challenges. First, how to design governance that actually enables decisions. Second, how to make ownership of the change genuinely clear so that the right people are making the right calls at the right time.</p>
+          <p className="article-intro">Governance is supposed to help. In most change programs, it does the opposite. It creates layers of approval that slow decisions down, forums where the same issues are discussed repeatedly without resolution, and reporting that consumes more effort than the work it describes. The problem is not too much governance or too little. It is governance designed for the wrong purpose: oversight instead of decision-making, control instead of clarity. This guide covers two connected challenges. First, how to design governance that actually enables decisions. Second, how to make ownership of the change genuinely clear so that the right people are making the right calls at the right time.</p>
         </ScrollReveal>
       </div>
 
@@ -342,7 +342,7 @@ export default function GovernancePage() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Part One: Designing Governance That Enables Decisions</h2>
-          <p className="article-section-desc">Most governance structures are designed by asking &ldquo;what do we need to oversee?&rdquo; The better question is &ldquo;what decisions does this programme need to make, and what is the fastest, clearest way to make them well?&rdquo; The five principles below describe what governance looks like when it is designed for decision-making rather than for control.</p>
+          <p className="article-section-desc">Most governance structures are designed by asking &ldquo;what do we need to oversee?&rdquo; The better question is &ldquo;what decisions does this program need to make, and what is the fastest, clearest way to make them well?&rdquo; The five principles below describe what governance looks like when it is designed for decision-making rather than for control.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>
@@ -607,8 +607,8 @@ export default function GovernancePage() {
 
       <section className="article-section">
         <ScrollReveal direction="up">
-          <h2 className="article-section-title">Part Two: Who Should Own What in a Change Programme</h2>
-          <p className="article-section-desc">Governance structures are only as effective as the ownership beneath them. If it is not clear who owns what, governance becomes a forum for discussion rather than a mechanism for decision. Below are the five critical ownership roles in any change programme, what each one owns, and where the boundaries are. Click any role to see the detail.</p>
+          <h2 className="article-section-title">Part Two: Who Should Own What in a Change Program</h2>
+          <p className="article-section-desc">Governance structures are only as effective as the ownership beneath them. If it is not clear who owns what, governance becomes a forum for discussion rather than a mechanism for decision. Below are the five critical ownership roles in any change program, what each one owns, and where the boundaries are. Click any role to see the detail.</p>
         </ScrollReveal>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "8px" }}>
@@ -749,7 +749,7 @@ export default function GovernancePage() {
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Risk and Issue Management in Change</h2>
           <p className="article-section-desc">
-            Most programmes track project risks meticulously and change risks not at all. A project risk is a system delay or a budget overrun. A change risk is a sponsor who has quietly disengaged, a workforce that is developing workarounds instead of adopting, or a culture that is hardening against the new way of working. These risks do not appear in RAID logs because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. But they are the risks that determine whether the change actually lands. The following framework identifies the five change-specific risks that every programme should be actively tracking, with guidance on how to spot them early and what to do when they emerge.
+            Most programs track project risks meticulously and change risks not at all. A project risk is a system delay or a budget overrun. A change risk is a sponsor who has quietly disengaged, a workforce that is developing workarounds instead of adopting, or a culture that is hardening against the new way of working. These risks do not appear in RAID logs because they are difficult to quantify, uncomfortable to name, and politically sensitive to escalate. But they are the risks that determine whether the change actually lands. The following framework identifies the five change-specific risks that every program should be actively tracking, with guidance on how to spot them early and what to do when they emerge.
           </p>
         </ScrollReveal>
 
@@ -768,7 +768,7 @@ export default function GovernancePage() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Governance and Ownership Self-Check</h2>
-          <p className="article-section-desc">Use this checklist to assess whether your governance and ownership model is built for decisions or built for oversight. Each item represents a characteristic of programmes where governance enables delivery rather than obstructing it.</p>
+          <p className="article-section-desc">Use this checklist to assess whether your governance and ownership model is built for decisions or built for oversight. Each item represents a characteristic of programs where governance enables delivery rather than obstructing it.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

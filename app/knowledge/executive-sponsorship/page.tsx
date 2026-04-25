@@ -13,9 +13,9 @@ const levels = [
     name: "Absent",
     colour: "#8B2020",
     tagline: "Not visible. Not involved. Not aware.",
-    description: "The sponsor has no meaningful presence in the change. They may have delegated sponsorship to someone without authority, or they may not realise they are the sponsor at all. The programme operates without executive cover, and when obstacles arise, there is no one with the power to remove them.",
+    description: "The sponsor has no meaningful presence in the change. They may have delegated sponsorship to someone without authority, or they may not realise they are the sponsor at all. The program operates without executive cover, and when obstacles arise, there is no one with the power to remove them.",
     signs: [
-      "The sponsor has not attended a single steering committee or programme update",
+      "The sponsor has not attended a single steering committee or program update",
       "Teams do not know who the executive sponsor is",
       "Decisions that require executive authority are stalled or escalated into a void",
       "The change team is operating on its own, making promises it cannot keep",
@@ -36,7 +36,7 @@ const levels = [
     description: "The sponsor has formally approved the change and may have signed a business case or project charter. But approval was the end of their involvement, not the beginning. They believe their role is to authorise, not to lead. The change has a name on a document but not a leader in the room.",
     signs: [
       "The sponsor approved the business case but has not engaged since",
-      "They refer questions about the change to the programme team, not to themselves",
+      "They refer questions about the change to the program team, not to themselves",
       "Their name is on the governance structure but they send delegates to meetings",
       "When asked about the change, they can describe it in broad terms but not in specifics",
     ],
@@ -73,7 +73,7 @@ const levels = [
     name: "Active",
     colour: "#2E6B4F",
     tagline: "Visibly supports. Removes blockers. Communicates directly.",
-    description: "The sponsor is actively involved in the change. They communicate about it directly, they intervene when obstacles arise, and they make decisions that demonstrate commitment. They are visible to the organisation as a leader of this change, not just an approver. The programme has executive momentum.",
+    description: "The sponsor is actively involved in the change. They communicate about it directly, they intervene when obstacles arise, and they make decisions that demonstrate commitment. They are visible to the organisation as a leader of this change, not just an approver. The program has executive momentum.",
     signs: [
       "The sponsor communicates about the change in their own words, not scripted talking points",
       "They raise the change in leadership forums without being prompted",
@@ -93,7 +93,7 @@ const levels = [
     name: "Committed",
     colour: "#0A1628",
     tagline: "Owns it. Makes trade-offs. Leads by example.",
-    description: "The sponsor treats the change as their own. They do not just support it; they lead it. They make personal trade-offs to prioritise the change, they hold their peers accountable for their contributions, and they model the behaviours the change requires. When the organisation looks at this leader, they see someone who has genuinely changed, not just someone who approved a programme.",
+    description: "The sponsor treats the change as their own. They do not just support it; they lead it. They make personal trade-offs to prioritise the change, they hold their peers accountable for their contributions, and they model the behaviours the change requires. When the organisation looks at this leader, they see someone who has genuinely changed, not just someone who approved a program.",
     signs: [
       "The sponsor has changed their own behaviour to align with the change",
       "They hold their leadership peers accountable for supporting the change in their areas",

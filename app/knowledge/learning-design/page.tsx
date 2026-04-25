@@ -268,13 +268,13 @@ const caseStudies = [
       "They trained 350 senior leaders for a full year. Then they measured whether their teams actually felt the difference.",
     dimension: "Adoption Measurement",
     body: [
-      "When Vasant Narasimhan became CEO of Novartis, he identified a cultural challenge that training alone could not solve: the organisation needed leaders who inspired and empowered rather than commanded and controlled. The concept was called 'unbossed' leadership. But Novartis did not treat this as a communication exercise or a compliance tick-box. They designed it as a behaviour change programme with rigorous measurement.",
-      "In 2019, 350 senior leaders entered a year-long leadership development programme. This was not a two-day workshop. It was sustained, intensive, and designed around practice and feedback rather than content delivery. Leaders worked through real leadership challenges, received coaching, practised new behaviours in their actual teams, and were held accountable not for completing modules but for demonstrable shifts in how they led.",
-      "The measurement approach was the critical differentiator. Rather than tracking completion or satisfaction, Novartis measured the impact of the training on the teams that reported to the trained leaders. Teams whose leaders completed the programme showed 3.8 percentage points higher engagement, 2.9 percentage points higher empowerment, and 3.6 percentage points higher psychological safety compared to control groups. The data proved not that leaders liked the training, but that their teams experienced a tangible difference in leadership behaviour.",
-      "Novartis committed $100 million over five years on top of their existing $200 million annual training budget to sustain the programme. They planned to cascade key elements to 10,000 leaders over three years. The investment reflected a conviction that cultural change requires sustained, well-designed, behaviour-focused learning, not a one-off compliance exercise. Learning became self-initiated rather than mandated, with employees pursuing development because the culture rewarded growth, not because the LMS sent a reminder.",
+      "When Vasant Narasimhan became CEO of Novartis, he identified a cultural challenge that training alone could not solve: the organisation needed leaders who inspired and empowered rather than commanded and controlled. The concept was called 'unbossed' leadership. But Novartis did not treat this as a communication exercise or a compliance tick-box. They designed it as a behaviour change program with rigorous measurement.",
+      "In 2019, 350 senior leaders entered a year-long leadership development program. This was not a two-day workshop. It was sustained, intensive, and designed around practice and feedback rather than content delivery. Leaders worked through real leadership challenges, received coaching, practised new behaviours in their actual teams, and were held accountable not for completing modules but for demonstrable shifts in how they led.",
+      "The measurement approach was the critical differentiator. Rather than tracking completion or satisfaction, Novartis measured the impact of the training on the teams that reported to the trained leaders. Teams whose leaders completed the program showed 3.8 percentage points higher engagement, 2.9 percentage points higher empowerment, and 3.6 percentage points higher psychological safety compared to control groups. The data proved not that leaders liked the training, but that their teams experienced a tangible difference in leadership behaviour.",
+      "Novartis committed $100 million over five years on top of their existing $200 million annual training budget to sustain the program. They planned to cascade key elements to 10,000 leaders over three years. The investment reflected a conviction that cultural change requires sustained, well-designed, behaviour-focused learning, not a one-off compliance exercise. Learning became self-initiated rather than mandated, with employees pursuing development because the culture rewarded growth, not because the LMS sent a reminder.",
     ],
     lesson:
-      "Novartis showed that the difference between compliance training and adoption training is not the topic. It is the design and the measurement. By designing a year-long programme around practice, coaching, and real-world application, and by measuring team-level behaviour change rather than individual completion, Novartis built evidence that training can change culture when it is designed to change behaviour.",
+      "Novartis showed that the difference between compliance training and adoption training is not the topic. It is the design and the measurement. By designing a year-long program around practice, coaching, and real-world application, and by measuring team-level behaviour change rather than individual completion, Novartis built evidence that training can change culture when it is designed to change behaviour.",
     source:
       "https://www.humanresourcesonline.net/case-study-how-an-unbossed-leadership-approach-drives-novartis-employer-branding-journey",
     sourceLabel: "Human Resources Online",
@@ -288,12 +288,12 @@ const caseStudies = [
     dimension: "Workflow-Integrated Learning",
     body: [
       "By 2012, AT&T's internal analysis revealed a stark reality: approximately 100,000 of their employees were in roles tied to hardware functions that would not exist within a decade. The telecommunications industry was shifting from hardware to software, from networks to cloud, and the workforce was not ready. CEO Randall Stephenson called it the biggest logistical challenge AT&T had ever faced.",
-      "The response, branded internally as Future Ready, was a $1 billion investment in reskilling that rejected the compliance training model entirely. Rather than mandating courses and tracking completion, AT&T built a career-integrated learning system. Employees could see which roles the company would need in the future, assess their current skills against those requirements, and build a personalised learning pathway using resources from Coursera, Udacity, Georgia Tech, and internal programmes.",
+      "The response, branded internally as Future Ready, was a $1 billion investment in reskilling that rejected the compliance training model entirely. Rather than mandating courses and tracking completion, AT&T built a career-integrated learning system. Employees could see which roles the company would need in the future, assess their current skills against those requirements, and build a personalised learning pathway using resources from Coursera, Udacity, Georgia Tech, and internal programs.",
       "The design was built around adoption principles. Learning was voluntary but consequential: employees who reskilled became eligible for emerging roles. Managers were trained to have career development conversations, not just performance reviews. The learning was spaced over months and years, not compressed into single events. And critically, the company adjusted its internal mobility and hiring practices to reward people who invested in their own development, creating a reinforcement loop between learning and career progression.",
-      "Leadership adoption was the catalyst. Stephenson and CTO John Donovan made Future Ready a centrepiece of every town hall and leadership meeting. As one leader noted, this would have been nothing more than an HR exercise that sat on a shelf if leadership had not become its biggest advocates. By 2020, more than 100,000 employees had completed retraining programmes. AT&T filled critical roles internally rather than through external hiring, saving recruitment costs while retaining institutional knowledge.",
+      "Leadership adoption was the catalyst. Stephenson and CTO John Donovan made Future Ready a centrepiece of every town hall and leadership meeting. As one leader noted, this would have been nothing more than an HR exercise that sat on a shelf if leadership had not become its biggest advocates. By 2020, more than 100,000 employees had completed retraining programs. AT&T filled critical roles internally rather than through external hiring, saving recruitment costs while retaining institutional knowledge.",
     ],
     lesson:
-      "AT&T proved that adoption-quality learning design can operate at enterprise scale when three conditions are met: the learning is connected to real career consequences, managers are activated as part of the learning system, and leadership treats the programme as a strategic priority rather than an HR initiative. The $1 billion investment was not in content. It was in a system that made learning a rational, rewarded behaviour.",
+      "AT&T proved that adoption-quality learning design can operate at enterprise scale when three conditions are met: the learning is connected to real career consequences, managers are activated as part of the learning system, and leadership treats the program as a strategic priority rather than an HR initiative. The $1 billion investment was not in content. It was in a system that made learning a rational, rewarded behaviour.",
     source:
       "https://hbr.org/2016/10/atts-talent-overhaul",
     sourceLabel: "Harvard Business Review",
@@ -342,14 +342,14 @@ export default function LearningDesign() {
 
   /* ---- Self-check items ---- */
   const checkItems = [
-    { key: "behaviour", label: "Every training programme has a defined target behaviour, not just a content outline" },
+    { key: "behaviour", label: "Every training program has a defined target behaviour, not just a content outline" },
     { key: "practice", label: "At least 60% of training time is spent on practice, not presentation" },
     { key: "manager", label: "Managers are briefed before training and equipped to reinforce new behaviours afterwards" },
     { key: "spaced", label: "Learning is spaced across multiple sessions with application tasks between them" },
     { key: "workflow", label: "Job aids and support are available at the point of need, not just in the training session" },
     { key: "classified", label: "Training requests are classified as compliance or adoption objectives before design begins" },
     { key: "scenarios", label: "Training scenarios are drawn from the learner's real work context, not generic examples" },
-    { key: "reinforcement", label: "A reinforcement plan exists for every adoption training programme, not just the initial session" },
+    { key: "reinforcement", label: "A reinforcement plan exists for every adoption training program, not just the initial session" },
     { key: "metrics", label: "Training success is measured by behaviour change and performance impact, not completion rates" },
     { key: "emotional", label: "The design acknowledges the emotional dimension of learning, not just the cognitive" },
   ];
@@ -377,7 +377,7 @@ export default function LearningDesign() {
             are explained, knowledge checks are passed, and completion certificates are issued. The
             problem is that knowledge transfer is not the same as behaviour change. People can pass
             every assessment and still return to their desks doing exactly what they did before. The
-            gap between knowing and doing is where most training programmes fail. This guide covers
+            gap between knowing and doing is where most training programs fail. This guide covers
             two connected problems: how to design learning that genuinely changes behaviour, and how
             to distinguish between training for compliance and training for adoption, because the two
             require fundamentally different design approaches.
@@ -398,7 +398,7 @@ export default function LearningDesign() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Compliance vs Adoption: The Same Journey, Two Different Designs</h2>
               <p className="article-section-desc">
-                Every learning programme moves through the same four phases: Before, During, After,
+                Every learning program moves through the same four phases: Before, During, After,
                 and Measurement. But compliance training and adoption training handle each phase
                 completely differently. Click any phase below to see the same training scenario
                 through two lenses: one designed for compliance, one designed for adoption.
@@ -564,7 +564,7 @@ export default function LearningDesign() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Learning Design Self-Check</h2>
               <p className="article-section-desc">
-                Use this checklist to assess whether your training programmes are designed for
+                Use this checklist to assess whether your training programs are designed for
                 behaviour change or whether they have drifted into compliance-style delivery. Be
                 honest. A partial score tells you where to focus.
               </p>
@@ -617,7 +617,7 @@ export default function LearningDesign() {
                     {checkedCount >= 5 && checkedCount < 8 && (
                       <span className="check-partial">
                         {" "}
-                        &mdash; Mixed approach. Some programmes are designed for behaviour change
+                        &mdash; Mixed approach. Some programs are designed for behaviour change
                         but the compliance-style default is still present. Focus on manager
                         activation and measurement.
                       </span>
@@ -625,8 +625,8 @@ export default function LearningDesign() {
                     {checkedCount >= 3 && checkedCount < 5 && (
                       <span className="check-partial">
                         {" "}
-                        &mdash; Your training programmes are primarily compliance-oriented. Start by
-                        classifying objectives and redesigning one programme using behaviour-first
+                        &mdash; Your training programs are primarily compliance-oriented. Start by
+                        classifying objectives and redesigning one program using behaviour-first
                         principles.
                       </span>
                     )}
@@ -634,7 +634,7 @@ export default function LearningDesign() {
                       <span className="check-partial">
                         {" "}
                         &mdash; Significant gaps in behaviour-focused design. Use the principles
-                        above to audit your highest-priority training programme.
+                        above to audit your highest-priority training program.
                       </span>
                     )}
                   </p>

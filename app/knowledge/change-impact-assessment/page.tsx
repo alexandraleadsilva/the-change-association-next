@@ -62,8 +62,8 @@ const resistanceSignals: ResistanceSignal[] = [
     behaviour: "Claims of being too busy for the change",
     surfaceRead: "People are making excuses to avoid the change",
     actualSignal: "The organisation has not created capacity for the change",
-    whatItTellsYou: "When people say they are too busy, they are usually telling the truth. Most change programmes are layered on top of existing workloads without anything being deprioritised. People are being asked to learn new systems, attend training, and adopt new processes while delivering 100% of their current responsibilities. This is not resistance. It is a resourcing problem the programme has not solved.",
-    responseStrategy: "Audit the actual workload of impacted teams. Identify what can be paused, delegated, or deprioritised during the transition. If the answer is nothing, then the programme is asking the impossible and will get compliance at best, burnout at worst. Creating capacity is a leadership responsibility, not an individual one.",
+    whatItTellsYou: "When people say they are too busy, they are usually telling the truth. Most change programs are layered on top of existing workloads without anything being deprioritised. People are being asked to learn new systems, attend training, and adopt new processes while delivering 100% of their current responsibilities. This is not resistance. It is a resourcing problem the program has not solved.",
+    responseStrategy: "Audit the actual workload of impacted teams. Identify what can be paused, delegated, or deprioritised during the transition. If the answer is nothing, then the program is asking the impossible and will get compliance at best, burnout at worst. Creating capacity is a leadership responsibility, not an individual one.",
   },
   {
     id: "cynicism",
@@ -78,7 +78,7 @@ const resistanceSignals: ResistanceSignal[] = [
     behaviour: "Creating workarounds to avoid the new process",
     surfaceRead: "People are undermining the change",
     actualSignal: "The new process does not work as well as the old one for their context",
-    whatItTellsYou: "Workarounds are not sabotage. They are innovation under constraint. When people build a workaround, they are solving a problem that the change programme did not anticipate. The workaround tells you exactly where the new design has gaps, where it fails to account for edge cases, or where the lived experience of the work differs from the documented process.",
+    whatItTellsYou: "Workarounds are not sabotage. They are innovation under constraint. When people build a workaround, they are solving a problem that the change program did not anticipate. The workaround tells you exactly where the new design has gaps, where it fails to account for edge cases, or where the lived experience of the work differs from the documented process.",
     responseStrategy: "Treat workarounds as design feedback, not defiance. Map the workarounds people are creating, understand what problem each one solves, and feed that intelligence back into the design. Some workarounds will reveal genuine gaps that need to be fixed. Others will reveal training gaps where people need more support. Both are valuable.",
   },
   {
@@ -86,7 +86,7 @@ const resistanceSignals: ResistanceSignal[] = [
     behaviour: "Previously supportive people going quiet",
     surfaceRead: "Champions are losing enthusiasm",
     actualSignal: "Champions are losing credibility because promises made to them are not being kept",
-    whatItTellsYou: "When your strongest advocates go quiet, it is one of the most serious signals in change management. Champions put their personal credibility on the line when they advocated for the change. If the programme fails to deliver on what was promised, or if their feedback is ignored, they withdraw to protect their reputation. The loss of champions is not a morale problem. It is a trust breach.",
+    whatItTellsYou: "When your strongest advocates go quiet, it is one of the most serious signals in change management. Champions put their personal credibility on the line when they advocated for the change. If the program fails to deliver on what was promised, or if their feedback is ignored, they withdraw to protect their reputation. The loss of champions is not a morale problem. It is a trust breach.",
     responseStrategy: "Have a direct and honest conversation with withdrawn champions. Ask what has changed for them. In most cases, they will tell you exactly what promise was broken or what feedback was ignored. Fix it visibly. Champions who see their concerns acted on become even stronger advocates than before, because they can say: I raised a problem and it was fixed.",
   },
 ];
@@ -112,11 +112,11 @@ const readinessItems: DetailItem[] = [
   },
   {
     text: "It should be repeated, not treated as a one-time checkpoint",
-    detail: "Readiness is not a gate to pass through. It is a dynamic state that shifts as the change progresses. A single assessment at the start of a programme tells you about a moment in time that will not last. Readiness should be measured repeatedly, especially after major milestones, communications, or setbacks. The trend matters more than any individual score.",
+    detail: "Readiness is not a gate to pass through. It is a dynamic state that shifts as the change progresses. A single assessment at the start of a program tells you about a moment in time that will not last. Readiness should be measured repeatedly, especially after major milestones, communications, or setbacks. The trend matters more than any individual score.",
   },
   {
     text: "It should measure emotional readiness alongside operational readiness",
-    detail: "Operational readiness asks whether systems are configured, processes are documented, and training is scheduled. Emotional readiness asks whether people feel heard, supported, and confident enough to try something new. Programmes that only measure operational readiness are frequently surprised when a technically ready organisation refuses to adopt the change. The emotional dimension is not a soft extra. It is the variable that determines whether operational readiness translates into actual adoption.",
+    detail: "Operational readiness asks whether systems are configured, processes are documented, and training is scheduled. Emotional readiness asks whether people feel heard, supported, and confident enough to try something new. Programs that only measure operational readiness are frequently surprised when a technically ready organisation refuses to adopt the change. The emotional dimension is not a soft extra. It is the variable that determines whether operational readiness translates into actual adoption.",
   },
 ];
 
@@ -133,7 +133,7 @@ const stakeholderItems: DetailItem[] = [
   },
   {
     text: "Include the people who think they are not affected",
-    detail: "Every change has a ripple effect that extends beyond the official scope. Teams upstream and downstream, support functions, and people adjacent to the change will feel its effects even if they are not in the programme scope. A stakeholder impact assessment that only covers the directly impacted will miss the groups who are blindsided by changes they were told would not affect them. These groups often become the loudest resisters because they were excluded from the conversation.",
+    detail: "Every change has a ripple effect that extends beyond the official scope. Teams upstream and downstream, support functions, and people adjacent to the change will feel its effects even if they are not in the program scope. A stakeholder impact assessment that only covers the directly impacted will miss the groups who are blindsided by changes they were told would not affect them. These groups often become the loudest resisters because they were excluded from the conversation.",
   },
   {
     text: "Validate the assessment with the stakeholders themselves",
@@ -154,7 +154,7 @@ const stakeholderItems: DetailItem[] = [
 const resistanceItems: DetailItem[] = [
   {
     text: "Resistance is not a character flaw. It is a rational response to perceived threat.",
-    detail: "The dominant framing in change management treats resistance as a problem to be overcome, a barrier, an obstacle, something that needs to be managed away. This framing is fundamentally wrong. Resistance is a rational response to perceived threat. When people resist change, they are protecting something that matters to them: their competence, their relationships, their identity, their sense of stability. The question is not how to overcome resistance. It is what is the resistance protecting, and is that something the programme should be paying attention to?",
+    detail: "The dominant framing in change management treats resistance as a problem to be overcome, a barrier, an obstacle, something that needs to be managed away. This framing is fundamentally wrong. Resistance is a rational response to perceived threat. When people resist change, they are protecting something that matters to them: their competence, their relationships, their identity, their sense of stability. The question is not how to overcome resistance. It is what is the resistance protecting, and is that something the program should be paying attention to?",
   },
   {
     text: "The language of resistance creates the problem it claims to describe",
@@ -219,7 +219,7 @@ const caseStudies = [
     body: [
       "In 2013, Target Corporation entered Canada with a plan to open 124 stores simultaneously, the largest retail expansion in Canadian history. By January 2015, every store was closed. The total cost of the failure exceeded $7 billion. The post-mortem revealed a cascade of failures that a genuine change impact assessment would have surfaced before a single store opened.",
       "Target acquired 220 leases from the departing Zellers chain without adequately assessing whether those locations met Target's operational requirements. Many were the wrong size, in the wrong locations, and required extensive renovation. The supply chain was built on an SAP implementation that was rushed and riddled with data quality problems. Stores opened with empty shelves, wrong products, and prices that were often higher than American Target stores, the exact opposite of what Canadian customers expected.",
-      "The resistance signals were present from the earliest stages. Canadian retail experts warned that the Zellers locations were problematic. Supply chain staff flagged that the SAP data was unreliable. Store managers reported that shelves could not be stocked. But the programme had no mechanism to treat these signals as legitimate feedback. The timeline was fixed, the commitments to investors were public, and the organisational culture rewarded optimism over honesty.",
+      "The resistance signals were present from the earliest stages. Canadian retail experts warned that the Zellers locations were problematic. Supply chain staff flagged that the SAP data was unreliable. Store managers reported that shelves could not be stocked. But the program had no mechanism to treat these signals as legitimate feedback. The timeline was fixed, the commitments to investors were public, and the organisational culture rewarded optimism over honesty.",
       "The stakeholders most affected, Canadian employees, store-level managers, and local suppliers, were the last to be consulted and the first to see the problems. They had intimate knowledge of Canadian retail conditions, customer expectations, and operational realities. Their input, had it been systematically gathered through a stakeholder impact assessment, would have revealed that the gap between Target's operating model and Canadian market requirements was far wider than the executive team believed.",
     ],
     lesson: "Target Canada is a case study in what happens when an organisation skips the impact assessment entirely. Every signal that the change was failing was present. Employees, suppliers, and local managers were raising concerns from the start. The organisation chose to interpret those signals as resistance rather than intelligence, and it cost $7 billion.",
@@ -272,7 +272,7 @@ export default function ChangeImpactAssessment() {
     { key: "pockets", label: "We have identified specific pockets of readiness and tailored our approach to each, rather than treating the organisation as uniform" },
     { key: "impact-dimensions", label: "Our stakeholder impact assessment maps multiple dimensions of impact (process, role, skill, relationship, identity) for each group" },
     { key: "validated", label: "We have validated the impact assessment directly with representatives from affected stakeholder groups" },
-    { key: "ripple", label: "We have identified and included stakeholders outside the official programme scope who will be affected by ripple effects" },
+    { key: "ripple", label: "We have identified and included stakeholders outside the official program scope who will be affected by ripple effects" },
     { key: "resistance-listen", label: "When we encounter resistance, our first response is to listen and understand, not to manage or overcome" },
     { key: "early-signals", label: "We have mechanisms to surface and act on early resistance signals before they become entrenched opposition" },
     { key: "capacity", label: "We have created real capacity for the change by deprioritising other work, not just adding the change on top" },
@@ -290,7 +290,7 @@ export default function ChangeImpactAssessment() {
         <ScrollReveal direction="up">
           <span className="article-label">Engagement &middot; Change Impact Assessment</span>
           <h1 className="article-title">Change readiness, stakeholder impact, and the real reason employees resist change</h1>
-          <p className="article-intro">Change impact assessment is where most programmes get the fundamentals wrong. They measure awareness and call it readiness. They map influence and call it impact analysis. They label concern as resistance and try to manage it away. This guide reframes all three: what a readiness assessment should actually tell you, how to run a stakeholder impact assessment that shapes the plan rather than sitting in a drawer, and why the resistance you are seeing is not a problem to overcome but the most valuable feedback your programme will receive.</p>
+          <p className="article-intro">Change impact assessment is where most programs get the fundamentals wrong. They measure awareness and call it readiness. They map influence and call it impact analysis. They label concern as resistance and try to manage it away. This guide reframes all three: what a readiness assessment should actually tell you, how to run a stakeholder impact assessment that shapes the plan rather than sitting in a drawer, and why the resistance you are seeing is not a problem to overcome but the most valuable feedback your program will receive.</p>
         </ScrollReveal>
       </div>
 
@@ -534,7 +534,7 @@ export default function ChangeImpactAssessment() {
                   marginBottom: "0",
                 }}>
                   {selectedSignals.length >= 5
-                    ? "You are seeing resistance across multiple dimensions. This pattern typically indicates a systemic issue with the change approach itself rather than individual pockets of difficulty. Consider pausing to reassess the fundamentals: has the case for change been genuinely made? Have people been consulted or merely informed? Has capacity been created? When resistance is this widespread, the signal is about the programme, not the people."
+                    ? "You are seeing resistance across multiple dimensions. This pattern typically indicates a systemic issue with the change approach itself rather than individual pockets of difficulty. Consider pausing to reassess the fundamentals: has the case for change been genuinely made? Have people been consulted or merely informed? Has capacity been created? When resistance is this widespread, the signal is about the program, not the people."
                     : selectedSignals.length >= 3
                     ? "Multiple resistance signals suggest the issue goes beyond individual concerns. Look for the common thread connecting these behaviours. Often, several different forms of resistance share a single root cause: a trust deficit, an unacknowledged loss, or a gap between what was promised and what is being delivered. Address the root cause and multiple symptoms often resolve simultaneously."
                     : "You are seeing resistance in a couple of areas. Click each signal above to decode it individually. If additional signals emerge over the coming weeks, return to this tool to check whether a broader pattern is forming."}

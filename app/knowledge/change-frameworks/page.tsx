@@ -17,7 +17,7 @@ const frameworks = [
       "Provides a clear, sequential model for individual adoption",
       "Widely recognised and understood across industries",
       "Strong diagnostic tool for identifying where individuals are stuck",
-      "Backed by extensive research and a global certification programme",
+      "Backed by extensive research and a global certification program",
     ],
     limitations: [
       "Focuses on the individual level and can underweight organisational and cultural factors",
@@ -32,11 +32,11 @@ const frameworks = [
     name: "Kotter's 8 Steps",
     origin: "John Kotter, Harvard (1996)",
     focus: "Leadership-driven transformation",
-    summary: "Kotter's model outlines eight sequential steps for leading large-scale change, from creating urgency through to anchoring new approaches in the culture. It is one of the most referenced change models in leadership and MBA programmes worldwide.",
+    summary: "Kotter's model outlines eight sequential steps for leading large-scale change, from creating urgency through to anchoring new approaches in the culture. It is one of the most referenced change models in leadership and MBA programs worldwide.",
     strengths: [
       "Provides a clear narrative arc that leaders can follow and communicate",
       "Emphasises the importance of urgency, vision, and coalition building",
-      "Well suited to large-scale, top-down transformation programmes",
+      "Well suited to large-scale, top-down transformation programs",
       "Widely taught and understood at senior leadership level",
     ],
     limitations: [
@@ -81,7 +81,7 @@ const frameworks = [
     ],
     limitations: [
       "Does not provide a framework for planning, delivering, or governing change",
-      "Better suited as a lens for understanding people than a methodology for managing programmes",
+      "Better suited as a lens for understanding people than a methodology for managing programs",
       "Limited guidance on stakeholder strategy, capability building, or systems readiness",
       "Can be difficult to operationalise without pairing it with a more structured model",
     ],
@@ -122,7 +122,7 @@ const frameworks = [
     ],
     limitations: [
       "Newer than established models and still building its evidence base",
-      "Certification programme is in development",
+      "Certification program is in development",
       "Less widely recognised than Prosci or Kotter at this stage",
     ],
     tcaConnection: "",

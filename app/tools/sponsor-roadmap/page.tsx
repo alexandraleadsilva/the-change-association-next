@@ -106,7 +106,7 @@ const pillarDefs: PillarDef[] = [
     name: "Sustainment",
     focus: "Making change stick",
     defaultActions: [
-      "Stay visibly engaged after the programme formally ends -- reference the change in leadership meetings",
+      "Stay visibly engaged after the program formally ends -- reference the change in leadership meetings",
       "Ensure performance management, KPIs, and reward systems reflect the new way of working",
       "Hold leadership peers accountable for sustaining the change in their areas",
       "Commission reviews at six and twelve months focused on behaviour change, not just technical completion",

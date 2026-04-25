@@ -74,16 +74,16 @@ const failurePatterns: DetailItem[] = [
     summary: "Organisations treat digital transformation as a technology project with a people component, rather than a people project enabled by technology.",
     body: [
       "The most common pattern in failed digital transformations is a governance structure that centres on technology delivery. Steering committees track system milestones, integration testing, and go-live dates. People readiness is a line item in a status report, not a workstream with equal authority.",
-      "This is not a criticism of technology teams. They deliver what they are asked to deliver. The problem is structural: when the programme is framed as a technology implementation, every decision defaults to what is technically optimal rather than what is humanly adoptable.",
+      "This is not a criticism of technology teams. They deliver what they are asked to deliver. The problem is structural: when the program is framed as a technology implementation, every decision defaults to what is technically optimal rather than what is humanly adoptable.",
       "The result is a system that works perfectly in a test environment and fails in the real world. Not because the code is wrong, but because the people who need to use it were never truly brought into the process of designing how it would fit into their working lives.",
     ],
   },
   {
     id: "training-gap",
     title: "Training that teaches buttons, not behaviours",
-    summary: "Most ERP training programmes teach people how to navigate a new interface. Very few teach people how to do their jobs differently.",
+    summary: "Most ERP training programs teach people how to navigate a new interface. Very few teach people how to do their jobs differently.",
     body: [
-      "A typical ERP training programme consists of click-through guides, e-learning modules, and classroom sessions that walk users through transactions. This covers what the system does. It almost never covers why the process has changed, what judgement calls now need to be made differently, or what to do when the system does not behave as expected.",
+      "A typical ERP training program consists of click-through guides, e-learning modules, and classroom sessions that walk users through transactions. This covers what the system does. It almost never covers why the process has changed, what judgement calls now need to be made differently, or what to do when the system does not behave as expected.",
       "The gap between knowing how to use a system and knowing how to work effectively with a system is enormous. A warehouse operative who can enter a goods receipt in SAP but does not understand why the receiving process has changed will default to old habits the moment pressure mounts.",
       "Effective training is role-based, scenario-driven, and iterative. It acknowledges that people learn by doing, not by watching. It gives them a safe environment to make mistakes before the stakes are real. And it equips managers to coach their teams through the transition, rather than pointing them to an e-learning portal.",
     ],
@@ -115,7 +115,7 @@ const failurePatterns: DetailItem[] = [
     body: [
       "Losing the workforce halfway through an ERP rollout is rarely a sudden event. It is a gradual erosion. People attend the training sessions but mentally check out. They nod in meetings but continue using their spreadsheets. They stop raising concerns because they have learned that concerns are treated as resistance.",
       "The warning signs are consistent across organisations: declining attendance at workshops, increasing reliance on super-users to do basic tasks, a growing gap between what the project team reports and what the operational reality looks like. By the time leadership recognises the pattern, the workforce has already decided that this is something being done to them, not with them.",
-      "Recovery from this point is possible but expensive. It requires stopping, listening, and making visible changes based on what people say. It requires leaders to admit that the plan was not working and to demonstrate that feedback will lead to action. Most critically, it requires time, and time is the one thing most ERP programmes have already run out of.",
+      "Recovery from this point is possible but expensive. It requires stopping, listening, and making visible changes based on what people say. It requires leaders to admit that the plan was not working and to demonstrate that feedback will lead to action. Most critically, it requires time, and time is the one thing most ERP programs have already run out of.",
     ],
   },
 ];
@@ -251,7 +251,7 @@ export default function ToolsAndSystems() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Technology vs People Readiness</h2>
-          <p className="article-section-desc">For each dimension, choose the statement that more accurately describes your current implementation. This diagnostic will reveal whether your programme is tech-ready but people-unready, the pattern behind most digital transformation failures.</p>
+          <p className="article-section-desc">For each dimension, choose the statement that more accurately describes your current implementation. This diagnostic will reveal whether your program is tech-ready but people-unready, the pattern behind most digital transformation failures.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>
@@ -342,7 +342,7 @@ export default function ToolsAndSystems() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">What Went Wrong When a Well-Planned ERP Rollout Lost the Workforce</h2>
-          <p className="article-section-desc">The scenario is familiar to anyone who has lived through an enterprise system implementation. The programme was well-funded, the technology was proven, the consultants were experienced. And yet, somewhere between design and deployment, the people who mattered most stopped believing in it.</p>
+          <p className="article-section-desc">The scenario is familiar to anyone who has lived through an enterprise system implementation. The program was well-funded, the technology was proven, the consultants were experienced. And yet, somewhere between design and deployment, the people who mattered most stopped believing in it.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={80}>
@@ -355,9 +355,9 @@ export default function ToolsAndSystems() {
 
         <ScrollReveal direction="up" delay={120}>
           <div className="detail-block" style={{ marginBottom: "20px" }}>
-            <h3 className="detail-block-title">Why well-planned programmes still lose people</h3>
-            <p className="detail-body">The paradox of a well-planned ERP rollout that loses the workforce is that the planning itself can be the problem. When every milestone is technical, every status report is green, and every risk register focuses on system integration, the programme creates a false confidence. It looks like everything is on track because the only things being tracked are technical deliverables.</p>
-            <p className="detail-body">People readiness does not fit neatly into a Gantt chart. You cannot measure it with test scripts. It shows up in how a warehouse operative feels about the new picking process, whether a finance team trusts the migrated data, and whether a regional manager believes the new system will help them or burden them. These things are real, measurable, and decisive, but they require different instruments than the ones most programmes use.</p>
+            <h3 className="detail-block-title">Why well-planned programs still lose people</h3>
+            <p className="detail-body">The paradox of a well-planned ERP rollout that loses the workforce is that the planning itself can be the problem. When every milestone is technical, every status report is green, and every risk register focuses on system integration, the program creates a false confidence. It looks like everything is on track because the only things being tracked are technical deliverables.</p>
+            <p className="detail-body">People readiness does not fit neatly into a Gantt chart. You cannot measure it with test scripts. It shows up in how a warehouse operative feels about the new picking process, whether a finance team trusts the migrated data, and whether a regional manager believes the new system will help them or burden them. These things are real, measurable, and decisive, but they require different instruments than the ones most programs use.</p>
           </div>
         </ScrollReveal>
 

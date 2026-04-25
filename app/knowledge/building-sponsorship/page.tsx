@@ -69,9 +69,9 @@ const playbook = [
     pillar: "Sustainment",
     num: "05",
     focus: "Making change stick",
-    what: "During Sustainment, the sponsor's role is to prevent the organisation from quietly reverting to old ways. This means staying engaged after the programme closes, ensuring reinforcement mechanisms are in place, and holding the leadership team accountable for maintaining the change.",
+    what: "During Sustainment, the sponsor's role is to prevent the organisation from quietly reverting to old ways. This means staying engaged after the program closes, ensuring reinforcement mechanisms are in place, and holding the leadership team accountable for maintaining the change.",
     actions: [
-      { text: "Stay visibly engaged after the programme formally ends", detail: "Most sponsors disengage when the project closes. But the change is not complete when the programme ends. It is complete when the new way of working is normal. Continue to reference the change in leadership meetings, ask about adoption data, and hold people accountable for outcomes." },
+      { text: "Stay visibly engaged after the program formally ends", detail: "Most sponsors disengage when the project closes. But the change is not complete when the program ends. It is complete when the new way of working is normal. Continue to reference the change in leadership meetings, ask about adoption data, and hold people accountable for outcomes." },
       { text: "Ensure performance management reflects the new way of working", detail: "If the organisation changed how it works but the KPIs, promotion criteria, and performance conversations did not change, people will eventually revert. The sponsor must ensure the measurement and reward systems are aligned with the change, not with the old model." },
       { text: "Hold your leadership peers accountable for sustaining the change in their areas", detail: "Sustainment is not the change team's job. It is a leadership responsibility. The sponsor must hold their peers accountable for whether the change is being maintained in each division, function, and region. If it is reverting somewhere, the sponsor needs to intervene." },
       { text: "Commission a review at six and twelve months focused on behaviour, not just process", detail: "A post-implementation review that only asks whether the system is live or the process is documented will miss the point. Ask whether people are actually working differently. The sponsor should ensure the review measures behaviour change and cultural embedding, not just technical completion." },
@@ -139,7 +139,7 @@ export default function BuildingSponsorship() {
     {
       label: "Unilever",
       headline: "Paul Polman abolished quarterly earnings to sponsor a decade-long transformation",
-      hook: "His first act as CEO was to remove the metric that would have killed his own change programme.",
+      hook: "His first act as CEO was to remove the metric that would have killed his own change program.",
       dimension: "Direction Sponsorship",
       body: [
         "When Paul Polman became Unilever CEO in 2009, the company was losing market share and operating without a compelling strategic narrative. His response was to launch the Unilever Sustainable Living Plan, one of the most ambitious corporate transformations in modern history.",
@@ -159,7 +159,7 @@ export default function BuildingSponsorship() {
       body: [
         "When Alan Mulally introduced weekly Business Plan Review meetings at Ford, every executive was expected to report progress using colour-coded charts: green for on track, yellow for caution, red for problems. For weeks, every chart was green, despite Ford losing $17 billion.",
         "Finally, one executive, Mark Fields, showed a red chart for a production problem with the Ford Edge. The room went silent. Everyone expected Mulally to react with anger or blame. Instead, he clapped. He thanked Fields for the honesty. Then he asked the room: who can help with this?",
-        "That single moment fundamentally changed the culture of Ford's leadership team. Within weeks, the charts were full of yellows and reds. Problems were surfacing. Solutions were being found collaboratively. The culture shifted from concealment to transparency, not because of a policy or a programme, but because the sponsor responded to honesty with recognition.",
+        "That single moment fundamentally changed the culture of Ford's leadership team. Within weeks, the charts were full of yellows and reds. Problems were surfacing. Solutions were being found collaboratively. The culture shifted from concealment to transparency, not because of a policy or a program, but because the sponsor responded to honesty with recognition.",
         "Ford went from $17 billion in losses to profitability within three years. It was the only one of the 'big three' American automakers that did not request a government bailout.",
       ],
       lesson: "Mulally understood that sponsorship is not just about what you say. It is about how you respond when someone takes a risk. By applauding the first red chart, he sponsored a culture of transparency through a single visible action that the entire organisation could reference.",

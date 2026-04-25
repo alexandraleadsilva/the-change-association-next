@@ -87,7 +87,7 @@ const lifecyclePhases: LifecyclePhase[] = [
       {
         name: "Manager ambivalence",
         description: "Managers publicly support the change but privately express doubt. Their teams detect the inconsistency immediately. The result is a permission structure for resistance: if my manager is not really committed, why should I be?",
-        response: "Have direct, private conversations with ambivalent managers. Understand their concerns. Some will be legitimate and should change the plan. Others will be personal and need coaching. But the conversation must happen. Ignoring manager ambivalence is the single fastest way to undermine a change programme.",
+        response: "Have direct, private conversations with ambivalent managers. Understand their concerns. Some will be legitimate and should change the plan. Others will be personal and need coaching. But the conversation must happen. Ignoring manager ambivalence is the single fastest way to undermine a change program.",
       },
     ],
     monitoringSignals: [
@@ -136,7 +136,7 @@ const lifecyclePhases: LifecyclePhase[] = [
     name: "Post-Go-Live",
     timing: "Weeks 12 to 24",
     emotionalState: "Fatigue, cynicism, selective adoption",
-    summary: "The programme team is winding down. Leadership attention has moved to the next priority. But the people living the change are still in the thick of it. Post-go-live resistance is characterised by quiet regression: people slowly drift back to old habits because nobody is watching anymore. The formal change is complete. The actual change is still in progress. This is where most change programmes lose what they gained.",
+    summary: "The program team is winding down. Leadership attention has moved to the next priority. But the people living the change are still in the thick of it. Post-go-live resistance is characterised by quiet regression: people slowly drift back to old habits because nobody is watching anymore. The formal change is complete. The actual change is still in progress. This is where most change programs lose what they gained.",
     resistanceTypes: [
       {
         name: "Quiet regression",
@@ -226,7 +226,7 @@ const anticipationItems: ActionItem[] = [
 const monitoringItems: ActionItem[] = [
   {
     text: "Establish a resistance baseline before the change begins",
-    detail: "Measure sentiment, engagement, and readiness before you start. Without a baseline, you cannot distinguish change-related resistance from pre-existing dissatisfaction. Many organisations attribute problems to their change programme that actually existed before it began. A baseline protects you from this misattribution and focuses your effort on resistance that is genuinely connected to the change.",
+    detail: "Measure sentiment, engagement, and readiness before you start. Without a baseline, you cannot distinguish change-related resistance from pre-existing dissatisfaction. Many organisations attribute problems to their change program that actually existed before it began. A baseline protects you from this misattribution and focuses your effort on resistance that is genuinely connected to the change.",
   },
   {
     text: "Use leading indicators, not lagging ones",
@@ -241,8 +241,8 @@ const monitoringItems: ActionItem[] = [
     detail: "Aggregate resistance data hides the pattern. Overall sentiment may be acceptable while a specific team, region, or level is in active resistance. Segment your monitoring by the stakeholder groups you identified in your impact assessment. If one group's resistance is significantly higher than others, investigate what is different about their experience. The answer usually reveals a gap in your plan.",
   },
   {
-    text: "Make resistance data part of the programme governance rhythm",
-    detail: "Resistance data should be reported to the steering committee alongside cost, schedule, and scope. If it is not, it will be deprioritised. When resistance is treated as a governance metric, it receives the same attention and resource allocation as other programme risks. When it is treated as a soft measure, it is discussed in passing and addressed in spare time.",
+    text: "Make resistance data part of the program governance rhythm",
+    detail: "Resistance data should be reported to the steering committee alongside cost, schedule, and scope. If it is not, it will be deprioritised. When resistance is treated as a governance metric, it receives the same attention and resource allocation as other program risks. When it is treated as a soft measure, it is discussed in passing and addressed in spare time.",
   },
 ];
 
@@ -342,16 +342,16 @@ const caseStudies = [
   },
   {
     label: "NHS England",
-    headline: "The Global Digital Exemplar programme learned that clinical resistance requires clinical champions",
+    headline: "The Global Digital Exemplar program learned that clinical resistance requires clinical champions",
     hook: "IT-led mandates failed. Clinician-led adoption worked.",
     dimension: "Digital Transformation",
     body: [
-      "NHS England's Global Digital Exemplar (GDE) programme, launched in 2016, aimed to create digitally advanced hospitals that would serve as blueprints for the wider health service. But the programme faced a fundamental resistance challenge: clinical staff viewed digital transformation as an IT initiative imposed on them, not a clinical improvement designed with them.",
+      "NHS England's Global Digital Exemplar (GDE) program, launched in 2016, aimed to create digitally advanced hospitals that would serve as blueprints for the wider health service. But the program faced a fundamental resistance challenge: clinical staff viewed digital transformation as an IT initiative imposed on them, not a clinical improvement designed with them.",
       "Early implementation revealed that resistance was not uniform. It varied dramatically by clinical context. A digital system that worked well in an outpatient clinic created genuine safety concerns in an emergency department where seconds mattered and screen-based workflows competed with patient attention. Treating all clinical resistance as the same, as technophobia or stubbornness, missed the point entirely.",
-      "The breakthrough came when the programme invested in Chief Clinical Information Officers: practising clinicians given dedicated time and authority to lead digital adoption within their trusts. These CCIOs could distinguish between resistance that reflected legitimate clinical risk and resistance that reflected unfamiliarity. They responded differently to each. Clinical safety concerns triggered system redesign. Unfamiliarity triggered targeted training and peer support from clinicians who had already adopted the tools.",
+      "The breakthrough came when the program invested in Chief Clinical Information Officers: practising clinicians given dedicated time and authority to lead digital adoption within their trusts. These CCIOs could distinguish between resistance that reflected legitimate clinical risk and resistance that reflected unfamiliarity. They responded differently to each. Clinical safety concerns triggered system redesign. Unfamiliarity triggered targeted training and peer support from clinicians who had already adopted the tools.",
       "A formative evaluation across 12 NHS provider organisations found that the trusts which made the most progress were those that treated resistance as clinical intelligence rather than an obstacle to deployment. They used resistance data to redesign workflows, adjust implementation sequences, and create locally relevant training. The trusts that treated resistance as a communications problem to be overcome made the least progress.",
     ],
-    lesson: "The NHS GDE programme demonstrates that resistance management requires domain credibility. In clinical settings, only clinicians could legitimately distinguish healthy challenge from obstruction. By investing in clinical champions with real authority, the programme converted resistance from a barrier into a quality assurance mechanism that improved the technology and the implementation.",
+    lesson: "The NHS GDE program demonstrates that resistance management requires domain credibility. In clinical settings, only clinicians could legitimately distinguish healthy challenge from obstruction. By investing in clinical champions with real authority, the program converted resistance from a barrier into a quality assurance mechanism that improved the technology and the implementation.",
     source: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8685936/",
     sourceLabel: "BMC Medicine",
   },
@@ -534,7 +534,7 @@ export default function ResistanceManagement() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Distinguishing Healthy Challenge from Destructive Resistance</h2>
-          <p className="article-section-desc">Not all resistance is equal, and treating it as if it were is one of the most common mistakes in change management. Healthy challenge makes the change better. Destructive resistance makes the change harder. Conflating the two means you either suppress valuable feedback or tolerate behaviour that undermines the programme. Click any dimension to compare the two.</p>
+          <p className="article-section-desc">Not all resistance is equal, and treating it as if it were is one of the most common mistakes in change management. Healthy challenge makes the change better. Destructive resistance makes the change harder. Conflating the two means you either suppress valuable feedback or tolerate behaviour that undermines the program. Click any dimension to compare the two.</p>
         </ScrollReveal>
 
         <div className="phase-list">

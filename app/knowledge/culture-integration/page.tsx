@@ -155,7 +155,7 @@ const mergerPhases: MergerPhase[] = [
     what: "Embedding is the long game. It is the period where the designed culture either takes root or withers. Most organisations lose patience during this phase because the visible integration work is done, the leadership team has moved on to the next priority, and the assumption is that culture will sort itself out. It will not. Culture that is not actively sustained reverts to whichever legacy culture had deeper roots.",
     activities: [
       { text: "Track cultural indicators at 6, 12, 18, and 24 months post-merger", detail: "Measure whether the designed cultural principles are showing up in behaviour, not just in surveys. Are decisions being made the new way? Are meetings running the new way? Are conflicts being resolved the new way? Behavioural evidence is the only reliable cultural indicator." },
-      { text: "Invest in cultural onboarding for every new hire", detail: "New hires are the lifeblood of cultural embedding. If they learn the culture from people who are still carrying legacy assumptions, the new culture cannot establish itself. Design a cultural onboarding programme that teaches the combined culture, not as history but as how we do things here." },
+      { text: "Invest in cultural onboarding for every new hire", detail: "New hires are the lifeblood of cultural embedding. If they learn the culture from people who are still carrying legacy assumptions, the new culture cannot establish itself. Design a cultural onboarding program that teaches the combined culture, not as history but as how we do things here." },
       { text: "Celebrate and recognise behaviours that exemplify the combined culture", detail: "Stories are how culture spreads. Identify moments where people demonstrate the new cultural principles and make those moments visible. Not through a newsletter that nobody reads, but through leadership behaviour and peer recognition that people experience directly." },
     ],
     commonMistake: "Assuming that because the merger happened two years ago, cultural integration is complete. Research consistently shows that cultural embedding after a merger takes three to five years. Organisations that declare victory after one year often find legacy cultures reasserting themselves three years later.",
@@ -199,15 +199,15 @@ const embeddingMeaningItems: ActionItem[] = [
     detail: "Under pressure, people revert to their deepest habits. If the new way of working collapses when the quarter-end crunch hits, it was not embedded. It was merely adopted. Genuine embedding means the new behaviours hold even when people are busy, stressed, and distracted. Stress is the most reliable test of whether change has reached the cultural level.",
   },
   {
-    text: "Embedding requires sustained reinforcement for far longer than most programmes plan for",
-    detail: "Research on habit formation suggests that embedding a new behaviour takes anywhere from two months to over eight months, depending on complexity. Organisational culture change involves hundreds of interconnected behaviours across thousands of people. The idea that a culture change can be embedded in a single programme cycle is unrealistic. Most successful culture changes are sustained over three to five years.",
+    text: "Embedding requires sustained reinforcement for far longer than most programs plan for",
+    detail: "Research on habit formation suggests that embedding a new behaviour takes anywhere from two months to over eight months, depending on complexity. Organisational culture change involves hundreds of interconnected behaviours across thousands of people. The idea that a culture change can be embedded in a single program cycle is unrealistic. Most successful culture changes are sustained over three to five years.",
   },
   {
     text: "The systems must make the new way easier than the old way",
     detail: "If the new way of working requires more effort, more steps, or more approvals than the old way, it will not embed. People optimise for ease, not for compliance. The most effective cultural embedding happens when the systems, tools, and processes are designed so that the new behaviour is the path of least resistance. Make the right thing the easy thing.",
   },
   {
-    text: "Leaders must model the embedded culture consistently, not just during the programme",
+    text: "Leaders must model the embedded culture consistently, not just during the program",
     detail: "Culture takes its cue from leadership behaviour, particularly leadership behaviour under pressure. A leader who espouses the new values in town halls but reverts to the old style in private meetings sends a clear signal: the new culture is performance, not reality. Embedding requires leaders to live the culture in every interaction, not just the visible ones.",
   },
 ];
@@ -256,7 +256,7 @@ const caseStudies = [
       "When Satya Nadella became CEO of Microsoft in 2014, the company was technically profitable but culturally stagnant. Internal competition was fierce. The stack ranking system pitted employees against each other. Teams operated in silos, guarding their products and budgets rather than collaborating. The dominant cultural assumption was that being right mattered more than learning, and protecting your territory mattered more than serving customers.",
       "Nadella's diagnosis was that Microsoft had a know-it-all culture when it needed a learn-it-all culture. This was not a slogan. It was an operating principle that he embedded into every system he could reach. He eliminated stack ranking. He restructured leadership teams to promote collaboration. He reframed failure as learning. He made growth mindset, borrowed from psychologist Carol Dweck, the foundation of the company's cultural identity.",
       "Critically, Nadella changed the systems, not just the language. The performance management system was rebuilt to reward collaboration and learning. The product strategy shifted from protecting Windows to embracing cloud and open source, a strategic move that was only possible because the culture now supported it. He made Microsoft Teams and Azure the focal points, requiring cross-organisational collaboration that the old culture would have blocked.",
-      "The cultural transformation took years, not quarters. Nadella was consistent and patient. He modelled the culture he wanted. He told personal stories about learning and vulnerability. He made cultural alignment a criterion for leadership appointments. By the time Microsoft's market capitalisation had tripled, the culture change was not just a programme. It was the company's identity.",
+      "The cultural transformation took years, not quarters. Nadella was consistent and patient. He modelled the culture he wanted. He told personal stories about learning and vulnerability. He made cultural alignment a criterion for leadership appointments. By the time Microsoft's market capitalisation had tripled, the culture change was not just a program. It was the company's identity.",
     ],
     lesson: "Microsoft demonstrates that culture change at scale is possible but requires a leader who is willing to change the systems, not just the messaging. Nadella did not ask people to change their mindset. He changed the structures, incentives, and leadership expectations that had produced the old mindset, and the new culture followed.",
     source: "https://www.harvardbusiness.org/wp-content/uploads/2023/11/Session-3_Microsoft-Case_HK_Caslin-Liu.pdf",
@@ -334,7 +334,7 @@ export default function CultureIntegration() {
           <span className="article-label">Sustainment &middot; Culture Integration</span>
           <h1 className="article-title">How do you embed change into culture when culture is the hardest thing to see, measure, or shift?</h1>
           <p className="article-intro">
-            Culture is the invisible architecture of every organisation. It determines how decisions are really made, what behaviours are really rewarded, and whether change sticks or slides. Yet most change programmes treat culture as an afterthought, something that will follow once the systems and structures are in place. It will not. Culture must be understood, designed for, and deliberately sustained. This article covers three questions that sit at the heart of sustainable change: how you change something you cannot easily see, how mergers succeed by putting culture first, and what it actually means for change to become culturally embedded.
+            Culture is the invisible architecture of every organisation. It determines how decisions are really made, what behaviours are really rewarded, and whether change sticks or slides. Yet most change programs treat culture as an afterthought, something that will follow once the systems and structures are in place. It will not. Culture must be understood, designed for, and deliberately sustained. This article covers three questions that sit at the heart of sustainable change: how you change something you cannot easily see, how mergers succeed by putting culture first, and what it actually means for change to become culturally embedded.
           </p>
         </ScrollReveal>
       </div>
@@ -430,7 +430,7 @@ export default function CultureIntegration() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">What Does It Actually Mean to Embed Change into Culture, and How Do You Know When It Has Happened?</h2>
               <p className="article-section-desc">
-                Embedding is the word everyone uses and few define. It is the difference between a change that was implemented and a change that became part of who the organisation is. Implementation puts new systems in place. Embedding makes those systems the way things are done here. The gap between the two is where most change programmes fail, not because the implementation was poor, but because nobody planned for what comes after.
+                Embedding is the word everyone uses and few define. It is the difference between a change that was implemented and a change that became part of who the organisation is. Implementation puts new systems in place. Embedding makes those systems the way things are done here. The gap between the two is where most change programs fail, not because the implementation was poor, but because nobody planned for what comes after.
               </p>
             </ScrollReveal>
 
@@ -597,7 +597,7 @@ export default function CultureIntegration() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Is Your Culture Change Designed to Last?</h2>
               <p className="article-section-desc">
-                Use this checklist to assess whether your culture change programme is addressing the conditions for genuine embedding, or whether it is focused on the visible surface while leaving the underlying systems unchanged.
+                Use this checklist to assess whether your culture change program is addressing the conditions for genuine embedding, or whether it is focused on the visible surface while leaving the underlying systems unchanged.
               </p>
             </ScrollReveal>
 

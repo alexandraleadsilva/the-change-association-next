@@ -156,7 +156,7 @@ const timingMoments: TimingMoment[] = [
     when: "The three to six months after the primary change has been implemented. This is when most communication plans end, and it is exactly when they should not.",
     what: "Recognition of what people have achieved. Honest assessment of what is working and what needs adjustment. Stories from teams who have successfully transitioned. Continued support information. Connection between the change and measurable outcomes. Acknowledgement of what was lost and what has been gained.",
     who: "The executive sponsor (for strategic reinforcement and recognition), managers (for ongoing team-level support), and peers (for social proof and shared learning). The change team should be transitioning ownership of communication to the business at this stage.",
-    channel: "Integration into existing business communication channels rather than separate change channels. The goal is for the change to become part of normal business conversation, not a separate programme with its own newsletter. Leadership meetings, team stand-ups, and performance conversations should reference the change naturally.",
+    channel: "Integration into existing business communication channels rather than separate change channels. The goal is for the change to become part of normal business conversation, not a separate program with its own newsletter. Leadership meetings, team stand-ups, and performance conversations should reference the change naturally.",
     risk: "If communication stops abruptly after go-live, people interpret the silence as 'the project is done, we are on our own now'. If the post-change period is not supported, reversion to old behaviours accelerates. The organisation quietly drifts back to the way things were, not because people resist the change but because the reinforcement stopped.",
     colour: "#B8860B",
   },
@@ -330,7 +330,7 @@ export default function CommunicationPlanning() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Building a Communication Plan That Does More Than Inform</h2>
-          <p className="article-section-desc">A communication plan that only delivers information is solving the wrong problem. The problem in most change programmes is not that people lack information. It is that people lack understanding, confidence, and trust. These four elements transform a broadcast schedule into a genuine communication strategy.</p>
+          <p className="article-section-desc">A communication plan that only delivers information is solving the wrong problem. The problem in most change programs is not that people lack information. It is that people lack understanding, confidence, and trust. These four elements transform a broadcast schedule into a genuine communication strategy.</p>
         </ScrollReveal>
 
         <div className="phase-list">

@@ -35,7 +35,7 @@ const failureReasons: ActionItem[] = [
   {
     text: "Nobody owns the benefits after the project closes",
     detail:
-      "Projects have project managers. Programmes have programme directors. But benefits? Benefits are typically orphaned at project closure. The project team disbands, the programme board stands down, and the benefits are assumed to materialise on their own. They do not. Benefits require active management: tracking, reporting, intervening when things drift, and adjusting plans when circumstances change. Without a named owner with authority and accountability, this management simply does not happen.",
+      "Projects have project managers. Programs have program directors. But benefits? Benefits are typically orphaned at project closure. The project team disbands, the program board stands down, and the benefits are assumed to materialise on their own. They do not. Benefits require active management: tracking, reporting, intervening when things drift, and adjusting plans when circumstances change. Without a named owner with authority and accountability, this management simply does not happen.",
   },
   {
     text: "Benefits are defined as outputs rather than outcomes",
@@ -45,7 +45,7 @@ const failureReasons: ActionItem[] = [
   {
     text: "No baseline was established before the change began",
     detail:
-      "You cannot measure improvement if you do not know where you started. Yet many programmes launch without establishing credible baselines for the metrics they claim to be improving. Six months after go-live, when someone asks whether the change delivered value, there is no data to compare against. The result is anecdote, opinion, and assumption rather than evidence.",
+      "You cannot measure improvement if you do not know where you started. Yet many programs launch without establishing credible baselines for the metrics they claim to be improving. Six months after go-live, when someone asks whether the change delivered value, there is no data to compare against. The result is anecdote, opinion, and assumption rather than evidence.",
   },
   {
     text: "The tracking period is too short",
@@ -69,11 +69,11 @@ const taxonomy = [
     colour: "#6B7280",
     definition: "What the project delivers",
     description:
-      "Outputs are the tangible deliverables of the project. A new IT system, a restructured team, a redesigned process, a training programme. Outputs are within the direct control of the project team. They can be planned, scheduled, and measured with precision. But an output is not a benefit. It is a necessary precondition for a benefit.",
+      "Outputs are the tangible deliverables of the project. A new IT system, a restructured team, a redesigned process, a training program. Outputs are within the direct control of the project team. They can be planned, scheduled, and measured with precision. But an output is not a benefit. It is a necessary precondition for a benefit.",
     examples: [
       "New CRM system deployed across all regions",
       "Revised operating procedures documented and distributed",
-      "All managers completed the two-day leadership programme",
+      "All managers completed the two-day leadership program",
       "New organisational structure implemented",
     ],
   },
@@ -267,7 +267,7 @@ const maturityLabels = [
     level: "Optimised",
     range: [16, 20],
     description:
-      "Benefits management is a strategic capability. It informs investment decisions, shapes programme design, and is integrated into performance management. The organisation learns from every benefits review and applies those lessons to future investments.",
+      "Benefits management is a strategic capability. It informs investment decisions, shapes program design, and is integrated into performance management. The organisation learns from every benefits review and applies those lessons to future investments.",
   },
 ];
 
@@ -279,17 +279,17 @@ const caseStudies = [
   {
     label: "NHS NPfIT",
     headline:
-      "The NHS National Programme for IT spent over 10 billion pounds with only a fraction of intended benefits realised",
-    hook: "The largest civilian IT programme in history became a case study in what happens when benefits realisation is an afterthought.",
+      "The NHS National Program for IT spent over 10 billion pounds with only a fraction of intended benefits realised",
+    hook: "The largest civilian IT program in history became a case study in what happens when benefits realisation is an afterthought.",
     dimension: "Benefits Failure",
     body: [
-      "In 2002, the UK government launched the National Programme for IT in the NHS (NPfIT) with an initial budget of 6.2 billion pounds. The programme aimed to digitise healthcare records, enable electronic prescriptions, and connect every NHS organisation through a single IT infrastructure. The projected benefits were enormous: safer patient care, faster information sharing, and significant efficiency savings across the entire health service.",
-      "The programme was dismantled in 2011. By that point, costs had escalated to over 10 billion pounds. The UK Public Accounts Committee reported that estimated benefits to March 2012 were just 3.7 billion pounds, roughly half of the costs incurred to that point. The Committee described it as one of the worst and most expensive contracting fiascos in public sector history.",
+      "In 2002, the UK government launched the National Program for IT in the NHS (NPfIT) with an initial budget of 6.2 billion pounds. The program aimed to digitise healthcare records, enable electronic prescriptions, and connect every NHS organisation through a single IT infrastructure. The projected benefits were enormous: safer patient care, faster information sharing, and significant efficiency savings across the entire health service.",
+      "The program was dismantled in 2011. By that point, costs had escalated to over 10 billion pounds. The UK Public Accounts Committee reported that estimated benefits to March 2012 were just 3.7 billion pounds, roughly half of the costs incurred to that point. The Committee described it as one of the worst and most expensive contracting fiascos in public sector history.",
       "The benefits failure was structural, not incidental. The business case was built on top-down assumptions about how clinicians would work with the new systems, without adequate engagement with the people who would need to change their behaviour. Benefits were defined at the national level but depended on local adoption patterns that varied enormously. There was no systematic mechanism for tracking whether local organisations were realising the benefits that justified the national investment.",
-      "Critically, the programme focused on outputs (systems deployed, organisations connected) rather than outcomes (clinicians using systems effectively, patient care improving). When systems were delivered but not adopted, the programme could claim delivery but not value. The gap between output and benefit was never bridged because the benefits plan was designed for approval, not for management.",
+      "Critically, the program focused on outputs (systems deployed, organisations connected) rather than outcomes (clinicians using systems effectively, patient care improving). When systems were delivered but not adopted, the program could claim delivery but not value. The gap between output and benefit was never bridged because the benefits plan was designed for approval, not for management.",
     ],
     lesson:
-      "The NHS NPfIT demonstrates that the scale of the investment does not compensate for the absence of benefits management. A 10 billion pound programme with no credible mechanism for tracking whether benefits are materialising is simply a very expensive way to produce outputs that may or may not create value.",
+      "The NHS NPfIT demonstrates that the scale of the investment does not compensate for the absence of benefits management. A 10 billion pound program with no credible mechanism for tracking whether benefits are materialising is simply a very expensive way to produce outputs that may or may not create value.",
     source:
       "https://publications.parliament.uk/pa/cm201314/cmselect/cmpubacc/294/294.pdf",
     sourceLabel: "UK Parliament Public Accounts Committee",
@@ -315,13 +315,13 @@ const caseStudies = [
   {
     label: "UK NAO Research",
     headline:
-      "The UK National Audit Office found that fewer than half of government programmes could demonstrate that they had achieved their intended benefits",
-    hook: "Across 73 billion pounds of programme spending, the evidence for benefits realisation was consistently weak.",
+      "The UK National Audit Office found that fewer than half of government programs could demonstrate that they had achieved their intended benefits",
+    hook: "Across 73 billion pounds of program spending, the evidence for benefits realisation was consistently weak.",
     dimension: "Research Evidence",
     body: [
-      "The UK National Audit Office (NAO) has conducted multiple reviews of benefits realisation across government programmes, consistently finding that the public sector struggles to evidence whether its investments deliver value. Their research found that fewer than half of programmes could demonstrate achievement of their intended benefits.",
+      "The UK National Audit Office (NAO) has conducted multiple reviews of benefits realisation across government programs, consistently finding that the public sector struggles to evidence whether its investments deliver value. Their research found that fewer than half of programs could demonstrate achievement of their intended benefits.",
       "The NAO identified several systemic problems. Benefits cases were often optimistic at the point of approval, with insufficient challenge to the assumptions. Baselines were frequently not established before the change began, making it impossible to measure improvement. Benefits ownership was unclear, with accountability typically sitting with the project team rather than the business. Once the project closed, tracking stopped.",
-      "A particularly significant finding was the gap between claimed and evidenced benefits. Many programmes reported benefits in their closure documents that could not be substantiated with data. Financial benefits were claimed that had not flowed through to budgets. Efficiency improvements were reported that had not reduced costs. The reporting system was producing numbers that did not reflect reality.",
+      "A particularly significant finding was the gap between claimed and evidenced benefits. Many programs reported benefits in their closure documents that could not be substantiated with data. Financial benefits were claimed that had not flowed through to budgets. Efficiency improvements were reported that had not reduced costs. The reporting system was producing numbers that did not reflect reality.",
       "The NAO recommended that organisations carry out benefits realisation management earlier, establish baselines before changes begin, ensure benefits are not treated as an add-on to the business case but are integral to it, develop better techniques for measuring non-financial benefits, and improve post-evaluation practice so that lessons are learned and applied to future investments.",
     ],
     lesson:
@@ -487,7 +487,7 @@ export default function BenefitsRealisation() {
               <p className="article-section-desc">
                 The majority of organisations have a benefits realisation
                 process. Very few have one that works. The UK National Audit
-                Office found that fewer than half of government programmes could
+                Office found that fewer than half of government programs could
                 demonstrate achievement of their intended benefits. In the
                 private sector, the picture is no better. The problem is rarely
                 that benefits were not defined. It is that the definitions were

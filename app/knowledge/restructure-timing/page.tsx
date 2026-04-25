@@ -104,7 +104,7 @@ const timingDimensions = [
       {
         text: "Map the change history of the organisation over the past three years",
         detail:
-          "List every significant change the organisation has been through: restructures, system implementations, leadership changes, strategy shifts, redundancy programmes. If the list is long, the organisation is likely fatigued. People do not distinguish between types of change. To them, it is all disruption. Each new change draws on the same reserve of energy and goodwill, and if that reserve is depleted, the restructure will face passive resistance regardless of how well it is designed.",
+          "List every significant change the organisation has been through: restructures, system implementations, leadership changes, strategy shifts, redundancy programs. If the list is long, the organisation is likely fatigued. People do not distinguish between types of change. To them, it is all disruption. Each new change draws on the same reserve of energy and goodwill, and if that reserve is depleted, the restructure will face passive resistance regardless of how well it is designed.",
       },
       {
         text: "Listen for the language of fatigue in the organisation",
@@ -126,7 +126,7 @@ const timingDimensions = [
     name: "Resource Availability",
     summary: "Do you have the people, budget, and bandwidth to execute this properly?",
     description:
-      "Restructures fail not because the design is wrong but because the organisation does not have the resources to implement the design properly. Implementation requires dedicated programme management, HR capacity for role transitions, IT capacity for systems changes, communication support, and management time. If these resources are not available, the restructure will be under-supported. An under-supported restructure is worse than no restructure at all, because it creates disruption without delivering the intended benefits.",
+      "Restructures fail not because the design is wrong but because the organisation does not have the resources to implement the design properly. Implementation requires dedicated program management, HR capacity for role transitions, IT capacity for systems changes, communication support, and management time. If these resources are not available, the restructure will be under-supported. An under-supported restructure is worse than no restructure at all, because it creates disruption without delivering the intended benefits.",
     guidance: [
       {
         text: "Calculate the true cost of the restructure, including the hidden costs",
@@ -136,7 +136,7 @@ const timingDimensions = [
       {
         text: "Assess whether the people who will manage the restructure have the capacity to do so",
         detail:
-          "Restructures are usually managed by HR and line managers who already have full-time roles. The restructure is added to their existing workload. When this happens, either the restructure is poorly managed or their existing responsibilities suffer. Both outcomes damage the organisation. If dedicated programme resources are not available, the restructure should be delayed until they are.",
+          "Restructures are usually managed by HR and line managers who already have full-time roles. The restructure is added to their existing workload. When this happens, either the restructure is poorly managed or their existing responsibilities suffer. Both outcomes damage the organisation. If dedicated program resources are not available, the restructure should be delayed until they are.",
       },
       {
         text: "Ensure that the systems and infrastructure changes required by the restructure are feasible within the timeline",
@@ -145,7 +145,7 @@ const timingDimensions = [
       },
     ] as GuidanceItem[],
     redFlag:
-      "The restructure is being launched with a tight timeline and no dedicated programme resources, relying on managers to absorb the implementation alongside their existing responsibilities. This is the most common setup for failure.",
+      "The restructure is being launched with a tight timeline and no dedicated program resources, relying on managers to absorb the implementation alongside their existing responsibilities. This is the most common setup for failure.",
   },
 ];
 
@@ -191,7 +191,7 @@ const caseStudies = [
     hook: "Vodafone restructured its entire billing system at the worst possible moment: when customer trust was already at breaking point.",
     dimension: "Organisational Readiness",
     body: [
-      "In 2013, Vodafone UK embarked on the largest IT and operational restructuring in its history: migrating 28.5 million customer accounts from seven separate billing platforms onto a single Siebel CRM system. The migration programme ran for two years and completed in April 2015. The technical ambition was sound. The timing was catastrophic.",
+      "In 2013, Vodafone UK embarked on the largest IT and operational restructuring in its history: migrating 28.5 million customer accounts from seven separate billing platforms onto a single Siebel CRM system. The migration program ran for two years and completed in April 2015. The technical ambition was sound. The timing was catastrophic.",
       "At the time of the migration, Vodafone was already the most complained-about mobile provider in the UK according to Ofcom's 2015 industry survey, generating nearly three times the industry average in customer complaints per 100,000 subscribers. The organisation's customer service operation was already strained. Its complaints handling processes were already inadequate. Into this environment, Vodafone introduced the disruption of a massive systems migration that affected every customer account.",
       "The consequences were immediate and severe. A proportion of the 28.5 million accounts were incorrectly migrated, introducing errors into billing data and price plan records. Over 10,452 pay-as-you-go customers lost money when top-ups were not credited to their accounts, losing a combined total of over 150,000 pounds across 17 months. The billing chaos drove a customer exodus that resulted in a 54 million pound revenue crash between April and June 2015 and a 3.2% drop in sales to 1.55 billion pounds.",
       "In October 2016, Ofcom fined Vodafone 4.6 million pounds for serious and sustained breaches of consumer protection rules. The fine covered both the pay-as-you-go billing failures and the inadequacy of Vodafone's complaints handling during the crisis. The restructuring had been executed without first addressing the operational weaknesses that made it dangerous.",
@@ -233,7 +233,7 @@ export default function RestructureTiming() {
     { key: "fatigue-check", label: "The organisation has not been through more than one significant structural change in the past two years" },
     { key: "previous-complete", label: "Previous changes have been fully embedded before this restructure is being launched" },
     { key: "budget", label: "The full cost of the restructure has been calculated, including hidden costs like productivity loss and attrition" },
-    { key: "dedicated-resources", label: "Dedicated programme resources are available, not just managers absorbing implementation alongside their day jobs" },
+    { key: "dedicated-resources", label: "Dedicated program resources are available, not just managers absorbing implementation alongside their day jobs" },
     { key: "systems-feasible", label: "The systems and infrastructure changes required by the restructure are feasible within the planned timeline" },
   ];
 

@@ -154,7 +154,7 @@ export default function MultiSiteChange() {
         <ScrollReveal direction="up">
           <span className="article-label">Execution &middot; Roadmap & Planning</span>
           <h1 className="article-title">How to manage change across multiple sites without losing consistency</h1>
-          <p className="article-intro">Multi-site change is where most transformation programmes lose coherence. The central team designs a plan that makes sense in a boardroom. Then it hits reality: different cultures, different capabilities, different levels of readiness, and different local priorities. The result is either rigid uniformity that ignores context or local fragmentation that destroys alignment. The answer is neither. It is a deliberate framework that defines what must be the same everywhere and what should be adapted locally.</p>
+          <p className="article-intro">Multi-site change is where most transformation programs lose coherence. The central team designs a plan that makes sense in a boardroom. Then it hits reality: different cultures, different capabilities, different levels of readiness, and different local priorities. The result is either rigid uniformity that ignores context or local fragmentation that destroys alignment. The answer is neither. It is a deliberate framework that defines what must be the same everywhere and what should be adapted locally.</p>
         </ScrollReveal>
       </div>
 

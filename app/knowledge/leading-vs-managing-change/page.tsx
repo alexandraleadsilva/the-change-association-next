@@ -44,7 +44,7 @@ const assessmentPairs = [
   },
   {
     theme: "Ownership",
-    manager: "I deliver the change management workstream within the programme",
+    manager: "I deliver the change management workstream within the program",
     leader: "I take ownership of whether the change lands, regardless of what my role description says",
   },
 ];
@@ -72,7 +72,7 @@ const phases: PhaseContent[] = [
     phase: "Building Engagement",
     pillar: "Engagement",
     managerDoes: "Executes the communication plan. Runs stakeholder workshops. Tracks engagement metrics. Identifies and logs resistance.",
-    leaderDoes: "Designs engagement around what people actually need to hear, not what the programme wants to say. Treats resistance as intelligence. Creates space for honest conversation about what the change means for people.",
+    leaderDoes: "Designs engagement around what people actually need to hear, not what the program wants to say. Treats resistance as intelligence. Creates space for honest conversation about what the change means for people.",
     keyQuestion: "Am I communicating at people, or engaging with them?",
   },
   {
@@ -113,7 +113,7 @@ const caseStudies = [
       "His weekly Business Plan Review meetings became the centrepiece of a new leadership culture. Every leader reported progress honestly, using colour-coded charts. When one executive admitted a problem by showing a red chart for the first time, Mulally applauded him. That single moment changed the culture from one of concealment to one of transparency.",
       "Mulally did not just manage a turnaround plan. He led a cultural transformation that gave people permission to be honest, aligned everyone around a shared vision, and made leadership visible at every level.",
     ],
-    lesson: "Mulally demonstrates what happens when a leader treats change as their personal responsibility, not a programme to be managed. He did not delegate the culture shift. He modelled it in every meeting, every decision, and every interaction.",
+    lesson: "Mulally demonstrates what happens when a leader treats change as their personal responsibility, not a program to be managed. He did not delegate the culture shift. He modelled it in every meeting, every decision, and every interaction.",
     source: "https://www.acertitude.com/insights/how-superstar-ceo-alan-mulally-brought-ford-back-from-the-brink",
     sourceLabel: "Acertitude",
   },

@@ -91,7 +91,7 @@ const raciActivities: RACIActivity[] = [
     roles: {
       hr: {
         level: "C",
-        guidance: "HR provides intelligence on organisational dynamics, team structures, union relationships, and historical context that shapes stakeholder positions. They are invaluable for identifying informal influencers that programme teams would miss.",
+        guidance: "HR provides intelligence on organisational dynamics, team structures, union relationships, and historical context that shapes stakeholder positions. They are invaluable for identifying informal influencers that program teams would miss.",
       },
       cm: {
         level: "R",
@@ -218,7 +218,7 @@ const decisionScenarios: DecisionScenario[] = [
   {
     id: "pace-and-scale",
     title: "The timeline is aggressive and the internal team is already at capacity",
-    signal: "The organisation has capable change professionals, but they are already allocated to existing programmes. The new transformation cannot wait, and pulling people from current work would create unacceptable risk.",
+    signal: "The organisation has capable change professionals, but they are already allocated to existing programs. The new transformation cannot wait, and pulling people from current work would create unacceptable risk.",
     recommendation: "hybrid",
     reasoning: "This is a resourcing problem, not a capability problem. Bringing in external change managers as additional capacity, working within the internal methodology and reporting structure, preserves internal ownership while meeting the timeline. The external team extends the internal team rather than replacing it.",
     watchOuts: "Hybrid models fail when external and internal teams operate in parallel rather than together. The external team must work within the internal team's governance, use their templates, and report through their channels. Two change approaches running simultaneously will confuse stakeholders and undermine both.",
@@ -229,7 +229,7 @@ const decisionScenarios: DecisionScenario[] = [
     signal: "The organisation has dedicated change management professionals with relevant experience. The transformation is significant but within the range of what the team has successfully delivered before. Leadership trusts the internal team.",
     recommendation: "internal",
     reasoning: "This is the clearest case for keeping change management internal. The team has the relationships, the organisational knowledge, the credibility, and the track record. Bringing in an external consultant would signal a lack of confidence in the internal team and create unnecessary friction. Use the budget for additional support, training, or tools instead.",
-    watchOuts: "Even strong internal teams benefit from external perspective at key moments. Consider engaging an external advisor for a specific intervention, such as a readiness assessment, a design review, or a coaching engagement for senior leaders, without handing over ownership of the programme.",
+    watchOuts: "Even strong internal teams benefit from external perspective at key moments. Consider engaging an external advisor for a specific intervention, such as a readiness assessment, a design review, or a coaching engagement for senior leaders, without handing over ownership of the program.",
   },
   {
     id: "culture-change",
@@ -321,10 +321,10 @@ const caseStudies = [
     hook: "Six project managers and six senior responsible owners in five years. Nobody owned the change, so nobody could lead it.",
     dimension: "Role Confusion at Scale",
     body: [
-      "The Universal Credit programme, launched by the UK Department for Work and Pensions in 2010, was intended to be the most significant reform of the welfare system in a generation. It aimed to merge six separate benefits into a single payment, simplifying the system for claimants and reducing administrative costs. The ambition was clear. The execution was catastrophic.",
-      "In the first five years, the programme went through six project managers and six senior responsible owners. Each transition brought a new leadership style, new priorities, and a new interpretation of what the programme was trying to achieve. The constant turnover meant that institutional knowledge was repeatedly lost, relationships with stakeholders had to be rebuilt, and the programme lurched from one approach to another without completing any of them.",
+      "The Universal Credit program, launched by the UK Department for Work and Pensions in 2010, was intended to be the most significant reform of the welfare system in a generation. It aimed to merge six separate benefits into a single payment, simplifying the system for claimants and reducing administrative costs. The ambition was clear. The execution was catastrophic.",
+      "In the first five years, the program went through six project managers and six senior responsible owners. Each transition brought a new leadership style, new priorities, and a new interpretation of what the program was trying to achieve. The constant turnover meant that institutional knowledge was repeatedly lost, relationships with stakeholders had to be rebuilt, and the program lurched from one approach to another without completing any of them.",
       "The role confusion extended beyond leadership. Officials were increasingly placed in managerial roles while policy advice became politicised. The result was that officials had less responsibility in designing policy but took more blame when things went wrong. The DWP attempted to adopt agile methodology, then switched to a hybrid approach it called Agile 2.0, then abandoned that for a phased approach. Each methodology shift required new role definitions, new governance structures, and new accountability frameworks, none of which had time to mature before the next change arrived.",
-      "The National Audit Office found that the Department did not have adequate measures of progress and lacked effective controls. Given the tight timescale, unfamiliar project management approach, and absence of a detailed plan, these gaps were critical. The programme was eventually delivered, years late and significantly over budget, but the human cost was substantial, both for the claimants who experienced a chaotic transition and for the civil servants who bore the pressure of an unmanageable programme.",
+      "The National Audit Office found that the Department did not have adequate measures of progress and lacked effective controls. Given the tight timescale, unfamiliar project management approach, and absence of a detailed plan, these gaps were critical. The program was eventually delivered, years late and significantly over budget, but the human cost was substantial, both for the claimants who experienced a chaotic transition and for the civil servants who bore the pressure of an unmanageable program.",
     ],
     lesson: "Universal Credit is a case study in what happens when role clarity is treated as an administrative detail rather than a strategic necessity. When nobody owns the change consistently, accountability dissolves. When roles are redefined with every leadership transition, people stop investing in their responsibilities because they expect the next reorganisation to take them away. Stable, clearly defined roles are not bureaucracy. They are the foundation that makes agility possible.",
     source: "https://www.nao.org.uk/reports/universal-credit-early-progress-2/",
@@ -340,7 +340,7 @@ const checkItems = [
   { key: "hr-role", label: "We have explicitly defined what HR owns, what HR advises on, and what HR does not do in this transformation" },
   { key: "cm-role", label: "There is a named change manager with a clear mandate, whether internal or external, and everyone knows who they are" },
   { key: "lm-role", label: "Line managers have been briefed on their specific role in the change and given the tools to fulfil it" },
-  { key: "raci", label: "Key change activities have clear ownership and the RACI has been validated with the people in it, not just drafted by the programme team" },
+  { key: "raci", label: "Key change activities have clear ownership and the RACI has been validated with the people in it, not just drafted by the program team" },
   { key: "external", label: "If we are using external consultants, we have defined what capability they are transferring and when their engagement ends" },
   { key: "boundaries", label: "People in new or changed roles have had the opportunity to negotiate boundaries with adjacent roles" },
   { key: "loss", label: "We have acknowledged what people are losing in role changes, not just what they are gaining" },
@@ -424,7 +424,7 @@ export default function RoleClarity() {
           <span className="article-label">Enablement &middot; Role Clarity &amp; Capability</span>
           <h1 className="article-title">Who actually does what in a transformation? HR, change managers, external consultants, and the role confusion that derails change.</h1>
           <p className="article-intro">
-            One of the most common and least discussed causes of failed transformation is that nobody is clear on who does what. HR assumes the change manager is handling resistance. The change manager assumes line managers are reinforcing new behaviours. Line managers assume someone in the programme team is managing stakeholders. The project manager assumes HR is leading the people side. Everyone assumes someone else is doing the critical work, and the gaps only become visible when adoption stalls. This article provides practical clarity on three connected questions: what is HR's actual role in transformation, when should you bring in external change management support, and how do you define new roles without creating the confusion and resistance that undermines everything else.
+            One of the most common and least discussed causes of failed transformation is that nobody is clear on who does what. HR assumes the change manager is handling resistance. The change manager assumes line managers are reinforcing new behaviours. Line managers assume someone in the program team is managing stakeholders. The project manager assumes HR is leading the people side. Everyone assumes someone else is doing the critical work, and the gaps only become visible when adoption stalls. This article provides practical clarity on three connected questions: what is HR's actual role in transformation, when should you bring in external change management support, and how do you define new roles without creating the confusion and resistance that undermines everything else.
           </p>
         </ScrollReveal>
       </div>
@@ -642,7 +642,7 @@ export default function RoleClarity() {
                       <span className="check-partial"> &mdash; Significant gaps in role clarity. These will create friction as the transformation scales. Prioritise the unchecked items.</span>
                     )}
                     {checkedCount > 0 && checkedCount < 4 && (
-                      <span className="check-partial"> &mdash; Critical role clarity gaps. Your transformation is at risk of the accountability vacuum that derails most change programmes. Address these urgently.</span>
+                      <span className="check-partial"> &mdash; Critical role clarity gaps. Your transformation is at risk of the accountability vacuum that derails most change programs. Address these urgently.</span>
                     )}
                   </p>
                 </div>

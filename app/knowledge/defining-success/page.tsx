@@ -29,7 +29,7 @@ const layers = [
       "New starters will be fully productive within four weeks rather than twelve",
     ],
     guidance: [
-      { text: "Define the outcome from the perspective of the people affected, not the programme", detail: "If the outcome only makes sense in a steering committee, it is not specific enough. Ask: what would a frontline employee notice is different? What would a customer experience differently? The answer is your outcome." },
+      { text: "Define the outcome from the perspective of the people affected, not the program", detail: "If the outcome only makes sense in a steering committee, it is not specific enough. Ask: what would a frontline employee notice is different? What would a customer experience differently? The answer is your outcome." },
       { text: "Test your outcome by asking 'so what?'", detail: "If the outcome is 'we will have implemented SAP', ask 'so what?' The answer might be 'so that managers can see real-time inventory data'. Then ask 'so what?' again. The answer might be 'so that we stop over-ordering and reduce waste by 20%'. Keep going until you reach the outcome that actually matters to the business." },
       { text: "Separate the change outcome from the project deliverable", detail: "A project delivers outputs: a system, a restructure, a new process. A change delivers outcomes: people working differently, decisions being made faster, customers being served better. Define both, but know the difference." },
     ] as ActionItem[],
@@ -161,7 +161,7 @@ const caseStudies = [
       "McKinsey research on transformation success rates found that only 12% of large-scale transformations deliver all of their intended value. The majority underperform or fail to sustain their gains.",
       "One of the primary differentiators between successful and unsuccessful transformations was the rigour with which success was defined at the outset. Organisations that established clear, measurable outcomes, tied to business performance and behavioural change, were significantly more likely to achieve and sustain results.",
       "The research emphasised that successful transformations define success across multiple dimensions: financial outcomes, operational performance, customer experience, and employee engagement. They also establish review cadences that allow for course correction rather than waiting for a post-implementation review.",
-      "Critically, the research found that the definition of success needs to be owned by the business, not the transformation programme. When success is defined and measured by the people responsible for delivering the outcome, accountability is clear and sustained.",
+      "Critically, the research found that the definition of success needs to be owned by the business, not the transformation program. When success is defined and measured by the people responsible for delivering the outcome, accountability is clear and sustained.",
     ],
     lesson: "The McKinsey data makes the case quantitatively: defining success before delivery begins is not a nice to have. It is a statistically significant predictor of whether the transformation will deliver value. The 88% that fail to deliver full value often fail at this step first.",
     source: "https://www.mckinsey.com/capabilities/transformation/our-insights/the-numbers-behind-successful-transformations",
@@ -181,7 +181,7 @@ export default function DefiningSuccess() {
     { key: "baseline", label: "We have measured the baseline before the change begins" },
     { key: "waves", label: "We have planned for waves of adoption with different expectations at each stage" },
     { key: "reviews", label: "We have review points at 30, 90, and 180 days, not just at project close" },
-    { key: "owned", label: "Success criteria are owned by the business, not just the programme team" },
+    { key: "owned", label: "Success criteria are owned by the business, not just the program team" },
     { key: "understood", label: "The people affected by the change can describe what success looks like in their own words" },
   ];
 
@@ -196,7 +196,7 @@ export default function DefiningSuccess() {
         <ScrollReveal direction="up">
           <span className="article-label">Direction &middot; Success Definition</span>
           <h1 className="article-title">How to define change success before delivery begins, and why most organisations skip this</h1>
-          <p className="article-intro">Most change programmes define success in terms of what will be delivered: a system goes live, a restructure completes, training is rolled out. These are project deliverables. They are not change outcomes. A meaningful success definition answers a different question: what will be true about this organisation, its people, and its performance that is not true today?</p>
+          <p className="article-intro">Most change programs define success in terms of what will be delivered: a system goes live, a restructure completes, training is rolled out. These are project deliverables. They are not change outcomes. A meaningful success definition answers a different question: what will be true about this organisation, its people, and its performance that is not true today?</p>
         </ScrollReveal>
       </div>
 
@@ -308,7 +308,7 @@ export default function DefiningSuccess() {
                   <span className="check-partial"> &mdash; Good foundation. Close the gaps before delivery begins.</span>
                 )}
                 {checkedCount > 0 && checkedCount < 5 && (
-                  <span className="check-partial"> &mdash; Significant gaps. Your programme may not know when it has succeeded.</span>
+                  <span className="check-partial"> &mdash; Significant gaps. Your program may not know when it has succeeded.</span>
                 )}
               </p>
             </div>

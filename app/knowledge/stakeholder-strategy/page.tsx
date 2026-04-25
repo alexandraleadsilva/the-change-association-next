@@ -81,7 +81,7 @@ const stakeholderRings = [
     engagement:
       "Impact stakeholders need engagement that respects their time, acknowledges their expertise, and addresses their specific concerns. Generic communications about strategic vision will not land here. These people need to know: what exactly is changing for me, when is it happening, will I be supported, and does anyone understand how busy I already am? The single most effective engagement approach for impact stakeholders is involving them in designing the change that affects them. When people co-create the solution, they do not need to be sold on it.",
     pitfall:
-      "Do not treat impact stakeholders as passive recipients of change. They know more about how the work actually gets done than anyone in the programme team. If you design the change without their input and then ask for their buy-in, you will get compliance at best and sabotage at worst.",
+      "Do not treat impact stakeholders as passive recipients of change. They know more about how the work actually gets done than anyone in the program team. If you design the change without their input and then ask for their buy-in, you will get compliance at best and sabotage at worst.",
   },
 ];
 
@@ -93,10 +93,10 @@ const busyTeamsActions: ActionItem[] = [
   {
     text: "Start by earning the right to their attention, not demanding it",
     detail:
-      "Operational teams have heard it before. Another initiative, another set of workshops, another request to attend something that takes them away from the work they are measured on. Before you ask for their time, demonstrate that you understand their world. Spend time observing their work, reading their performance dashboards, and talking to their managers about current pressures. When you eventually ask for their engagement, frame it in terms of their priorities, not yours. The question is not 'how do we get operations engaged in the change programme?' It is 'how does this change solve a problem operations already has?'",
+      "Operational teams have heard it before. Another initiative, another set of workshops, another request to attend something that takes them away from the work they are measured on. Before you ask for their time, demonstrate that you understand their world. Spend time observing their work, reading their performance dashboards, and talking to their managers about current pressures. When you eventually ask for their engagement, frame it in terms of their priorities, not yours. The question is not 'how do we get operations engaged in the change program?' It is 'how does this change solve a problem operations already has?'",
   },
   {
-    text: "Design engagement around their workflow, not your programme plan",
+    text: "Design engagement around their workflow, not your program plan",
     detail:
       "If your engagement plan requires operational staff to leave their desks, attend workshops, and complete pre-reading, you have already lost. The most effective engagement with busy teams happens inside their existing routines: a ten-minute slot in their team meeting, a brief conversation during a shift handover, a short feedback loop built into a tool they already use. Design engagement that fits into their day rather than competing with it. This requires the change team to adapt to operations, not the other way around.",
   },
@@ -182,12 +182,12 @@ const influencerActions: ActionItem[] = [
   {
     text: "Give influencers a role, not just information",
     detail:
-      "Information without a role creates informed bystanders, not advocates. Give your informal influencers a genuine role in the change: invite them to be part of the design process, ask them to pilot the new way of working, give them a direct line to the change team for feedback, or make them the first point of contact for questions from their peers. The role needs to be real, not ceremonial. If influencers feel they are being used as a communication channel rather than a genuine participant, they will disengage. The best influencer activation programmes give influencers the ability to shape the change, not just sell it.",
+      "Information without a role creates informed bystanders, not advocates. Give your informal influencers a genuine role in the change: invite them to be part of the design process, ask them to pilot the new way of working, give them a direct line to the change team for feedback, or make them the first point of contact for questions from their peers. The role needs to be real, not ceremonial. If influencers feel they are being used as a communication channel rather than a genuine participant, they will disengage. The best influencer activation programs give influencers the ability to shape the change, not just sell it.",
   },
   {
     text: "Support influencers without co-opting them",
     detail:
-      "The moment an informal influencer is perceived by their peers as 'working for the programme', their influence evaporates. Their power comes from being seen as independent, honest, and trustworthy. Your job is to support them without co-opting them. This means giving them information and access, but not turning them into an extension of the change team. Do not give them branded materials to distribute. Do not ask them to 'cascade messages'. Do not put them in a formal change champion network with a name badge and a Teams channel. Instead, maintain a quiet, respectful relationship where they have access to the information they need and the freedom to form and share their own views.",
+      "The moment an informal influencer is perceived by their peers as 'working for the program', their influence evaporates. Their power comes from being seen as independent, honest, and trustworthy. Your job is to support them without co-opting them. This means giving them information and access, but not turning them into an extension of the change team. Do not give them branded materials to distribute. Do not ask them to 'cascade messages'. Do not put them in a formal change champion network with a name badge and a Teams channel. Instead, maintain a quiet, respectful relationship where they have access to the information they need and the freedom to form and share their own views.",
   },
   {
     text: "Monitor the influence network throughout the change, not just at the start",
@@ -223,7 +223,7 @@ const caseStudies = [
     hook: "They stopped calling anyone an employee. Everyone became a caregiver. Then they changed what that word meant in practice.",
     dimension: "Stakeholder Mapping",
     body: [
-      "In 2008, Cleveland Clinic launched a transformation to fundamentally change how every person in the organisation thought about their role in patient care. The challenge was engaging over 50,000 staff, most of whom were clinicians and operational teams running one of the world's busiest healthcare systems, with no capacity for additional programmes or initiatives.",
+      "In 2008, Cleveland Clinic launched a transformation to fundamentally change how every person in the organisation thought about their role in patient care. The challenge was engaging over 50,000 staff, most of whom were clinicians and operational teams running one of the world's busiest healthcare systems, with no capacity for additional programs or initiatives.",
       "The foundation of their approach was a radical stakeholder reframe. Cleveland Clinic stopped using the word 'employee' entirely and replaced it with 'caregiver' for everyone, from surgeons to security guards, from nurses to cafeteria staff. This was not a branding exercise. It was a deliberate stakeholder strategy that redefined how every person understood their relationship to the change. When a janitor is called a caregiver, the conversation about patient experience becomes personally relevant to them in a way that a strategic memo about 'patient-centric care models' never could.",
       "The engagement approach was mapped to each stakeholder group's specific reality. Cleveland Clinic restructured into more than twenty institutes, each bringing together all medical specialties related to a particular set of conditions. This meant that stakeholder engagement was not generic. It was specific to each institute, each specialty, and each team's relationship to the patient experience they were trying to improve.",
       "Using the Gallup Q12 framework, they established baseline engagement metrics and tracked progress at the team level, not just the organisational level. Over five years, they engaged more than 10,000 caregivers across clinical and non-clinical areas. The approach succeeded because it mapped stakeholders by their actual impact on patient experience, not by their position in the hierarchy, and designed engagement that was specific, measurable, and embedded in daily clinical work.",
@@ -615,7 +615,7 @@ export default function StakeholderStrategy() {
                 How to Engage Operational Teams Who Are Too Busy for Another Initiative
               </h2>
               <p className="article-section-desc">
-                Operational teams are the backbone of every organisation. They run production lines, serve customers, manage systems, and deliver the work that keeps the business functioning. They are also, almost universally, at or beyond capacity. When a change programme asks for their time and attention, it is competing with every other demand on their already-full day. The standard approach of workshops, communications, and training sessions does not work for these teams. What works is engagement that respects their reality, fits into their workflow, and gives them a genuine voice. Click any point to explore it in depth.
+                Operational teams are the backbone of every organisation. They run production lines, serve customers, manage systems, and deliver the work that keeps the business functioning. They are also, almost universally, at or beyond capacity. When a change program asks for their time and attention, it is competing with every other demand on their already-full day. The standard approach of workshops, communications, and training sessions does not work for these teams. What works is engagement that respects their reality, fits into their workflow, and gives them a genuine voice. Click any point to explore it in depth.
               </p>
             </ScrollReveal>
 
@@ -657,7 +657,7 @@ export default function StakeholderStrategy() {
                 How to Identify and Activate the Informal Influencers Who Shape Adoption
               </h2>
               <p className="article-section-desc">
-                Every organisation has two structures: the formal hierarchy that appears on the organisation chart, and the informal network through which information, opinions, and trust actually flow. Change programmes that only engage the formal hierarchy miss the infrastructure that determines whether people adopt or resist. Informal influencers are the people whose opinions carry disproportionate weight, not because of their title but because of their relationships, their expertise, and the trust they have built over time. Finding them, engaging them authentically, and giving them a genuine role in the change is one of the highest-leverage activities in any stakeholder strategy.
+                Every organisation has two structures: the formal hierarchy that appears on the organisation chart, and the informal network through which information, opinions, and trust actually flow. Change programs that only engage the formal hierarchy miss the infrastructure that determines whether people adopt or resist. Informal influencers are the people whose opinions carry disproportionate weight, not because of their title but because of their relationships, their expertise, and the trust they have built over time. Finding them, engaging them authentically, and giving them a genuine role in the change is one of the highest-leverage activities in any stakeholder strategy.
               </p>
             </ScrollReveal>
 
@@ -678,7 +678,7 @@ export default function StakeholderStrategy() {
                 Building a Change Champion Network
               </h2>
               <p className="article-section-desc">
-                Informal influencers shape opinion. But a champion network gives you something different: a formally recruited, deliberately designed, and actively maintained group of people who bridge the gap between the change team and the organisation. Champions are not volunteers who happen to be enthusiastic. They are selected, equipped, and supported to play a defined role throughout the life of the change. When built well, a champion network is the single most effective mechanism for scaling engagement, surfacing resistance early, and sustaining adoption after the programme team has moved on.
+                Informal influencers shape opinion. But a champion network gives you something different: a formally recruited, deliberately designed, and actively maintained group of people who bridge the gap between the change team and the organisation. Champions are not volunteers who happen to be enthusiastic. They are selected, equipped, and supported to play a defined role throughout the life of the change. When built well, a champion network is the single most effective mechanism for scaling engagement, surfacing resistance early, and sustaining adoption after the program team has moved on.
               </p>
             </ScrollReveal>
 

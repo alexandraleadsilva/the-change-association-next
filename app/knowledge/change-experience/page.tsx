@@ -132,7 +132,7 @@ const topicSections: TopicSection[] = [
     id: "why-change-fails",
     num: "01",
     title: "Why change fails when people understand the process but not the experience",
-    introduction: "Most change programmes are designed around process: the milestones, the workstreams, the governance structures, and the training calendars. These are necessary. But they address only the visible half of the change. The invisible half is the experience: the fear of being incompetent in a new role, the grief of losing a team that took years to build, the exhaustion of holding uncertainty for months without resolution. When we design only for process and ignore experience, we create a gap. That gap is where change fails.",
+    introduction: "Most change programs are designed around process: the milestones, the workstreams, the governance structures, and the training calendars. These are necessary. But they address only the visible half of the change. The invisible half is the experience: the fear of being incompetent in a new role, the grief of losing a team that took years to build, the exhaustion of holding uncertainty for months without resolution. When we design only for process and ignore experience, we create a gap. That gap is where change fails.",
     items: [
       {
         text: "Process tells people what is changing. Experience tells them what it feels like to change.",
@@ -188,7 +188,7 @@ const topicSections: TopicSection[] = [
     id: "touchpoint-design",
     num: "03",
     title: "How to design change touchpoints that build trust instead of eroding it",
-    introduction: "Every change programme has touchpoints: the moments when the organisation makes contact with the people going through the change. The first announcement. The first training session. The first day on the new system. The first time something goes wrong. Each of these moments is a trust decision. The organisation either builds trust or erodes it, and there is no neutral ground. Most touchpoints are designed for information transfer. The most effective touchpoints are designed for trust.",
+    introduction: "Every change program has touchpoints: the moments when the organisation makes contact with the people going through the change. The first announcement. The first training session. The first day on the new system. The first time something goes wrong. Each of these moments is a trust decision. The organisation either builds trust or erodes it, and there is no neutral ground. Most touchpoints are designed for information transfer. The most effective touchpoints are designed for trust.",
     items: [
       {
         text: "Trust is built in the moments that matter, not in the volume of communication.",
@@ -251,13 +251,13 @@ const touchpointCards: TouchpointCard[] = [
     moment: "The First Day of Change",
     timeframe: "Go-live or restructure day",
     buildsTrust: [
-      "Having leaders and managers visible and available, not in meetings. This is the day to walk the floor, not run the programme.",
+      "Having leaders and managers visible and available, not in meetings. This is the day to walk the floor, not run the program.",
       "Providing practical support at the point of need. Not a link to an intranet page. A real person who can help when the new system does not work or the new process is confusing.",
       "Acknowledging publicly that the first day will be messy and that is expected. Normalising imperfection reduces anxiety.",
       "Checking in with individuals, not just teams. A personal message from a manager makes people feel seen in a way that a group email never will.",
     ],
     erodesTrust: [
-      "Being absent. If the leadership team is in a programme review meeting on go-live day while frontline staff are struggling, the message is unmistakable: the plan matters more than the people.",
+      "Being absent. If the leadership team is in a program review meeting on go-live day while frontline staff are struggling, the message is unmistakable: the plan matters more than the people.",
       "Expecting competence on day one. If people feel judged for struggling with something new, they will stop trying and start hiding.",
       "Celebrating the launch while people are still processing the loss. Tone-deaf celebrations in the middle of genuine difficulty create resentment.",
       "Responding to problems with 'that should not be happening' instead of 'thank you for telling us, we will fix it'.",
@@ -290,7 +290,7 @@ const touchpointCards: TouchpointCard[] = [
       "Acknowledging the setback openly and promptly. Not minimising it. Not spinning it. Naming it for what it is.",
       "Taking responsibility where the organisation got it wrong, rather than blaming external factors or the people going through the change.",
       "Explaining what will change as a result. A setback that leads to visible learning and adjustment builds more trust than a change that went perfectly but learned nothing.",
-      "Checking in on the people most affected. A setback is not just a programme issue. It is an emotional event for the people who trusted the plan and saw it falter.",
+      "Checking in on the people most affected. A setback is not just a program issue. It is an emotional event for the people who trusted the plan and saw it falter.",
     ],
     erodesTrust: [
       "Pretending it did not happen. People noticed. They are watching. If leadership does not acknowledge the setback, people conclude that either leadership does not see it (incompetence) or does not care (indifference). Both destroy trust.",
@@ -346,10 +346,10 @@ const caseStudies = [
     hook: "The strategy was clear. The factory floor experience was anything but.",
     dimension: "Touchpoint Design",
     body: [
-      "Ford's transition to electric vehicles under CEO Jim Farley, beginning in earnest in 2022 with the creation of Ford Model e, represented one of the most ambitious change programmes in manufacturing history. The strategic narrative was compelling: Ford would split into two entities, Ford Blue for internal combustion and Ford Model e for electric vehicles, to compete with Tesla and new EV entrants.",
+      "Ford's transition to electric vehicles under CEO Jim Farley, beginning in earnest in 2022 with the creation of Ford Model e, represented one of the most ambitious change programs in manufacturing history. The strategic narrative was compelling: Ford would split into two entities, Ford Blue for internal combustion and Ford Model e for electric vehicles, to compete with Tesla and new EV entrants.",
       "The process was well-designed from a strategic perspective. The business case was clear. The market signals were undeniable. But on the factory floor and in the engineering divisions, the emotional experience was profoundly different from the boardroom narrative. Engineers who had spent decades perfecting internal combustion technology were told their expertise was part of the old world. Manufacturing workers at ICE plants watched investment flow to new EV facilities and wondered about their future.",
       "Ford encountered the experience gap at scale. The first announcement was strategically sound but emotionally incomplete. Workers at legacy plants reported feeling like 'the ones being left behind'. The touchpoint design focused on information transfer but missed the emotional reality: grief, identity loss, and uncertainty about whether decades of expertise still mattered.",
-      "Ford has since invested significantly in retraining programmes, including partnerships with community colleges and the UAW to reskill workers for EV manufacturing. But the early experience gap, the distance between the strategy's clarity and the workers' emotional reality, created trust deficits that required sustained, deliberate effort to repair.",
+      "Ford has since invested significantly in retraining programs, including partnerships with community colleges and the UAW to reskill workers for EV manufacturing. But the early experience gap, the distance between the strategy's clarity and the workers' emotional reality, created trust deficits that required sustained, deliberate effort to repair.",
     ],
     lesson: "Ford's EV transition illustrates that even the most strategically necessary change can fail at the human level if the emotional experience is not designed alongside the process. The factory floor does not experience strategy. It experiences touchpoints. And those touchpoints either build trust or erode it.",
     source: "https://www.reuters.com/business/autos-transportation/ford-professionalise-ev-unit-with-silicon-valley-talent-2023-03-02/",
@@ -431,7 +431,7 @@ export default function ChangeExperience() {
         <ScrollReveal direction="up">
           <span className="article-label">Engagement &middot; Change Experience</span>
           <h1 className="article-title">The change experience: why understanding the process is not enough</h1>
-          <p className="article-intro">Change does not fail because people do not understand what is happening. It fails because no one acknowledged what it felt like. Every change programme has a process: the plan, the milestones, the communications calendar. But every change programme also has an experience: the fear of becoming incompetent, the grief of losing a team, the slow erosion of trust when promises do not match reality. This article is about the experience. It is about what change actually feels like for the people going through it, and how to design every touchpoint so that it builds trust instead of breaking it.</p>
+          <p className="article-intro">Change does not fail because people do not understand what is happening. It fails because no one acknowledged what it felt like. Every change program has a process: the plan, the milestones, the communications calendar. But every change program also has an experience: the fear of becoming incompetent, the grief of losing a team, the slow erosion of trust when promises do not match reality. This article is about the experience. It is about what change actually feels like for the people going through it, and how to design every touchpoint so that it builds trust instead of breaking it.</p>
         </ScrollReveal>
       </div>
 
@@ -914,7 +914,7 @@ export default function ChangeExperience() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Is Your Change Experience-Aware?</h2>
-          <p className="article-section-desc">Use this checklist to assess whether your change programme is designed for the human experience, not just the project plan. Be honest. The items you leave unchecked are the ones that will determine how people remember this change.</p>
+          <p className="article-section-desc">Use this checklist to assess whether your change program is designed for the human experience, not just the project plan. Be honest. The items you leave unchecked are the ones that will determine how people remember this change.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>
@@ -940,7 +940,7 @@ export default function ChangeExperience() {
               <p className="check-score">
                 {checkedCount} of {checkItems.length} complete
                 {checkedCount === checkItems.length && (
-                  <span className="check-complete"> &mdash; Your change programme is designed for the human experience. This is rare, and it matters.</span>
+                  <span className="check-complete"> &mdash; Your change program is designed for the human experience. This is rare, and it matters.</span>
                 )}
                 {checkedCount >= 9 && checkedCount < checkItems.length && (
                   <span className="check-partial"> &mdash; Strong foundation. The gaps you see are the ones that will matter most in the difficult moments. Close them before they close you.</span>
@@ -949,10 +949,10 @@ export default function ChangeExperience() {
                   <span className="check-partial"> &mdash; You are aware of the experience dimension but have not fully designed for it. The process is likely solid. The experience needs more deliberate attention.</span>
                 )}
                 {checkedCount >= 3 && checkedCount < 6 && (
-                  <span className="check-partial"> &mdash; Significant gaps in experience design. Your change programme may deliver its business outcomes but leave people feeling unseen and unsupported. That has consequences for the next change.</span>
+                  <span className="check-partial"> &mdash; Significant gaps in experience design. Your change program may deliver its business outcomes but leave people feeling unseen and unsupported. That has consequences for the next change.</span>
                 )}
                 {checkedCount > 0 && checkedCount < 3 && (
-                  <span className="check-partial"> &mdash; Your change programme is designed primarily for process. The human experience is largely unaddressed. People will comply, but they will not commit. And they will remember how this felt.</span>
+                  <span className="check-partial"> &mdash; Your change program is designed primarily for process. The human experience is largely unaddressed. People will comply, but they will not commit. And they will remember how this felt.</span>
                 )}
               </p>
             </div>

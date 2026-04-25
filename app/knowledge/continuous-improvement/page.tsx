@@ -54,9 +54,9 @@ const pirSections: PIRSection[] = [
     ],
     goodAnswers: [
       "Good answers are specific and evidence-based, not general. Instead of saying the new system was implemented, describe exactly which processes moved to the new system and which still rely on workarounds.",
-      "Good answers acknowledge scope changes honestly. Every programme changes scope. Documenting this is not failure. It is honesty that enables learning.",
+      "Good answers acknowledge scope changes honestly. Every program changes scope. Documenting this is not failure. It is honesty that enables learning.",
       "Good answers distinguish between the technical change and the human change. The system may be live, but that does not mean people have changed how they work. Both dimensions need to be captured separately.",
-      "Good answers include the perspective of people who lived through the change, not just those who designed it. Frontline staff and middle managers often have a very different account of what changed than the programme team.",
+      "Good answers include the perspective of people who lived through the change, not just those who designed it. Frontline staff and middle managers often have a very different account of what changed than the program team.",
     ],
   },
   {
@@ -69,11 +69,11 @@ const pirSections: PIRSection[] = [
       "Where did adoption exceed expectations, and what conditions enabled that?",
       "Which communication or engagement approaches resonated most strongly?",
       "Where did leadership support make a measurable difference?",
-      "What capabilities did the team or organisation build during this programme that did not exist before?",
+      "What capabilities did the team or organisation build during this program that did not exist before?",
     ],
     goodAnswers: [
       "Good answers link success to specific actions, not luck or general enthusiasm. If a team adopted quickly, identify what was different about their preparation, leadership, or support.",
-      "Good answers are transferable. They describe what worked in terms that another team, programme, or organisation could replicate. Saying our people were great is not useful. Saying weekly manager briefings with Q&A reduced resistance by giving people a forum for concerns is useful.",
+      "Good answers are transferable. They describe what worked in terms that another team, program, or organisation could replicate. Saying our people were great is not useful. Saying weekly manager briefings with Q&A reduced resistance by giving people a forum for concerns is useful.",
       "Good answers recognise the people and conditions behind success. Was it the approach that worked, or was it the quality of a particular leader, facilitator, or team? If the success depended on a specific person rather than a repeatable process, that is important to note.",
       "Good answers quantify where possible. Adoption rates, satisfaction scores, time-to-competence, error rates, and customer feedback all provide evidence that general statements do not.",
     ],
@@ -82,7 +82,7 @@ const pirSections: PIRSection[] = [
     id: "what-did-not",
     num: "03",
     title: "What Did Not Work",
-    description: "This is where the real value lives. But it only works if people feel safe enough to be honest. The purpose of this section is not to assign blame. It is to build organisational intelligence. Every problem you surface here is a problem the next programme can avoid.",
+    description: "This is where the real value lives. But it only works if people feel safe enough to be honest. The purpose of this section is not to assign blame. It is to build organisational intelligence. Every problem you surface here is a problem the next program can avoid.",
     prompts: [
       "Where did the change not land as intended, and what was the impact?",
       "Which risks materialised, and were our mitigations adequate?",
@@ -103,16 +103,16 @@ const pirSections: PIRSection[] = [
     title: "What Surprised Us",
     description: "Surprises are the most underrated category in a post-implementation review. They reveal the limits of your planning, the blind spots in your stakeholder analysis, and the assumptions you did not know you were making. Every surprise is a lesson about your organisational awareness.",
     prompts: [
-      "What outcomes, positive or negative, did nobody on the programme team predict?",
+      "What outcomes, positive or negative, did nobody on the program team predict?",
       "Which groups reacted differently from how we expected, and why?",
       "What dependencies or interactions between workstreams caught us off guard?",
       "Where did the culture respond in ways our change plan did not account for?",
-      "What did we learn about our organisation that we did not know before this programme?",
+      "What did we learn about our organisation that we did not know before this program?",
     ],
     goodAnswers: [
       "Good answers are genuinely surprising, not repackaged versions of known risks that were inadequately managed. If the surprise was predictable, it belongs in the What Did Not Work section instead.",
       "Good answers explore why the surprise happened, not just what it was. The gap between prediction and reality is where organisational learning lives. Was the surprise caused by insufficient data, wrong assumptions, or a failure to listen to the right people?",
-      "Good answers lead to changes in how the organisation approaches future programmes. If a cultural dynamic surprised you, that should change how you conduct stakeholder analysis next time. If an unintended benefit emerged, that should change how you define scope.",
+      "Good answers lead to changes in how the organisation approaches future programs. If a cultural dynamic surprised you, that should change how you conduct stakeholder analysis next time. If an unintended benefit emerged, that should change how you define scope.",
       "Good answers treat positive surprises as seriously as negative ones. An unexpected benefit that is not understood cannot be replicated. An unexpected success that is attributed to luck rather than analysed for its causes is a wasted insight.",
     ],
   },
@@ -120,18 +120,18 @@ const pirSections: PIRSection[] = [
     id: "what-differently",
     num: "05",
     title: "What We Would Do Differently",
-    description: "This is the section that turns reflection into action. Everything above is diagnosis. This section is prescription. It should produce concrete, specific commitments that the organisation can apply to its next change programme. If this section contains only general statements, the review has failed.",
+    description: "This is the section that turns reflection into action. Everything above is diagnosis. This section is prescription. It should produce concrete, specific commitments that the organisation can apply to its next change program. If this section contains only general statements, the review has failed.",
     prompts: [
-      "If we were starting this programme again, what would we change about the approach?",
+      "If we were starting this program again, what would we change about the approach?",
       "What would we start doing, stop doing, and continue doing?",
       "Which decisions would we make earlier, later, or differently?",
       "What support, resources, or capabilities were missing that should be in place next time?",
       "What recommendations do we have for the team that will sustain this change going forward?",
     ],
     goodAnswers: [
-      "Good answers are specific enough to act on. Instead of communicate more, say establish weekly all-hands updates from week one with a dedicated Q&A channel monitored by the programme team.",
-      "Good answers are addressed to a specific audience. Recommendations for executive sponsors are different from recommendations for programme managers, which are different from recommendations for the HR team. Generic advice helps nobody.",
-      "Good answers distinguish between things that should change in the approach and things that should change in the organisation. Some lessons are about how you run programmes. Others are about how the organisation makes decisions, allocates resources, or manages risk. Both are valuable but they require different actions.",
+      "Good answers are specific enough to act on. Instead of communicate more, say establish weekly all-hands updates from week one with a dedicated Q&A channel monitored by the program team.",
+      "Good answers are addressed to a specific audience. Recommendations for executive sponsors are different from recommendations for program managers, which are different from recommendations for the HR team. Generic advice helps nobody.",
+      "Good answers distinguish between things that should change in the approach and things that should change in the organisation. Some lessons are about how you run programs. Others are about how the organisation makes decisions, allocates resources, or manages risk. Both are valuable but they require different actions.",
       "Good answers include a mechanism for follow-through. A recommendation without an owner, a timeline, and a review point is a wish, not an action. The best reviews produce a small number of high-impact actions that are tracked and reviewed, not a long list that is filed and forgotten.",
     ],
   },
@@ -192,7 +192,7 @@ const feedbackLoops: FeedbackLoop[] = [
     name: "Manager Check-Ins",
     icon: "\u2726",
     frequency: "Weekly during the first 3 months, fortnightly thereafter",
-    purpose: "Middle managers are the most important feedback mechanism in any change programme. They hear what the frontline will not escalate, they see the workarounds forming, and they know which parts of the change are landing and which are being quietly ignored.",
+    purpose: "Middle managers are the most important feedback mechanism in any change program. They hear what the frontline will not escalate, they see the workarounds forming, and they know which parts of the change are landing and which are being quietly ignored.",
     howItWorks: "Structured one-to-one or small group conversations between the change team and line managers. The conversation follows a simple framework: what are you hearing from your team, what are you struggling with, and what support do you need. These are not status meetings. They are listening sessions designed to surface the informal intelligence that formal reporting misses.",
     whatGoodLooksLike: [
       "Managers feel heard, not interrogated. The tone is supportive, not evaluative. If managers perceive these as performance checks, they will tell you what you want to hear instead of what you need to hear.",
@@ -235,7 +235,7 @@ const caseStudies = [
       "The results were significant. Voluntary turnover dropped 30 percent within the first year. Adobe reclaimed 80,000 hours of manager time previously spent on administrative review processes. More importantly, the company built a feedback culture that supported its broader transformation: people were accustomed to giving and receiving feedback regularly, which made them more adaptive to change.",
       "The lesson for continuous improvement is clear. Adobe did not just change a process. They built a feedback loop into the operating rhythm of the company. When change came, the mechanism for sensing problems and adjusting was already in place. The check-in system was not designed for change management. But it became one of the most effective change sustainment tools the company had.",
     ],
-    lesson: "Feedback loops that are embedded in the daily operating rhythm of the organisation are far more effective at sustaining change than feedback mechanisms that are bolted on as part of a programme. Adobe succeeded because continuous feedback became the way they worked, not something extra they did during a transition.",
+    lesson: "Feedback loops that are embedded in the daily operating rhythm of the organisation are far more effective at sustaining change than feedback mechanisms that are bolted on as part of a program. Adobe succeeded because continuous feedback became the way they worked, not something extra they did during a transition.",
     source: "https://www.gsb.stanford.edu/faculty-research/case-studies/adobe-building-momentum-abandoning-annual-performance-reviews-check",
     sourceLabel: "Stanford Graduate School of Business",
   },
@@ -260,7 +260,7 @@ const caseStudies = [
     hook: "Implementation is not the finish line. The governance that follows determines whether the investment pays off.",
     dimension: "Feedback Loops and PIR",
     body: [
-      "Microsoft's own guidance for Dynamics 365 enterprise implementations reflects hard-won lessons from thousands of deployment programmes. Their implementation framework explicitly requires post-go-live reviews and structured feedback loops as non-negotiable elements of the implementation lifecycle, not optional extras.",
+      "Microsoft's own guidance for Dynamics 365 enterprise implementations reflects hard-won lessons from thousands of deployment programs. Their implementation framework explicitly requires post-go-live reviews and structured feedback loops as non-negotiable elements of the implementation lifecycle, not optional extras.",
       "The framework mandates that organisations conduct structured reviews after go-live to assess whether the implementation achieved its intended outcomes, identify gaps between planned and actual adoption, and document lessons learned. Critically, these reviews are designed to feed directly into a continuous improvement cycle: each finding produces a specific action, an owner, and a timeline.",
       "Microsoft's approach to feedback loops during the post-implementation phase includes monitoring adoption metrics through built-in analytics, establishing feedback channels for end users, and conducting regular governance reviews that compare actual usage patterns against planned outcomes. The guidance emphasises that feedback must be acted on visibly and quickly, because user confidence in the new system depends on seeing that their reported issues are being resolved.",
       "The evidence from Microsoft's customer base is that organisations which follow this structured approach to post-implementation review and continuous feedback are significantly more likely to realise the full value of their technology investment. Organisations that skip the post-implementation phase or treat it as a formality consistently underperform on adoption, user satisfaction, and return on investment.",
@@ -427,7 +427,7 @@ export default function ContinuousImprovement() {
 
   const checkItems = [
     { key: "pir-scheduled", label: "A post-implementation review is scheduled within 4 to 8 weeks of go-live, with a clear owner" },
-    { key: "pir-inclusive", label: "The PIR includes frontline staff and middle managers, not just the programme team and senior sponsors" },
+    { key: "pir-inclusive", label: "The PIR includes frontline staff and middle managers, not just the program team and senior sponsors" },
     { key: "pir-safe", label: "The environment is psychologically safe enough that people will share what genuinely did not work" },
     { key: "pir-actions", label: "PIR findings produce specific actions with owners and timelines, not just a report" },
     { key: "feedback-multiple", label: "We have at least three different feedback mechanisms running post-go-live, not just one" },
@@ -436,7 +436,7 @@ export default function ContinuousImprovement() {
     { key: "managers-supported", label: "Managers have regular check-ins with the change team where they can share what they are hearing" },
     { key: "customer-monitored", label: "Customer or end-user experience is being monitored for the impact of the change" },
     { key: "loop-closed", label: "Every feedback loop has a defined close mechanism: data in, action out, result communicated back" },
-    { key: "sustainability-owned", label: "A specific person in the business owns continuous improvement for this change beyond the programme" },
+    { key: "sustainability-owned", label: "A specific person in the business owns continuous improvement for this change beyond the program" },
     { key: "review-cadence", label: "Structured reviews are planned at 30, 90, and 180 days post go-live" },
   ];
 
@@ -452,10 +452,10 @@ export default function ContinuousImprovement() {
         <ScrollReveal direction="up">
           <span className="article-label">Sustainment &middot; Continuous Improvement</span>
           <h1 className="article-title">
-            Feedback loops and post-implementation reviews: how to keep change alive after the programme ends
+            Feedback loops and post-implementation reviews: how to keep change alive after the program ends
           </h1>
           <p className="article-intro">
-            Most change programmes invest heavily in getting to go-live and almost nothing in what happens after. The programme team disbands. The budget closes. The sponsors move on. And the change, left without the feedback mechanisms that kept it on track during delivery, slowly drifts back towards the old way of working. This article covers two practices that prevent that drift: feedback loops that keep the organisation sensing and adapting, and post-implementation reviews that turn experience into organisational intelligence. Both are essential. Neither works without the other.
+            Most change programs invest heavily in getting to go-live and almost nothing in what happens after. The program team disbands. The budget closes. The sponsors move on. And the change, left without the feedback mechanisms that kept it on track during delivery, slowly drifts back towards the old way of working. This article covers two practices that prevent that drift: feedback loops that keep the organisation sensing and adapting, and post-implementation reviews that turn experience into organisational intelligence. Both are essential. Neither works without the other.
           </p>
         </ScrollReveal>
       </div>
@@ -471,7 +471,7 @@ export default function ContinuousImprovement() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Part One: Building Feedback Loops That Keep Change Alive</h2>
               <p className="article-section-desc">
-                A feedback loop is not a survey. It is a system that takes input from the people living the change, converts that input into decisions, acts on those decisions, and communicates the result back to the people who provided the input. If any of those steps is missing, it is not a loop. It is a dead end. The five feedback mechanisms below, used together, give you the breadth, depth, and speed you need to sustain change after the programme ends.
+                A feedback loop is not a survey. It is a system that takes input from the people living the change, converts that input into decisions, acts on those decisions, and communicates the result back to the people who provided the input. If any of those steps is missing, it is not a loop. It is a dead end. The five feedback mechanisms below, used together, give you the breadth, depth, and speed you need to sustain change after the program ends.
               </p>
             </ScrollReveal>
           </section>
@@ -488,17 +488,17 @@ export default function ContinuousImprovement() {
           {/* Why feedback loops fail */}
           <section className="article-section">
             <ScrollReveal direction="up">
-              <h2 className="article-section-title">Why Feedback Loops Fail After the Programme Ends</h2>
+              <h2 className="article-section-title">Why Feedback Loops Fail After the Program Ends</h2>
               <p className="article-section-desc">
-                The pattern is predictable. During the programme, feedback flows freely because there is a team dedicated to collecting it, analysing it, and acting on it. After the programme, that team dissolves and the feedback mechanisms either stop entirely or continue collecting data that nobody reviews. The solution is not to keep the programme team running indefinitely. It is to transfer the feedback mechanisms to the business with clear ownership, defined rhythms, and the authority to act on what they hear.
+                The pattern is predictable. During the program, feedback flows freely because there is a team dedicated to collecting it, analysing it, and acting on it. After the program, that team dissolves and the feedback mechanisms either stop entirely or continue collecting data that nobody reviews. The solution is not to keep the program team running indefinitely. It is to transfer the feedback mechanisms to the business with clear ownership, defined rhythms, and the authority to act on what they hear.
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={80}>
               <ExpandableList items={[
                 {
-                  text: "The ownership gap: who runs the feedback loops after the programme team leaves?",
-                  detail: "Before the programme closes, every feedback mechanism needs a named owner in the business. Not a team. A person. Someone who is accountable for reviewing the data, making decisions, and communicating back to the people who provided feedback. If this handover does not happen explicitly, the loops die within weeks of the programme closing."
+                  text: "The ownership gap: who runs the feedback loops after the program team leaves?",
+                  detail: "Before the program closes, every feedback mechanism needs a named owner in the business. Not a team. A person. Someone who is accountable for reviewing the data, making decisions, and communicating back to the people who provided feedback. If this handover does not happen explicitly, the loops die within weeks of the program closing."
                 },
                 {
                   text: "The action gap: feedback is collected but nothing changes",
@@ -528,7 +528,7 @@ export default function ContinuousImprovement() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Part Two: What a Post-Implementation Review Actually Needs to Cover</h2>
               <p className="article-section-desc">
-                A post-implementation review is not a project closure exercise. It is not a celebration. It is not a performance assessment of the programme manager. It is a structured process for turning experience into organisational intelligence. Done well, it produces insights that make every subsequent change programme better. Done badly, it produces a document that nobody reads. The difference lies in who is in the room, what questions are asked, and whether the findings lead to action.
+                A post-implementation review is not a project closure exercise. It is not a celebration. It is not a performance assessment of the program manager. It is a structured process for turning experience into organisational intelligence. Done well, it produces insights that make every subsequent change program better. Done badly, it produces a document that nobody reads. The difference lies in who is in the room, what questions are asked, and whether the findings lead to action.
               </p>
             </ScrollReveal>
           </section>
@@ -549,7 +549,7 @@ export default function ContinuousImprovement() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">Who Should Be in the Room</h2>
               <p className="article-section-desc">
-                The composition of the review determines its value. Most PIRs include only the programme team and the executive sponsor. This produces a review that reflects what the programme intended, not what the organisation experienced. The following groups should be represented, and their absence should be treated as a risk to the quality of the review.
+                The composition of the review determines its value. Most PIRs include only the program team and the executive sponsor. This produces a review that reflects what the program intended, not what the organisation experienced. The following groups should be represented, and their absence should be treated as a risk to the quality of the review.
               </p>
             </ScrollReveal>
 
@@ -568,16 +568,16 @@ export default function ContinuousImprovement() {
                   detail: "Their presence signals that the review matters. More importantly, they need to hear unfiltered feedback about how their decisions played out in practice. Were the resources adequate? Was the timeline realistic? Did the governance model work? These questions can only be answered honestly if the sponsor creates an environment where people feel safe to speak candidly."
                 },
                 {
-                  text: "The programme or project team",
-                  detail: "They have the most detailed knowledge of what was planned versus what was delivered, where compromises were made, and where the approach deviated from the original design. Their perspective is necessary but not sufficient. A review that only includes the programme team is a self-assessment, not a post-implementation review."
+                  text: "The program or project team",
+                  detail: "They have the most detailed knowledge of what was planned versus what was delivered, where compromises were made, and where the approach deviated from the original design. Their perspective is necessary but not sufficient. A review that only includes the program team is a self-assessment, not a post-implementation review."
                 },
                 {
                   text: "Representatives from support functions: IT, HR, Finance, Communications",
-                  detail: "These teams supported the change and have their own perspective on what worked. IT knows which technical issues are still outstanding. HR knows which capability gaps remain. Finance knows whether the business case assumptions are holding. Communications knows which messages resonated and which fell flat. Each function adds a layer of insight that the programme team alone cannot provide."
+                  detail: "These teams supported the change and have their own perspective on what worked. IT knows which technical issues are still outstanding. HR knows which capability gaps remain. Finance knows whether the business case assumptions are holding. Communications knows which messages resonated and which fell flat. Each function adds a layer of insight that the program team alone cannot provide."
                 },
                 {
                   text: "An independent facilitator",
-                  detail: "The person who led the programme should not facilitate the review. They have too much invested in the outcome. An independent facilitator can ask uncomfortable questions, manage the dynamics in the room, and ensure that quieter voices are heard. This is not a nice-to-have. The quality of the facilitation determines whether the review produces honest insights or polished summaries."
+                  detail: "The person who led the program should not facilitate the review. They have too much invested in the outcome. An independent facilitator can ask uncomfortable questions, manage the dynamics in the room, and ensure that quieter voices are heard. This is not a nice-to-have. The quality of the facilitation determines whether the review produces honest insights or polished summaries."
                 },
               ]} />
             </ScrollReveal>
@@ -615,7 +615,7 @@ export default function ContinuousImprovement() {
             <ScrollReveal direction="up">
               <h2 className="article-section-title">How Feedback Loops and PIRs Work Together</h2>
               <p className="article-section-desc">
-                Feedback loops and post-implementation reviews are not separate practices. They are two parts of the same system. Feedback loops provide the continuous stream of intelligence that keeps the change on track day to day. Post-implementation reviews provide the structured reflection that turns that intelligence into organisational learning. Without feedback loops, the PIR has no data. Without the PIR, the feedback loops have no strategic direction. Together, they create a continuous improvement cycle that keeps change alive long after the programme has ended.
+                Feedback loops and post-implementation reviews are not separate practices. They are two parts of the same system. Feedback loops provide the continuous stream of intelligence that keeps the change on track day to day. Post-implementation reviews provide the structured reflection that turns that intelligence into organisational learning. Without feedback loops, the PIR has no data. Without the PIR, the feedback loops have no strategic direction. Together, they create a continuous improvement cycle that keeps change alive long after the program has ended.
               </p>
             </ScrollReveal>
 

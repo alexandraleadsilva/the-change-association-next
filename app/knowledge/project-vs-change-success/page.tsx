@@ -65,7 +65,7 @@ const stages = [
       measures: "Sustained adoption at 30, 90, and 180 days. Behaviour change embedded. Performance aligned. Reinforcement in place. No regression to old ways.",
       success: "Six months later, the new way of working is the normal way of working. People would find it strange to go back.",
     },
-    gap: "This is where most change programmes fail. The project closes, the team disbands, and no one is accountable for whether the change persists. The project succeeded. The change did not.",
+    gap: "This is where most change programs fail. The project closes, the team disbands, and no one is accountable for whether the change persists. The project succeeded. The change did not.",
   },
 ];
 
@@ -121,7 +121,7 @@ const caseStudies = [
     hook: "Most organisations cannot tell you whether their transformation succeeded because they measured the wrong things.",
     dimension: "The Measurement Gap",
     body: [
-      "McKinsey's research consistently shows that approximately 70% of large-scale transformation programmes fail to achieve their stated goals. This is one of the most cited statistics in change management, and it has remained stubbornly consistent for decades.",
+      "McKinsey's research consistently shows that approximately 70% of large-scale transformation programs fail to achieve their stated goals. This is one of the most cited statistics in change management, and it has remained stubbornly consistent for decades.",
       "A key finding is that organisations that distinguish between project delivery and business outcome measurement are significantly more likely to achieve sustained results. Those that treat go-live as the finish line systematically underperform.",
       "The research identifies a common pattern: organisations invest heavily in project governance, tracking milestones, budgets, and deliverables with precision. But they invest far less in measuring whether people are working differently, whether capabilities have been built, and whether the intended business outcomes are materialising.",
       "The conclusion is clear: the measurement framework itself is a predictor of success. Organisations that measure change outcomes alongside project outputs are better positioned to intervene early, course-correct, and sustain results.",
@@ -157,7 +157,7 @@ export default function ProjectVsChangeSuccess() {
     { key: "change-metrics", label: "Our success framework includes metrics that measure behaviour change, not just delivery" },
     { key: "adoption", label: "We are tracking adoption rates, not just training completion" },
     { key: "sustained", label: "We have metrics for 30, 90, and 180 days post go-live, not just at launch" },
-    { key: "business-owns", label: "The business owns the change success metrics, not just the programme team" },
+    { key: "business-owns", label: "The business owns the change success metrics, not just the program team" },
     { key: "visible", label: "Change metrics have the same visibility in governance as project metrics" },
     { key: "early", label: "We have leading indicators that will tell us early if adoption is at risk" },
     { key: "accountable", label: "Someone is accountable for change outcomes after the project formally closes" },
@@ -235,7 +235,7 @@ export default function ProjectVsChangeSuccess() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Which One Are You Measuring?</h2>
-          <p className="article-section-desc">Select the metrics your programme is currently tracking. The result will show whether you are measuring project success, change success, or both.</p>
+          <p className="article-section-desc">Select the metrics your program is currently tracking. The result will show whether you are measuring project success, change success, or both.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

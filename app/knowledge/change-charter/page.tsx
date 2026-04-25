@@ -53,7 +53,7 @@ const charterSections: CharterSection[] = [
     commonMistakes: [
       "Writing a business case that only speaks to finance. If the case does not address the human dimension, it will secure funding but not commitment.",
       "Overstating benefits and understating costs. Every executive has seen inflated business cases. Credibility comes from honesty, not optimism.",
-      "Treating the business case as a one-time approval document rather than a living reference that the programme returns to when priorities shift or scope creeps.",
+      "Treating the business case as a one-time approval document rather than a living reference that the program returns to when priorities shift or scope creeps.",
     ],
     qualityTest: "Does this case speak to both the CFO and the frontline manager? Would both find it credible and relevant?",
   },
@@ -66,10 +66,10 @@ const charterSections: CharterSection[] = [
       "What is explicitly in scope: which teams, processes, systems, geographies, and time periods are covered by this change.",
       "What is explicitly out of scope: what this change will not address, even if stakeholders expect it to. Saying what you will not do is as important as saying what you will.",
       "Boundary conditions: the constraints within which this change must operate. Budget limits, regulatory requirements, contractual obligations, technology constraints.",
-      "Dependencies on other programmes, decisions, or external factors that could affect scope.",
+      "Dependencies on other programs, decisions, or external factors that could affect scope.",
     ],
     commonMistakes: [
-      "Defining scope so broadly that everything is included and the programme cannot fail because it never committed to anything specific.",
+      "Defining scope so broadly that everything is included and the program cannot fail because it never committed to anything specific.",
       "Failing to document what is out of scope, which creates a vacuum that every stakeholder fills with their own expectations.",
       "Not revisiting scope when circumstances change. A charter that was written six months ago may describe a scope that no longer matches reality.",
     ],
@@ -99,9 +99,9 @@ const charterSections: CharterSection[] = [
     name: "Governance & Roles",
     subtitle: "Who decides, who delivers, who is accountable",
     whatToInclude: [
-      "The governance structure: steering committee, programme board, working groups. Who sits on each, how often they meet, and what decisions they own.",
+      "The governance structure: steering committee, program board, working groups. Who sits on each, how often they meet, and what decisions they own.",
       "The executive sponsor: named, with a clear description of what the role requires in practice, not just a title on an organogram.",
-      "The programme lead, change lead, and key delivery roles. Each with clear accountability, not just responsibility.",
+      "The program lead, change lead, and key delivery roles. Each with clear accountability, not just responsibility.",
       "Escalation paths: how decisions that cannot be resolved at one level move to the next. If this is not defined, unresolved issues will fester.",
     ],
     commonMistakes: [
@@ -135,17 +135,17 @@ const charterSections: CharterSection[] = [
     name: "Risks & Dependencies",
     subtitle: "What could derail this and what must be true for it to work",
     whatToInclude: [
-      "The top risks to the change programme, assessed by likelihood and impact. Not a register of every possible risk, but the ones that could genuinely derail it.",
+      "The top risks to the change program, assessed by likelihood and impact. Not a register of every possible risk, but the ones that could genuinely derail it.",
       "Mitigation strategies for each top risk. Not generic statements about monitoring, but specific actions that reduce likelihood or impact.",
-      "Dependencies: what this programme needs from other programmes, from external suppliers, from leadership decisions, or from organisational readiness.",
+      "Dependencies: what this program needs from other programs, from external suppliers, from leadership decisions, or from organisational readiness.",
       "Assumptions: what this charter assumes to be true. If those assumptions prove false, the charter may need to be revised.",
     ],
     commonMistakes: [
       "Creating a risk register that is comprehensive but not prioritised. Fifty risks treated equally means none are managed seriously.",
       "Listing dependencies without owners. A dependency without an owner is a problem waiting to happen.",
-      "Treating risks as static. The risk profile of a change programme shifts as it moves through phases. The charter should define when and how risks are reviewed.",
+      "Treating risks as static. The risk profile of a change program shifts as it moves through phases. The charter should define when and how risks are reviewed.",
     ],
-    qualityTest: "If the programme hit a serious problem in three months, would it be traceable to a risk identified here, or would it be a surprise?",
+    qualityTest: "If the program hit a serious problem in three months, would it be traceable to a risk identified here, or would it be a surprise?",
   },
 ];
 
@@ -169,7 +169,7 @@ const charterVsProjectCharter: DetailItem[] = [
   },
   {
     text: "A project charter is approved once. A change charter is a living reference point.",
-    detail: "Project charters are typically approved at the start and then filed. Change charters should be revisited at each phase transition: has the strategic context shifted? Are the success criteria still right? Has the risk profile changed? A charter that was written twelve months ago and never updated is describing a change programme that no longer exists.",
+    detail: "Project charters are typically approved at the start and then filed. Change charters should be revisited at each phase transition: has the strategic context shifted? Are the success criteria still right? Has the risk profile changed? A charter that was written twelve months ago and never updated is describing a change program that no longer exists.",
   },
   {
     text: "A project charter manages scope. A change charter manages meaning.",
@@ -180,7 +180,7 @@ const charterVsProjectCharter: DetailItem[] = [
 const whyChartersFail: DetailItem[] = [
   {
     text: "They are too long. A charter that nobody reads serves nobody.",
-    detail: "Most change charters are written to satisfy a governance requirement, not to guide a programme. They grow to 40 or 50 pages because every stakeholder adds their section, every concern gets a paragraph, and every caveat gets documented. The result is a comprehensive document that is comprehensively unread. A good charter is as long as it needs to be and no longer. If it cannot be summarised in a single page for leadership and understood in ten pages by the programme team, it is too long.",
+    detail: "Most change charters are written to satisfy a governance requirement, not to guide a program. They grow to 40 or 50 pages because every stakeholder adds their section, every concern gets a paragraph, and every caveat gets documented. The result is a comprehensive document that is comprehensively unread. A good charter is as long as it needs to be and no longer. If it cannot be summarised in a single page for leadership and understood in ten pages by the program team, it is too long.",
   },
   {
     text: "They are too vague. Ambiguity is not diplomacy. It is a time bomb.",
@@ -188,11 +188,11 @@ const whyChartersFail: DetailItem[] = [
   },
   {
     text: "They describe a project, not a change. The human dimension is missing.",
-    detail: "A charter that covers budget, timeline, deliverables, and governance but says nothing about how people will be affected, how adoption will be driven, or how the organisation will sustain the new way of working is a project charter wearing a change label. The human dimension is not a nice-to-have section at the end. It is the reason most change programmes fail or underperform. If your charter does not address it with the same rigour as the financial case, it is incomplete.",
+    detail: "A charter that covers budget, timeline, deliverables, and governance but says nothing about how people will be affected, how adoption will be driven, or how the organisation will sustain the new way of working is a project charter wearing a change label. The human dimension is not a nice-to-have section at the end. It is the reason most change programs fail or underperform. If your charter does not address it with the same rigour as the financial case, it is incomplete.",
   },
   {
     text: "They are written by the wrong people. A charter written by consultants for leadership is owned by nobody.",
-    detail: "The best charters are co-created. The executive sponsor provides the strategic direction. The programme team provides the delivery approach. The change team provides the people strategy. Finance provides the business case. Together, they produce a document that everyone understands because everyone contributed. A charter written in isolation by any one of these groups will reflect that group's perspective and miss the others.",
+    detail: "The best charters are co-created. The executive sponsor provides the strategic direction. The program team provides the delivery approach. The change team provides the people strategy. Finance provides the business case. Together, they produce a document that everyone understands because everyone contributed. A charter written in isolation by any one of these groups will reflect that group's perspective and miss the others.",
   },
   {
     text: "They are approved and forgotten. A charter that lives in a SharePoint folder is already dead.",
@@ -203,7 +203,7 @@ const whyChartersFail: DetailItem[] = [
 const businessCaseDimensions: DetailItem[] = [
   {
     text: "The financial dimension: costs, benefits, and the cost of doing nothing",
-    detail: "The financial case must be honest. Overstate the benefits and you lose credibility with anyone who has seen inflated business cases before, which is everyone. Understate the costs and you create a programme that is underfunded from day one. Include the cost of doing nothing: what is the ongoing expense, risk, or lost opportunity if this change does not proceed? Often, the cost of inaction is more compelling than the benefit of action.",
+    detail: "The financial case must be honest. Overstate the benefits and you lose credibility with anyone who has seen inflated business cases before, which is everyone. Understate the costs and you create a program that is underfunded from day one. Include the cost of doing nothing: what is the ongoing expense, risk, or lost opportunity if this change does not proceed? Often, the cost of inaction is more compelling than the benefit of action.",
   },
   {
     text: "The capability dimension: what the organisation will be able to do that it cannot do today",
@@ -249,16 +249,16 @@ function ExpandableList({ items }: { items: DetailItem[] }) {
 const caseStudies = [
   {
     label: "NHS England",
-    headline: "The 12.7 billion pound IT programme that never defined the change it was trying to make",
-    hook: "The National Programme for IT had a project charter. It never had a change charter.",
+    headline: "The 12.7 billion pound IT program that never defined the change it was trying to make",
+    hook: "The National Program for IT had a project charter. It never had a change charter.",
     dimension: "Charter Failure",
     body: [
-      "In 2002, the NHS launched the National Programme for IT (NPfIT), the largest civilian IT programme ever attempted in the UK. The ambition was to create a single electronic care record for every patient in England, connecting general practitioners, hospitals, and community services. The initial contracts were worth roughly 6 billion pounds. By the time the programme was dismantled in 2011, costs had reached 12.7 billion pounds against just 2.6 billion in realised benefits.",
-      "The programme had extensive project governance: contracts, milestones, delivery partners, and a central programme office. What it did not have was a coherent change charter that addressed the human and organisational dimensions of what it was attempting.",
-      "Politicians and programme managers rushed into procurement and implementation processes that allowed little time for consultation with key stakeholders. Doctors, nurses, and general practitioners were not meaningfully involved in defining what the change would mean for their clinical practice. The programme imposed a centralised, top-down solution on local organisations with fundamentally different needs, cultures, and levels of digital readiness.",
+      "In 2002, the NHS launched the National Program for IT (NPfIT), the largest civilian IT program ever attempted in the UK. The ambition was to create a single electronic care record for every patient in England, connecting general practitioners, hospitals, and community services. The initial contracts were worth roughly 6 billion pounds. By the time the program was dismantled in 2011, costs had reached 12.7 billion pounds against just 2.6 billion in realised benefits.",
+      "The program had extensive project governance: contracts, milestones, delivery partners, and a central program office. What it did not have was a coherent change charter that addressed the human and organisational dimensions of what it was attempting.",
+      "Politicians and program managers rushed into procurement and implementation processes that allowed little time for consultation with key stakeholders. Doctors, nurses, and general practitioners were not meaningfully involved in defining what the change would mean for their clinical practice. The program imposed a centralised, top-down solution on local organisations with fundamentally different needs, cultures, and levels of digital readiness.",
       "A business readiness assessment could have identified that the NHS was not ready to embrace a change of this size. But no such assessment was conducted. The business case spoke to efficiency and cost savings. It did not speak to the clinical experience, the workflow disruption, or the cultural resistance that would determine whether the technology was actually used.",
     ],
-    lesson: "The NPfIT demonstrates what happens when a programme has a project charter but not a change charter. The project delivered technology. But the change, which required clinicians to work differently, share data across organisational boundaries, and trust a centrally imposed system, was never defined, scoped, or governed as a change. The absence of a change charter meant there was no shared definition of what success looked like beyond technical deployment, no governance for the people side of the transformation, and no mechanism for adapting the approach when reality diverged from the plan.",
+    lesson: "The NPfIT demonstrates what happens when a program has a project charter but not a change charter. The project delivered technology. But the change, which required clinicians to work differently, share data across organisational boundaries, and trust a centrally imposed system, was never defined, scoped, or governed as a change. The absence of a change charter meant there was no shared definition of what success looked like beyond technical deployment, no governance for the people side of the transformation, and no mechanism for adapting the approach when reality diverged from the plan.",
     source: "https://www.henricodolfing.com/2019/01/case-study-10-billion-it-disaster.html",
     sourceLabel: "Henrico Dolfing",
   },
@@ -285,7 +285,7 @@ const caseStudies = [
     body: [
       "In 2016, Unilever launched Connected 4 Growth (C4G), a fundamental restructuring of its operating model. The transformation touched all 170,000 employees across more than 190 countries. The company was reorganised from a centralised structure into smaller, more autonomous business units with greater decision-making authority. It was one of the largest organisational transformations in the consumer goods sector.",
       "What distinguished C4G was the clarity of its founding charter. The strategic context was explicit: Unilever needed to respond faster to local market conditions, reduce decision-making layers, and empower people closer to consumers. The business case addressed both the financial dimension, faster growth and reduced overhead, and the human dimension, more autonomy, clearer accountability, and a more entrepreneurial culture.",
-      "The scope was deliberately defined: C4G addressed organisational structure, decision rights, and ways of working. It did not attempt to simultaneously transform every system and process. This focus allowed the programme to make meaningful progress rather than spreading resources across an impossibly broad front.",
+      "The scope was deliberately defined: C4G addressed organisational structure, decision rights, and ways of working. It did not attempt to simultaneously transform every system and process. This focus allowed the program to make meaningful progress rather than spreading resources across an impossibly broad front.",
       "Governance was designed for the scale and complexity of the change. Local markets had autonomy to adapt the model to their context within defined boundaries. Success criteria included both business performance metrics and cultural indicators, measured through employee surveys and behavioural assessments, not just financial results.",
     ],
     lesson: "Unilever's C4G demonstrates what a well-constructed change charter makes possible. The strategic context was clear and grounded in market reality. The business case spoke to both financial outcomes and human experience. The scope was focused rather than all-encompassing. Governance balanced central direction with local adaptation. Success was defined in terms of outcomes and behaviours, not just deliverables. The result was a transformation that achieved its business objectives while maintaining employee engagement through a period of significant structural change.",
@@ -329,7 +329,7 @@ export default function ChangeCharter() {
         <ScrollReveal direction="up">
           <span className="article-label">Direction &middot; Change Diagnosis</span>
           <h1 className="article-title">The Change Charter: How to Define Scope, Rationale, and Governance Before Delivery Begins</h1>
-          <p className="article-intro">Every change programme needs a founding document. Not a project initiation document. Not a business case buried in a spreadsheet. A change charter: the single reference point that defines why this change is happening, what it will achieve, how it will be governed, and how everyone will know if it worked. Most organisations have something that looks like a charter. Few have one that actually works. The ones that work share a quality: they are short enough to be read, honest enough to be trusted, and specific enough to guide real decisions when the programme hits difficulty.</p>
+          <p className="article-intro">Every change program needs a founding document. Not a project initiation document. Not a business case buried in a spreadsheet. A change charter: the single reference point that defines why this change is happening, what it will achieve, how it will be governed, and how everyone will know if it worked. Most organisations have something that looks like a charter. Few have one that actually works. The ones that work share a quality: they are short enough to be read, honest enough to be trusted, and specific enough to guide real decisions when the program hits difficulty.</p>
         </ScrollReveal>
       </div>
 
@@ -447,7 +447,7 @@ export default function ChangeCharter() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Is Your Charter Fit for Purpose?</h2>
-          <p className="article-section-desc">Use this checklist to assess whether your change charter is a genuine decision-making tool or a governance artefact. Be honest. A charter that scores well here will guide your programme through difficulty. One that scores poorly will be irrelevant the moment reality diverges from the plan.</p>
+          <p className="article-section-desc">Use this checklist to assess whether your change charter is a genuine decision-making tool or a governance artefact. Be honest. A charter that scores well here will guide your program through difficulty. One that scores poorly will be irrelevant the moment reality diverges from the plan.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

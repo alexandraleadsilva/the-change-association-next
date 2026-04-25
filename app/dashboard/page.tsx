@@ -241,14 +241,35 @@ export default function DashboardPage() {
     return (<><Nav /><div style={{ padding: "120px 48px", textAlign: "center", fontFamily: "var(--ui)", color: "var(--text-mid)" }}>Loading...</div><Footer /></>);
   }
 
-  if (!authenticated) {
-    return (
-      <><Nav />
-        <div style={{ padding: "120px 48px", textAlign: "center", maxWidth: 480, margin: "0 auto" }}>
-          <h1 style={{ fontFamily: "var(--serif)", fontSize: 32, fontWeight: 500, color: "var(--navy)", marginBottom: 16 }}>Sign in to view your dashboard</h1>
-          <p style={{ fontFamily: "var(--ui)", fontSize: 14, color: "var(--text-mid)", lineHeight: 1.7 }}>Your dashboard shows the status of your change programme with visual gauges and charts.</p>
-        </div>
-      <Footer /></>
+  // Use dummy data for non-authenticated users
+  const isDemo = !authenticated;
+  if (isDemo && tools.length === 0) {
+    // Inject dummy data so the dashboard looks populated
+    const dummyReadiness = { dimensions: { people: { score: 3.8 }, process: { score: 2.4 }, culture: { score: 3.2 }, capability: { score: 2.8 }, systems: { score: 4.1 } } };
+    const dummyStakeholders = { stakeholders: [
+      { currentPosition: "champion" }, { currentPosition: "champion" }, { currentPosition: "supporter" },
+      { currentPosition: "supporter" }, { currentPosition: "supporter" }, { currentPosition: "neutral" },
+      { currentPosition: "neutral" }, { currentPosition: "resistant" }, { currentPosition: "resistant" },
+      { currentPosition: "blocker" },
+    ]};
+    const dummyCharter = { sections: { strategicContext: "Sample content here for demo", caseForChange: "Sample content here for demo", scopeBoundaries: "Sample content here for demo", approachPhasing: "Sample content", governanceRoles: "", successCriteria: "", risksDependencies: "" } };
+    const dummyComms = { entries: [{ status: "complete" }, { status: "complete" }, { status: "in-progress" }, { status: "in-progress" }, { status: "planned" }, { status: "planned" }, { status: "planned" }] };
+    const dummySponsor = { phases: { direction: { actions: [{ status: "complete" }, { status: "complete" }] }, engagement: { actions: [{ status: "in-progress" }, { status: "not-started" }] }, enablement: { actions: [{ status: "not-started" }] }, execution: { actions: [{ status: "not-started" }] }, sustainment: { actions: [{ status: "not-started" }] } } };
+    const dummySignals = { signals: [{ severity: "high", status: "investigating" }, { severity: "medium", status: "responding" }, { severity: "medium", status: "new" }, { severity: "low", status: "resolved" }] };
+    const dummyBenefits = { benefits: [{ status: "on-track" }, { status: "on-track" }, { status: "at-risk" }, { status: "not-started" }] };
+    const dummyAdoption = { stages: { awareness: { score: 4.2 }, understanding: { score: 3.5 }, trial: { score: 2.8 }, adoption: { score: 1.6 }, proficiency: { score: 0 } } };
+    const dummyCulture = { indicators: { language: { level: "emerging" }, behaviours: { level: "not-yet" }, oldWays: { level: "not-yet" }, newStarters: { level: "emerging" }, leadershipChange: { level: "not-yet" } } };
+
+    tools.push(
+      { tool_type: "readiness-assessment", project_name: "Sample Project", data: dummyReadiness as Record<string, unknown>, updated_at: "2026-04-20T10:00:00Z" },
+      { tool_type: "stakeholder-map", project_name: "Sample Project", data: dummyStakeholders as Record<string, unknown>, updated_at: "2026-04-19T10:00:00Z" },
+      { tool_type: "charter-builder", project_name: "Sample Project", data: dummyCharter as Record<string, unknown>, updated_at: "2026-04-18T10:00:00Z" },
+      { tool_type: "communication-planner", project_name: "Sample Project", data: dummyComms as Record<string, unknown>, updated_at: "2026-04-17T10:00:00Z" },
+      { tool_type: "sponsor-roadmap", project_name: "Sample Project", data: dummySponsor as Record<string, unknown>, updated_at: "2026-04-16T10:00:00Z" },
+      { tool_type: "resistance-tracker", project_name: "Sample Project", data: dummySignals as Record<string, unknown>, updated_at: "2026-04-15T10:00:00Z" },
+      { tool_type: "benefits-register", project_name: "Sample Project", data: dummyBenefits as Record<string, unknown>, updated_at: "2026-04-14T10:00:00Z" },
+      { tool_type: "adoption-scorecard", project_name: "Sample Project", data: dummyAdoption as Record<string, unknown>, updated_at: "2026-04-13T10:00:00Z" },
+      { tool_type: "culture-tracker", project_name: "Sample Project", data: dummyCulture as Record<string, unknown>, updated_at: "2026-04-12T10:00:00Z" },
     );
   }
 
@@ -258,9 +279,41 @@ export default function DashboardPage() {
 
       <div className="page-header">
         <span>Dashboard</span>
-        <h1>Programme Health</h1>
-        <p>A visual overview of your change programme across all dimensions of the TCA model.</p>
+        <h1>Program Health</h1>
+        <p>A visual overview of your change program across all dimensions of the TCA model.</p>
       </div>
+
+      {isDemo && (
+        <div style={{
+          background: "var(--navy)",
+          padding: "16px 48px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 12,
+        }}>
+          <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.8)" }}>
+            This is a preview with sample data. <strong style={{ color: "var(--cream)" }}>Sign in</strong> to see your own program health dashboard.
+          </p>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))}
+            style={{
+              background: "var(--gold)",
+              border: "none",
+              fontFamily: "var(--ui)",
+              fontSize: 12,
+              fontWeight: 500,
+              letterSpacing: "0.06em",
+              color: "var(--navy)",
+              padding: "8px 20px",
+              cursor: "pointer",
+            }}
+          >
+            Sign In
+          </button>
+        </div>
+      )}
 
       <section style={{ padding: "0 48px 24px", maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>

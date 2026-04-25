@@ -135,7 +135,7 @@ const backlashPrinciples: ActionItem[] = [
 const lagConsequences: ActionItem[] = [
   {
     text: "People receive contradictory signals and default to the one that affects their pay",
-    detail: "When the change programme says one thing and the performance system says another, the performance system wins every time. People are rational actors. They will prioritise the behaviours that are rewarded, regardless of what the transformation communications tell them. This is not resistance. It is a perfectly logical response to a contradictory environment. The fault lies with the system, not the person.",
+    detail: "When the change program says one thing and the performance system says another, the performance system wins every time. People are rational actors. They will prioritise the behaviours that are rewarded, regardless of what the transformation communications tell them. This is not resistance. It is a perfectly logical response to a contradictory environment. The fault lies with the system, not the person.",
   },
   {
     text: "Managers lose credibility when they cannot reconcile what they are asking with how people are measured",
@@ -589,7 +589,7 @@ export default function PerformanceAlignment() {
         <ScrollReveal direction="up">
           <span className="article-label">Sustainment &middot; Performance Alignment</span>
           <h1 className="article-title">How to align performance management to the new way of working without creating a backlash</h1>
-          <p className="article-intro">Every transformation has a moment where the change programme says one thing and the performance system says another. People are told to collaborate, but rewarded for individual output. They are asked to take risks, but measured on error rates. They are encouraged to adopt new processes, but their KPIs still track the old ones. This is the single most common reason that change fails to stick. Not because people resist the new way of working, but because the measurement system actively punishes it. This article covers both sides of the problem: how to align performance management without provoking backlash, and when KPIs should change so they do not lag behind the transformation they are supposed to support.</p>
+          <p className="article-intro">Every transformation has a moment where the change program says one thing and the performance system says another. People are told to collaborate, but rewarded for individual output. They are asked to take risks, but measured on error rates. They are encouraged to adopt new processes, but their KPIs still track the old ones. This is the single most common reason that change fails to stick. Not because people resist the new way of working, but because the measurement system actively punishes it. This article covers both sides of the problem: how to align performance management without provoking backlash, and when KPIs should change so they do not lag behind the transformation they are supposed to support.</p>
         </ScrollReveal>
       </div>
 
@@ -600,7 +600,7 @@ export default function PerformanceAlignment() {
       <section className="article-section">
         <ScrollReveal direction="up">
           <h2 className="article-section-title">Why Performance Alignment Is the Hidden Failure Point</h2>
-          <p className="article-section-desc">Most change programmes invest heavily in communication, training, and leadership engagement. These are necessary but insufficient. If the performance management system still rewards the old way of working, people will default to whatever protects their rating, their bonus, and their career progression. This is not resistance. It is rationality. The system tells them what really matters, and they listen.</p>
+          <p className="article-section-desc">Most change programs invest heavily in communication, training, and leadership engagement. These are necessary but insufficient. If the performance management system still rewards the old way of working, people will default to whatever protects their rating, their bonus, and their career progression. This is not resistance. It is rationality. The system tells them what really matters, and they listen.</p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

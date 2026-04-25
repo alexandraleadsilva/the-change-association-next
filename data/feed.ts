@@ -41,7 +41,7 @@ export const feed: FeedEntry[] = [
   {
     date: "January 2026",
     headline: "Boeing publishes safety culture report as turnaround continues",
-    summary: "Boeing's 2025 Chief Aerospace Safety Officer report details progress on its cultural overhaul following the 737 MAX door plug incident. Under CEO Kelly Ortberg, the company has expanded its Speak Up programme, introduced unannounced production audits, and reported a 40 percent reduction in assembly defects. The case is a live example of culture-led change at enterprise scale.",
+    summary: "Boeing's 2025 Chief Aerospace Safety Officer report details progress on its cultural overhaul following the 737 MAX door plug incident. Under CEO Kelly Ortberg, the company has expanded its Speak Up program, introduced unannounced production audits, and reported a 40 percent reduction in assembly defects. The case is a live example of culture-led change at enterprise scale.",
     category: "culture",
     region: "US",
     source: "https://aviationsourcenews.com/boeings-2025-safety-report-highlights-progress-in-safety-culture-and-practices/",
