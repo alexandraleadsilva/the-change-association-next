@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
+import demoData from "@/data/demo-dashboard.json";
 import { Footer } from "@/components/Footer";
 
 interface ToolRecord {
@@ -240,9 +241,7 @@ export default function DashboardPage() {
   // Use dummy data for non-authenticated users
   const isDemo = !authenticated;
 
-  const displayTools: ToolRecord[] = isDemo
-    ? (require("@/data/demo-dashboard.json") as ToolRecord[])
-    : tools;
+  const displayTools: ToolRecord[] = isDemo ? demoData : tools;
 
   if (loading) {
     return (<><Nav /><div style={{ padding: "120px 48px", textAlign: "center", fontFamily: "var(--ui)", color: "var(--text-mid)" }}>Loading...</div><Footer /></>);
