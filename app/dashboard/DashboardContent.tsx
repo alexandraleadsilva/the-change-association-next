@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { GaugeChart, DonutChart, BarMeter } from "@/components/DashboardCharts";
 
 export default function DashboardPage() {
   const [tools, setTools] = useState<any[]>([]);
@@ -97,47 +98,64 @@ export default function DashboardPage() {
       <div className="page-header"><span>Dashboard</span><h1>Program Health</h1><p>Track your change program across all dimensions of the TCA model.</p></div>
       <section style={{ padding: "0 48px 48px", maxWidth: 1100, margin: "0 auto" }}>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginBottom: 36 }}>
-          {[
-            { label: "Readiness", val: rAvg > 0 ? rAvg.toFixed(1)+"/5" : "N/A", c: clr(rAvg, 5), href: "/tools/readiness-assessment" },
-            { label: "Stakeholders", val: String(sCount), c: sCount > 0 ? "#27AE60" : "#9E9E9E", href: "/tools/stakeholder-map" },
-            { label: "Charter", val: cDone+"/7", c: clr(cDone, 7), href: "/tools/charter-builder" },
-            { label: "Comms", val: String(comCount), c: comCount > 0 ? "#27AE60" : "#9E9E9E", href: "/tools/communication-planner" },
-            { label: "Sponsor", val: spActions.length > 0 ? spDone+"/"+spActions.length : "N/A", c: clr(spDone, Math.max(spActions.length,1)), href: "/tools/sponsor-roadmap" },
-            { label: "Resistance", val: String(resCount), c: resCount > 0 ? "#D4A017" : "#9E9E9E", href: "/tools/resistance-tracker" },
-            { label: "Benefits", val: String(bCount), c: bCount > 0 ? "#27AE60" : "#9E9E9E", href: "/tools/benefits-register" },
-          ].map(item => (
-            <Link key={item.label} href={item.href} style={{ borderLeft: "3px solid "+item.c, border: "1px solid var(--border)", borderLeftWidth: 3, borderLeftColor: item.c, padding: "16px 18px", textDecoration: "none" }}>
-              <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>{item.label}</span>
-              <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>{item.val}</span>
-            </Link>
-          ))}
+        {/* Row 1: Gauges */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, marginBottom: 36 }}>
+          <div style={{ border: "1px solid var(--border)", padding: "28px 20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <GaugeChart value={rAvg} max={5} label="Overall Readiness" colour={clr(rAvg, 5)} size={180} />
+            <Link href="/tools/readiness-assessment" style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)", textDecoration: "none", marginTop: 10 }}>Open Assessment &rarr;</Link>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <DonutChart segments={[
+                { value: (sData?.stakeholders as any[] || []).filter((s: any) => s.currentPosition === "champion" || s.currentPosition === "supporter").length, colour: "#27AE60", label: "Supportive" },
+                { value: (sData?.stakeholders as any[] || []).filter((s: any) => s.currentPosition === "neutral").length, colour: "#9E9E9E", label: "Neutral" },
+                { value: (sData?.stakeholders as any[] || []).filter((s: any) => s.currentPosition === "resistant" || s.currentPosition === "blocker").length, colour: "#C0392B", label: "Resistant" },
+              ]} label="Stakeholders" />
+              <Link href="/tools/stakeholder-map" style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)", textDecoration: "none", marginTop: 6, display: "inline-block" }}>Open Map &rarr;</Link>
+            </div>
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <GaugeChart value={cDone} max={7} label="Charter" colour={clr(cDone, 7)} size={130} />
+              <Link href="/tools/charter-builder" style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)", textDecoration: "none", marginTop: 6, display: "inline-block" }}>Open Charter &rarr;</Link>
+            </div>
+            <div style={{ border: "1px solid var(--border)", padding: "20px", textAlign: "center" }}>
+              <GaugeChart value={spDone} max={Math.max(spActions.length, 1)} label="Sponsor" colour={clr(spDone, Math.max(spActions.length, 1))} size={130} />
+              <Link href="/tools/sponsor-roadmap" style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)", textDecoration: "none", marginTop: 6, display: "inline-block" }}>Open Roadmap &rarr;</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 2: Stats */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14, marginBottom: 36 }}>
+          <Link href="/tools/communication-planner" style={{ border: "1px solid var(--border)", borderLeft: "3px solid " + (comCount > 0 ? "#27AE60" : "#9E9E9E"), padding: "16px 18px", textDecoration: "none" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Communications</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>{comCount}</span>
+          </Link>
+          <Link href="/tools/resistance-tracker" style={{ border: "1px solid var(--border)", borderLeft: "3px solid " + (resCount > 0 ? "#D4A017" : "#9E9E9E"), padding: "16px 18px", textDecoration: "none" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Resistance Signals</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>{resCount}</span>
+          </Link>
+          <Link href="/tools/benefits-register" style={{ border: "1px solid var(--border)", borderLeft: "3px solid " + (bCount > 0 ? "#27AE60" : "#9E9E9E"), padding: "16px 18px", textDecoration: "none" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Benefits</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>{bCount}</span>
+          </Link>
+          <Link href="/tools/impact-matrix" style={{ border: "1px solid var(--border)", borderLeft: "3px solid #9E9E9E", padding: "16px 18px", textDecoration: "none" }}>
+            <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 4 }}>Impact Groups</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 600, color: "var(--navy)" }}>{count(getData("impact-matrix"), "groups")}</span>
+          </Link>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 36 }}>
           <div style={{ border: "1px solid var(--border)", padding: 20 }}>
             <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14 }}>Readiness by Dimension</span>
             {dims.map((d, i) => (
-              <div key={d} style={{ marginBottom: 10 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                  <span style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--text-dark)", textTransform: "capitalize" as const }}>{d}</span>
-                  <span style={{ fontFamily: "var(--ui)", fontSize: 11, fontWeight: 500, color: clr(rScores[i], 5) }}>{rScores[i] > 0 ? rScores[i].toFixed(1) : "0"}</span>
-                </div>
-                <div style={{ height: 5, background: "rgba(100,90,70,0.1)", borderRadius: 3 }}><div style={{ height: "100%", width: pct(rScores[i], 5), background: clr(rScores[i], 5), borderRadius: 3 }} /></div>
-              </div>
+              <BarMeter key={d} value={rScores[i]} max={5} label={d} colour={clr(rScores[i], 5)} />
             ))}
             {rScores.every(s => s === 0) && <p style={{ fontFamily: "var(--ui)", fontSize: 12, color: "var(--text-mid)" }}>No data. <Link href="/tools/readiness-assessment" style={{ color: "var(--gold)" }}>Start</Link></p>}
           </div>
           <div style={{ border: "1px solid var(--border)", padding: 20 }}>
             <span style={{ fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14 }}>Adoption Curve</span>
             {aStages.map((s, i) => (
-              <div key={s} style={{ marginBottom: 10 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                  <span style={{ fontFamily: "var(--ui)", fontSize: 11, color: "var(--text-dark)", textTransform: "capitalize" as const }}>{s}</span>
-                  <span style={{ fontFamily: "var(--ui)", fontSize: 11, fontWeight: 500, color: clr(aScores[i], 5) }}>{aScores[i] > 0 ? aScores[i].toFixed(1) : "0"}</span>
-                </div>
-                <div style={{ height: 5, background: "rgba(100,90,70,0.1)", borderRadius: 3 }}><div style={{ height: "100%", width: pct(aScores[i], 5), background: clr(aScores[i], 5), borderRadius: 3 }} /></div>
-              </div>
+              <BarMeter key={s} value={aScores[i]} max={5} label={s} colour={clr(aScores[i], 5)} />
             ))}
             {aScores.every(s => s === 0) && <p style={{ fontFamily: "var(--ui)", fontSize: 12, color: "var(--text-mid)" }}>No data. <Link href="/tools/adoption-scorecard" style={{ color: "var(--gold)" }}>Start</Link></p>}
           </div>
