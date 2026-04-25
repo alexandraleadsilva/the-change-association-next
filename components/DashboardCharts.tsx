@@ -10,13 +10,11 @@ export function GaugeChart({ value, max, label, colour, size = 160 }: { value: n
   const endAngle = Math.PI - (angle * Math.PI / 180);
   const endX = cx + r * Math.cos(endAngle);
   const endY = cy - r * Math.sin(endAngle);
-  const largeArc = angle > 90 ? 1 : 0;
-
   return (
     <div style={{ textAlign: "center" }}>
       <svg width={size} height={size / 2 + 30} viewBox={`0 0 ${size} ${size / 2 + 30}`}>
         <path d={`M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx + r} ${cy}`} fill="none" stroke="rgba(100,90,70,0.12)" strokeWidth="10" strokeLinecap="round" />
-        {pct > 0 && <path d={`M ${startX} ${cy} A ${r} ${r} 0 ${largeArc} 1 ${endX} ${endY}`} fill="none" stroke={colour} strokeWidth="10" strokeLinecap="round" />}
+        {pct > 0 && <path d={`M ${startX} ${cy} A ${r} ${r} 0 0 1 ${endX} ${endY}`} fill="none" stroke={colour} strokeWidth="10" strokeLinecap="round" />}
         <text x={cx} y={cy - 8} textAnchor="middle" fontFamily="var(--serif)" fontSize="28" fontWeight="600" fill="var(--navy)">{value > 0 ? value.toFixed(1) : "\u2014"}</text>
         <text x={cx} y={cy + 10} textAnchor="middle" fontFamily="var(--ui)" fontSize="10" fill="#9A9080" letterSpacing="0.06em">out of {max}</text>
       </svg>
