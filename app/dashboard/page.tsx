@@ -237,26 +237,28 @@ export default function DashboardPage() {
   const adoptionLabels: Record<string, string> = { awareness: "Awareness", understanding: "Understanding", trial: "Trial", adoption: "Adoption", proficiency: "Proficiency" };
   const cultureLabels: Record<string, string> = { language: "Language", behaviours: "Behaviours", oldWays: "Old Ways", newStarters: "New Starters", leadershipChange: "Leadership" };
 
-  if (loading) {
-    return (<><Nav /><div style={{ padding: "120px 48px", textAlign: "center", fontFamily: "var(--ui)", color: "var(--text-mid)" }}>Loading...</div><Footer /></>);
-  }
-
   // Use dummy data for non-authenticated users
   const isDemo = !authenticated;
 
-  const demoTools: ToolRecord[] = [
-    { tool_type: "readiness-assessment", project_name: "Sample Project", data: { dimensions: { people: { score: 3.8 }, process: { score: 2.4 }, culture: { score: 3.2 }, capability: { score: 2.8 }, systems: { score: 4.1 } } } as Record<string, unknown>, updated_at: "2026-04-20T10:00:00Z" },
-    { tool_type: "stakeholder-map", project_name: "Sample Project", data: { stakeholders: [{ currentPosition: "champion" }, { currentPosition: "champion" }, { currentPosition: "supporter" }, { currentPosition: "supporter" }, { currentPosition: "supporter" }, { currentPosition: "neutral" }, { currentPosition: "neutral" }, { currentPosition: "resistant" }, { currentPosition: "resistant" }, { currentPosition: "blocker" }] } as Record<string, unknown>, updated_at: "2026-04-19T10:00:00Z" },
-    { tool_type: "charter-builder", project_name: "Sample Project", data: { sections: { strategicContext: "Sample content for demo purposes", caseForChange: "Sample content for demo purposes", scopeBoundaries: "Sample content for demo purposes", approachPhasing: "Sample content", governanceRoles: "", successCriteria: "", risksDependencies: "" } } as Record<string, unknown>, updated_at: "2026-04-18T10:00:00Z" },
-    { tool_type: "communication-planner", project_name: "Sample Project", data: { entries: [{ status: "complete" }, { status: "complete" }, { status: "in-progress" }, { status: "in-progress" }, { status: "planned" }, { status: "planned" }, { status: "planned" }] } as Record<string, unknown>, updated_at: "2026-04-17T10:00:00Z" },
-    { tool_type: "sponsor-roadmap", project_name: "Sample Project", data: { phases: { direction: { actions: [{ status: "complete" }, { status: "complete" }] }, engagement: { actions: [{ status: "in-progress" }, { status: "not-started" }] }, enablement: { actions: [{ status: "not-started" }] }, execution: { actions: [{ status: "not-started" }] }, sustainment: { actions: [{ status: "not-started" }] } } } as Record<string, unknown>, updated_at: "2026-04-16T10:00:00Z" },
-    { tool_type: "resistance-tracker", project_name: "Sample Project", data: { signals: [{ severity: "high", status: "investigating" }, { severity: "medium", status: "responding" }, { severity: "medium", status: "new" }, { severity: "low", status: "resolved" }] } as Record<string, unknown>, updated_at: "2026-04-15T10:00:00Z" },
-    { tool_type: "benefits-register", project_name: "Sample Project", data: { benefits: [{ status: "on-track" }, { status: "on-track" }, { status: "at-risk" }, { status: "not-started" }] } as Record<string, unknown>, updated_at: "2026-04-14T10:00:00Z" },
-    { tool_type: "adoption-scorecard", project_name: "Sample Project", data: { stages: { awareness: { score: 4.2 }, understanding: { score: 3.5 }, trial: { score: 2.8 }, adoption: { score: 1.6 }, proficiency: { score: 0 } } } as Record<string, unknown>, updated_at: "2026-04-13T10:00:00Z" },
-    { tool_type: "culture-tracker", project_name: "Sample Project", data: { indicators: { language: { level: "emerging" }, behaviours: { level: "not-yet" }, oldWays: { level: "not-yet" }, newStarters: { level: "emerging" }, leadershipChange: { level: "not-yet" } } } as Record<string, unknown>, updated_at: "2026-04-12T10:00:00Z" },
-  ];
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  const demoTools: ToolRecord[] = isDemo ? [
+    { tool_type: "readiness-assessment", project_name: "Sample Project", data: { dimensions: { people: { score: 3.8 }, process: { score: 2.4 }, culture: { score: 3.2 }, capability: { score: 2.8 }, systems: { score: 4.1 } } }, updated_at: "2026-04-20T10:00:00Z" },
+    { tool_type: "stakeholder-map", project_name: "Sample Project", data: { stakeholders: [{ currentPosition: "champion" }, { currentPosition: "champion" }, { currentPosition: "supporter" }, { currentPosition: "supporter" }, { currentPosition: "supporter" }, { currentPosition: "neutral" }, { currentPosition: "neutral" }, { currentPosition: "resistant" }, { currentPosition: "resistant" }, { currentPosition: "blocker" }] }, updated_at: "2026-04-19T10:00:00Z" },
+    { tool_type: "charter-builder", project_name: "Sample Project", data: { sections: { strategicContext: "Sample content for demo", caseForChange: "Sample content for demo", scopeBoundaries: "Sample content for demo", approachPhasing: "Sample content", governanceRoles: "", successCriteria: "", risksDependencies: "" } }, updated_at: "2026-04-18T10:00:00Z" },
+    { tool_type: "communication-planner", project_name: "Sample Project", data: { entries: [{ status: "complete" }, { status: "complete" }, { status: "in-progress" }, { status: "in-progress" }, { status: "planned" }, { status: "planned" }, { status: "planned" }] }, updated_at: "2026-04-17T10:00:00Z" },
+    { tool_type: "sponsor-roadmap", project_name: "Sample Project", data: { phases: { direction: { actions: [{ status: "complete" }, { status: "complete" }] }, engagement: { actions: [{ status: "in-progress" }, { status: "not-started" }] }, enablement: { actions: [{ status: "not-started" }] }, execution: { actions: [{ status: "not-started" }] }, sustainment: { actions: [{ status: "not-started" }] } } }, updated_at: "2026-04-16T10:00:00Z" },
+    { tool_type: "resistance-tracker", project_name: "Sample Project", data: { signals: [{ severity: "high", status: "investigating" }, { severity: "medium", status: "responding" }, { severity: "medium", status: "new" }, { severity: "low", status: "resolved" }] }, updated_at: "2026-04-15T10:00:00Z" },
+    { tool_type: "benefits-register", project_name: "Sample Project", data: { benefits: [{ status: "on-track" }, { status: "on-track" }, { status: "at-risk" }, { status: "not-started" }] }, updated_at: "2026-04-14T10:00:00Z" },
+    { tool_type: "adoption-scorecard", project_name: "Sample Project", data: { stages: { awareness: { score: 4.2 }, understanding: { score: 3.5 }, trial: { score: 2.8 }, adoption: { score: 1.6 }, proficiency: { score: 0 } } }, updated_at: "2026-04-13T10:00:00Z" },
+    { tool_type: "culture-tracker", project_name: "Sample Project", data: { indicators: { language: { level: "emerging" }, behaviours: { level: "not-yet" }, oldWays: { level: "not-yet" }, newStarters: { level: "emerging" }, leadershipChange: { level: "not-yet" } } }, updated_at: "2026-04-12T10:00:00Z" },
+  ] as any : [];
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   const displayTools = isDemo ? demoTools : tools;
+
+  if (loading) {
+    return (<><Nav /><div style={{ padding: "120px 48px", textAlign: "center", fontFamily: "var(--ui)", color: "var(--text-mid)" }}>Loading...</div><Footer /></>);
+  }
 
   return (
     <>
