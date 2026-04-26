@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#0A1628"/>
+  <g transform="translate(131, 96) scale(6.25)">
+    <rect x="0" y="0" width="40" height="3.5" fill="#EAE4D5"/>
+    <rect x="2" y="3.5" width="36" height="2.5" fill="#EAE4D5"/>
+    <rect x="3.5" y="6" width="4" height="21" fill="#EAE4D5"/>
+    <rect x="18" y="6" width="4" height="21" fill="#EAE4D5"/>
+    <rect x="32.5" y="6" width="4" height="21" fill="#EAE4D5"/>
+    <rect x="2" y="27" width="36" height="2.5" fill="#EAE4D5"/>
+    <rect x="0" y="29.5" width="40" height="3.5" fill="#EAE4D5"/>
+  </g>
+  <text x="256" y="430" font-family="serif" font-size="52" font-weight="400" letter-spacing="8" fill="#EAE4D5" text-anchor="middle">TCA</text>
+</svg>

@@ -66,6 +66,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://thechangeassociation.com",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 const jsonLd = {
@@ -102,6 +111,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#0A1628" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
