@@ -2358,7 +2358,7 @@ a.link-disabled .article-link-arrow { color: var(--gold); font-size: 12px; }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }
   .nav-links li a { padding: 14px 24px; border-radius: 0 !important; }
-  .nav-links li a.active { border-radius: 0 !important; }
+  .nav-links li a.active { margin: 2px 12px; padding: 12px 16px; border-radius: var(--radius-sm) !important; }
   .nav-links li button { width: 100%; text-align: left; padding: 14px 24px !important; border-radius: 0 !important; }
   .nav-sep { display: none; }
 
