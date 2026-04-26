@@ -152,17 +152,17 @@ export default function DashboardPage() {
     <>
       <Nav />
       <div className="page-header"><span>Dashboard</span><h1>Program Health</h1><p>Track your change program across all dimensions of the TCA model.</p></div>
-      <div style={{ padding: "0 48px 64px", maxWidth: 1100, margin: "0 auto" }}>
+      <div className="dash-wrap">
 
         {!authenticated && (
-          <div style={{ background: "var(--navy)", padding: "20px 40px", marginBottom: 28, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, borderRadius: 8 }}>
+          <div className="dash-banner">
             <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.8)" }}>This is a preview with sample data. <strong style={{ color: "var(--cream)" }}>Sign in</strong> to track your own program.</p>
             <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)", padding: "8px 20px", cursor: "pointer", borderRadius: 6 }}>Sign In</button>
           </div>
         )}
 
         {/* ── READINESS — full width ── */}
-        <div style={{ border: "1px solid var(--border)", padding: "28px 32px", marginBottom: 24, display: "grid", gridTemplateColumns: "auto 1fr", gap: 40, alignItems: "center", borderRadius: 8 }}>
+        <div className="dash-readiness">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <GaugeChart value={rAvg} max={5} label="Overall Readiness" colour={clr(rAvg, 5)} size={180} />
             <Link href="/tools/readiness-assessment" style={lnk}>Open Assessment &rarr;</Link>
@@ -174,7 +174,7 @@ export default function DashboardPage() {
         </div>
 
         {/* ── ROW 2: Stakeholders · Charter · Comms ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 24 }}>
+        <div className="dash-row-3">
           <div style={card}>
             <span style={hdr}>Stakeholder Map</span>
             <DonutChart segments={stakeSegs} label="Stakeholders" />
@@ -197,7 +197,7 @@ export default function DashboardPage() {
         </div>
 
         {/* ── ROW 3: Sponsor · Resistance · Benefits ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 24 }}>
+        <div className="dash-row-3">
           <div style={card}>
             <span style={hdr}>Sponsor Roadmap</span>
             <div style={{ width: "100%", marginTop: 4, marginBottom: 12 }}>
@@ -250,13 +250,13 @@ export default function DashboardPage() {
         </div>
 
         {/* ── ROW 4: Adoption · Culture ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-          <div style={{ border: "1px solid var(--border)", padding: "24px 20px", borderRadius: 8 }}>
+        <div className="dash-row-2">
+          <div style={card}>
             <span style={hdr}>Adoption Scorecard</span>
             {aLabels.map((s, i) => <BarMeter key={s} value={aScores[i]} max={5} label={s} colour={clr(aScores[i], 5)} />)}
             <div style={{ textAlign: "center", marginTop: 8 }}><Link href="/tools/adoption-scorecard" style={lnk}>Open Scorecard &rarr;</Link></div>
           </div>
-          <div style={{ border: "1px solid var(--border)", padding: "24px 20px", borderRadius: 8 }}>
+          <div style={card}>
             <span style={hdr}>Culture Embedding</span>
             {cuLabels.map((l, i) => <BarMeter key={l} value={cuScores[i]} max={3} label={l} colour={clr(cuScores[i], 3)} />)}
             <div style={{ textAlign: "center", marginTop: 8 }}><Link href="/tools/culture-tracker" style={lnk}>Open Tracker &rarr;</Link></div>
