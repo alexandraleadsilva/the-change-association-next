@@ -37,6 +37,7 @@ export function SignInPrompt() {
         padding: "20px 24px",
         zIndex: 150,
         boxShadow: "0 8px 32px rgba(10,22,40,0.25)",
+        borderRadius: 8,
         opacity: dismissed ? 0 : 1,
         transform: dismissed ? "translateY(12px)" : "translateY(0)",
         transition: "opacity 0.3s, transform 0.3s",
@@ -94,6 +95,7 @@ export function SignInPrompt() {
           padding: "10px 20px",
           cursor: "pointer",
           transition: "background 0.2s",
+          borderRadius: 6,
         }}
       >
         Sign In

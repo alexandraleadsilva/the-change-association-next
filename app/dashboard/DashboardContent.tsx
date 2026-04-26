@@ -30,7 +30,7 @@ export default function DashboardPage() {
   function clr(v: number, m: number): string { const p = m > 0 ? v / m : 0; return p >= 0.8 ? "#27AE60" : p >= 0.5 ? "#D4A017" : p > 0 ? "#C0392B" : "#9E9E9E"; }
 
   const hdr: React.CSSProperties = { fontFamily: "var(--ui)", fontSize: 10, fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#9A9080", display: "block", marginBottom: 14, textAlign: "center", width: "100%" };
-  const card: React.CSSProperties = { border: "1px solid var(--border)", padding: "24px 20px", display: "flex", flexDirection: "column", alignItems: "center" };
+  const card: React.CSSProperties = { border: "1px solid var(--border)", padding: "24px 20px", display: "flex", flexDirection: "column", alignItems: "center", borderRadius: 8 };
   const lnk: React.CSSProperties = { fontFamily: "var(--ui)", fontSize: 11, color: "var(--gold)", textDecoration: "none", marginTop: 12 };
 
   /* ── READINESS ── */
@@ -155,14 +155,14 @@ export default function DashboardPage() {
       <div style={{ padding: "0 48px 64px", maxWidth: 1100, margin: "0 auto" }}>
 
         {!authenticated && (
-          <div style={{ background: "var(--navy)", padding: "20px 40px", marginBottom: 28, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+          <div style={{ background: "var(--navy)", padding: "20px 40px", marginBottom: 28, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, borderRadius: 8 }}>
             <p style={{ fontFamily: "var(--ui)", fontSize: 13, color: "rgba(234,228,213,0.8)" }}>This is a preview with sample data. <strong style={{ color: "var(--cream)" }}>Sign in</strong> to track your own program.</p>
-            <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)", padding: "8px 20px", cursor: "pointer" }}>Sign In</button>
+            <button onClick={() => window.dispatchEvent(new CustomEvent("tca-open-signin"))} style={{ background: "var(--gold)", border: "none", fontFamily: "var(--ui)", fontSize: 12, fontWeight: 500, color: "var(--navy)", padding: "8px 20px", cursor: "pointer", borderRadius: 6 }}>Sign In</button>
           </div>
         )}
 
         {/* ── READINESS — full width ── */}
-        <div style={{ border: "1px solid var(--border)", padding: "28px 32px", marginBottom: 24, display: "grid", gridTemplateColumns: "auto 1fr", gap: 40, alignItems: "center" }}>
+        <div style={{ border: "1px solid var(--border)", padding: "28px 32px", marginBottom: 24, display: "grid", gridTemplateColumns: "auto 1fr", gap: 40, alignItems: "center", borderRadius: 8 }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <GaugeChart value={rAvg} max={5} label="Overall Readiness" colour={clr(rAvg, 5)} size={180} />
             <Link href="/tools/readiness-assessment" style={lnk}>Open Assessment &rarr;</Link>
@@ -251,12 +251,12 @@ export default function DashboardPage() {
 
         {/* ── ROW 4: Adoption · Culture ── */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-          <div style={{ border: "1px solid var(--border)", padding: "24px 20px" }}>
+          <div style={{ border: "1px solid var(--border)", padding: "24px 20px", borderRadius: 8 }}>
             <span style={hdr}>Adoption Scorecard</span>
             {aLabels.map((s, i) => <BarMeter key={s} value={aScores[i]} max={5} label={s} colour={clr(aScores[i], 5)} />)}
             <div style={{ textAlign: "center", marginTop: 8 }}><Link href="/tools/adoption-scorecard" style={lnk}>Open Scorecard &rarr;</Link></div>
           </div>
-          <div style={{ border: "1px solid var(--border)", padding: "24px 20px" }}>
+          <div style={{ border: "1px solid var(--border)", padding: "24px 20px", borderRadius: 8 }}>
             <span style={hdr}>Culture Embedding</span>
             {cuLabels.map((l, i) => <BarMeter key={l} value={cuScores[i]} max={3} label={l} colour={clr(cuScores[i], 3)} />)}
             <div style={{ textAlign: "center", marginTop: 8 }}><Link href="/tools/culture-tracker" style={lnk}>Open Tracker &rarr;</Link></div>

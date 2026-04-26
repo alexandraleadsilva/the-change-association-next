@@ -124,6 +124,7 @@ export function Nav() {
                   color: "#fff",
                   padding: "10px 24px",
                   cursor: "pointer",
+                  borderRadius: 6,
                 }}
               >
                 Sign In

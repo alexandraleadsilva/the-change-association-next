@@ -15,6 +15,8 @@
   --text-mid: #5C6070;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --ui: 'Jost', system-ui, sans-serif;
+  --radius: 8px;
+  --radius-sm: 6px;
 }
 body {
   background: var(--cream);
@@ -69,6 +71,7 @@ nav {
 .nav-links li a.active {
   background: var(--navy);
   color: #fff;
+  border-radius: var(--radius-sm);
 }
 .nav-links li a:hover:not(.active) {
   color: var(--navy);
@@ -120,6 +123,7 @@ nav {
   cursor: pointer;
   transition: background 0.2s;
   width: fit-content;
+  border-radius: var(--radius-sm);
 }
 .btn:hover { background: var(--navy-mid); }
 .btn-outline {
@@ -133,6 +137,7 @@ nav {
   text-decoration: none;
   border: 1px solid var(--navy);
   transition: all 0.2s;
+  border-radius: var(--radius-sm);
 }
 .btn-outline:hover { background: var(--navy); color: #fff; }
 .btn-gold {
@@ -146,6 +151,7 @@ nav {
   padding: 12px 24px;
   text-decoration: none;
   transition: all 0.2s;
+  border-radius: var(--radius-sm);
 }
 .btn-gold:hover { background: #D9AF6B; }
 
@@ -448,6 +454,7 @@ footer {
   max-width: 480px;
   width: 90%;
   position: relative;
+  border-radius: var(--radius);
 }
 .modal-close {
   position: absolute;
@@ -497,6 +504,7 @@ footer {
   color: var(--text-dark);
   outline: none;
   transition: border-color 0.2s;
+  border-radius: var(--radius-sm);
 }
 .modal-form .form-group input::placeholder { color: #9A9080; }
 .modal-form .form-group input:focus { border-color: var(--navy); }
@@ -1097,6 +1105,7 @@ footer {
   padding: 28px 32px;
   background: var(--cream);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 .detail-block-warning {
   border-left: 3px solid var(--gold);
@@ -1178,6 +1187,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0;
+  border-radius: var(--radius);
 }
 .check-item {
   display: flex;
@@ -1199,6 +1209,7 @@ footer {
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  border-radius: 4px;
 }
 .check-item input:checked + .check-box {
   background: var(--gold);
@@ -1425,6 +1436,7 @@ footer {
   font-family: var(--ui);
   text-align: left;
   width: auto;
+  border-radius: var(--radius);
 }
 .stair:hover {
   border-color: var(--stair-colour);
@@ -1495,6 +1507,7 @@ footer {
   color: rgba(234, 228, 213, 0.5);
   cursor: pointer;
   transition: all 0.2s;
+  border-radius: var(--radius-sm);
 }
 .diagnostic-btn:hover { border-color: rgba(234, 228, 213, 0.4); color: var(--cream); }
 .diagnostic-btn-yes { background: var(--gold); border-color: var(--gold); color: var(--navy); }
@@ -1658,6 +1671,7 @@ footer {
   font-family: var(--ui);
   width: 100%;
   transition: all 0.2s;
+  border-radius: var(--radius);
 }
 .phase-card:hover {
   border-color: var(--gold);
@@ -1705,6 +1719,7 @@ footer {
 .phase-compare-col {
   padding: 28px;
   border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 .phase-compare-leader {
   background: rgba(10, 22, 40, 0.03);
@@ -1758,6 +1773,7 @@ footer {
   font-family: var(--ui);
   width: 100%;
   height: 100%;
+  border-radius: var(--radius);
 }
 .framework-card:hover {
   border-color: var(--gold);
@@ -2174,6 +2190,7 @@ footer {
   outline: none;
   transition: border-color 0.2s;
   -webkit-appearance: none;
+  border-radius: var(--radius-sm);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: #9A9080; }
