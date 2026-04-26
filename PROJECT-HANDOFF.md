@@ -244,3 +244,48 @@ Created via `/api/setup-db`:
 3. **Auth flash on navigation**: Solved by caching in localStorage. The `mounted` state guard in Nav.tsx prevents hydration mismatch.
 4. **Build from correct directory**: Always run commands from `/Users/alexandradsilva/the-change-association-next`.
 5. **Git push auth**: If push fails, may need `gh auth refresh -s workflow`.
+
+---
+
+## Getting Started on a New Machine / New Claude Account
+
+If you lose access to your current Claude account or set up on a new machine, follow these steps:
+
+### 1. Install tools (if not already installed)
+```bash
+# Node.js (v18+)
+brew install node
+
+# GitHub CLI
+brew install gh
+
+# Vercel CLI
+npm i -g vercel
+
+# Claude Code
+npm i -g @anthropic-ai/claude-code
+```
+
+### 2. Authenticate services
+```bash
+# GitHub - follow the prompts to log in as alexandraleadsilva
+gh auth login
+
+# Vercel - log in with the account linked to the project
+vercel login
+```
+
+### 3. Clone and link the project
+```bash
+git clone https://github.com/alexandraleadsilva/the-change-association-next.git
+cd the-change-association-next
+vercel link   # select the existing project when prompted
+```
+
+### 4. Start Claude Code
+```bash
+claude
+```
+
+Then say:
+> I'm continuing work on my website The Change Association. Read the file PROJECT-HANDOFF.md in the root of this project - it has everything you need to get up to speed.
