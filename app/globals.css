@@ -200,6 +200,7 @@ nav {
   border: 1px solid var(--border);
   text-decoration: none;
   transition: all 0.25s;
+  border-radius: var(--radius);
 }
 .home-card:hover {
   border-color: var(--gold);
@@ -406,6 +407,8 @@ footer {
 .email-row {
   display: flex;
   border: 1px solid var(--navy);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 .email-row input {
   flex: 1;
@@ -1975,6 +1978,7 @@ footer {
   padding: 40px;
   background: var(--navy);
   margin-bottom: 48px;
+  border-radius: var(--radius);
 }
 .featured-label {
   font-family: var(--ui);
@@ -2348,6 +2352,8 @@ a.link-disabled .article-link-arrow { color: var(--gold); font-size: 12px; }
     flex-direction: column;
     border-bottom: 1px solid var(--border);
     padding: 8px 0;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 8px 24px rgba(10,22,40,0.1);
   }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }
