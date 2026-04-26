@@ -21,6 +21,42 @@ export const feed: FeedEntry[] = [
   // ---- ADD NEW ENTRIES HERE ----
 
   {
+    date: "April 2026",
+    headline: "CNBC warns of AI driven labour crisis as Meta and Microsoft cut 20,000 jobs",
+    summary: "Combined layoffs at Meta and Microsoft have surpassed 20,000 roles in April alone, with both companies redirecting budgets toward AI infrastructure. An LHH survey found 87 percent of HR leaders say their organisation has already conducted or is planning layoffs in the next 12 months. The scale of workforce disruption underscores the urgent need for change professionals to lead people through AI driven transitions, not just manage the technology rollout.",
+    category: "change-adoption",
+    region: "Global",
+    source: "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html",
+    sourceLabel: "CNBC",
+  },
+  {
+    date: "April 2026",
+    headline: "Prosci launches evolved brand and subscription membership after 30 years",
+    summary: "Prosci has unveiled a refreshed brand identity and a new Membership subscription service giving change practitioners ongoing access to research tools, expert guidance, and a global peer community. With 275,000 certified professionals in 80 countries, CEO Scott McAllister says out changing the competition is rapidly becoming the next source of competitive advantage. The move signals a broader industry shift from one off certification toward continuous capability building.",
+    category: "tools",
+    region: "Global",
+    source: "https://www.prosci.com/blog/prosci-evolved-brand",
+    sourceLabel: "Prosci",
+  },
+  {
+    date: "April 2026",
+    headline: "City and Guilds identifies five essential change management skills for leaders",
+    summary: "A new City and Guilds article argues that effective change leadership depends on human centred behaviours rather than rigid frameworks. The five capabilities highlighted are adaptability, empathy, communication clarity, decision making under uncertainty, and stakeholder alignment. The piece recommends building change skills proactively across all levels through scenario based learning rather than relying solely on specialist change roles.",
+    category: "leadership",
+    region: "UK",
+    source: "https://www.cityandguilds.com/news/april-2026/change-management-skills-for-confident-leaders",
+    sourceLabel: "City and Guilds",
+  },
+  {
+    date: "March 2026",
+    headline: "Gartner finds 78 percent of CHROs say workflows must change to realise AI value",
+    summary: "A Gartner report on change management trends in the age of AI reveals that just over half of organisations have redesigned roles because of AI, yet many are struggling to manage the people side of these transitions. With 78 percent of CHROs acknowledging that workflows and roles need to change, the research reinforces that technology adoption without structured change management leaves organisations vulnerable to resistance and disengagement.",
+    category: "digital-transformation",
+    region: "Global",
+    source: "https://www.gartner.com/en/newsroom/press-releases/2026-3-16-gartner-identifies-top-change-management-trends-for-chros-in-age-of-ai",
+    sourceLabel: "Gartner",
+  },
+  {
     date: "March 2026",
     headline: "Unilever enforces global hiring pause amid restructuring",
     summary: "Unilever has paused all global hiring as part of its ongoing transformation. The company has already cut 6,000 of 7,500 planned roles and is separating its Ice Cream division into a standalone business. The restructure aims to deliver 800 million euros in cost savings but raises questions about how organisations sustain engagement during prolonged uncertainty.",
