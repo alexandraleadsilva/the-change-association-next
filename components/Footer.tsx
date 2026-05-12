@@ -21,7 +21,7 @@ export function Footer({ showAbout = false }: { showAbout?: boolean }) {
         <li><Link href="/change-bites">Change Bites</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
-      <p className="footer-copy">&copy; 2025 The Change Association</p>
+      <p className="footer-copy">&copy; 2020 The Change Association</p>
     </footer>
   );
 }
