@@ -51,6 +51,19 @@ export async function GET() {
       CREATE INDEX IF NOT EXISTS idx_otp_email ON otp_codes(email)
     `;
 
+    // Certifications table
+    await sql`
+      CREATE TABLE IF NOT EXISTS certifications (
+        id VARCHAR(12) PRIMARY KEY,
+        full_name VARCHAR(255) NOT NULL,
+        credential VARCHAR(255) NOT NULL,
+        issued_date DATE NOT NULL,
+        expiry_date DATE,
+        status VARCHAR(20) DEFAULT 'active',
+        created_at TIMESTAMP DEFAULT NOW()
+      )
+    `;
+
     return NextResponse.json({ success: true, message: "Tables created" });
   } catch (error) {
     console.error("DB setup error:", error);
